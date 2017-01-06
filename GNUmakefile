@@ -1,5 +1,6 @@
 THISDIR := phy452-basicstatmech
 THISBOOK := phy452
+BASEVER := 075bfa1
 
 include ../latex/make.bookvars
 
