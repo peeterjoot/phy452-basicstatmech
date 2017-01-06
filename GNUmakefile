@@ -4,7 +4,7 @@ BASEVER := 075bfa1
 
 include ../latex/make.bookvars
 
-FIGURES := ../../figures/$(THISBOOK)
+FIGURES := ../figures/phy452-basicstatmech
 
 SOURCE_DIRS += appendix
 SOURCE_DIRS += $(FIGURES)
