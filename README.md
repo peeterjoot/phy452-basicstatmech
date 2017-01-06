@@ -1,2 +1,3 @@
 # phy452-basicstatmech
-phy452-basicstatmech notes compilation
+
+Class notes and problems from 'Basic Statistical Mechanics', taught by Prof. Arun Paramekanti.
