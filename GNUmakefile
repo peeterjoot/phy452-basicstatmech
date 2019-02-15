@@ -1,12 +1,7 @@
 THISDIR := phy452-basicstatmech
 THISBOOK := phy452
 
-export BOOKSUBVER := 1
-export BOOKMAJVER := 0
-export REVISIONNUMBER := 9
-
-VER := $(shell grep Version .revinfo/gitCommitDateAsMyTime.tex | sed 's/.*{//;s/.xspace.*//;')
-
+include make.revision
 include ../latex/make.bookvars
 
 FIGURES := ../figures/phy452-basicstatmech
@@ -79,10 +74,3 @@ basicStatMechProblemSet4.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet5.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet6.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet7.pdf :: $(PDF_DEPS)
-
-dist:
-	cp $(THISBOOK).pdf $(THISBOOK).$(VER).pdf
-
-# a for annotate (releases).
-tag:
-	git tag -a $(THISBOOK).$(VER).pdf
