@@ -35,6 +35,11 @@ THISBOOK_DEPS += $(PDFS_FROM_EPS)
 
 include ../latex/make.rules
 
+#$(THISBOOK).pdf :: classicthesis.sty
+#
+#classicthesis.sty: ../latex/classicthesis/classicthesis.sty
+#	cp ../latex/classicthesis/classicthesis.sty .
+
 basicStatMechProblemSet1.pdf :: basicStatMechProblemSet1Problem1.tex
 basicStatMechProblemSet1.pdf :: basicStatMechProblemSet1Problem2.tex
 
@@ -74,3 +79,6 @@ basicStatMechProblemSet4.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet5.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet6.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet7.pdf :: $(PDF_DEPS)
+
+clean ::
+	git checkout $(THISBOOK).tex

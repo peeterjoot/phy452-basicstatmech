@@ -1,5 +1,7 @@
 - probably remove: midterm1review.tex (now in the appendix)
 
+- why eqnref instead of cref?
+
 - dups?
          \input{centralLimitOnProducts.tex}
          \input{productOfIIDCLT.tex}
