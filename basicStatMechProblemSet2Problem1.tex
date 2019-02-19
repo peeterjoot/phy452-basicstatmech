@@ -14,7 +14,7 @@ where \(D\) is the diffusion constant.  Define the Fourier components of the pro
 P(x, t) = \int_{-\infty}^\infty \frac{dk}{2 \pi} \tilde{P}(k, t) \exp\left( i k x \right)
 \end{equation}
 \begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:60}
-\tilde{P}(k, t) = \int_{-\infty}^\infty dx P(x, t) \exp\left( -i k x \right)
+\tilde{P}(k, t) = \int_{-\infty}^\infty dx P(x, t) \exp\left( -i k x \right).
 \end{equation}
 \end{subequations}
 
@@ -234,7 +234,7 @@ The normalization of the distribution depends on the interval boundaries.  With 
 \begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:380}
 \int_a^{a + L} dx \left( \inv{L} + A \sin( k_0 x) \right) dx
 =
-1 - \frac{A}{k_0} \left( \cos( k_0(a + L) ) - \cos( k_0 a ) \right)
+1 - \frac{A}{k_0} \left( \cos( k_0(a + L) ) - \cos( k_0 a ) \right).
 \end{equation}
 
 With an even range for box \(x \in [-L/2, L/2]\) this is unity.
@@ -247,7 +247,7 @@ P(x, t)
 \left( \inv{L} + A \sin( k_0 x' ) \right) \exp
 \left(
 - \frac{(x' - x)^2}{2 \sqrt{D t} }
-\right)
+\right).
 \end{dmath}
 
 Let's write this as
@@ -274,7 +274,7 @@ P_{\mathrm{sin}}(x, t)
 \exp
 \left(
 - \frac{(x' - x)^2}{2 \sqrt{D t} }
-\right)
+\right).
 \end{dmath}
 \end{subequations}
 
@@ -297,7 +297,7 @@ e^{-u^2}
 \inv{2 L} \left(
 \erf\left( \frac{L/2 -x}{2 \sqrt{D t}} \right)
 -\erf\left( -\frac{L/2 +x}{2 \sqrt{D t}} \right)
-\right)
+\right).
 \end{dmath}
 
 Following Mathematica, lets introduce a two argument error function for the difference between two points
@@ -314,7 +314,7 @@ P_{\mathrm{rect}}(x, t)
 -\frac{L/2 +x}{2 \sqrt{D t}}
 ,
 \frac{L/2 -x}{2 \sqrt{D t}}
-\right)
+\right).
 \end{dmath}
 
 For \(L = D = 1\), and \(t = 10^{-8}\), this is plotted in \cref{fig:problemSet2Problem1iiRectPropagator:problemSet2Problem1iiRectPropagatorFig3}.  Somewhat surprisingly, this difference of error functions does appear to result in a rectangular function for small \(t\).
@@ -480,7 +480,7 @@ dx
 =
 \frac{A \pi}{i} \left(
 \delta(k - k_0) - \delta(k + k_0)
-\right)
+\right).
 \end{dmath}
 
 Now we can inverse Fourier transform the diffusion result with ease since we've got delta functions.  That is
@@ -563,7 +563,7 @@ du
    \exp\lr{
       \lr{i k_0 \sqrt{D t}}^2
    }
-}
+}.
 \end{dmath}
 
 This is just

@@ -31,7 +31,7 @@ Switching to spherical or circular coordinates when there is radial symmetry isn
 \iint f(r) dx dy = \iint f(r) r dr d\theta = 2 \pi \int f(r) r dr
 \end{equation}
 \begin{equation}\label{eqn:hyperSphereVolume:40}
-\iiint f(r) dx dy = \iiint f(r) r^2 dr \sin d\theta d\theta d\phi = 4 \pi \int f(r) r^2 dr
+\iiint f(r) dx dy = \iiint f(r) r^2 dr \sin d\theta d\theta d\phi = 4 \pi \int f(r) r^2 dr.
 \end{equation}
 \end{subequations}
 
@@ -57,7 +57,7 @@ Once we believe or assume that the surface ``area'' of a hypervolume is the deri
 V_2 = B r^2
 \end{equation}
 \begin{equation}\label{eqn:hyperSphereVolume:120}
-V_3 = C r^3
+V_3 = C r^3.
 \end{equation}
 \end{subequations}
 
@@ -67,7 +67,7 @@ The perimeter of the circle and surface area of the sphere are then
 A_2 = 2 B r
 \end{equation}
 \begin{equation}\label{eqn:hyperSphereVolume:160}
-A_3 = 3 C r^2
+A_3 = 3 C r^2.
 \end{equation}
 \end{subequations}
 
@@ -109,7 +109,7 @@ So we have for the volume of the 3D sphere, \(V = 4 \pi r^3/3\) as expected.
 
 It's also clear that the exponential integral isn't a requirement for this trick.  It's just convienent because boundary value conditions aren't required.  For example, suppose we want to calculate the area of a circle using this trick.  We can do so by integrating
 \begin{dmath}\label{eqn:hyperSphereVolume:240}
-4 \int_0^r dx \int_0^{\sqrt{r^2 - x^2}} dy (x^2 + y^2) = \int_0^r r^2 2 B r dr
+4 \int_0^r dx \int_0^{\sqrt{r^2 - x^2}} dy (x^2 + y^2) = \int_0^r r^2 2 B r dr.
 \end{dmath}
 
 The LHS can be integrated using a sine or cosine substitution and then integrating by parts (or by Mathematica as in \nbref{nVolumeTrickToCalculateAreaOfCircle.nb}).  Comparison of the two gives

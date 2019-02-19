@@ -49,7 +49,7 @@ X = \sum_{i = 1}^N \delta x_i
 = \sum_{i = 1}^N \expectation{(\delta x_i)^2 }
 = \sum_{i = 1}^N \expectation{(\pm \delta x)^2 }
 = (\delta x)^2 \sum_{i = 1}^N 1
-= N (\delta x)^2
+= N (\delta x)^2.
 \end{dmath}
 
 In the above, I assume that the cross terms were killed with an assumption of uncorrelation.
@@ -132,7 +132,7 @@ N \calP(x, t) =
 ]
 {
 C(x, t)
-}{particle density or concentration}
+}{particle density or concentration}.
 \end{equation}
 
 \section{Continuity equation and Ficks law}
@@ -156,7 +156,7 @@ Here \(J\) is the probability current density, and \(\calP\) is the probability 
 \item \underline{Phenomenological law}, or \underlineAndIndex{Fick's law}.
 
 \begin{equation}\label{eqn:basicStatMechLecture3:220}
-J = - D \PD{x}{\calP}
+J = - D \PD{x}{\calP}.
 \end{equation}
 
 The probability current is linearly proportional to the gradient of the probability density.
@@ -192,7 +192,7 @@ We are imagining that we are following one particle (particle \(i\)) in a gas, i
 
 After two collisions
 \begin{equation}\label{eqn:basicStatMechLecture3:300}
-\Bv_i(2) = \Bv_i(1) + \Delta \Bv_i(2)
+\Bv_i(2) = \Bv_i(1) + \Delta \Bv_i(2).
 \end{equation}
 
 After \(N_{\txtc}\) collisions
@@ -201,7 +201,7 @@ After \(N_{\txtc}\) collisions
 + \Delta \Bv_i(1)
 + \Delta \Bv_i(2)
 + \cdots
-+ \Delta \Bv_i(N_{\txtc})
++ \Delta \Bv_i(N_{\txtc}).
 \end{equation}
 
 Where \(N_{\txtc}\) is the number of collisions.  We expect
@@ -215,7 +215,7 @@ Where \(N_{\txtc}\) is the number of collisions.  We expect
 \begin{equation}\label{eqn:basicStatMechLecture3:380}
 \calP_{N_{\txtc}}(\Bv) \propto e^{-
 \frac{(\Bv - \Bv_0)^2}{2 N_{\txtc}}
-}
+}.
 \end{equation}
 \end{subequations}
 
@@ -225,9 +225,8 @@ We'll see that there is something wrong with this, and will figure out how to fi
 
 In particular, the kinetic energy of any given particle is
 \begin{equation}\label{eqn:basicStatMechLecture3:400}
-\text{KE}_i = \inv{2} m \Bv_i^2
+\text{KE}_i = \inv{2} m \Bv_i^2,
 \end{equation}
-
 and the sum of this is fixed for the complete system.
 
 However, if we sum the kinetic energy squares above \eqnref{eqn:basicStatMechLecture3:360} shows that it is growing with the number of collisions.  Fixing this we will arrive at the Maxwell Boltzmann distribution.

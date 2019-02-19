@@ -93,7 +93,6 @@ g(N, s) \approx g(N, 0) e^{-\frac{2s^2}{N}}
 g(N, 0) \approx \sqrt{ \frac{2}{\pi N}} 2^N,
 \end{equation}
 \end{subequations}
-
 from which we find the entropy \eqnref{eqn:kittelCh2:220} directly after taking logarithms.  The temperature is found directly
 
 The magnetization, for a system that has spin excess \(2 s\) was defined as
@@ -148,11 +147,9 @@ e^{-\frac{2s^2}{N}}
 
 \makesubproblem{Planck Energy.}{pr:kittelCh2:3b}  Let \(U\) denote the total energy \(n \Hbar \omega\) of the oscillators.  Express the entropy as \(\sigma(U, N)\).  Show that the total energy at temperature \(\tau\) is
 \begin{equation}\label{eqn:kittelCh2:80}
-U = \frac{N \Hbar \omega}{\exp\left( \Hbar \omega/\tau \right) -1}
+U = \frac{N \Hbar \omega}{\exp\left( \Hbar \omega/\tau \right) -1}.
 \end{equation}
-
 This is the Planck result;  it is derived again in Chapter \(4\) by a powerful method that does not require us to find the multiplicity function.
-
 } % makeoproblem
 
 \makeanswer{pr:kittelCh2:3}{
@@ -176,7 +173,7 @@ Taking logarithms and applying the Stirling approximation, our entropy is
 - n \ln n + n
 =
 (N - 1) \ln \frac{N + n - 1}{N - 1}
-+ n \ln \frac{N + n - 1}{n}
++ n \ln \frac{N + n - 1}{n}.
 \end{dmath}
 
 \makeSubAnswer{Planck Energy}{pr:kittelCh2:3b}
@@ -190,7 +187,7 @@ N \ln \frac{N + n}{N}
 =
 (N + n)\ln (N + n) - N \ln N - n \ln n
 =
-\left(N + \frac{U}{\Hbar\omega} \right)\ln \left(N + \frac{U}{\Hbar\omega} \right) - N \ln N - \frac{U}{\Hbar\omega} \ln \frac{U}{\Hbar\omega}
+\left(N + \frac{U}{\Hbar\omega} \right)\ln \left(N + \frac{U}{\Hbar\omega} \right) - N \ln N - \frac{U}{\Hbar\omega} \ln \frac{U}{\Hbar\omega}.
 \end{dmath}
 
 With \((x \ln x)' = \ln x + 1\), we have

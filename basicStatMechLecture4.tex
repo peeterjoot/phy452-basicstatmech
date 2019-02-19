@@ -29,7 +29,7 @@ We argued that the probability distribution for finding a velocity \(\Bv\) was a
 \calP_{N_{\txtc}}(\Bv_i) \propto \exp
 \left(
 -\frac{(\Bv_i - \Bv_i(0))^2}{ 2 N_{\txtc}}
-\right)
+\right).
 \end{equation}
 
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture4Fig1}{Velocity distribution found without considering kinetic energy conservation}{fig:basicStatMechLecture4:basicStatMechLecture4Fig1}{0.3}
@@ -38,7 +38,7 @@ We argued that the probability distribution for finding a velocity \(\Bv\) was a
 
 However, we know that this must be wrong, since we require
 \begin{equation}\label{eqn:basicStatMechLecture4:60}
-T = \inv{2} \sum_{i = 1}^{n} \Bv_i^2 = \mbox{conserved}
+T = \inv{2} \sum_{i = 1}^{n} \Bv_i^2 = \mbox{conserved}.
 \end{equation}
 
 Where our argument went wrong is that when the particle has a greater than average velocity, the effect of a collision will be to slow it down.  We have to account for
@@ -52,9 +52,8 @@ There were two ingredients to diffusion (the random walk), these were
 \begin{itemize}
 \item
 Conservation of particles
-
 \begin{equation}\label{eqn:basicStatMechLecture4:80}
-\PD{t}{c} + \PD{x}{j} = 0
+\PD{t}{c} + \PD{x}{j} = 0.
 \end{equation}
 
 We can also think about a conservation of a particles in a velocity space
@@ -85,7 +84,7 @@ We want something directed opposite to the velocity and the concentration
 \text{Diffusion current} \equiv -D \PD{v}{c}(v, t)
 \end{equation}
 \begin{equation}\label{eqn:basicStatMechLecture4:200}
-\text{Dissipation current} \equiv - \eta v c(v, t)
+\text{Dissipation current} \equiv - \eta v c(v, t).
 \end{equation}
 \end{subequations}
 
@@ -100,7 +99,7 @@ This gives
 = D \PDSq{v}{c}(v, t) + \eta \PD{v}{}
 \left(
 v c(v, t)
-\right)
+\right).
 \end{dmath}
 
 Can we find a steady state solution to this equation when \(t \rightarrow \infty\)?  For such a steady state we have
@@ -108,7 +107,7 @@ Can we find a steady state solution to this equation when \(t \rightarrow \infty
 0 = \frac{d^2 c}{dv^2} + \frac{\eta}{D} \frac{d}{dv}
 \left(
 v c
-\right)
+\right).
 \end{equation}
 
 Integrating once we have
@@ -165,7 +164,7 @@ Here
 \kB = \mbox{Boltzmann constant}
 \end{equation}
 \begin{equation}\label{eqn:basicStatMechLecture4:320}
-T = \mbox{absolute temperature}
+T = \mbox{absolute temperature}.
 \end{equation}
 \end{subequations}
 
@@ -186,7 +185,7 @@ Fick's law and the continuity equation in 3D are respectively
 \Bj = -D \spacegrad_\Bv c(\Bv, t) - \eta \Bv c(\Bv, t)
 \end{equation}
 \begin{equation}\label{eqn:basicStatMechLecture4:380}
-\PD{t}{} c(\Bv, t) + \spacegrad_\Bv \cdot \Bj(\Bv, t) = 0
+\PD{t}{} c(\Bv, t) + \spacegrad_\Bv \cdot \Bj(\Bv, t) = 0.
 \end{equation}
 \end{subequations}
 
@@ -196,7 +195,7 @@ As above we have for the steady state
 \left(
  -D \spacegrad_\Bv c(\Bv, t) - \eta \Bv c(\Bv, t)
 \right)
-= -D \spacegrad^2_\Bv c - \eta \spacegrad_\Bv \cdot (\Bv c)
+= -D \spacegrad^2_\Bv c - \eta \spacegrad_\Bv \cdot (\Bv c).
 \end{dmath}
 
 Integrating once over all space
@@ -206,7 +205,7 @@ D \spacegrad_\Bv c = -\eta \Bv c + \text{vector constant, assumed zero}
 
 This is three sets of equations, one for each component \(v_\alpha\) of \(\Bv\)
 \begin{equation}\label{eqn:basicStatMechLecture4:580}
-\PD{v_\alpha}{c} = -\frac{\eta}{D} v_\alpha c
+\PD{v_\alpha}{c} = -\frac{\eta}{D} v_\alpha c.
 \end{equation}
 
 So that our steady state equation is
@@ -332,7 +331,7 @@ Computing the average 3D squared velocity for this distribution, we have
    \kB T
 \right)
 = \frac{3}{2}
-\kB T
+\kB T.
 \end{dmath}
 
 For each component \(v_\alpha\) the normalization kills off all the contributions for the other components, leaving us with the usual \(3 \kB T/2\) ideal gas law kinetic energy.

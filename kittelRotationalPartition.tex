@@ -85,15 +85,14 @@ Z_R(\tau)
 =
 \int_0^\infty dl \frac{d}{dl}
 \lr{ -\frac{\tau}{\epsilon_0} e^{-l(l+1)\epsilon_0/\tau} }
-= \frac{\tau}{\epsilon_0}
+= \frac{\tau}{\epsilon_0}.
 \end{dmath}
-
 
 \makeSubAnswer{Evaluate partition function for small temperatures}{pr:kittelRotationalPartition:3:6:c}
 
 When \(\tau \ll \epsilon_0\), so that \(\epsilon_0/\tau \gg 1\), all our exponentials are increasingly close to zero as \(l\) increases.  Dropping all the second and higher order terms we have
 \begin{equation}\label{eqn:kittelRotationalPartition:150}
-Z_R(\tau) \approx 1 + 3 e^{-2 \epsilon_0/\tau}
+Z_R(\tau) \approx 1 + 3 e^{-2 \epsilon_0/\tau}.
 \end{equation}
 
 \makeSubAnswer{Energy and heat capacity}{pr:kittelRotationalPartition:3:6:d}
@@ -119,17 +118,16 @@ in this domain is
 = \PD{\tau}{U}
 =
 \lr{ \frac{6 \epsilon_0/\tau}{1 + 3 e^{-2 \epsilon_0/\tau}} }^2
-\approx \lr{ \frac{6 \epsilon_0}{\tau} }^2
+\approx \lr{ \frac{6 \epsilon_0}{\tau} }^2.
 \end{dmath}
 
 For the small \(\epsilon_0/\tau\) (large temperatures) case we have
-
 \begin{dmath}\label{eqn:kittelRotationalPartition:170}
 U
 = \tau^2 \PD{\tau}{} \ln Z
 = \tau^2 \PD{\tau}{} \ln \frac{\tau}{\epsilon_0}
 = \tau^2 \inv{\tau}
-= \tau
+= \tau.
 \end{dmath}
 
 The heat capacity in this large temperature region is
@@ -169,7 +167,7 @@ U
 \frac{
 \lr{ \sum_{l = 1}^\infty l (l + 1)(2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}
 }
-{Z}
+{Z}.
 \end{dmath}
 
 To avoid the zero point energy, we have to use this and not the truncated partition function to do the integral approximation.  Doing that calculation (which isn't as convenient but can be done in software \nbref{kittelRotationalPartition.nb}).  We obtain

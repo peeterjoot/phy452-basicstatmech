@@ -22,15 +22,13 @@ We calculated the distribution for the sum of random variables associated with \
 P_N(r, k) = \binom{N}{k} r^{N-k} s^k,
 \end{equation}
 \begin{equation}\label{eqn:unfairCoinLimitHardWay:40}
-k = \frac{N + X}{2}
+k = \frac{N + X}{2}.
 \end{equation}
 \end{subequations}
-
 Calculate the limit for \(N \gg 1\) and \(N \gg X\), without using the central limit theorem (i.e. using Stirling's approximation and Taylor series expansion for the logs.)
 } % makeoproblem
 
 \makeanswer{pr:unfairCoinDistributionHardWay:1}{
-
 Application of Stirling's approximation gives us
 \begin{dmath}\label{eqn:unfairCoinLimitHardWay:60}
 P_N(r, k)
@@ -62,7 +60,7 @@ N^{N
 \sqrt{\frac{N}{2 \pi k(N-k)}}
 \lr{ \frac{N r}{N-k} }
 ^{N-k}
-\lr{ \frac{N s}{k} }^k
+\lr{ \frac{N s}{k} }^k.
 \end{dmath}
 
 The \(N r/(N-k)\) term looks like it can probably be coerced into \(1/(1 - y/N)\) form that will allow for Taylor expansion of the log.  With that change of variables, we find
@@ -86,7 +84,7 @@ This is a bit unsymmetrical, so let's write \(y r = x\) so that
 \frac{N - k}{N r} = 1 - \frac{x}{N r}
 \end{equation}
 \begin{equation}\label{eqn:unfairCoinLimitHardWay:160}
-\frac{k}{Ns} = 1 + \frac{x}{N s}
+\frac{k}{Ns} = 1 + \frac{x}{N s}.
 \end{equation}
 \end{subequations}
 
@@ -96,7 +94,7 @@ We've also got terms in \(k\) and \(N - k\) above that we need to express.  With
 = \inv{N}(N r - x)(N s + x)
 = \inv{N}( -x^2 + N^2 r s + x N(r - s) )
 = -\frac{x^2}{N} + N r s + x( 2 r - 1 )
-\approx N r s
+\approx N r s.
 \end{dmath}
 
 Taking logs of \eqnref{eqn:unfairCoinLimitHardWay:60} we have
@@ -135,7 +133,7 @@ Taking logs of \eqnref{eqn:unfairCoinLimitHardWay:60} we have
 - \frac{x^2}{N}
 \lr{ \inv{r} + \inv{s} }
 + \frac{x^3}{(N)^2}
-\lr{ \inv{r^2} - \inv{s^2} }
+\lr{ \inv{r^2} - \inv{s^2} }.
 \end{dmath}
 
 Dropping the \(O(1/N^2)\) term and noting that

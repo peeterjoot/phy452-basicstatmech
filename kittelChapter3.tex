@@ -19,9 +19,8 @@
 \citep{kittel1980thermal} expresses the classical gas partition function (3.77) as
 \begin{equation}\label{eqn:kittelChapter3:20}
 Z_1 \propto \int \exp\left( - \frac{p_x^2 + p_y^2 + p_z^2 }{2 M \tau}
-\right) dp_x dp_y dp_z
+\right) dp_x dp_y dp_z.
 \end{equation}
-
 Show that this leads to the expected \(3 \tau/2\) result for the thermal average energy.
 } % makeproblem
 
@@ -66,9 +65,8 @@ N \ln Z_1 - \ln N!
 \sqrt{ \tau}
 }
 = \frac{3}{2} N \tau
-= \frac{3}{2} N \kB T
+= \frac{3}{2} N \kB T.
 \end{dmath}
-
 } % makeanswer
 
 \makeoproblem{Two state system}{pr:kittelChapter3:1}{\citep{kittel1980thermal} problem 3.1}{
@@ -248,9 +246,8 @@ Note that at high temperatures such that \(\tau \gg \Hbar \omega\) we may expand
 \begin{equation}\label{eqn:kittelChapter3:320}
 \sigma = \frac{\Hbar\omega/\tau}{e^{\Hbar \omega/\tau} - 1} -
 \ln
-\lr{1 - e^{-\Hbar \omega/\tau} }
+\lr{1 - e^{-\Hbar \omega/\tau} }.
 \end{equation}
-
 } % makeoproblem
 
 \makeanswer{pr:kittelChapter3:3}{
@@ -287,7 +284,7 @@ F
 \ln
 \lr{
 \sum_{s = 0}^\infty e^{-s \Hbar \omega/\tau}
-}
+}.
 \end{dmath}
 
 We see that the contribution of the \(\Hbar \omega/2\) in the energy of each state just adds a constant factor to the free energy.  This will drop out when we compute the entropy.  Dropping that factor now that we know why it doesn't contribute, we can complete the summation, so have, by inspection
@@ -323,9 +320,8 @@ Taking derivatives for the entropy we have
 \frac{\Hbar \omega}{\tau}
 }{
 e^{\Hbar \omega/\tau} - 1
-}
+}.
 \end{dmath}
-
 } % makeanswer
 
 \makeoproblem{Energy fluctuation}{pr:kittelChapter3:4}{\citep{kittel1980thermal} problem 3.4}{
@@ -333,11 +329,9 @@ e^{\Hbar \omega/\tau} - 1
 Consider a system of fixed volume in thermal contact with a reservoir.  Show that the mean square fluctuation in the energy of the system is
 \begin{equation}\label{eqn:kittelChapter3:440}
 \expectation{ (\epsilon - \expectation{\epsilon})^2 } = \tau^2
-\lr{\PD{\tau}{U}}_V
+\lr{\PD{\tau}{U}}_V.
 \end{equation}
-
 Here \(U\) is the conventional symbol for \(\expectation{\epsilon}\).  Hint: Use the partition function \(Z\) to relate \(\PDi{t}{U}\) to the mean square fluctuation.  Also, multiply out the term \((\cdots)^2\).
-
 } % makeoproblem
 
 \makeanswer{pr:kittelChapter3:4}{
@@ -352,7 +346,7 @@ U
 = \expectation{\epsilon}
 = \sum_s P_s \epsilon_s
 = \sum_s \epsilon_s \frac{e^{-\epsilon_s/\tau}}{Z}
-= \inv{Z} \sum_s \epsilon_s e^{-\epsilon_s/\tau}
+= \inv{Z} \sum_s \epsilon_s e^{-\epsilon_s/\tau}.
 \end{dmath}
 
 So we have

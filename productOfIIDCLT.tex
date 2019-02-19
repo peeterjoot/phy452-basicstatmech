@@ -9,26 +9,22 @@ What can we say about a product of independent identical random variables using 
 Writing
 
 \begin{equation}\label{eqn:midterm1review:20}
-X = x_1 x_2 \cdots x_N
+X = x_1 x_2 \cdots x_N.
 \end{equation}
 
 We can't apply CLT directly, but we can apply it to \(\ln X\)
-
 \begin{equation}\label{eqn:midterm1review:40}
-Y = \ln X = \sum_i \ln x_i = \sum_i y_i
+Y = \ln X = \sum_i \ln x_i = \sum_i y_i,
 \end{equation}
-
-So
-
+so
 \begin{equation}\label{eqn:midterm1review:60}
 \tilde{P}(Y) = \inv{\sqrt{ 2 \pi N \sigma_y^2}} \exp
 \lr{
 -\frac{(Y - N \mu_y)^2}{N \sigma_y^2}
-}
+}.
 \end{equation}
 
 Of interest here is how probabilities change under change of variables.  If \(Y = \ln X\), this works like
-
 \begin{equation}\label{eqn:midterm1review:80}
 P(X) dX = \tilde{P}(Y) dY
 \end{equation}

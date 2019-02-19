@@ -14,7 +14,7 @@ We are considering a geometry like that of \cref{fig:problemSet3problem2touching
 
 From the geometry, if \(\Bc_k\) is the vector to the center of the \(k\)th sphere, we have for some random unit vector \(\rcap_k\)
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem2:20}
-\Bc_{k+1} = \Bc_k + 2 a \rcap_k
+\Bc_{k+1} = \Bc_k + 2 a \rcap_k.
 \end{equation}
 
 Proceeding recursively, writing \(d_N\), and \(n = N -1 > 0\), we have for the difference of the positions of the first and last centers of the chain
@@ -24,7 +24,7 @@ d_N
 = 2 a \Abs{ \sum_{k = 1}^{n} \rcap_k}
 = 2 a \lr{ \sum_{k,m = 1}^{n} \rcap_k \cdot \rcap_m }^{1/2}
 = 2 a \lr{ n + 2 \sum_{1 \le k < m \le n} \rcap_k \cdot \rcap_m }^{1/2}
-= 2 a \sqrt{n} \lr{ 1 + \frac{2}{n} \sum_{1 \le k < m \le n} \rcap_k \cdot \rcap_m }^{1/2}
+= 2 a \sqrt{n} \lr{ 1 + \frac{2}{n} \sum_{1 \le k < m \le n} \rcap_k \cdot \rcap_m }^{1/2}.
 \end{dmath}
 
 The \(\rcap_k\)'s clearly cannot be completely random since we have a constraint that \(\rcap_k \cdot \rcap_{k+1} > -\cos\pi/3\), or else two adjacent spheres will overlap.  There will also be overlapping constraints for longer portions of the chain that are harder to express.  We are ignoring both such constraints, and seek the ensemble average of all systems of the form \eqnref{eqn:basicStatMechProblemSet3Problem2:40}.
