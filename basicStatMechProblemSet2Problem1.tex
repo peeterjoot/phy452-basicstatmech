@@ -165,22 +165,23 @@ A schematic plot of this function as a function of \(t\) for fixed \(x - x'\) is
 For the Gaussian of \eqnref{eqn:basicStatMechProblemSet2Problem1:80} we compute the initial time Fourier transform
 
 \begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:280}
+\begin{aligned}
 \tilde{P}(k)
-=
+&=
 \int_{-\infty}^\infty dx
 \inv{\sqrt{2 \pi \sigma^2}} \exp
 \left(
 -\frac{x^2}{2 \sigma^2}
 -i k x
-\right)
-=
+\right) \\
+&=
 \inv{\sqrt{2 \pi \sigma^2}}
 \exp
 \left(
 -\left( \frac{\sqrt{ 2 \sigma^2}}{2} k i
 \right)^2
-\right)
-\int_{-\infty}^\infty dx
+\right) \\
+&\quad \int_{-\infty}^\infty dx
 \exp
 \left(
 -\left( \frac{x}{\sqrt{2 \sigma^2} } + \frac{\sqrt{ 2 \sigma^2}}{2} k i
@@ -190,10 +191,10 @@ For the Gaussian of \eqnref{eqn:basicStatMechProblemSet2Problem1:80} we compute 
 \exp\left(
 -\frac{\sigma^2 k^2}{2}
 \right).
+\end{aligned}
 \end{dmath}
 
 The time evolution of the generating function is
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:300}
 \tilde{P}(k, t)
 =
@@ -201,33 +202,32 @@ The time evolution of the generating function is
 -\frac{\sigma^2 k^2}{2} - D k^2 t
 \right),
 \end{dmath}
-
 and we can find our time evolved probability density by inverse transforming
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:320}
+\begin{aligned}
 P(x, t)
-=
+&=
 \int_{-\infty}^\infty \frac{dk}{2 \pi}
 \exp\left(
 -\frac{\sigma^2 k^2}{2} - D k^2 t + i k x
-\right)
-=
+\right) \\
+&=
 \exp\left(
 i \frac{x}{ 2 \sqrt{\frac{\sigma^2}{2} + D t} }
 \right)^2
-\int_{-\infty}^\infty \frac{dk}{2 \pi}
-\exp\left(
+\int_{-\infty}^\infty \frac{dk}{2 \pi} \\
+&\quad \exp\left(
 -\left(
 k \sqrt{\frac{\sigma^2}{2} + D t}
 + i \frac{x}{ 2
 \sqrt{\frac{\sigma^2}{2} + D t}
 }
 \right)^2
-\right)
+\right).
+\end{aligned}
 \end{dmath}
 
 For \(t \ge 0\) this is
-
 \boxedEquation{eqn:basicStatMechProblemSet2Problem1:340}{
 P(x, t)
 =
@@ -412,25 +412,30 @@ e^{ -i k_0 x }
 \int_{-\frac{L/2 +x}{2 \sqrt{D t}} + i k_0 \sqrt{D t}}^{\frac{L/2 - x}{2 \sqrt{Dt}} + i k_0 \sqrt{D t}}
 dv
 e^{ -v^2 }
-\right)
-=
+\right),
+\end{dmath}
+which is
+\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:n}
+\begin{aligned}
+P_{\mathrm{sin}}(x, t)
+&=
 \frac{A}{4 i }
 e^{ -k_0^2 D t }
-\left(
 e^{ i k_0 x }
 \erf\left(
    -\frac{L/2 +x}{2 \sqrt{D t}} - i k_0 \sqrt{D t},
    \frac{L/2 - x}{2 \sqrt{Dt}} - i k_0 \sqrt{D t}
-\right)
--
+\right) \\
+&-
+\frac{A}{4 i }
+e^{ -k_0^2 D t }
 e^{ -i k_0 x }
 \erf\left(
    -\frac{L/2 +x}{2 \sqrt{D t}} + i k_0 \sqrt{D t},
    \frac{L/2 - x}{2 \sqrt{Dt}} + i k_0 \sqrt{D t}
-\right)
-\right)
+\right).
+\end{aligned}
 \end{dmath}
-
 This is plotted for \(A = D = L = 1\), \(k_0 = 8 \pi\), and \(t = 10^{-8}\) in \cref{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSinePropagatorFig5}.
 
 \imageFigure{../figures/phy452-basicstatmech/problemSet2Problem1iiSinePropagatorFig5}{Verification at \(t \rightarrow 0\) that the diffusion result is sine like}{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSinePropagatorFig5}{0.3}

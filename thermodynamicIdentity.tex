@@ -33,31 +33,31 @@ It's quite likely that many of the identities that can be obtained will be usefu
 \paragraph{Differentials in \(P, V\)}
 
 This first case illustrates the method.
-
 \begin{dmath}\label{eqn:thermodynamicIdentity:60}
+\begin{aligned}
 0
-= dU - T dS + P dV
-=
-\PDc{P}{U}{V} dP +\PDc{V}{U}{P} dV
-- T
+&= dU - T dS + P dV
+&=
+\PDc{P}{U}{V} dP +\PDc{V}{U}{P} dV \\
+&- T
 \lr{
 \PDc{P}{S}{V} dP + \PDc{V}{S}{P} dV
 }
-+ P dV
-=
++ P dV \\
+&=
 dP \lr{
 \PDc{P}{U}{V}
 - T \PDc{P}{S}{V}
-}
-+dV \lr{
+} \\
+&+dV \lr{
 \PDc{V}{U}{P}
 - T \PDc{V}{S}{P}
 + P
 }.
+\end{aligned}
 \end{dmath}
 
 Taking wedge products \index{wedge product} with \(dV\) and \(dP\) respectively, we form two 2-forms
-
 \begin{subequations}
 \begin{equation}\label{eqn:thermodynamicIdentity:80}
 0 = dP \wedge dV \lr{
@@ -90,17 +90,18 @@ P =
 \paragraph{Differentials in \(P, T\)}
 
 \begin{dmath}\label{eqn:thermodynamicIdentity:160}
+\begin{aligned}
 0
-= dU - T dS + P dV
-=
-\PDc{P}{U}{T} dP + \PDc{T}{U}{P} dT
--T \lr{
+&= dU - T dS + P dV \\
+&=
+\PDc{P}{U}{T} dP + \PDc{T}{U}{P} dT \\
+&-T \lr{
 \PDc{P}{S}{T} dP + \PDc{T}{S}{P} dT
-}
-+
+} \\
+&+
 \PDc{P}{V}{T} dP + \PDc{T}{V}{P} dT,
+\end{aligned}
 \end{dmath}
-
 or
 \begin{subequations}
 \begin{equation}\label{eqn:thermodynamicIdentity:180}
@@ -114,16 +115,17 @@ or
 \paragraph{Differentials in \(P, S\)}
 
 \begin{dmath}\label{eqn:thermodynamicIdentity:220}
+\begin{aligned}
 0
-= dU - T dS + P dV
-=
+&= dU - T dS + P dV \\
+&=
 \PDc{P}{U}{S} dP + \PDc{S}{U}{P} dS
-- T dS
-+ P \lr{
+- T dS \\
+&+ P \lr{
 \PDc{P}{V}{S} dP + \PDc{S}{V}{P} dS
 },
+\end{aligned}
 \end{dmath}
-
 or
 \begin{subequations}
 \begin{equation}\label{eqn:thermodynamicIdentity:240}
@@ -137,15 +139,16 @@ T = \PDc{S}{U}{P} + P \PDc{S}{V}{P}.
 \paragraph{Differentials in \(P, U\)}
 
 \begin{dmath}\label{eqn:thermodynamicIdentity:280}
+\begin{aligned}
 0
-= dU - T dS + P dV
-= dU - T \lr{
+&= dU - T dS + P dV
+&= dU - T \lr{
 \PDc{P}{S}{U} dP + \PDc{U}{S}{P} dU
-}
-+ P
+} \\
+&+ P
 \lr{ \PDc{P}{V}{U} dP + \PDc{U}{V}{P} dU },
+\end{aligned}
 \end{dmath}
-
 or
 \begin{subequations}
 \begin{equation}\label{eqn:thermodynamicIdentity:300}
@@ -159,14 +162,15 @@ T \PDc{P}{S}{U} = P \PDc{P}{V}{U}.
 \paragraph{Differentials in \(V, T\)}
 
 \begin{dmath}\label{eqn:thermodynamicIdentity:340}
+\begin{aligned}
 0
-= dU - T dS + P dV
-=
-\PDc{V}{U}{T} dV + \PDc{T}{U}{V} dT
-- T \lr{ \PDc{V}{S}{T} dV + \PDc{T}{S}{V} dT }
+&= dU - T dS + P dV \\
+&=
+\PDc{V}{U}{T} dV + \PDc{T}{U}{V} dT \\
+&- T \lr{ \PDc{V}{S}{T} dV + \PDc{T}{S}{V} dT }
 + P dV,
+\end{aligned}
 \end{dmath}
-
 or
 \begin{subequations}
 \begin{equation}\label{eqn:thermodynamicIdentity:360}
@@ -201,14 +205,15 @@ T = \PDc{S}{U}{V} .
 \paragraph{Differentials in \(V, U\)}
 
 \begin{dmath}\label{eqn:thermodynamicIdentity:460}
+\begin{aligned}
 0
-= dU - T dS + P dV
-=
+&= dU - T dS + P dV \\
+&=
 dU
-- T \lr{ \PDc{V}{S}{U} dV + \PDc{U}{S}{V} dU }
-+ P \lr{ \PDc{V}{V}{U} dV + \PDc{U}{V}{V} dU }
+- T \lr{ \PDc{V}{S}{U} dV + \PDc{U}{S}{V} dU } \\
+&+ P \lr{ \PDc{V}{V}{U} dV + \PDc{U}{V}{V} dU },
+\end{aligned}
 \end{dmath}
-
 or
 \begin{subequations}
 \begin{equation}\label{eqn:thermodynamicIdentity:480}
@@ -222,13 +227,14 @@ T \PDc{V}{S}{U} = P \PDc{V}{V}{U}.
 \paragraph{Differentials in \(S, T\)}
 
 \begin{dmath}\label{eqn:thermodynamicIdentity:520}
+\begin{aligned}
 0
-= dU - T dS + P dV
-= \lr{ \PDc{S}{U}{T} dS + \PDc{T}{U}{S} dT }
-- T dS
-+ P \lr{ \PDc{S}{V}{T} dS + \PDc{T}{V}{S} dT },
+&= dU - T dS + P dV \\
+&= \lr{ \PDc{S}{U}{T} dS + \PDc{T}{U}{S} dT }
+- T dS \\
+&+ P \lr{ \PDc{S}{V}{T} dS + \PDc{T}{V}{S} dT },
+\end{aligned}
 \end{dmath}
-
 or
 \begin{subequations}
 \begin{equation}\label{eqn:thermodynamicIdentity:540}
@@ -262,14 +268,15 @@ T = P \PDc{S}{V}{U}.
 \paragraph{Differentials in \(T, U\)}
 
 \begin{dmath}\label{eqn:thermodynamicIdentity:640}
+\begin{aligned}
 0
-= dU - T dS + P dV
-= dU - T
-\lr{ \PDc{T}{S}{U} dT + \PDc{U}{S}{T} dU }
-+ P
+&= dU - T dS + P dV \\
+&= dU - T
+\lr{ \PDc{T}{S}{U} dT + \PDc{U}{S}{T} dU } \\
+&+ P
 \lr{ \PDc{T}{V}{U} dT + \PDc{U}{V}{T} dU },
+\end{aligned}
 \end{dmath}
-
 or
 \begin{subequations}
 \begin{equation}\label{eqn:thermodynamicIdentity:660}

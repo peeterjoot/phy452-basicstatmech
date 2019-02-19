@@ -220,22 +220,22 @@ v = \sqrt{\frac{\beta}{2m}} p_y,
 \end{subequations}
 
 the momentum integrals are
-
 \begin{dmath}\label{eqn:midterm2reflection:320}
+\begin{aligned}
 \int dp_x dp_y e^{-\beta p_x^2/2 m} e^{-\beta p_y^2/2 m}
-=
+&=
 \frac{2m}{\beta}
-\int du du e^{- u^2 - v^2}
-=
+\int du du e^{- u^2 - v^2} \\
+&=
 \frac{m}{\beta}
 2 \pi
-\int 2 r dr e^{- r^2}
-=
+\int 2 r dr e^{- r^2} \\
+&=
 \frac{2 \pi m}{\beta}.
+\end{aligned}
 \end{dmath}
 
 Writing
-
 \begin{subequations}
 \begin{dmath}\label{eqn:midterm2reflection:340}
 f(x) = \inv{2} m \omega^2 x^2 + a x^4
@@ -360,7 +360,7 @@ so that the specific heat is
 \int dx e^{- \beta f(x)}
 } \\
 &-
-\lr{
+\biglr{
 \frac{
 \int dx f(x) e^{- \beta f(x)}
 }
@@ -376,7 +376,7 @@ so that the specific heat is
 \int dy e^{- \beta g(y)}
 }
 -
-\lr{
+\biglr{
 \frac{
 \int dy g(y) e^{- \beta g(y)}
 }

@@ -340,24 +340,23 @@ We can now express the average dipole moment with only sums over radial indices 
 }.
 \end{dmath}
 
-So our average dipole moment is
-
+So our average dipole moment, with \( x = \mu \Hbar \calE \beta \), is
 \boxedEquation{eqn:basicStatMechProblemSet5Problem3:560}{
 \expectation{ \mu L_z }
 =
 \frac
 {\mu \Hbar }
 {
-2 \sinh(\mu \Hbar \calE \beta/2)
+2 \sinh(x/2)
 }
 \frac
 {
    \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}}
-   \lr{ l \sinh(\mu \Hbar \calE \beta (l+1)) - (l+1) \sinh(\mu \Hbar \calE \beta l) }
+   \lr{ l \sinh(x (l+1)) - (l+1) \sinh(x l) }
 }
 {
    \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}}
-   \sinh(\mu \Hbar \calE \beta(l + 1/2))
+   \sinh(x(l + 1/2))
 }.
 }
 
