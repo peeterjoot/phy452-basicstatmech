@@ -17,7 +17,6 @@
 \paragraph{Setup}
 
 For photons and high velocity particles our non-relativistic \textAndIndex{density of states} is insufficient.  Let's redo these calculations for particles for which the energy is given by
-
 \begin{dmath}\label{eqn:relativisticDensityOfStates:20}
 \epsilon = \sqrt{
 \lr{m c^2}^2
@@ -25,7 +24,6 @@ For photons and high velocity particles our non-relativistic \textAndIndex{densi
 \end{dmath}
 
 We want to convert a sum over momentum values to an energy integral
-
 \begin{dmath}\label{eqn:relativisticDensityOfStates:40}
 \calD_3(\epsilon)
 =
@@ -46,16 +44,13 @@ L^d
 \end{dmath}
 
 Now we want to use
-
 \begin{dmath}\label{eqn:relativisticDensityOfStates:60}
 \delta(g(x))
 = \sum_{x_0} \frac{ \delta(x - x_0)}{
 \Abs{g'(x)}_{x = x_0}
 },
 \end{dmath}
-
 where \(x_0\) are the roots of \(g(x)\).  With
-
 \begin{dmath}\label{eqn:relativisticDensityOfStates:80}
 g( cp ) = \epsilon - \sqrt{
 \lr{ m c^2 }^2
@@ -63,7 +58,6 @@ g( cp ) = \epsilon - \sqrt{
 \end{dmath}
 
 Writing \(p^\conj\) for the roots we have
-
 \begin{dmath}\label{eqn:relativisticDensityOfStates:100}
 c p^\conj
 =
@@ -73,7 +67,6 @@ c p^\conj
 \end{dmath}
 
 Note that
-
 \begin{equation}\label{eqn:relativisticDensityOfStates:120}
 \sqrt{
 \lr{ m c^2 }^2
@@ -99,7 +92,6 @@ we have
 \paragraph{3D case}
 
 We can now evaluate the density of states, and do the 3D case first.  We have
-
 \begin{dmath}\label{eqn:relativisticDensityOfStates:160}
 \calD_3(\epsilon)
 =
@@ -113,7 +105,6 @@ We can now evaluate the density of states, and do the 3D case first.  We have
 \end{dmath}
 
 Observe that in the switch to spherical coordinates in momentum space, our integration is now over a ``radius'' of momentum space, requiring just integration over the positive values.  This will kill off one of our delta functions, leaving just
-
 \begin{dmath}\label{eqn:relativisticDensityOfStates:340}
 \calD_3(\epsilon)
 =
@@ -123,9 +114,7 @@ Observe that in the switch to spherical coordinates in momentum space, our integ
 }
 \frac{ \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }{\epsilon},
 \end{dmath}
-
 or
-
 \boxedEquation{eqn:relativisticDensityOfStates:360}{
 \calD_3(\epsilon)
 =
@@ -137,7 +126,6 @@ or
 }
 
 In particular, for very high energy particles where \(\epsilon \gg \lr{m c^2}\), our 3D density of states is
-
 \boxedEquation{eqn:relativisticDensityOfStates:380}{
 \calD_3(\epsilon)
 \approx
@@ -149,7 +137,6 @@ This is also the desired result for photons or other massless particles.
 \paragraph{2D case}
 
 For 2D we have
-
 \begin{dmath}\label{eqn:relativisticDensityOfStates:200}
 \begin{aligned}
 \calD_2(\epsilon)
@@ -224,7 +211,6 @@ For \(\epsilon \gg m c^2\) or \(m = 0\) this reduces to
 \paragraph{Integration range}
 
 Note that the integration range given a non-zero mass in the density of states has to be adjusted slightly, since the zero momentum (\(\Bp = 0\)) energy is \(\epsilon = m c^2\).  This gives
-
 \begin{dmath}\label{eqn:relativisticDensityOfStates:321}
 \sum_\Bk f(\Bk)
 \rightarrow \int \frac{d^d \Bk}{(2\pi)^d} f(\Bk)

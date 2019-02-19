@@ -15,13 +15,10 @@
 \label{chap:energyProbabilityPathriaQuestion}
 
 In \citep{pathriastatistical} is an expansion of
-
 \begin{equation}\label{eqn:energyProbabilityPathriaQuestion:20}
 P(E) \propto e^{-\beta E} g(E),
 \end{equation}
-
 around the mean energy \(E^\conj = U\).  The first derivative part of the expansion is simple enough
-
 \begin{dmath}\label{eqn:energyProbabilityPathriaQuestion:40}
 \PD{E}{}
 \lr{ e^{-\beta E} g(E) }
@@ -34,12 +31,10 @@ g(E) e^{-\beta E}
 \end{dmath}
 
 The peak energy \(E^\conj\) will be where this derivative equals zero.  That is
-
 \begin{equation}\label{eqn:energyProbabilityPathriaQuestion:60}
 0 = g(E^\conj) e^{-\beta E^\conj}
 \lr{ -\beta + \evalbar{(\ln g(E))'}{E = E^\conj} },
 \end{equation}
-
 or
 \begin{equation}\label{eqn:energyProbabilityPathriaQuestion:80}
 \evalbar{
@@ -61,17 +56,14 @@ S = \kB \ln g
 
 We have
 \begin{equation}\label{eqn:energyProbabilityPathriaQuestion:140}
-\lr{\PD{E}{ \ln g(E) }}_{E = U} = \beta
+\lr{\PD{E}{ \ln g(E) }}_{E = U} = \beta,
 \end{equation}
-
 so that
-
 \begin{equation}\label{eqn:energyProbabilityPathriaQuestion:160}
 E^\conj = U.
 \end{equation}
 
 So far so good.  Reading the text, the expansion of the logarithm of \(P(E)\) around \(E = E^\conj = U\) wasn't clear.  Let's write that out in full.  To two terms that is
-
 \begin{dmath}\label{eqn:energyProbabilityPathriaQuestion:180}
 \ln e^{-\beta E} g(E)
 =
@@ -95,7 +87,6 @@ So far so good.  Reading the text, the expansion of the logarithm of \(P(E)\) ar
 \end{dmath}
 
 The first order term has the derivative of the logarithm of \(e^{-\beta E}g(E)\).  Since the logarithm is monotonic and the derivative of \(e^{-\beta E}g(E)\) has been shown to be zero at \(E = U\), this must be zero.  We can also see this explicitly by computation
-
 \begin{dmath}\label{eqn:energyProbabilityPathriaQuestion:200}
 \evalbar{
 \PD{E}{} \ln e^{-\beta E} g(E)
@@ -158,7 +149,6 @@ For the second derivative we have
 \end{dmath}
 
 Somehow this is supposed to come out to \(\kB T^2 \CV\)?  Backing up, we have
-
 \begin{dmath}\label{eqn:energyProbabilityPathriaQuestion:240}
 \evalbar{
 \PD{E}{} \ln e^{-\beta E} g(E)

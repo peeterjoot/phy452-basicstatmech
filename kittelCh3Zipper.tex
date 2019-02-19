@@ -32,14 +32,11 @@ The system is depicted in \cref{fig:kittelCh3Zipper:kittelCh3ZipperFig1}, in the
 The left opening only constraint simplifies the combinatorics, since this restricts the available energies for the complete molecule to \(0, \epsilon, 2 \epsilon, \cdots, N \epsilon\).
 
 The probability of finding the molecule with \(s\) links open is then
-
 \begin{dmath}\label{eqn:kittelCh3Zipper:20}
 P_s =
 \frac{e^{- \beta s \epsilon}}{Z},
 \end{dmath}
-
 with
-
 \begin{dmath}\label{eqn:kittelCh3Zipper:40}
 Z = \sum_{s = 0}^N e^{- \beta s \epsilon}.
 \end{dmath}
@@ -57,7 +54,6 @@ Z =
 \makeSubAnswer{}{pr:kittelCh3Zipper:7:b}
 
 The expectation value for the number of links is
-
 \begin{dmath}\label{eqn:kittelCh3Zipper:80}
 \expectation{s}
 = \sum_{s = 0}^N s P_s
@@ -66,13 +62,10 @@ The expectation value for the number of links is
 \end{dmath}
 
 Let's write
-
 \begin{dmath}\label{eqn:kittelCh3Zipper:100}
 a = e^{-\beta \epsilon},
 \end{dmath}
-
 and make a change of variables
-
 \begin{dmath}\label{eqn:kittelCh3Zipper:120}
 -\PD{(\beta \epsilon)}{}
 =
@@ -85,11 +78,9 @@ and make a change of variables
 \PD{a}{}
 =
 a
-\PD{a}{}
+\PD{a}{},
 \end{dmath}
-
 so that
-
 \begin{dmath}\label{eqn:kittelCh3Zipper:140}
 -\PD{\ln a}{} \sum_{s = 1}^N a^s
 =
@@ -124,7 +115,6 @@ a^N ( N (a - 1) - 1 ) + 1
 \end{dmath}
 
 The average number of links is thus
-
 \begin{dmath}\label{eqn:kittelCh3Zipper:160}
 \expectation{k} =
 \frac
@@ -135,7 +125,6 @@ The average number of links is thus
 a^N ( N (a - 1) - 1 ) + 1
 },
 \end{dmath}
-
 or
 \boxedEquation{eqn:kittelCh3Zipper:180}{
 \expectation{k} =
@@ -148,7 +137,6 @@ e^{-\beta \epsilon N} ( N (e^{-\beta \epsilon} - 1) - 1 ) + 1
 }
 
 In the very low temperature limit where \(\beta \epsilon \gg 1\) (small \(T\), big \(\beta\)), we have
-
 \begin{dmath}\label{eqn:kittelCh3Zipper:200}
 \expectation{k} \approx
 \frac{1}{e^{\beta \epsilon}}

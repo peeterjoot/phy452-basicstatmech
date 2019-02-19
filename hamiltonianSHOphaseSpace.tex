@@ -16,25 +16,20 @@
 \label{chap:hamiltonianSHOphaseSpace}
 
 Let's review the 1D SHO to get a better feel for the ideas of phase space.  Given a spring and mass system
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:20}
-F = - k x = -(\spacegrad \phi)_x
+F = - k x = -(\spacegrad \phi)_x,
 \end{equation}
-
 our potential is
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:40}
 \phi = \inv{2} k x^2,
 \end{equation}
 
 So, our Hamiltonian is
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:60}
 H = \inv{2m}{p^2} + \inv{2} k x^2.
 \end{equation}
 
 Hamilton's equations follow from \(H = p \xdot - \LL\)
-
 \begin{subequations}
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:80}
 \PD{p}{H} = \xdot
@@ -45,7 +40,6 @@ Hamilton's equations follow from \(H = p \xdot - \LL\)
 \end{subequations}
 
 For the SHO this is
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:120}
 \ddt{}
 \begin{bmatrix}
@@ -65,7 +59,6 @@ p/m
 \end{equation}
 
 It's convenient to non-dimensionalize this.  Using \(\omega = \sqrt{k/m}\), which has dimensions of \(1/T\), we form
-
 \begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:140}
 \ddt{}
 \begin{bmatrix}
@@ -120,13 +113,11 @@ the SHO Hamilton's equations are just
 }
 
 The solution follows immediately
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:220}
 \Bx = e^{i \omega t} \Bx_0.
 \end{equation}
 
 We expect matrix exponential to have the structure of a rotation matrix, so let's write it out explicitly to see its structure
-
 \begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:240}
 e^{i \omega t}
 =
@@ -152,7 +143,6 @@ I \cos(\omega t)
 \end{dmath}
 
 In this non-dimensionalized phase space, with \(p/m\) on the horizontal axis and \(\omega x\) on the vertical axis, this is a counterclockwise rotation.  The (squared) radius of the rotation is
-
 \begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:300}
 (p_0/m)^2
 +
@@ -175,7 +165,6 @@ In this non-dimensionalized phase space, with \(p/m\) on the horizontal axis and
 
 % dim check: [E/m] = [v^2]
 It makes sense to put the initial position in phase space in polar form too.  We can write
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:320}
 \begin{bmatrix}
 p_0/m \\
@@ -189,9 +178,7 @@ e^{i \theta}
 0
 \end{bmatrix},
 \end{equation}
-
 where
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:340}
 \theta = \Atan \lr{ \omega m \frac{x_0}{p_0} }.
 \end{equation}
@@ -209,7 +196,6 @@ Now the non-dimensionalized phase space solution takes the particularly simple f
 \paragraph{Removing the non-dimensionalization}
 
 Written explicitly, our momentum and position trace out, elliptical trajectories
-
 \begin{subequations}
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:260}
 p = p_0 \cos(\omega t) - \omega m x_0 \sin(\omega t)
@@ -220,7 +206,6 @@ x = \frac{p_0}{m \omega} \sin(\omega t) + x_0 \cos(\omega t).
 \end{subequations}
 
 With the initial phase space point specified as a rotation from the momentum axis as in \eqnref{eqn:hamiltonianSHOphaseSpace:340}, this is just
-
 \begin{subequations}
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:260b}
 p
@@ -242,7 +227,6 @@ Observe that the rotation angle \(\theta\) doesn't specify a geometric rotation 
 \paragraph{Aside.  Complex representation of phase space points}
 
 It's interesting to note that we can also work in a complex representation of phase space, instead of a matrix picture (for this 1D SHO problem).
-
 \begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:380}
 \ddt{} \lr{
 \frac{p}{m} + i \omega x
@@ -260,19 +244,16 @@ i \omega
 \end{dmath}
 
 Writing
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:400}
 z = \frac{p}{m} + i \omega x,
 \end{equation}
 
 Hamilton's equations take the form
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:420}
 z' = i \omega z.
 \end{equation}
 
 Again, we can read off the solution by inspection
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:440}
 z = e^{i \omega t} z_0.
 \end{equation}
@@ -281,7 +262,6 @@ z = e^{i \omega t} z_0.
 \index{continuity equation}
 
 Thinking back to the origin of the 3D continuity equation from fluid mechanics, we used the geometrical argument that any change to the mass in a volume had to leave through the boundary.  This was
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:460}
 \PD{t}{} \int_V \rho dV
 = -\int_{\partial V} \lr{ \rho \Bu } \cdot \ncap dA
@@ -289,7 +269,6 @@ Thinking back to the origin of the 3D continuity equation from fluid mechanics, 
 \end{equation}
 
 We used Green's theorem above, allowing us to write, provided the volume is fixed
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:480}
 0 =
 \int_V
@@ -314,7 +293,6 @@ Consider the following phase space picture \cref{fig:densityCurrentThroughPhaseS
 \imageFigure{../figures/phy452-basicstatmech/densityCurrentThroughPhaseSpaceAreaFig2}{Phase space current}{fig:densityCurrentThroughPhaseSpaceArea:densityCurrentThroughPhaseSpaceAreaFig2}{0.3}
 
 With this geometrical picture in mind, the \(6N\) dimensional phase space equivalent of \eqnref{eqn:hamiltonianSHOphaseSpace:460}, and a basis \(\Be_{i_{\alpha}}\) for the positions \(q_{i_\alpha}\) and \(\Bf_{i_\alpha}\) for the momentum components \(p_{i_\alpha}\) is then
-
 \begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:520}
 \PD{t}{} \int_{V_{6N}} \rho d^{3N} q d^{3N} p
 = -\int_{\partial V_{6N}} \lr{ \rho
@@ -334,7 +312,6 @@ With this geometrical picture in mind, the \(6N\) dimensional phase space equiva
 Here \(dA\) is the surface area element for the phase space and \(\ncap\) is the unit normal to this surface.  We have to assume the existence of a divergence theorem for the \(6N\) dimensional space.
 
 We can now regroup, and find for the integrand
-
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:540}
 0 =
 \PD{t}{\rho}

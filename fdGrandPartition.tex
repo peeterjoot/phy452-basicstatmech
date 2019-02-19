@@ -22,7 +22,6 @@ Let's make a bit more sense of some of the index manipulation done above.
 
 There are some similarily confusing portions in \S 6.2 \citep{pathriastatistical} where we have the following notation for the sums in the grand partition function \(\ZG\) \index{grand partition function}
 % \footnote{On notation: \(\ZG\) is new notation that our final exam introduced, and I'm going to switch to that from the \(\ZGorig\) that we used in class.  The text appears to use a script Q like \(\ZGtext\) but with the loop much more disconnected and hard to interpret}
-
 \begin{subequations}
 \begin{equation}\label{eqn:fdGrandPartition:20}
 \ZG = \sum_{N = 0}^\infty z^N Q_N(V, T)
@@ -33,7 +32,6 @@ Q_N(V, T) = {\sum_{\{n_\epsilon\}}}' e^{-\beta \sum_\epsilon n_\epsilon \epsilon
 \end{subequations}
 
 This was shorthand notation for the canonical ensemble, subject to constraints on \(N\) and \(E\)
-
 \begin{subequations}
 \begin{equation}\label{eqn:fdGrandPartition:60}
 Q_N(V, T) = \sum_E e^{-\beta E}
@@ -49,7 +47,6 @@ N = \sum_\epsilon n_\epsilon.
 I found this notation pretty confusing, since the normal conventions about what is a dummy index in the various summations do not hold.
 
 The claim of the text (and in class) is that we could write out the grand canonical partition function as
-
 \begin{equation}\label{eqn:fdGrandPartition:120}
 \Omega =
 \left(
@@ -68,13 +65,11 @@ The claim of the text (and in class) is that we could write out the grand canoni
 Let's verify this for a Fermi-Dirac distribution by dispensing with the notational tricks and writing out the original specification of the grand canonical partition function in long form, and compare that to the first few terms of the expansion of \eqnref{eqn:fdGrandPartition:120}.
 
 Let's consider a specific value of \(E\), namely all those values of \(E\) that apply to \(N = 3\).  Note that we have \(n_\epsilon \in \{0, 1\}\) only for a Fermi-Dirac system, so this means we can have values of \(E\) like
-
 \begin{equation}\label{eqn:fdGrandPartition:140}
 E \in \{ \epsilon_0 + \epsilon_1 + \epsilon_2, \epsilon_0 + \epsilon_3 + \epsilon_7, \epsilon_2 + \epsilon_6 + \epsilon_{11}, \cdots\}
 \end{equation}
 
 Our grand canonical partition function, when written out explicitly, will have the form
-
 \begin{equation}\label{eqn:fdGrandPartition:160}
 \ZG
 = z^0 e^{-0}
@@ -85,7 +80,6 @@ Our grand canonical partition function, when written out explicitly, will have t
 \end{equation}
 
 Okay, that's simple enough and really what the primed notation is getting at.  Now let's verify that after simplification this matches up with \eqnref{eqn:fdGrandPartition:120}.  Expanding this out a bit we have
-
 \begin{dmath}\label{eqn:fdGrandPartition:121}
 \Omega
 =
@@ -173,7 +167,6 @@ z e^{-\beta \epsilon_4}
 This completes the verification of the result as expected.  It is definitely a brute force way of doing so, but easy to understand and I found for myself that it removed some of the notation that obfuscated what is really a simple statement.
 
 Once we are comfortable with this Fermi-Dirac expression of the grand canonical partition function, we can then write it in the product form that leads to the sum that we want after taking logs
-
 \begin{equation}\label{eqn:fdGrandPartition:180}
 \ZG =
 \left(

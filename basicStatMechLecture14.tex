@@ -27,16 +27,13 @@ This lecture had a large amount of spoken content not captured in these notes.  
 %F2
 
 We are now going to allow particles to move to and from the system and the reservoir.  The total number of states in the system is
-
 \begin{dmath}\label{eqn:basicStatMechLecture14:20}
 \Omega_{\mathrm{total}} (N, V, E) =
 \sum_{N_S, E_S}
 \Omega_S(N_S, V_S, E_S)
 \Omega_R(N - N_S, V_R, E - E_S),
 \end{dmath}
-
 so for \(N_S \ll N\), and \(E_S \ll E\), we have
-
 \begin{dmath}\label{eqn:basicStatMechLecture14:40}
 \Omega_R
 = \exp\lr{ \inv{\kB} S_R(N- N_S, V_R, E - E_S)}
@@ -53,9 +50,7 @@ so for \(N_S \ll N\), and \(E_S \ll E\), we have
 e^{-\frac{\mu}{\kB T} N_S}
 e^{-\frac{E_S}{\kB T} },
 \end{dmath}
-
 where the \textAndIndex{chemical potential} and \textAndIndex{temperature} are defined respectively as
-
 \begin{subequations}
 \begin{dmath}\label{eqn:basicStatMechLecture14:60}
 \frac{\mu}{T} = -\PDc{N}{S_R}{V,E}
@@ -74,7 +69,6 @@ e^{-\frac{E_S}{\kB T} }.
 \end{dmath}
 
 With \(\{c\}\) as the set of all possible configuration pairs \(\{N_S, E_S\}\), we define the grand partition function
-
 \begin{dmath}\label{eqn:basicStatMechLecture14:120}
 \ZG = \sum_{\{c\}}
 e^{\frac{\mu}{\kB T} N_S}
@@ -82,7 +76,6 @@ e^{-\frac{E_S}{\kB T} }.
 \end{dmath}
 
 So that the probability of finding a given state with energy and particle numbers \(\{E_S, N_S\}\) is
-
 \begin{dmath}\label{eqn:basicStatMechLecture14:140}
 \calP(E_S, N_S) =
 \frac{
@@ -92,13 +85,10 @@ e^{-\frac{E_S}{\kB T} }
 \end{dmath}
 
 For a classical system we have
-
 \begin{dmath}\label{eqn:basicStatMechLecture14:160}
 \{ c \} \rightarrow \{ x \} \{ p \},
 \end{dmath}
-
 whereas in a quantum content we have
-
 \begin{dmath}\label{eqn:basicStatMechLecture14:180}
 \{ c \} \rightarrow \text{eigenstate}.
 \end{dmath}
@@ -112,7 +102,6 @@ whereas in a quantum content we have
 \end{dmath}
 
 We want to do this because the calculation of the number of states
-
 \begin{dmath}\label{eqn:basicStatMechLecture14:220}
 \int_{
 \{ x \} \{ p \}
@@ -127,9 +116,7 @@ We want to do this because the calculation of the number of states
 + \cdots
 },
 \end{dmath}
-
 can quickly become intractable.  We want to go to the canonical ensemble was because the partition function
-
 \begin{dmath}\label{eqn:basicStatMechLecture14:260}
 Z_c = \int_{
 \{ x \} \{ p \}
@@ -166,9 +153,7 @@ Suppose we have just a one dimensional Fermion system for some potential as in \
 \imageFigure{../figures/phy452-basicstatmech/lecture14Fig4}{Energy level filling in a quantum system}{fig:lecture14:lecture14Fig4}{0.3}
 
 For every momentum \(k\) there are two possible occupation numbers \(n_k \in \{0, 1\}\)
-
 our partition function is
-
 \begin{dmath}\label{eqn:basicStatMechLecture14:240}
 Z_c = \sum_{
 n_k,

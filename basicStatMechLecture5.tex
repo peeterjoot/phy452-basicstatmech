@@ -19,7 +19,6 @@
 \section{Motion in phase space}
 
 Classical system: \(\Bx_i, \Bp_i\) with dimensionality
-
 \begin{equation}\label{eqn:basicStatMechLecture5:20}
 \mathLabelBox{
 2
@@ -38,7 +37,6 @@ Classical system: \(\Bx_i, \Bp_i\) with dimensionality
 \end{equation}
 
 Hamiltonian \(H\) is the ``energy function''
-
 \begin{equation}\label{eqn:basicStatMechLecture5:40}
 H =
 \mathLabelBox{
@@ -75,7 +73,6 @@ V(\Bx_i)
 \end{subequations}
 
 Expressed in terms of the Hamiltonian this is
-
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechLecture5:100}
 \dot{p}_{i_\alpha} = - \PD{x_{i_\alpha}}{H}
@@ -92,15 +89,11 @@ In phase space we can have any number of possible trajectories as illustrated in
 \section{Liouville's theorem}
 
 We are interested in asking the question of how the density of a region in phase space evolves as illustrated in \cref{fig:basicStatMechLecture5:basicStatMechLecture5Fig2}.  We define a phase space density
-
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture5Fig2}{Evolution of a phase space volume}{fig:basicStatMechLecture5:basicStatMechLecture5Fig2}{0.3}
-
 \begin{equation}\label{eqn:basicStatMechLecture5:140}
 \rho(p_{i_\alpha}, x_{i_\alpha}, t),
 \end{equation}
-
 and seek to demonstrate \underlineAndIndex{Liouville's theorem}, that the phase space density does not change.  To do so, consider the total time derivative of the phase space density
-
 \begin{dmath}\label{eqn:basicStatMechLecture5:160}
 \ddt{\rho}
 =
@@ -160,37 +153,29 @@ and seek to demonstrate \underlineAndIndex{Liouville's theorem}, that the phase 
 \end{dmath}
 
 We've implicitly defined a current density \(\Bj\) above by comparing to the continuity equation
-
 \begin{equation}\label{eqn:basicStatMechLecture5:180}
-\PD{t}{\rho} + \spacegrad \cdot \Bj = 0
+\PD{t}{\rho} + \spacegrad \cdot \Bj = 0.
 \end{equation}
-
-And by inserting Hamilton's equations we find that
-
+By inserting Hamilton's equations we find that
 \begin{equation}\label{eqn:basicStatMechLecture5:181}
 \PD{p_{i_\alpha}}{\dot{p}_{i_\alpha}}
 +
 \PD{x_{i_\alpha}}{\dot{x}_{i_\alpha}}
-= 0
+= 0.
 \end{equation}
-
 Here we have
-
 \begin{equation}\label{eqn:landauSection11Problem2b:200}
-\rho(\dot{x}_{i_\alpha}, \dot{p}_{i_\alpha}) \rightarrow \mbox{current in phase space}
+\rho(\dot{x}_{i_\alpha}, \dot{p}_{i_\alpha}) \rightarrow \mbox{current in phase space}.
 \end{equation}
-
 Usually we have
-
 \begin{subequations}
 \begin{equation}\label{eqn:landauSection11Problem2b:220}
 \Bj_{\mathrm{usual}} \sim \rho \Bv
 \end{equation}
 \begin{equation}\label{eqn:landauSection11Problem2b:240}
-\Bj = -D \spacegrad \rho
+\Bj = -D \spacegrad \rho,
 \end{equation}
 \end{subequations}
-
 but we don't care about this diffusion relation here.
 %, just the continuity equation equivalent
 %
@@ -199,7 +184,6 @@ but we don't care about this diffusion relation here.
 %\end{equation}
 %
 With this identification the implication is that
-
 \begin{equation}\label{eqn:landauSection11Problem2b:280}
 \ddt{\rho} = 0.
 \end{equation}
@@ -209,7 +193,6 @@ We can say that flow in phase space is very similar to an ``incompressible fluid
 \section{Time averages, and Poincar\'e recurrence theorem}
 
 We want to look at how various observables behave over time
-
 \begin{equation}\label{eqn:basicStatMechLecture5:300}
 \overbar{A} = \inv{T} \int_0^T dt \rho(x, p, t) A(p, x)
 \end{equation}

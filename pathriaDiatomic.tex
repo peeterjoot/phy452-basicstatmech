@@ -16,7 +16,6 @@
 
 \makeoproblem{Diatomic molecule}{pr:pathriaDiatomic:4:7}{\citep{pathriastatistical} pr 4.7}{
 Consider a classical system of non-interacting, diatomic molecules enclosed in a box of volume \(V\) at temperature \(T\).  The Hamiltonian of a single molecule is given by
-
 \begin{dmath}\label{eqn:pathriaDiatomic:4:7}
 H(\Br_1, \Br_2, \Bp_1, \Bp_2) = \inv{2m} \lr{ \Bp_1^2 + \Bp_2^2 }
 +\inv{2} K \Abs{\Br_1 - \Br_2}^2.
@@ -29,7 +28,6 @@ Study the thermodynamics of this system, including the dependence of the quantit
 
 \paragraph{Partition function}
 First consider the partition function for a single diatomic pair
-
 \begin{dmath}\label{eqn:pathriaDiatomic:27}
 Z_1
 =
@@ -50,7 +48,6 @@ e^{-\beta K
 }\end{dmath}
 
 Now we can make a change of variables to simplify the exponential.  Let's write
-
 \begin{subequations}
 \begin{dmath}\label{eqn:pathriaDiatomic:47}
 \Bu = \Br_1 - \Br_2
@@ -73,14 +70,12 @@ or
 \end{subequations}
 
 Our volume element is
-
 \begin{dmath}\label{eqn:pathriaDiatomic:127}
 d^3 \Br_1 d^3 \Br_2
 = d^3 \Bu d^3 \Bv \frac{\partial(\Br_1, \Br_2)}{\partial(\Bu, \Bv)}.
 \end{dmath}
 
 It wasn't obvious to me that this change of variables preserves the volume element, but a quick calculation shows this to be the case
-
 \begin{dmath}\label{eqn:pathriaDiatomic:147}
 \frac{\partial(\Br_1, \Br_2)}{\partial(\Bu, \Bv)}
 =
@@ -105,7 +100,6 @@ It wasn't obvious to me that this change of variables preserves the volume eleme
 \end{dmath}
 
 Our remaining integral can now be evaluated
-
 \begin{dmath}\label{eqn:pathriaDiatomic:167}
 \int d^3 \Br_1 d^3 \Br_2
 e^{-\beta K
@@ -126,7 +120,6 @@ V
 \end{dmath}
 
 Our partition function is now completely evaluated
-
 \begin{dmath}\label{eqn:pathriaDiatomic:187}
 Z_1 =
 V
@@ -136,7 +129,6 @@ V
 \end{dmath}
 
 As a function of \(V\) and \(T\) as in the text, we write
-
 \begin{subequations}
 \begin{equation}\label{eqn:pathriaDiatomic:207}
 Z_1 = V f(T)
@@ -151,7 +143,6 @@ f(T) =
 \paragraph{Gibbs sum}
 
 Our Gibbs sum, summing over the number of molecules (not atoms), is
-
 \begin{dmath}\label{eqn:pathriaDiatomic:247}
 \ZG = \sum_{N_r = 0}^\infty \frac{z^{N_r}}{N_r!} Z_1^{N_r} = e^{ z V f(T) },
 \end{dmath}
@@ -166,7 +157,6 @@ The fact that we can sum this as an exponential series so nicely looks like it's
 \paragraph{Pressure}
 
 The pressure follows
-
 \begin{dmath}\label{eqn:pathriaDiatomic:287}
 P = z f(T) \kB T
 =
@@ -176,7 +166,6 @@ e^{\mu/\kB T}
 \end{dmath}
 
 \paragraph{Average energy}
-
 \begin{dmath}\label{eqn:pathriaDiatomic:307}
 \expectation{H}
 = -\PD{\beta}{q}
@@ -195,16 +184,13 @@ V \frac{9}{2} \kB^2
 \end{dmath}
 
 \paragraph{Average occupancy}
-
 \begin{dmath}\label{eqn:pathriaDiatomic:347}
 \expectation{N}
 = z \PD{z}{} \ln \ZG
 = z \PD{z}{} \lr{ z V f(T) }
-= z V f(T)
+= z V f(T),
 \end{dmath}
-
 but this is just \(q\), or
-
 \begin{dmath}\label{eqn:pathriaDiatomic:367}
 \expectation{N}
 =
@@ -215,7 +201,6 @@ V
 \end{dmath}
 
 \paragraph{Free energy}
-
 \begin{dmath}\label{eqn:pathriaDiatomic:387}
 F
 = - \kB T \ln \frac{ \ZG }{z^N}
@@ -228,7 +213,7 @@ q - N \ln z
 =
 z V f(T) \mu - \kB T z V f(T)
 =
-z V f(T) \lr{ \mu - \kB T }
+z V f(T) \lr{ \mu - \kB T }.
 \end{dmath}
 
 \begin{dmath}\label{eqn:pathriaDiatomic:407}
@@ -242,7 +227,6 @@ V
 \end{dmath}
 
 \paragraph{Entropy}
-
 \begin{dmath}\label{eqn:pathriaDiatomic:427}
 S
 = \frac{U - F}{T}
@@ -263,7 +247,6 @@ e^{\mu/\kB T}
 \paragraph{Expectation of atomic separation}
 
 The momentum portions of the average will just cancel out, leaving just
-
 \begin{dmath}\label{eqn:pathriaDiatomic:447}
 \expectation{r_{12}^2}
 =
@@ -325,7 +308,6 @@ e^{-\beta K a^2/2}
 \end{dmath}
 
 Expanding the numerator by parts we have
-
 \begin{dmath}\label{eqn:pathriaDiatomic:467}
 \int
 da
@@ -348,7 +330,6 @@ e^{-\beta K a^2/2}.
 \end{dmath}
 
 This gives us
-
 \boxedEquation{eqn:pathriaDiatomic:487}{
 \expectation{r_{12}^2}
 =

@@ -16,7 +16,6 @@ Our process is illustrated in \cref{fig:problemSet4Problem2:problemSet4Problem2F
 
 \paragraph{Step 1}
 This problem is somewhat underspecified.  From the ideal gas law, regardless of how the gas got from the initial to the final states, we have
-
 \begin{subequations}
 \label{eqn:basicStatMechProblemSet4Problem2:20a}
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:20}
@@ -36,25 +35,21 @@ Alternately, we could have a system such as that of \cref{fig:problemSet4Problem
 \imageFigure{../figures/phy452-basicstatmech/problemSet4Problem2Fig3}{Gas of fixed mass absorbing heat}{fig:problemSet4Problem2:problemSet4Problem2Fig3}{0.3}
 
 Regardless of the source of the energy that accounts for the increase in volume the work done \textunderline{on} the gas (a negation of the positive work the gas is performing on the system, perhaps a piston as in the picture) is
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:60}
 \dbar W_1 = - \int_{V_0}^{V_1} p dV = -P_0 (V_1 - V_0).
 \end{equation}
 
 Let's now assume that we have the second sort of configuration above, where the total amount of gas is held fixed.  From the ideal gas relations of \eqnref{eqn:basicStatMechProblemSet4Problem2:20a}, and with \(\Delta V = V_1 - V_0\), \(\Delta T = T_1 - T_0\), and \(N_1 = N_0 = N\), we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:80}
 P_0 \Delta V = N \kB \Delta T.
 \end{equation}
 
 The change in energy of the ideal gas, assuming three degrees of freedom, is
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:100}
 d U = \frac{3}{2} N \kB \Delta T = \frac{3}{2} P_0 \Delta V.
 \end{equation}
 
 The energy balance then requires that the total heat absorbed by the gas must include that portion that has done work on the system, plus the excess kinetic energy of the gas.  That is
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:120}
 \dbar Q_1 = \frac{3}{2} P_0 \Delta V + P_0 \Delta V = \frac{5}{2} P_0 \Delta V.
 \end{equation}
@@ -62,19 +57,16 @@ The energy balance then requires that the total heat absorbed by the gas must in
 \paragraph{Step 2}
 
 For this leg of the cycle we have no work done on the gas
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:140}
 \dbar W_2 = -\int_{V_1}^{V_1} P dV = 0.
 \end{equation}
 
 We do, however have a change in energy.  The energy of the gas is
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:160}
 U = \frac{3}{2} N \kB T = \frac{3}{2} P V.
 \end{equation}
 
 With \(\Delta P = P_1 - P_0\), the change of energy of the gas, the total heat absorbed by the gas, is
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:180}
 dU_2 = \dbar Q_2 = \frac{3}{2} V_1 \Delta P.
 \end{equation}
@@ -82,7 +74,6 @@ dU_2 = \dbar Q_2 = \frac{3}{2} V_1 \Delta P.
 \paragraph{Step 3}
 
 For the final leg of the cycle, the work done on the gas is
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet4Problem2:200}
 \dbar W_3
 =
@@ -95,7 +86,6 @@ For the final leg of the cycle, the work done on the gas is
 
 This is positive this time
 Unlike the first part of the cycle, the work done on the gas is positive this time (work is being done on the gas to both compress it).  The change in energy of the gas, however, is negative, with the difference between final and initial energy being
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet4Problem2:220}
 dU_3
 = \frac{3}{2} (P_0 V_0 - P_1 V_1)
@@ -104,7 +94,6 @@ dU_3
 \end{dmath}
 
 The simultaneous compression and the pressure reduction require energy to be removed from the gas.  We must have a negative change in heat \(\dbar Q < 0\), with heat emitted in this phase of the cycle.  This can be verified explicitly
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet4Problem2:240}
 \dbar Q_3
 = dU - \dbar W
@@ -116,7 +105,6 @@ The simultaneous compression and the pressure reduction require energy to be rem
 \paragraph{Changes over the complete cycle.}
 
 Summarizing the results from each of the phases, we have
-
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:340}
 \dbar W_1 = -P_0 \Delta V
@@ -152,7 +140,6 @@ d U_3 = -\frac{3}{2} ( P_1 V_1 - P_0 V_0 )
 \end{subequations}
 
 Summing the changes in the work we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:280}
 \sum_{i = 1}^3 \dbar W_i = \inv{2} \Delta V \Delta P > 0.
 \end{equation}
@@ -160,7 +147,6 @@ Summing the changes in the work we have
 This is the area of the triangle, as expected.  Since it is positive, there is net work done on the gas.
 
 We expect the energy changes to sum to zero, and this can be verified explicitly finding
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:300}
 \sum_{i = 1}^3 d U_i =
 \frac{3}{2} P_0 \Delta V
@@ -168,7 +154,6 @@ We expect the energy changes to sum to zero, and this can be verified explicitly
 \end{equation}
 
 With net work done on the gas and no change in energy, there should be no net heat absorption by the gas, with a total change in heat that should equal, in amplitude, the total work done on the gas.  This is confirmed by summation
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem2:320}
 \sum_{i = 1}^3 \dbar Q_i =
 \frac{5}{2} P_0 \Delta V

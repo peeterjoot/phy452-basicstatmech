@@ -19,7 +19,6 @@ Let's start with some terminology and notation, borrowing from \citep{wiki:nsphe
 \end{itemize}
 
 To calculate the volume, we require a parameterization allowing for expression of the volume element in an easy to integrate fashion.  For the \(1\)-sphere, we can use the usual circular and spherical coordinate volume elements
-
 \begin{subequations}
 \begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:20}
 V_2(R) = 4 \int_0^R r dr \int_0^{\pi/2} d\theta = 4 \frac{R^2}{2} \frac{\pi}{2} = \pi R^2
@@ -36,7 +35,6 @@ Here, to simplify the integration ranges, we've calculated the ``volume'' integr
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechProblemSet3Fig1}{Integrating over just one quadrant of circle or octet of sphere}{fig:basicStatMechProblemSet3:basicStatMechProblemSet3Fig1}{0.3}
 
 How will we generalize this to higher dimensions?  To calculate the volume elements in a systematic fashion, we can introduce a parameterization and use a Jacobian to change from Cartesian coordinates.  For the \(1\)-volume and \(2\)-volume cases those parameterizations were the familiar
-
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:60}
 \begin{aligned}
@@ -54,7 +52,6 @@ x_0 &= r \sin\theta \sin\phi
 \end{subequations}
 
 Some reflection shows that this generalizes nicely.  Let's use shorthand
-
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:100}
 C_k = \cos\theta_k
@@ -63,9 +60,7 @@ C_k = \cos\theta_k
 S_k = \sin\theta_k,
 \end{equation}
 \end{subequations}
-
 and pick \(V_5\), say, a dimension bigger than the 2D or 3D cases that we can do by inspection, we can parameterize with
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:140}
 \begin{aligned}
 x_4 &= r C_4 \\
@@ -77,7 +72,6 @@ x_0 &= r S_4 S_3 S_2 S_1.
 \end{equation}
 
 Our volume element
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:160}
 dV_5 =
 \mathLabelBox
@@ -93,7 +87,6 @@ dr d\theta_4 d\theta_3 d\theta_2 d\theta_1
 \end{equation}
 
 That Jacobian is
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:180}
 J_5 =
 \left\lvert
@@ -199,7 +192,6 @@ S_3 S_2 S_1
 \end{dmath}
 
 Observe above that the cofactors of both the \(1,1\) and the \(1,2\) elements, when expanded along the first row, have a common factor.  This allows us to work recursively
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:200}
 J_5
 = r^4 S_4^3 S_3^2 S_2^1 S_1^0
@@ -217,7 +209,6 @@ r S_4^3 J_4
 \end{dmath}
 
 Similarly for the 4D volume
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:220}
 J_4
 = r^3 S_3^2 S_2^1 S_1^0
@@ -260,9 +251,7 @@ S_1 & \phantom{-} C_1
 \right\rvert
 = r S_2^1 J_2,
 \end{dmath}
-
 and finally for the 2D volume
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:260}
 J_2
 = r S_1^0
@@ -276,11 +265,9 @@ S_1 & \phantom{-} C_1
 \end{dmath}
 
 Putting all the bits together, the ``volume'' element in the n-D space is
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:280}
 dV_n = dr d\theta_{n-1} \cdots d\theta_{1} r^{n-1} \prod_{k=0}^{n-2} (\sin\theta_{k+1})^{k},
 \end{equation}
-
 and the total volume is
 \begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:300}
 V_n(R)
@@ -305,21 +292,17 @@ V_{n-2}(R)
 \end{dmath}
 
 Note that a single of these sine power integrals has a messy result (see: \nbref{statMechProblemSet3.nb})
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:320}
 \int_0^{\pi/2} d\theta \sin^{k} \theta
 =
 \frac{\sqrt{\pi } \Gamma \left(\frac{k+1}{2}\right)}{2 \Gamma \left(\frac{k}{2}+1\right)},
 \end{equation}
-
 but the product is simple, and that result, computed in \nbref{statMechProblemSet3.nb}, is inserted above, providing an expression for the n-D volume element as a recurrence relation
-
 \boxedEquation{eqn:basicStatMechProblemSet3Problem1:340}{
-V_{n} = \frac{2 \pi}{n} R^2 V_{n-2}(R)
+V_{n} = \frac{2 \pi}{n} R^2 V_{n-2}(R).
 }
 
 With this recurrence relation we can find the volume \(V_{2n}\) or \(V_{2n+1}\) in terms of \(V_2\) and \(V_3\) respectively.  For the even powers we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:360}
 \begin{array}{lll}
 V_{2(2)}
@@ -348,7 +331,6 @@ V_{2(n)} = \frac{(\pi R^2)^{n}}{n!}.
 }
 
 Observe that this also conveniently gives \(V_2 = \pi R^2\), so is actually valid for \(n \ge 1\).  Now for the odd powers
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:420}
 \begin{array}{lll}
 V_{2(2)+1}
@@ -380,7 +362,6 @@ As with the even powered expression \eqnref{eqn:basicStatMechProblemSet3Problem1
 The even and odd power expressions don't look quite different on the surface, but can be put into a consistent form, when expressed in terms of the gamma function.
 
 For the even powers, using a substitution \(2 n = m\) we have for even values of \(m \ge 2\)
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:480}
 V_{m}
 = \frac{\pi^{m/2} R^m}{\Gamma(n + 1)}
@@ -388,13 +369,11 @@ V_{m}
 \end{equation}
 
 For the even powers, with the help of \citep{abramowitz1964handbook} we find
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:500}
 (2 n + 1)!! = \frac{2^{n+1} \Gamma\left(n + \frac{3}{2}\right)}{\sqrt{\pi}}.
 \end{equation}
 
 This gives us
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:520}
 V_{2(n)+1}
 = \frac{\pi^{n + 1/2} R^{2 n + 1}}{\Gamma\left(n + \frac{3}{2}\right)}
@@ -415,14 +394,12 @@ V_{m}
 We've shown that this is valid for any dimension \(m \ge 2\).
 
 Tabulating some values of these for \(n \in [2, 7]\) we have respectively
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:580}
 \pi  r^2,\frac{4 \pi  r^3}{3},\frac{\pi ^2 r^4}{2},\frac{8 \pi ^2 r^5}{15},\frac{\pi ^3 r^6}{6},\frac{16 \pi ^3 r^7}{105},
 \end{equation}
 
 %matching the values from \href{http://en.wikipedia.org/wiki/File:N_SpheresVolumeAndSurfaceArea.png}{the wikipeda}
 The only task left is computation of the surface area.  That comes by inspection and is
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:560}
 S_{m}(R)
 =\frac{d V_m(R)}{d R}
@@ -430,7 +407,6 @@ S_{m}(R)
 \end{equation}
 
 Again for \(m \in [2, 7]\) we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:600}
 2 \pi  r,4 \pi  r^2,2 \pi ^2 r^3,\frac{8 \pi ^2 r^4}{3},\pi ^3 r^5,\frac{16 \pi ^3 r^6}{15}.
 \end{equation}

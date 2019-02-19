@@ -5,13 +5,11 @@
 \makeoproblem{Quantum electric dipole}{basicStatMech:problemSet5:3}{2013 problem set 5, p3}{
 %(3 points)
 A quantum electric dipole at a fixed space point has its energy determined by two parts - a part which comes from its angular motion and a part coming from its interaction with an applied electric field \(\calE\). This leads to a quantum Hamiltonian
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:20}
 H = \frac{\BL \cdot \BL}{2 I} - \mu \calE L_z,
 \end{equation}
 
 where \(I\) is the moment of inertia, and we have assumed an electric field \(\calE = \calE \zcap\).  This Hamiltonian has eigenstates described by spherical harmonics \(Y_{l, m}(\theta, \phi)\), with \(m\) taking on \(2l+1\) possible integral values, \(m = -l, -l + 1, \cdots, l -1, l\).  The corresponding eigenvalues are
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:40}
 \lambda_{l, m} = \frac{l(l+1) \Hbar^2}{2I} - \mu \calE m \Hbar.
 \end{equation}
@@ -39,7 +37,6 @@ Let's summarize the values of the energy eigenvalues \(\lambda_{l,m}\) for \(l =
 \paragraph{\(l = 0\)}
 
 For \(l = 0\), the azimuthal quantum number can only take the value \(m = 0\), so we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:60}
 \lambda_{0,0} = 0.
 \end{equation}
@@ -47,13 +44,10 @@ For \(l = 0\), the azimuthal quantum number can only take the value \(m = 0\), s
 \paragraph{\(l = 1\)}
 
 For \(l = 1\) we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:80}
 \frac{l(l+1)}{2} = 1(2)/2 = 1,
 \end{equation}
-
 so we have
-
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:100}
 \lambda_{1,0} = \frac{\Hbar^2}{I}
@@ -66,13 +60,10 @@ so we have
 \paragraph{\(l = 2\)}
 
 For \(l = 2\) we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:140}
 \frac{l(l+1)}{2} = 2(3)/2 = 3,
 \end{equation}
-
 so we have
-
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:160}
 \lambda_{2,0} = \frac{3 \Hbar^2}{I}
@@ -92,7 +83,6 @@ These are sketched as a function of \(\calE\) in \cref{fig:basicStatMechProblemS
 \makeSubAnswer{Partition function}{pr:basicStatMechProblemSet5Problem3:b}
 
 Our partition function, in general, is
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:220}
 Z
 = \sum_{l = 0}^\infty \sum_{m = -l}^l e^{-\lambda_{l,m} \beta}
@@ -100,7 +90,6 @@ Z
 \end{dmath}
 
 Dropping all but \(l = 0, 1\) terms this is
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:380}
 Z
 \approx
@@ -121,7 +110,6 @@ Z
 \makeSubAnswer{Average dipole moment}{pr:basicStatMechProblemSet5Problem3:c}
 
 For the average dipole moment, averaging over both the states and the partitions, we have
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:260}
 Z \expectation{ \mu L_z }
 = \sum_{l = 0}^\infty \sum_{m = -l}^l
@@ -140,7 +128,6 @@ m
 \end{dmath}
 
 For the cap of \(l = 1\) we have
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:280}
 \expectation{ \mu L_z } \approx
 \frac{2 \mu \Hbar }{Z}
@@ -174,7 +161,6 @@ This is plotted in \cref{fig:basicStatMechProblemSet5Problem3:basicStatMechProbl
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechProblemSet5Problem3Fig3A}{Dipole moment}{fig:basicStatMechProblemSet5Problem3:basicStatMechProblemSet5Problem3Fig3}{0.3}
 
 For high temperatures \(\mu \Hbar \calE \beta \ll 1\) or \(\kB T \gg \mu \Hbar \calE\), expanding the hyperbolic sine and cosines to first and second order respectively and the exponential to first order we have
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:720}
 \expectation{ \mu L_z } \approx
 2 \mu \Hbar
@@ -200,7 +186,6 @@ Our dipole moment tends to zero approximately inversely proportional to temperat
 %\end{equation}
 
 For low temperatures \(\kB T \ll \mu \Hbar \calE\), where \(\mu \Hbar \calE \beta \gg 1\) we have
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:740}
 \expectation{ \mu L_z } \approx
 \frac
@@ -219,7 +204,6 @@ Provided the electric field is small enough (which means here that \(\calE < \Hb
 \makeSubAnswer{Approximation validation}{pr:basicStatMechProblemSet5Problem3:d}
 
 In order to validate the approximation, let's first put the partition function and the numerator of the dipole moment into a tidier closed form, evaluating the sums over the radial indices \(l\).  First let's sum the exponentials for the partition function, making an \(n = m + l\)
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:420}
 \sum_{m = -l}^l a^m
 =
@@ -246,7 +230,6 @@ With a substitution of \(a = e^b\), we have
 }
 
 Now we can sum the azimuthal exponentials for the dipole moment.  This sum is of the form
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:460}
 \sum_{m = -l}^l m a^m
 = a
@@ -267,13 +250,10 @@ a
 \end{dmath}
 
 With \(a = e^{b}\), and \(1 = a db/da\), we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:480}
 a \frac{d}{da} = a \frac{db}{da} \frac{d}{db} = \frac{d}{db},
 \end{equation}
-
 we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:500}
 \sum_{m = -l}^l m e^{b m}
 = \frac{d}{db}
@@ -302,7 +282,6 @@ l \sinh(b (l+1)) - (l+1) \sinh(b l)
 }
 
 We can now express the average dipole moment with only sums over radial indices \(l\)
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:540}
 \expectation{ \mu L_z }
 =
@@ -365,7 +344,6 @@ The hyperbolic sine in the denominator from the partition function and the diffe
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechProblemSet5Problem3Fig2A}{Hyperbolic sine plots for dipole moment}{fig:basicStatMechProblemSet5Problem3:basicStatMechProblemSet5Problem3Fig2}{0.3}
 
 Let's look at the order of these hyperbolic sines for large arguments.  For the numerator we have a difference of the form
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:580}
 x \sinh( x + 1 ) - (x + 1) \sinh ( x )
 =
@@ -389,7 +367,6 @@ x e^{x}  ( e - 1 ) - e^x
 \end{dmath}
 
 For the hyperbolic sine from the partition function we have for large \(x\)
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:600}
 \sinh( x + 1/2)
 = \inv{2} \lr{e^{x + 1/2} - e^{-x - 1/2}}
@@ -405,19 +382,15 @@ For the hyperbolic sine from the partition function we have for large \(x\)
 %\end{equation}
 
 While these hyperbolic sines increase without bound as \(l\) increases, we have a negative quadratic dependence on \(l\) in the \(\BL^2\) contribution to these sums, provided that is small enough we can neglect the linear growth of the hyperbolic sines.  We wish for that factor to be large enough that it dominates for all \(l\).  That is
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:640}
 \frac{l(l+1) \Hbar^2}{2 I \kB T} \gg 1,
 \end{equation}
-
 or
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:660}
 T \ll \frac{l(l+1) \Hbar^2}{2 I \kB T}.
 \end{equation}
 
 Observe that the RHS of this inequality, for \(l = 1, 2, 3, 4, \cdots\) satisfies
-
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:680}
 \frac{\Hbar^2 }{I \kB}
 <

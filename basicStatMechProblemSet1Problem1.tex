@@ -4,7 +4,6 @@
 %
 \makeoproblem{Limiting form of the binomial distribution}{basicStatMech:problemSet1:1}{2013 problem set 1, q1}{
 Starting from the simple case of the binomial distribution
-
 \begin{equation}\label{eqn:basicStatMechProblemSet1Problem1:20}
 P_N(X) = 2^{-N} \frac{N!}{
 \left(
@@ -24,7 +23,6 @@ derive the Gaussian distribution which results when \(N \gg 1\) and \(\Abs{X} \l
 We'll work with the logarithms of \(P_N(X)\).
 
 Note that the logarithm of the Stirling approximation takes the form
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet1Problem1:40}
 \ln a!
 \approx \ln \sqrt{2\pi} + \inv{2} \ln a + a \ln a - a
@@ -33,7 +31,6 @@ Note that the logarithm of the Stirling approximation takes the form
 \end{dmath}
 
 Using this we have
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet1Problem1:60}
 \ln
 \left(
@@ -62,11 +59,10 @@ Using this we have
 \right)
 + \ln \frac{N}{2}
 \right)
-- \frac{N + X}{2}
+- \frac{N + X}{2}.
 \end{dmath}
 
 Adding \(\ln \left( (N + X)/2 \right)! + \ln \left( (N - X)/2 \right)!\), we have
-
 \begin{equation}\label{eqn:basicStatMechProblemSet1Problem1:80}
 \begin{aligned}
 2 &\ln \sqrt{2 \pi}
@@ -124,7 +120,6 @@ Adding \(\ln \left( (N + X)/2 \right)! + \ln \left( (N - X)/2 \right)!\), we hav
 \end{equation}
 
 Recall that we can expand the log around \(1\) with the slowly converging Taylor series
-
 \begin{subequations}
 \begin{dmath}\label{eqn:basicStatMechProblemSet1Problem1:100}
 \ln( 1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4}
@@ -133,9 +128,7 @@ Recall that we can expand the log around \(1\) with the slowly converging Taylor
 \ln( 1 - x) = -x - \frac{x^2}{2} - \frac{x^3}{3} - \frac{x^4}{4},
 \end{dmath}
 \end{subequations}
-
 but if \(x \ll 1\) the first order term will dominate, so in this case where we assume \(X \ll N\), we can approximate this sum of factorial logs to first order as
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet1Problem1:140}
 2 \ln \sqrt{2 \pi} -N
 +
@@ -164,7 +157,6 @@ but if \(x \ll 1\) the first order term will dominate, so in this case where we 
 \end{dmath}
 
 Putting the bits together, we have
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet1Problem1:160}
 \ln P_N(X) \approx - N \ln 2 +
 \left( N + \inv{2}

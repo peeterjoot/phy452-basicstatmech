@@ -26,19 +26,15 @@ My answer was to state that the Central limit theorem didn't apply since it was 
 Wondering if this was really all the question required, I went looking to see if there was in fact some way to apply the central limit theorem to such a product and found \href{http://math.stackexchange.com/q/82133}{http://math.stackexchange.com/q/82133}.  The central limit theorem can be applied to the logarithm of such a product (provided all the random variables are strictly positive)
 
 For example, if we write
-
 \begin{equation}\label{eqn:centralLimitOnProducts:20}
 Z = \ln Y = \sum_{k = 1}^N \ln X_k,
 \end{equation}
-
 now we have something that the central limit theorem can be applied to.  It will be interesting to see if this is the answer that the midterm was looking for.  It is one that wasn't obvious enough for me to think of it at the time.  In fact, it's also not something that we can even state a precise central limit theorem result for, because we don't have enough information to state the mean and variance of the logarithm of the random vars \(X_k\).  For example, if the random vars are continuous, we have
-
 \begin{equation}\label{eqn:centralLimitOnProducts:40}
 \expectation{\ln X} = \int \rho(X) \ln X dX.
 \end{equation}
 
 Conceivably, if we knew all the moments of \(X\) we could expand the logarithm in Taylor series.  In fact we need more than that.  If we suppose that \(0 < X < 2 \mu\), so that \(\Abs{X/\mu - 1} \le 1\), we can write
-
 \begin{dmath}\label{eqn:centralLimitOnProducts:60}
 \ln X
 = \ln \mu + (X - \mu)
@@ -47,7 +43,6 @@ Conceivably, if we knew all the moments of \(X\) we could expand the logarithm i
 \end{dmath}
 
 With such a bounding for the random variable \(X\) we'd have
-
 \begin{equation}\label{eqn:centralLimitOnProducts:140}
 \expectation{\ln X} = \ln \mu
 +
@@ -57,7 +52,6 @@ With such a bounding for the random variable \(X\) we'd have
 We need all the higher order moments of \(X/\mu - 1\) (or equivalently all the moments of \(X\)), and can't just assume that \(\expectation{\ln X} = \ln \mu\).
 
 Suppose instead that we just assume that it is possible to find the mean and variance of the logarithm of the random variables \(X_k\), say
-
 \begin{subequations}
 \begin{equation}\label{eqn:centralLimitOnProducts:80}
 \mu_{\mathrm{ln}} = \expectation{\ln X}
@@ -68,7 +62,6 @@ Suppose instead that we just assume that it is possible to find the mean and var
 \end{subequations}
 
 Now we can state that for large \(N\) the random variable \(Z\) has a distribution approximated by
-
 \begin{equation}\label{eqn:centralLimitOnProducts:120}
 \rho(Z)
 = \inv{\sigma_{\mathrm{ln}} \sqrt{2 \pi N}} \exp\left( - \frac{ (\ln X - N \mu_{\mathrm{ln}})^2}{2 N \sigma_{\mathrm{ln}}^2} \right).

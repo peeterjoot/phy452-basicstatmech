@@ -20,7 +20,6 @@
 \makeoproblem{Anharmonic oscillator}{pr:pathriaHarmonicOscPertubation:3:29}{\citep{pathriastatistical} pr 3.29}{
 
 The potential energy of a one-dimensional, anharmonic oscillator may be written as
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:20}
 V(q) = c q^2 - g q^3 - f q^4,
 \end{dmath}
@@ -30,7 +29,6 @@ where \(c\), \(g\), and \(f\) are positive constant; quite generally, \(g\) and 
 \makesubproblem{}{pr:pathriaHarmonicOscPertubation:3:29:a}
 
 Show that the leading contribution of anharmonic terms to the heat capacity of the oscillator, assumed classical, is given by
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:40}
 \frac{3}{2} \kB^2 \lr{
 \frac{f}{c^2} + \frac{5}{4} \frac{g^2}{c^3} } T
@@ -40,7 +38,6 @@ Show that the leading contribution of anharmonic terms to the heat capacity of t
 \makesubproblem{}{pr:pathriaHarmonicOscPertubation:3:29:b}
 
 To the same order, show that the mean value of the position coordinate \(q\) is given by
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:60}
 \frac{3}{4} \frac{g \kB T}{c^2}.
 \end{dmath}
@@ -49,7 +46,6 @@ To the same order, show that the mean value of the position coordinate \(q\) is 
 \makeanswer{pr:pathriaHarmonicOscPertubation:3:29}{
 
 Our partition function is
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:80}
 Z
 = \int dp dq e^{-\beta p^2/2m} e^{ -\beta \lr{ c q^2 - g q^3 - f q^4} }
@@ -57,13 +53,11 @@ Z
 \end{dmath}
 
 How to expand this wasn't immediately clear to me (as it wasn't on the midterm either).  We can't Taylor expand in \(q\), because there's no single position \(q\) that is of interest to expand around (we are integrating over all \(q\)).  What we can do though is Taylor expand about the values \(f\) and \(g\), which are assumed to be small.  Here's the two variable Taylor expansion of this perturbed harmonic oscillator exponential.  With
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:100}
 A(f, g) = e^{ -\beta \lr{ c q^2 - g q^3 - f q^4} }
 \end{dmath}
 
 The expansion to second order is
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:120}
 A(f, g)
 =
@@ -106,7 +100,6 @@ e^{ -\beta c q^2 }
 \end{dmath}
 
 This can now be integrated by parts, where any odd powers are killed.  For even powers we have
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:140}
 \int q^{2 N} e^{-a q^2} dq
 =
@@ -118,7 +111,6 @@ This can now be integrated by parts, where any odd powers are killed.  For even 
 \end{dmath}
 
 This gives us
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:160}
 Z =
 \sqrt{ \frac{\pi}{\beta c} }
@@ -160,7 +152,6 @@ Z \approx
 
 \makeSubAnswer{Specific heat.}{pr:pathriaHarmonicOscPertubation:3:29:a}
 Our average energy, in this approximation
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:180}
 \expectation{H}
 = -\PD{\beta}{} \ln Z
@@ -197,7 +188,6 @@ Our average energy, in this approximation
 \end{dmath}
 
 So to first order in \(T\) our specific heat is
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:200}
 \CV = \PD{T}{\expectation{H}}
 \approx
@@ -221,7 +211,6 @@ or
 }
 
 \makeSubAnswer{Coordinate expectation.}{pr:pathriaHarmonicOscPertubation:3:29:b}
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:260}
 \expectation{q}
 =
@@ -257,7 +246,6 @@ or
 }
 
 Compare this to the expectation of the coordinate for an unperturbed harmonic oscillator
-
 \begin{dmath}\label{eqn:pathriaHarmonicOscPertubation:300}
 \expectation{q} = \frac{\int q e^{ -\beta c q^2}}{\int e^{-\beta c q^2}} = 0.
 \end{dmath}

@@ -27,7 +27,6 @@ A particle with spin \(S\) has \(2 S + 1\) states \(-S, -S + 1, \cdots S-1, S\).
 \makeanswer{pr:midterm2reflection:1}{
 
 Our partition function is
-
 \begin{dmath}\label{eqn:midterm2reflection:20}
 Z
 = \sum_{m = -S}^S e^{-\Hbar \beta m B}
@@ -40,13 +39,10 @@ e^{\Hbar \beta S B}
 \end{dmath}
 
 Writing
-
 \begin{equation}\label{eqn:midterm2reflection:40}
 a = e^{-\Hbar \beta B},
 \end{equation}
-
 that is
-
 \begin{dmath}\label{eqn:midterm2reflection:560}
 Z =
 a^{-S}
@@ -68,13 +64,11 @@ Z =
 }
 
 To calculate the magnetization \(M\), I used
-
 \begin{equation}\label{eqn:midterm2reflection:100}
 M = -\expectation{H}/B.
 \end{equation}
 
 As \citep{kittel1980thermal} defines magnetization for a spin system.  It was pointed out to me after the test that magnetization was defined differently in class as
-
 \begin{equation}\label{eqn:midterm2reflection:140}
 \mu = \PD{B}{F}.
 \end{equation}
@@ -82,7 +76,6 @@ As \citep{kittel1980thermal} defines magnetization for a spin system.  It was po
 These are, up to a sign, identical, at least in this case, since we have \(\beta\) and \(B\) traveling together in the partition function.
 
 In terms of the average energy
-
 \begin{dmath}\label{eqn:midterm2reflection:580}
 M = -\frac{\expectation{H}}{B}
 = \inv{B} \PD{\beta}{} \ln Z(\beta B)
@@ -91,7 +84,6 @@ M = -\frac{\expectation{H}}{B}
 \end{dmath}
 
 Compare this to the in-class definition of magnetization
-
 \begin{dmath}\label{eqn:midterm2reflection:180}
 \mu
 = \PD{B}{F}
@@ -106,7 +98,6 @@ Defining the magnetic moment in either of these fashions is really a cheat, beca
 \paragraph{Calculating it}
 
 For this derivative we have
-
 \begin{dmath}\label{eqn:midterm2reflection:600}
 \PD{(\beta B)}{} \ln Z
 =
@@ -171,7 +162,6 @@ I got something like this on the midterm, but recall doing it somehow much diffe
 %(10 points)
 
 Consider a single particle perturbation of a classical simple harmonic oscillator Hamiltonian
-
 \begin{equation}\label{eqn:midterm2reflection:120}
 H = \inv{2} m \omega^2 \lr{x^2 + y^2} + \inv{2 m} \lr{p_x^2 + p_y^2} + a x^4 + by^6
 \end{equation}
@@ -189,7 +179,6 @@ By Taylor expanding around \(c = 0\) and \(d = 0\) with those as the variables i
 \makeanswer{pr:midterm2reflection:2}{
 
 The canonical partition function is
-
 \begin{dmath}\label{eqn:midterm2reflection:260}
 Z
 =
@@ -209,7 +198,6 @@ Z
 \end{dmath}
 
 With
-
 \begin{subequations}
 \begin{dmath}\label{eqn:midterm2reflection:280}
 u = \sqrt{\frac{\beta}{2m}} p_x
@@ -256,7 +244,6 @@ Z =
 
 \makeSubAnswer{Attempt 1: differentiation under the integral sign}{pr:midterm2reflection:2:a}
 The mean energy is
-
 \begin{dmath}\label{eqn:midterm2reflection:400}
 \expectation{H}
 = \frac{\int H e^{-\beta H}}{\int e^{-\beta H}}
@@ -318,7 +305,6 @@ The specific heat follows by differentiating once more
 \end{dmath}
 
 Differentiating the integral terms we have, for example,
-
 \begin{dmath}\label{eqn:midterm2reflection:440}
 \PD{\beta}{}
 \frac{
@@ -393,7 +379,6 @@ That's as far as I took this problem.  There was a discussion after the midterm 
 \makeSubAnswer{Attempt 2: Taylor expanding in \(c\) and \(d\)}{pr:midterm2reflection:2:b}
 
 Performing a two variable Taylor expansion of \(Z\), about \((c, d) = (0, 0)\) we have
-
 \begin{dmath}\label{eqn:midterm2reflection:381}
 Z \approx
 \frac{2 \pi m}{\beta}
@@ -410,9 +395,7 @@ e^{- \beta m \omega^2 y^2/2}
 - \beta b \frac{5!!}{(\beta m \omega^2)^3}
 },
 \end{dmath}
-
 or
-
 \boxedEquation{eqn:midterm2reflection:480}{
 Z \approx
 \frac{(2 \pi/\omega)^2}{\beta^2}
@@ -424,7 +407,6 @@ Z \approx
 }
 
 Now we can calculate the average energy
-
 \begin{dmath}\label{eqn:midterm2reflection:500}
 \expectation{H}
 =

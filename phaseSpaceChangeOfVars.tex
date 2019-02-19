@@ -23,13 +23,10 @@ In \citep{pathriastatistical} problem 2.2, it's suggested to try a spherical cha
 \makeanswer{pr:phaseSpaceChangeOfVars:1}{
 %\section{Canonical momenta and Hamiltonian}
 Our cylindrical velocity is
-
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVars:20}
 \Bv = \rdot \rcap + r \thetadot \thetacap,
 \end{dmath}
-
 so a purely kinetic Lagrangian would be
-
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVars:40}
 \LL
 = \inv{2} m \Bv^2
@@ -37,34 +34,29 @@ so a purely kinetic Lagrangian would be
 \end{dmath}
 
 Our canonical momenta are
-
 \begin{subequations}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVars:60}
 p_r = \PD{\rdot}{\LL} = m \rdot
 \end{equation}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVars:80}
-p_\theta = \PD{\thetadot}{\LL} = m r^2 \thetadot.
+p_\theta = \PD{\thetadot}{\LL} = m r^2 \thetadot,
 \end{equation}
 \end{subequations}
-
 and our kinetic energy is
-
 \begin{equation}\label{eqn:phaseSpaceChangeOfVars:100}
 H = \LL = \inv{2m} p_r^2 + \inv{2 m r^2} p_\theta^2.
 \end{equation}
 
 Now we need to express our momenta in terms of the Cartesian coordinates.  We have for the radial momentum
-
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVars:120}
 p_r
 = m \rdot
 = m \ddt{} \sqrt{x^2 + y^2}
-= \inv{2} \frac{2 m}{r} \lr{ x \xdot + y \ydot }
+= \inv{2} \frac{2 m}{r} \lr{ x \xdot + y \ydot },
 \end{dmath}
-
 or
 \begin{equation}\label{eqn:phaseSpaceChangeOfVars:140}
-p_r = \inv{r} \lr{ x p_x + y p_y }
+p_r = \inv{r} \lr{ x p_x + y p_y }.
 \end{equation}
 
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVars:160}
@@ -74,13 +66,11 @@ p_\theta
 \end{dmath}
 
 After some reduction \nbref{cyclindrialMomenta.nb}, we find
-
 \begin{equation}\label{eqn:phaseSpaceChangeOfVars:180}
 p_\theta = p_y x - p_x y.
 \end{equation}
 
 We can assemble these into a complete set of change of variable equations
-
 \begin{subequations}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVars:200}
 r = \sqrt{x^2 + y^2}
@@ -97,7 +87,6 @@ p_\theta = p_y x - p_x y.
 \end{subequations}
 
 Our phase space volume element change of variables is
-
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVars:280}
 dr d\theta dp_r dp_\theta =
 \frac{\partial(r, \theta, p_r, p_\theta)}{\partial(x, y, p_x, p_y)}

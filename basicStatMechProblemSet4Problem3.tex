@@ -5,7 +5,6 @@
 \makeoproblem{Adiabatic process for an Ideal Gas}{basicStatMech:problemSet4:3}{\citep{schroeder2000thermal} 1.40(a)}{
 %(3 points)
 Show that when an ideal monoatomic gas expands adiabatically, the temperature and pressure are related by
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem3:20}
 \frac{dT}{dP
 }
@@ -19,19 +18,15 @@ Show that when an ideal monoatomic gas expands adiabatically, the temperature an
 \makeanswer{basicStatMech:problemSet4:3}{
 
 From (3.34b) of \citep{kittel1980thermal}, we find that the Adiabatic condition can be expressed algebraically as
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem3:40}
 0 = \dbar Q = T dS = dU + P dV.
 \end{equation}
 
 With
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem3:60}
 U = \frac{3}{2} N \kB T = \frac{3}{2} P V,
 \end{equation}
-
 this is
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet4Problem3:80}
 0
 = \frac{3}{2} V dP
@@ -41,7 +36,6 @@ this is
 \end{dmath}
 
 Dividing through by \(P V\), this becomes a perfect differential, and we can integrate
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet4Problem3:100}
 0
 = 3 \int \frac{dP }{P}
@@ -55,13 +49,11 @@ Dividing through by \(P V\), this becomes a perfect differential, and we can int
 \end{dmath}
 
 Exponentiating yields
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem3:120}
 T^5 = C' P^2.
 \end{equation}
 
 The desired relation follows by taking derivatives
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet4Problem3:140}
 2 C' P
 =
@@ -69,13 +61,10 @@ The desired relation follows by taking derivatives
 =
 5 C' \frac{P^2}{T} \frac{dT}{dP},
 \end{dmath}
-
 or
-
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem3:160}
 \frac{dT}{dP} =
 \frac{2}{5} \frac{T}{P},
 \end{equation}
-
 as desired.
 }

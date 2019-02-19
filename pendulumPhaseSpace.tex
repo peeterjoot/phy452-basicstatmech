@@ -24,27 +24,22 @@ Analyze the (presumably small angle) pendulum problem in phase space.  Also show
 With coordinates as in \cref{fig:pendulumPhaseSpace:pendulumPhaseSpaceFig1}, our Lagrangian is
 
 \imageFigure{../figures/phy452-basicstatmech/pendulumPhaseSpaceFig1}{1d pendulum}{fig:pendulumPhaseSpace:pendulumPhaseSpaceFig1}{0.3}
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:20}
 \LL = \inv{2} m l^2 \thetadot^2 - g m l ( 1 - \cos\theta ).
 \end{equation}
 
 As a sign check we find for small \(\theta\) from the Euler-Lagrange equations \(\ddot{\theta} = -(g/l) \theta\) as expected.  For the Hamiltonian, we need the canonical momentum
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:40}
 p_\theta = \PD{\thetadot}{\LL} = m l^2 \thetadot.
 \end{equation}
 
 Observe that this canonical momentum does not have dimensions of momentum, but that of angular momentum (\(m l \thetadot \times l\)).
-
 Our Hamiltonian is
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:60}
 H = \inv{2 m l^2} p_\theta^2 + g m l ( 1 - \cos\theta ).
 \end{equation}
 
 Hamilton's equations for this system, in matrix form are
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:80}
 \ddt{}
 \begin{bmatrix}
@@ -64,7 +59,6 @@ p_\theta/m l^2 \\
 \end{equation}
 
 With \(\omega = g/l\), it is convenient to non-dimensionalize this
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:100}
 \ddt{}
 \begin{bmatrix}
@@ -80,7 +74,6 @@ p_\theta/\omega m l^2 \\
 \end{equation}
 
 Now we can make the small angle approximation.  Writing
-
 \begin{subequations}
 \begin{equation}\label{eqn:pendulumPhaseSpace:120}
 \Bu = \begin{bmatrix}
@@ -98,13 +91,11 @@ i =
 \end{subequations}
 
 Our pendulum equation is reduced to
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:160}
 \Bu' = i \omega \Bu,
 \end{equation}
 
 With a solution that we can read off by inspection
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:180}
 \Bu
 = e^{i \omega t} \Bu_0
@@ -117,7 +108,6 @@ With a solution that we can read off by inspection
 \end{equation}
 
 Let's put the initial phase space point into polar form
-
 \begin{dmath}\label{eqn:pendulumPhaseSpace:200}
 \Bu_0^2
 = \theta_0^2 + \frac{p_0^2}{\omega^2 m^2 l^4}
@@ -130,7 +120,6 @@ Let's put the initial phase space point into polar form
 \end{dmath}
 
 This doesn't appear to be an exact match for \eqnref{eqn:pendulumPhaseSpace:60}, but we can write for small \(\theta_0\)
-
 \begin{dmath}\label{eqn:pendulumPhaseSpace:220}
 1 - \cos\theta_0
 =
@@ -142,7 +131,6 @@ This doesn't appear to be an exact match for \eqnref{eqn:pendulumPhaseSpace:60},
 \end{dmath}
 
 This shows that we can rewrite our initial conditions as
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:240}
 \Bu_0 =
 \sqrt{ \frac{2 E}{g m l} }
@@ -152,16 +140,13 @@ e^{i \phi }
 0
 \end{bmatrix},
 \end{equation}
-
 where
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:260}
 \tan \phi =
 \lr{ \omega m l^2 \theta_0/ p_0 }.
 \end{equation}
 
 Our time evolution in phase space is given by
-
 \begin{equation}\label{eqn:pendulumPhaseSpace:280b}
 \begin{bmatrix}
 \theta(t) \\
@@ -215,7 +200,6 @@ As a final note, observe that the oriented integral from problem 2.5 of the text
 \imageFigure{../figures/phy452-basicstatmech/pendulumPhaseSpaceFig3}{Area from oriented integral along path}{fig:pendulumPhaseSpace:pendulumPhaseSpaceFig3}{0.3}
 
 Let's do this \(\oint p_\theta d\theta\) integral for the pendulum phase trajectories.  With
-
 \begin{subequations}
 \begin{equation}\label{eqn:pendulumPhaseSpace:340}
 \theta = \inv{\omega l} \sqrt{\frac{2 E}{m}} \cos(\omega t + \phi)
@@ -226,7 +210,6 @@ p_\theta = -m l \sqrt{\frac{2 E}{m}} \sin(\omega t + \phi)
 \end{subequations}
 
 We have
-
 \begin{dmath}\label{eqn:pendulumPhaseSpace:380}
 \oint p_\theta d\theta
 = \frac{m l}{\omega l} \frac{2 E}{m} \int_0^{2\pi/\omega} \sin^2( \omega t + \phi) \omega dt

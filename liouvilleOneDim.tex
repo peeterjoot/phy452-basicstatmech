@@ -19,17 +19,14 @@
 %\section{Motivation}
 
 In the midterm today we were asked to state and prove Liouville's theorem.  I couldn't remember the proof, having only a recollection that it had something to do with the continuity equation
-
 \begin{equation}\label{eqn:liouvilleOneDim:20}
 0 = \PD{t}{\rho} + \PD{x}{j},
 \end{equation}
-
 but unfortunately couldn't remember what the \(j\) was.  Looking up the proof, it's actually really simple, just the application of chain rule for a function \(\rho\) that's presumed to be a function of time, position and momentum variables.  It didn't appear to me that this proof has anything to do with any sort of notion of density, so I posed the following questions.
 
 \paragraph{Context}
 
 The core of the proof can be distilled to one dimension, removing all the indices that obfuscate what's being one.  For that case, application of the chain rule to a function \(\rho(t, x, p)\), we have
-
 \begin{dmath}\label{eqn:liouvilleOneDim:40}
 \ddt{\rho}
 = \PD{t}{\rho} + \PD{t}{x} \PD{x}{\rho} + \PD{t}{p} \PD{p}{\rho}
@@ -59,25 +56,19 @@ The core of the proof can be distilled to one dimension, removing all the indice
 \paragraph{Wrong interpretation}
 
 From this I'd thought that the theorem was about steady states.  If we do have a steady state, where \(d\rho/dt = 0\) we have
-
 \begin{equation}\label{eqn:liouvilleOneDim:60}
 0 = \PD{t}{\rho} + \PD{x}{\lr{\xdot \rho}} + \PD{p}{\lr{\pdot \rho}}.
 \end{equation}
 
 That would answer the question of what the current is, it's this tuple
-
 \begin{equation}\label{eqn:liouvilleOneDim:80}
 \Bj = (\rho \xdot, \rho \pdot),
 \end{equation}
-
 so if we introduce a ``phase space'' gradient
-
 \begin{equation}\label{eqn:liouvilleOneDim:100}
-\spacegrad = \lr{ \PD{x}{}, \PD{p}{} }
+\spacegrad = \lr{ \PD{x}{}, \PD{p}{} },
 \end{equation}
-
 we've got something that looks like a continuity equation
-
 \begin{equation}\label{eqn:liouvilleOneDim:120}
 0 = \PD{t}{\rho} + \spacegrad \cdot \Bj.
 \end{equation}

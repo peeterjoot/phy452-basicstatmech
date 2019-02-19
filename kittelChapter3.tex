@@ -17,7 +17,6 @@
 
 \makeproblem{Classical gas partition function}{pr:kittelChapter3:0}{
 \citep{kittel1980thermal} expresses the classical gas partition function (3.77) as
-
 \begin{equation}\label{eqn:kittelChapter3:20}
 Z_1 \propto \int \exp\left( - \frac{p_x^2 + p_y^2 + p_z^2 }{2 M \tau}
 \right) dp_x dp_y dp_z
@@ -29,13 +28,10 @@ Show that this leads to the expected \(3 \tau/2\) result for the thermal average
 \makeanswer{pr:kittelChapter3:0}{
 
 Let's use the adjustment technique from the text for the \(N\) partition case and write
-
 \begin{equation}\label{eqn:kittelChapter3:40}
 Z_N = \inv{N!} Z_1^N,
 \end{equation}
-
 with \(Z_1\) as above.  This gives us
-
 \begin{dmath}\label{eqn:kittelChapter3:60}
 U
 = \tau^2 \PD{\tau}{} \ln Z_N
@@ -82,18 +78,16 @@ Find an expression for the free energy as a function of \(\tau\) of a system wit
 \makeanswer{pr:kittelChapter3:1}{
 
 Our partition function is
-
 \begin{equation}\label{eqn:kittelChapter3:80}
-Z = 1 + e^{-\epsilon /\tau}
+Z = 1 + e^{-\epsilon /\tau}.
 \end{equation}
 
 The free energy is just
 \begin{dmath}\label{eqn:kittelChapter3:100}
-F = -\tau \ln Z = -\tau \ln (1 + e^{-\epsilon/\tau})
+F = -\tau \ln Z = -\tau \ln (1 + e^{-\epsilon/\tau}).
 \end{dmath}
 
 The entropy follows immediately
-
 \begin{dmath}\label{eqn:kittelChapter3:120}
 \sigma
 = -\PD{\tau}{F}
@@ -108,11 +102,10 @@ The entropy follows immediately
 =
 \ln \lr{1 + e^{-\epsilon/\tau}}
 +
-\frac{\epsilon}{\tau} \frac{e^{-\epsilon/\tau}}{1 + e^{-\epsilon/\tau}}
+\frac{\epsilon}{\tau} \frac{e^{-\epsilon/\tau}}{1 + e^{-\epsilon/\tau}}.
 \end{dmath}
 
 The energy is
-
 \begin{dmath}\label{eqn:kittelChapter3:140}
 U
 = F + \tau \sigma
@@ -125,11 +118,10 @@ U
 +
 \frac{\epsilon}{\tau} \frac{e^{-\epsilon/\tau}}{1 + e^{-\epsilon/\tau}}
 -\cancel{\ln (1 + e^{-\epsilon/\tau}) }
-}
+}.
 \end{dmath}
 
 This is
-
 \begin{equation}\label{eqn:kittelChapter3:160}
 U
 =
@@ -158,7 +150,6 @@ Use the partition function to find an exact expression for the magnetization \(M
 \makeanswer{pr:kittelChapter3:2}{
 
 Our partition function for a unit volume containing \(n\) spins is
-
 \begin{equation}\label{eqn:kittelChapter3:180}
 Z
 =
@@ -180,9 +171,7 @@ n!
 }
 ,
 \end{equation}
-
 so that the Free energy is
-
 \begin{equation}\label{eqn:kittelChapter3:200}
 F = -\tau
 \lr{
@@ -191,7 +180,6 @@ F = -\tau
 \end{equation}
 
 The energy, magnetization and magnetic field were interrelated by
-
 \begin{dmath}\label{eqn:kittelChapter3:220}
 - M B = U
 =
@@ -214,7 +202,6 @@ The energy, magnetization and magnetic field were interrelated by
 \end{dmath}
 
 This gives us
-
 \begin{equation}\label{eqn:kittelChapter3:240}
 M = m n \tanh \lr{m B/\tau},
 \end{equation}
@@ -226,16 +213,13 @@ so that
 \end{equation}
 
 For \(m B/\tau \ll 1\), the cosh term goes to unity, so we have
-
 \begin{equation}\label{eqn:kittelChapter3:280}
 \chi \approx
 = \frac{m^2 n}{\tau},
 \end{equation}
-
 as desired.
 
 With \(x = M/nm\), or \(m = M/nx\), the free energy is
-
 \begin{equation}\label{eqn:kittelChapter3:201}
 F =
 -\tau
@@ -255,14 +239,12 @@ That last expression isn't particularly illuminating.  What was the point of tha
 \makeoproblem{Free energy of a harmonic oscillator}{pr:kittelChapter3:3}{\citep{kittel1980thermal} problem 3.3}{
 
 A one dimensional harmonic oscillator has an infinite series of equally spaced energy states, with \(\epsilon_s = s \Hbar \omega\), where \(s\) is a positive integer or zero, and \(\omega\) is the classical frequency of the oscillator.  We have chosen the zero of energy at the state \(s = 0\).  Show that for a harmonic oscillator the free energy is
-
 \begin{equation}\label{eqn:kittelChapter3:300}
 F = \tau \ln
 \lr{ 1 - e^{-\Hbar \omega/\tau} }.
 \end{equation}
 
 Note that at high temperatures such that \(\tau \gg \Hbar \omega\) we may expand the argument of the logarithm to obtain \(F \approx \tau \ln (\Hbar \omega/\tau)\).  From \eqnref{eqn:kittelChapter3:300} show that the entropy is
-
 \begin{equation}\label{eqn:kittelChapter3:320}
 \sigma = \frac{\Hbar\omega/\tau}{e^{\Hbar \omega/\tau} - 1} -
 \ln
@@ -274,13 +256,11 @@ Note that at high temperatures such that \(\tau \gg \Hbar \omega\) we may expand
 \makeanswer{pr:kittelChapter3:3}{
 
 I found it curious that this problem dropped the factor of \(\Hbar\omega/2\) from the energy.  Including it we have
-
 \begin{equation}\label{eqn:kittelChapter3:340}
 \epsilon_s = \lr{s + \inv{2}} \Hbar \omega,
 \end{equation}
 
 So that the partition function is
-
 \begin{equation}\label{eqn:kittelChapter3:360}
 Z
 = \sum_{s = 0}^\infty e^{-\lr{s + \inv{2}} \Hbar \omega/\tau}
@@ -290,7 +270,6 @@ e^{-\Hbar \omega/2\tau}
 \end{equation}
 
 The free energy is
-
 \begin{dmath}\label{eqn:kittelChapter3:380}
 F
 = -\tau \ln Z
@@ -312,7 +291,6 @@ F
 \end{dmath}
 
 We see that the contribution of the \(\Hbar \omega/2\) in the energy of each state just adds a constant factor to the free energy.  This will drop out when we compute the entropy.  Dropping that factor now that we know why it doesn't contribute, we can complete the summation, so have, by inspection
-
 \begin{equation}\label{eqn:kittelChapter3:400}
 F = -\tau \ln Z
 =
@@ -323,7 +301,6 @@ F = -\tau \ln Z
 \end{equation}
 
 Taking derivatives for the entropy we have
-
 \begin{dmath}\label{eqn:kittelChapter3:420}
 \sigma = -\PD{\tau}{F}
 =
@@ -354,7 +331,6 @@ e^{\Hbar \omega/\tau} - 1
 \makeoproblem{Energy fluctuation}{pr:kittelChapter3:4}{\citep{kittel1980thermal} problem 3.4}{
 
 Consider a system of fixed volume in thermal contact with a reservoir.  Show that the mean square fluctuation in the energy of the system is
-
 \begin{equation}\label{eqn:kittelChapter3:440}
 \expectation{ (\epsilon - \expectation{\epsilon})^2 } = \tau^2
 \lr{\PD{\tau}{U}}_V
@@ -367,13 +343,10 @@ Here \(U\) is the conventional symbol for \(\expectation{\epsilon}\).  Hint: Use
 \makeanswer{pr:kittelChapter3:4}{
 
 With a probability of finding the system in state \(s\) of
-
 \begin{equation}\label{eqn:kittelChapter3:500}
-P_s = \frac{e^{-\epsilon_s/\tau}}{Z}
+P_s = \frac{e^{-\epsilon_s/\tau}}{Z},
 \end{equation}
-
 the average energy is
-
 \begin{dmath}\label{eqn:kittelChapter3:460}
 U
 = \expectation{\epsilon}
@@ -383,7 +356,6 @@ U
 \end{dmath}
 
 So we have
-
 \begin{dmath}\label{eqn:kittelChapter3:480}
 \tau^2 \PD{\tau}{U}
 = -\frac{\tau^2}{Z^2} \frac{dZ}{d\tau}
@@ -397,7 +369,6 @@ So we have
 \end{dmath}
 
 But
-
 \begin{dmath}\label{eqn:kittelChapter3:520}
 \frac{dZ}{d\tau}
 =
@@ -405,9 +376,7 @@ But
 =
 \sum_s \frac{\epsilon_s}{\tau^2} e^{-\epsilon_s/\tau},
 \end{dmath}
-
 giving
-
 \begin{dmath}\label{eqn:kittelChapter3:540}
 \tau^2 \PD{\tau}{U}
 =

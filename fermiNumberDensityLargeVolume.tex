@@ -22,7 +22,6 @@
 \makesubproblem{}{pr:fermiNumberDensityLargeVolume:1:a}
 
 Write down the expression for the grand canonical partition function \(\ZG\) of an ideal three-dimensional Fermi gas with atoms having mass \(m\) at a temperature \(T\) and a \textAndIndex{chemical potential} \(\mu\) (or equivalently a fugacity \(z = e^{\beta \mu}\)).  Consider the high temperature ``classical limit'' of this ideal gas, where \(z \ll 1\) and one gets an effective Boltzmann distribution, and obtain the equation for the density of the particles
-
 \begin{dmath}\label{eqn:fermiNumberDensityLargeVolume:20}
 n = \inv{V \beta} \PD{\mu}{\ln \ZG}
 \end{dmath}
@@ -30,7 +29,6 @@ n = \inv{V \beta} \PD{\mu}{\ln \ZG}
 by converting momentum sums into integrals.  Invert this relationship to find the chemical potential \(\mu\) as a function of the density \(n\).
 
 Hint: In the limit of a large volume \(V\):
-
 \begin{dmath}\label{eqn:fermiNumberDensityLargeVolume:40}
 \sum_\Bk \rightarrow V \int \frac{d^3 \Bk}{(2 \pi)^3}.
 \end{dmath}
@@ -45,7 +43,6 @@ Hint: In the limit of a large volume \(V\):
 \makeSubAnswer{}{pr:fermiNumberDensityLargeVolume:1:a}
 
 Since it was specified incorrectly in the original problem, let's start off by verifying the expression for the number of particles (and hence the number density)
-
 \begin{dmath}\label{eqn:fermiNumberDensityLargeVolume:60}
 \inv{\beta} \PD{\mu}{} \ln \ZG
 =
@@ -63,13 +60,10 @@ Since it was specified incorrectly in the original problem, let's start off by v
 \end{dmath}
 
 Moving on to the problem, we've seen that the Fermion grand canonical partition function can be written
-
 \begin{dmath}\label{eqn:fermiNumberDensityLargeVolume:80}
 \ZG = \prod_\epsilon \lr{ 1 + z e^{-\beta \epsilon}},
 \end{dmath}
-
 so that our density is
-
 \begin{dmath}\label{eqn:fermiNumberDensityLargeVolume:100}
 n
 = \frac{N}{V}
@@ -93,7 +87,6 @@ z
 \end{dmath}
 
 In the high temperature classical limit, where \(z \ll 1\) we have
-
 \begin{dmath}\label{eqn:fermiNumberDensityLargeVolume:120}
 n
 \approx
@@ -135,13 +128,10 @@ where
 \end{dmath}
 
 Inverting for \(\mu\) we have
-
 \begin{dmath}\label{eqn:fermiNumberDensityLargeVolume:180}
-\mu = \inv{\beta} \ln z
+\mu = \inv{\beta} \ln z,
 \end{dmath}
-
 or
-
 \boxedEquation{eqn:fermiNumberDensityLargeVolume:200}{
 \mu = \kB T \ln \lr{ n \lambda^3 }.
 }

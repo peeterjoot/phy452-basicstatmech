@@ -21,7 +21,6 @@ Try a spherical change of vars to verify explicitly that phase space volume is p
 
 \makeanswer{pr:phaseSpaceChangeOfVarsSpherical:1}{
 Our kinetic Lagrangian in spherical coordinates is
-
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVarsSpherical:20}
 \LL
 = \inv{2} m \lr{ \rdot \rcap + r \sin\theta \phidot \phicap + r \thetadot \thetacap}^2
@@ -29,7 +28,6 @@ Our kinetic Lagrangian in spherical coordinates is
 \end{dmath}
 
 We read off our canonical momentum
-
 \begin{subequations}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVarsSpherical:40}
 p_r = \PD{r}{\LL} = m \rdot
@@ -41,9 +39,7 @@ p_\theta = \PD{\theta}{\LL} = m r^2 \thetadot
 p_\phi = \PD{\phi}{\LL} = m r^2 \sin^2\theta \phidot,
 \end{equation}
 \end{subequations}
-
 and can now express the Hamiltonian in spherical coordinates
-
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVarsSpherical:100}
 H = \inv{2} m \lr{
 \lr{\frac{p_r}{m}}^2
@@ -51,11 +47,10 @@ H = \inv{2} m \lr{
 + r^2 \lr{\frac{p_\theta}{m r^2}}
 }
 =
-\frac{p_r^2}{2m} + \frac{p_\phi^2}{2 m r^2 \sin^2\theta} + \frac{p_\theta^2}{2 m r^2}
+\frac{p_r^2}{2m} + \frac{p_\phi^2}{2 m r^2 \sin^2\theta} + \frac{p_\theta^2}{2 m r^2}.
 \end{dmath}
 
 Now we want to do a change of variables.  The coordinates transform as
-
 \begin{subequations}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVarsSpherical:120}
 x = r \sin\theta \cos\phi
@@ -82,7 +77,6 @@ r = \sqrt{x^2 + y^2 + z^2}
 \end{subequations}
 
 It's not too hard to calculate the change of variables for the momenta (verified in \nbref{sphericalPhaseSpaceChangeOfVars.nb}).  We have
-
 \begin{subequations}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVarsSpherical:240}
 p_r = \frac{
@@ -95,12 +89,11 @@ p_\theta = \frac{
 }{\sqrt{x^2 + y^2}}
 \end{equation}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVarsSpherical:280}
-p_\phi = x p_y - y p_x
+p_\phi = x p_y - y p_x.
 \end{equation}
 \end{subequations}
 
 Now let's compute the volume element in spherical coordinates.  With \(\rho^2 = x^2 + y^2\), this is
-
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVarsSpherical:300}
 d\omega
 = dr d\theta d\phi dp_r dp_\theta dp_\phi
@@ -121,12 +114,11 @@ But
  \frac{\left(y^2+z^2\right) p_x-x y p_y-x z p_z}{r^3} & \frac{\left(x^2+z^2\right) p_y-y \left(x p_x+z p_z\right)}{r^3} & \frac{\left(\rho^2\right) p_z-z \left(x p_x+y p_y\right)}{r^3} & \frac{x}{r} & \frac{y}{r} & \frac{z}{r} \\
  \frac{y z \left(y p_x-x p_y\right)-x \left(\rho^2\right) p_z}{\rho^3} & \frac{x z \left(x p_y-y p_x\right)-y \left(\rho^2\right) p_z}{\rho^3} & \frac{x p_x+y p_y}{\rho} & \frac{x z}{\rho} & \frac{y z}{\rho} & -\rho \\
  p_y & -p_x & 0 & -y & x & 0 \\
-\end{vmatrix}
+\end{vmatrix}.
 \end{aligned}
 \end{dmath}
 
 We find after a bit of computation that this determinant is also unity, as we found in the similar cylindrical change of phase space variables, so we have
-
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVarsSpherical:300b}
 dr d\theta d\phi p_r p_\theta p_\phi = dx dy dz dp_x dp_y dp_z,
 \end{dmath}

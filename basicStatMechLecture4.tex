@@ -20,13 +20,11 @@
 \section{Review: Lead up to Maxwell distribution for gases}
 
 For the random walk, after a number of collisions \(N_{\txtc}\), we found that a particle (labeled the \(i\)th) will have a velocity
-
 \begin{equation}\label{eqn:basicStatMechLecture4:20}
-\Bv_i(N_{\txtc}) = \Bv_i(0) + \sum_{l = 1}^{N_{\txtc}} \Delta \Bv_i(l)
+\Bv_i(N_{\txtc}) = \Bv_i(0) + \sum_{l = 1}^{N_{\txtc}} \Delta \Bv_i(l).
 \end{equation}
 
 We argued that the probability distribution for finding a velocity \(\Bv\) was as in \cref{fig:basicStatMechLecture4:basicStatMechLecture4Fig1}, and
-
 \begin{equation}\label{eqn:basicStatMechLecture4:40}
 \calP_{N_{\txtc}}(\Bv_i) \propto \exp
 \left(
@@ -39,7 +37,6 @@ We argued that the probability distribution for finding a velocity \(\Bv\) was a
 \section{What went wrong?}
 
 However, we know that this must be wrong, since we require
-
 \begin{equation}\label{eqn:basicStatMechLecture4:60}
 T = \inv{2} \sum_{i = 1}^{n} \Bv_i^2 = \mbox{conserved}
 \end{equation}
@@ -52,7 +49,6 @@ Where our argument went wrong is that when the particle has a greater than avera
 \end{itemize}
 
 There were two ingredients to diffusion (the random walk), these were
-
 \begin{itemize}
 \item
 Conservation of particles
@@ -79,13 +75,11 @@ The diffusion results in an ``attempt'' to flatten the distribution of the conce
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture4Fig2}{A friction like term is require to oppose the diffusion pressure}{fig:basicStatMechLecture4:basicStatMechLecture4Fig2}{0.3}
 
 We'd like to add to the diffusion current an extra frictional like term
-
 \begin{equation}\label{eqn:basicStatMechLecture4:140}
 j_v = -D \PD{v}{c}(v, t) - \eta v c(v)
 \end{equation}
 
 We want something directed opposite to the velocity and the concentration
-
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechLecture4:180}
 \text{Diffusion current} \equiv -D \PD{v}{c}(v, t)
@@ -96,7 +90,6 @@ We want something directed opposite to the velocity and the concentration
 \end{subequations}
 
 This gives
-
 \begin{dmath}\label{eqn:basicStatMechLecture4:160}
 \PD{t}{c}(v, t)
 = -\PD{v}{j_v}
@@ -111,7 +104,6 @@ v c(v, t)
 \end{dmath}
 
 Can we find a steady state solution to this equation when \(t \rightarrow \infty\)?  For such a steady state we have
-
 \begin{equation}\label{eqn:basicStatMechLecture4:220}
 0 = \frac{d^2 c}{dv^2} + \frac{\eta}{D} \frac{d}{dv}
 \left(
@@ -120,7 +112,6 @@ v c
 \end{equation}
 
 Integrating once we have
-
 \begin{equation}\label{eqn:basicStatMechLecture4:240}
 \frac{d c}{dv} = -\frac{\eta}{D} v c + \text{constant}
 \end{equation}
@@ -141,7 +132,6 @@ This is the \underlineAndIndex{Maxwell-Boltzmann} distribution, illustrated in \
 The concentration \(c(v)\) has a probability distribution.
 
 Calculating \(\expectation{v^2}\) from this distribution we can identify the \(D/\eta\) factor.
-
 \begin{dmath}\label{eqn:basicStatMechLecture4:520}
 \expectation{v^2}
 = \frac{\int v^2 e^{- \eta v^2/2D} dv}{
@@ -167,13 +157,11 @@ Calculating \(\expectation{v^2}\) from this distribution we can identify the \(D
 \end{dmath}
 
 This also happens to be the energy in terms of temperature (we can view this as a definition of the temperature for now), writing
-
 \begin{equation}\label{eqn:basicStatMechLecture4:280}
-\inv{2} m \expectation{\Bv^2} = \inv{2} m \left( \frac{D}{\eta} \right) = \inv{2} \kB T
+\inv{2} m \expectation{\Bv^2} = \inv{2} m \left( \frac{D}{\eta} \right) = \inv{2} \kB T.
 \end{equation}
 
 Here
-
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechLecture4:300}
 \kB = \mbox{Boltzmann constant}
@@ -196,7 +184,6 @@ This is a specific example of the more general \underlineAndIndex{fluctuation-di
 \paragraph{Generalizing to 3D}
 
 Fick's law and the continuity equation in 3D are respectively
-
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechLecture4:360}
 \Bj = -D \spacegrad_\Bv c(\Bv, t) - \eta \Bv c(\Bv, t)
@@ -207,7 +194,6 @@ Fick's law and the continuity equation in 3D are respectively
 \end{subequations}
 
 As above we have for the steady state
-
 \begin{dmath}\label{eqn:basicStatMechLecture4:540}
 0 = \PD{t}{} c(\Bv, t) = \spacegrad_\Bv \cdot
 \left(
@@ -217,19 +203,16 @@ As above we have for the steady state
 \end{dmath}
 
 Integrating once over all space
-
 \begin{equation}\label{eqn:basicStatMechLecture4:560}
 D \spacegrad_\Bv c = -\eta \Bv c + \text{vector constant, assumed zero}
 \end{equation}
 
 This is three sets of equations, one for each component \(v_\alpha\) of \(\Bv\)
-
 \begin{equation}\label{eqn:basicStatMechLecture4:580}
 \PD{v_\alpha}{c} = -\frac{\eta}{D} v_\alpha c
 \end{equation}
 
 So that our steady state equation is
-
 \begin{equation}\label{eqn:basicStatMechLecture4:400}
 c(\Bv, t \rightarrow \infty) \propto
 \exp
@@ -245,7 +228,6 @@ v_z^2
 \end{equation}
 
 Computing the average 3D squared velocity for this distribution, we have
-
 \begin{dmath}\label{eqn:basicStatMechLecture4:420}
 \inv{2} m \expectation{\Bv \cdot \Bv}
 =
