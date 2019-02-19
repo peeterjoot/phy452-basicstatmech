@@ -33,7 +33,6 @@ B_m(z) = \sum_{k = 0}^m \binom{m}{k} B_k z^{m - k}
 \end{subequations}
 
 It is conventional to fix \(B_0 = 1\).  \Eqnref{eqn:bernoulliAndEulerMacLarenSummation:60} provides an iterative method to calculate all the higher Bernoulli numbers.  Without calculating the Bernoulli numbers explicitly, we can relate these to the values of the polynomials at the origin
-
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:120}{
 B_m(0) = B_m.
 }
@@ -87,7 +86,6 @@ m B_{m-1}(z)
 }
 
 There's a number of difference relations that the polynomials satisfy.  The one that we need is
-
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:40}{
 B_m(z + 1) - B_m(z) = m z^{m -1}.
 }
@@ -232,9 +230,7 @@ and for \(m = 1\)
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:240b}
 B_1(1) = 1 + B_1(0) = 1 - 1/2 = -B_1.
 \end{dmath}
-
-we find that either of the end points in the \([0, 1]\) interval provide us (up to a sign) with the Bernoulli numbers
-
+We find that either of the end points in the \([0, 1]\) interval provide us (up to a sign) with the Bernoulli numbers
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:280}{
 B_m(1) =
 \left\{
@@ -251,14 +247,12 @@ Integrating \eqnref{eqn:bernoulliAndEulerMacLarenSummation:220} after an \(m \ri
 B_{m + 1}(z + 1) - B_{m + 1}(z)
 = (m + 1)\int_z^{z+1} B_m(z) dz,
 \end{equation}
-
 or
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:320}{
 \int_z^{z+1} B_m(z) dz = z^m.
 }
 
 Evaluating this at \(z = 0\) shows that our polynomials are odd functions around the center of the \([0, 1]\) interval, or
-
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:340}{
 \int_0^{1} B_m(z) dz = 0.
 }
@@ -277,9 +271,7 @@ We also obtain Bernoulli's sum of powers result
 =
 0 + 1^m + 2^m + \cdots (n-1)^m,
 \end{dmath}
-
 or
-
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:380}{
 \sum_{k = 1}^{n-1} k^m = \int_1^n B_m(z) dz.
 }
