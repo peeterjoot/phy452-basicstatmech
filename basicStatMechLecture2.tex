@@ -310,7 +310,8 @@ y^\conj = \alpha.
 We now want to expand the integrand around this peak value
 \begin{equation}\label{eqn:basicStatMechLecture2:700}
 I(\alpha) = \int_0^\infty
-\exp\left(
+\exp
+\biglr{
 f(y^\conj) +
 \mathLabelBox
 [
@@ -326,7 +327,7 @@ f(y^\conj) +
 \evalbar{\PDSq{y}{f}}{y^\conj}
 (y - y^\conj)^2
 + \cdots
-\right).
+}.
 \end{equation}
 
 We'll drop all but the quadratic term, and first need the second derivative
