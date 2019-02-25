@@ -21,7 +21,6 @@ P(x, t) = \int_{-\infty}^\infty \frac{dk}{2 \pi} \tilde{P}(k, t) \exp\left( i k 
 This is useful since the diffusion equation is linear in the probability and each Fourier component will evolve independently.  Using this, solve the diffusion equation to obtain \(P(k,t)\) in Fourier space given the initial \(\tilde{P}(k,0)\).
 
 \makesubproblem{Assuming an initial Gaussian profile}{basicStatMech:problemSet2:1a}
-
 \begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:80}
 P(x, 0) = \inv{\sqrt{2 \pi \sigma^2}} \exp
 \left(
@@ -41,9 +40,7 @@ to assume \(A < 1/L\) to ensure that the probability density is positive.  Obtai
 } % makeoproblem
 
 \makeanswer{basicStatMech:problemSet2:1}{
-
 Inserting the transform definitions we have
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:120}
 0
 =
@@ -471,7 +468,6 @@ Similar to the individual plots of \(P_{\mathrm{rect}}(x, t)\) and \(P_{\mathrm{
 \paragraph{An easier solution for the sinusoidal part}
 
 After working this problem, talking with classmates about how they solved it (because I was sure I'd done this windowed oscillating distribution the hard way), I now understand what was meant by ``ignore boundary effects''.  That is, ignore the boundary effects in the sinusoid portion of the distribution.  I didn't see how we could ignore the boundary effects because doing so would make the sine Fourier transform non-convergent.  Ignoring pesky ideas like convergence we can ``approximate'' the Fourier transform of the windowed sine as
-
 \begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:600}
 \tilde{P}_{\mathrm{sin}}(k)
 \approx

@@ -87,9 +87,9 @@ How does this relate to Louville's theorem?  We start by demonstrating that phas
 \item constrained to volume \(V\)
 \item Energy fixed at \(E\).
 \end{enumerate}
-
 \begin{dmath}\label{eqn:basicStatMechLecture6:180}
-\Omega(N, V, E) = \int_V
+\begin{aligned}
+\Omega&(N, V, E) = \int_V
 d\Bx_1
 d\Bx_2
 \cdots
@@ -98,15 +98,15 @@ d\Bx_N
 d\Bp_1
 d\Bp_2
 \cdots
-d\Bp_N
-\delta \left(
+d\Bp_N \times \\
+&\quad \delta \left(
 E
 - \frac{\Bp_1^2}{2m}
 - \frac{\Bp_2^2}{2m}
 \cdots
 - \frac{\Bp_N^2}{2m}
-\right)
-=
+\right) \\
+&=
 \mathLabelBox
 [
    labelstyle={xshift=2cm},
@@ -127,6 +127,7 @@ E
 \cdots
 - \frac{\Bp_N^2}{2m}
 \right).
+\end{aligned}
 \end{dmath}
 
 With \(\gamma\) defined implicitly by
@@ -148,7 +149,7 @@ so that with \textAndIndex{Heavyside theta} as in \cref{fig:basicStatMechLecture
 \frac{d\Theta}{dx} = \delta(x),
 \end{equation}
 \end{subequations}
-\imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture6Fig2}{Heavyside theta, \(\Theta(x)\).}{fig:basicStatMechLecture6:basicStatMechLecture6Fig2}{0.3}
+\imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture6Fig2}{Heavyside theta, \(\Theta(x)\).}{fig:basicStatMechLecture6:basicStatMechLecture6Fig2}{0.2}
 we have
 \begin{equation}\label{eqn:basicStatMechLecture6:240}
 \gamma(N, V, E) = V^N
@@ -232,7 +233,7 @@ This result is almost correct, and we have to correct in 2 ways.  We have to fix
 
 In the real world we have to consider this as a quantum mechanical system.  Imagine a two dimensional phase space.  The allowed points are illustrated in \cref{fig:basicStatMechLecture6:basicStatMechLecture6Fig3}.
 
-\imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture6Fig3}{Phase space volume adjustment for the uncertainty principle.}{fig:basicStatMechLecture6:basicStatMechLecture6Fig3}{0.3}
+\imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture6Fig3}{Uncertainty principle phase space volume adjustment.}{fig:basicStatMechLecture6:basicStatMechLecture6Fig3}{0.2}
 
 Since \(\Delta x \Delta p \sim \Hbar\), the question of how many boxes there are, we calculate the total volume, and then divide by the volume of each box.  This sort of handwaving wouldn't be required if we did a proper quantum mechanical treatment.  The corrected result is
 \boxedEquation{eqn:basicStatMechLecture6:380}{

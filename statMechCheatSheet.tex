@@ -77,21 +77,17 @@ N! \approx \sqrt{ 2 \pi N} N^N e^{-N}
 \begin{equation}\label{eqn:statMechCheatSheet:200}
 \Gamma(\alpha) = \int_0^\infty dy e^{-y} y^{\alpha - 1}
 \end{equation}
-
 \begin{equation}\label{eqn:statMechCheatSheet:220}
 \Gamma(\alpha + 1) = \alpha \Gamma(\alpha)
 \end{equation}
-
 \begin{equation}\label{eqn:statMechCheatSheet:240}
 \Gamma
 \lr{1/2}
  = \sqrt{\pi}
 \end{equation}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:260}
 \zeta(s) = \sum_{k=1}^{\infty} k^{-s}
 \end{dmath}
-
 \begin{equation}\label{eqn:statMechCheatSheet:280}
 \begin{aligned}
 \zeta(3/2) &\approx 2.61238 \\
@@ -100,7 +96,6 @@ N! \approx \sqrt{ 2 \pi N} N^N e^{-N}
 \zeta(3) &\approx 1.20206
 \end{aligned}
 \end{equation}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:300}
 \Gamma(z) \Gamma(1-z) = \frac{\pi}{\sin(\pi z)}
 \end{dmath}
@@ -113,9 +108,7 @@ P(x, t) = \int_{-\infty}^\infty \frac{dk}{2 \pi} \tilde{P}(k, t) \exp\left( i k 
 \tilde{P}(k, t) = \int_{-\infty}^\infty dx P(x, t) \exp\left( -i k x \right)
 \end{equation}
 \end{subequations}
-
 Heavyside theta
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:360}
 \Theta(x) =
@@ -130,7 +123,6 @@ Heavyside theta
 \frac{d\Theta}{dx} = \delta(x)
 \end{equation}
 \end{subequations}
-
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:400}
 \sum_{m = -l}^l a^m
@@ -148,7 +140,6 @@ Heavyside theta
 }
 \end{equation}
 \end{subequations}
-
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:440}
 \int_{-\infty}^\infty q^{2 N} e^{-a q^2} dq
@@ -164,14 +155,11 @@ Heavyside theta
 \begin{equation}\label{eqn:statMechCheatSheet:480}
 \binom{-\Abs{m}}{k} = (-1)^k \frac{\Abs{m}}{\Abs{m} + k} \binom{\Abs{m}+k}{\Abs{m}}
 \end{equation}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:500}
 \int_0^\infty d\epsilon \frac{\epsilon^3}{e^{\beta \epsilon} - 1} =
 \frac{\pi ^4}{15 \beta ^4},
 \end{dmath}
-
 volume in mD
-
 \begin{equation}\label{eqn:statMechCheatSheet:520}
 V_m
 =
@@ -180,34 +168,24 @@ V_m
    \Gamma\left( m/2 + 1 \right)
 }
 \end{equation}
-
 area of ellipse
-
 \begin{equation}\label{eqn:statMechCheatSheet:540}
 A = \pi a b
 \end{equation}
-
 \paragraph{Radius of gyration of a 3D polymer}
-
 With radius \(a\), we have
-
 \begin{dmath}\label{eqn:statMechCheatSheet:560}
 r_N \approx a \sqrt{N}
 \end{dmath}
-
 \paragraph{Velocity random walk}
-
 Find
 \begin{equation}\label{eqn:statMechCheatSheet:580}
 \calP_{N_{\txtc}}(\Bv) \propto e^{-
 \frac{(\Bv - \Bv_0)^2}{2 N_{\txtc}}
 }
 \end{equation}
-
 \paragraph{Random walk}
-
 1D Random walk
-
 \begin{dmath}\label{eqn:statMechCheatSheet:600}
 \calP( x, t )
 =
@@ -215,7 +193,6 @@ Find
 +
 \inv{2} \calP(x - \delta x, t - \delta t)
 \end{dmath}
-
 leads to
 \begin{equation}\label{eqn:statMechCheatSheet:620}
 \PD{t}{\calP}(x, t) =
@@ -226,21 +203,15 @@ leads to
 =
 -\PD{x}{J},
 \end{equation}
-
 The diffusion constant relation to the probability current is referred to as Fick's law
-
 \begin{dmath}\label{eqn:statMechCheatSheet:640}
 D = -\PD{x}{J}
 \end{dmath}
-
 with which we can cast the probability diffusion identity into a continuity equation form
-
 \begin{dmath}\label{eqn:statMechCheatSheet:660}
 \PD{t}{\calP} + \PD{x}{J} = 0
 \end{dmath}
-
 In 3D (with the Maxwell distribution frictional term), this takes the form
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:680}
 \Bj = -D \spacegrad_\Bv c(\Bv, t) - \eta \Bv c(\Bv, t)
@@ -249,37 +220,27 @@ In 3D (with the Maxwell distribution frictional term), this takes the form
 \PD{t}{} c(\Bv, t) + \spacegrad_\Bv \cdot \Bj(\Bv, t) = 0
 \end{equation}
 \end{subequations}
-
-
 \paragraph{Maxwell distribution}
-
 Add a frictional term to the velocity space diffusion current
-
 \begin{equation}\label{eqn:statMechCheatSheet:720}
 j_v = -D \PD{v}{c}(v, t) - \eta v c(v).
 \end{equation}
-
 For steady state the continuity equation \(0 = \frac{dc}{dt} = -\PD{v}{j_v}\) leads to
-
 \begin{equation}\label{eqn:statMechCheatSheet:740}
 c(v) \propto \exp
 \left(
 - \frac{\eta v^2}{2 D}
 \right).
 \end{equation}
-
 We also find
 \begin{dmath}\label{eqn:statMechCheatSheet:760}
 \expectation{v^2} = \frac{D}{\eta},
 \end{dmath}
-
 and identify
 \begin{equation}\label{eqn:statMechCheatSheet:780}
 \inv{2} m \expectation{\Bv^2} = \inv{2} m \left( \frac{D}{\eta} \right) = \inv{2} \kB T
 \end{equation}
-
 \paragraph{Hamilton's equations}
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:800}
 \PD{p}{H} = \xdot
@@ -288,9 +249,7 @@ and identify
 \PD{x}{H} = -\pdot
 \end{equation}
 \end{subequations}
-
 SHO
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:840}
 H = \frac{p^2}{2m} + \inv{2} k x^2
@@ -299,16 +258,13 @@ H = \frac{p^2}{2m} + \inv{2} k x^2
 \omega^2 = \frac{k}{m}
 \end{equation}
 \end{subequations}
-
 Quantum energy eigenvalues
 \begin{equation}\label{eqn:statMechCheatSheet:880}
 E_n =
 \lr{ n + \inv{2} }
 \Hbar \omega
 \end{equation}
-
 \paragraph{Liouville's theorem}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:900}
 \ddt{\rho}
 %= \PD{t}{\rho} + \PD{t}{x} \PD{x}{\rho} + \PD{t}{p} \PD{p}{\rho}
@@ -323,16 +279,10 @@ E_n =
 = \PD{t}{\rho} + \spacegrad \cdot \BJ
 = 0,
 \end{dmath}
-
 Regardless of whether we have a steady state system, if we sit on a region of phase space volume, the probability density in that neighborhood will be constant.
-
 \paragraph{Ergodic}
-
 A system for which all accessible phase space is swept out by the trajectories.  This and Liouville's theorem allows us to assume that we can treat any given small phase space volume as if it is equally probable to the same time evolved phase space region, and switch to ensemble averaging instead of time averaging.
-
-
 \paragraph{Thermodynamics}
-
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:920}
 dE = T dS - P dV + \mu dN
@@ -375,7 +325,6 @@ _{N,V}
 \CP = T \PDc{T}{S}{N,P} = \PDc{T}{H}{N,P}
 \end{equation}
 \end{subequations}
-
 \begin{equation}\label{eqn:statMechCheatSheet:1160}
 \mathLabelBox
 [
@@ -397,20 +346,14 @@ _{N,V}
 ]
 {\dbar Q}{Heat supplied to the system}
 \end{equation}
-
 Example (work on gas): \(\dbar W = -P dV\).  Adiabatic: \(\dbar Q = 0\).  Cyclic: \(dE = 0\).
-
 \paragraph{Microstates}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:1180}
 \beta = \inv{\kB T}
 \end{dmath}
-
 \begin{equation}\label{eqn:statMechCheatSheet:1200}
 S = \kB \ln \Omega
 \end{equation}
-
-
 \begin{dmath}\label{eqn:statMechCheatSheet:1220}
 \Omega(N, V, E) =
 \inv{h^{3N} N!}
@@ -441,11 +384,9 @@ E
 - \frac{\Bp_N^2}{2m}
 \right)
 \end{dmath}
-
 \begin{equation}\label{eqn:statMechCheatSheet:1240}
 \Omega = \frac{d\gamma}{dE}
 \end{equation}
-
 \begin{equation}\label{eqn:statMechCheatSheet:1260}
 \gamma
 =
@@ -461,19 +402,14 @@ E
 - \frac{\Bp_N^2}{2m}
 \right)
 \end{equation}
-
 quantum
-
 \begin{equation}\label{eqn:statMechCheatSheet:1280}
 \gamma = \sum_i \Theta(E - \epsilon_i)
 \end{equation}
-
 \paragraph{Ideal gas}
-
 \begin{equation}\label{eqn:statMechCheatSheet:1300}
 \Omega = \frac{V^N}{N!} \inv{h^{3N}} \frac{( 2 \pi m E)^{3 N/2 }}{E} \frac{1}{\Gamma( 3N/2 ) }
 \end{equation}
-
 \begin{equation}\label{eqn:statMechCheatSheet:1320}
 S_{\mathrm{ideal}} =
 \kB
@@ -483,9 +419,7 @@ N \ln \frac{V}{N} + \frac{3 N}{2} \ln
  + \frac{5 N}{2}
 \right)
 \end{equation}
-
 \paragraph{Quantum free particle in a box}
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:1340}
 \Psi_{n_1, n_2, n_3}(x, y, z) =
@@ -506,21 +440,15 @@ N \ln \frac{V}{N} + \frac{3 N}{2} \ln
 \epsilon_k = \frac{\Hbar^2 k^2}{2m},
 \end{dmath}
 \end{subequations}
-
 \paragraph{Spin}
-
 magnetization
-
 \begin{equation}\label{eqn:statMechCheatSheet:1400}
 \mu = \PD{B}{F}
 \end{equation}
-
 moment per particle
-
 \begin{equation}\label{eqn:statMechCheatSheet:1420}
 m = \mu/N
 \end{equation}
-
 spin matrices
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:1440}
@@ -533,9 +461,7 @@ spin matrices
 \sigma_z = \PauliZ
 \end{equation}
 \end{subequations}
-
 \(l \ge 0, -l \le m \le l\)
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:1500}
 \BL^2 \ket{lm} = l(l+1)\Hbar^2 \ket{lm}
@@ -544,14 +470,11 @@ spin matrices
 L_z \ket{l m} = \Hbar m \ket{l m}
 \end{equation}
 \end{subequations}
-
 spin addition
 \begin{dmath}\label{eqn:statMechCheatSheet:1540}
 S(S + 1) \Hbar^2
 \end{dmath}
-
 \paragraph{Canonical ensemble}
-
 classical
 \begin{equation}\label{eqn:statMechCheatSheet:1560}
 \Omega(N, E) =
@@ -566,7 +489,6 @@ e^{-
 _{N, V}
 }
 \end{equation}
-
 quantum
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:1580}
@@ -583,7 +505,6 @@ Z
 \lr{ e^{-\beta \hat{H}_{\text{subsystem}}} }
 \end{equation}
 \end{subequations}
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:1620}
 \expectation{E}
@@ -637,13 +558,10 @@ Z
 F = \expectation{E} - T S = -\kB T \ln Z
 \end{equation}
 \end{subequations}
-
 \paragraph{Grand Canonical ensemble}
-
 \begin{equation}\label{eqn:statMechCheatSheet:1760}
 S = - \kB \sum_{r,s} P_{r,s} \ln P_{r,s}
 \end{equation}
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:1780}
 P_{r, s} = \frac{e^{-\alpha N_r - \beta E_s}}{\ZG}
@@ -670,11 +588,9 @@ F = - \kB T \ln \frac{ \ZG }{z^N}
 \expectation{n_\epsilon} = -\inv{\beta} \PDc{\epsilon}{q}{z, T, \text{other} \epsilon} = \inv{z^{-1} e^{\beta \epsilon} \pm 1}
 \end{equation}
 \end{subequations}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:1940}
 \var(N) = \inv{\beta} \PDc{\mu}{\expectation{N}}{V, T} = - \inv{\beta} \PDc{\epsilon}{\expectation{n_\epsilon}}{z,T} = z^{-1} e^{\beta \epsilon}
 \end{dmath}
-
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:1960}
 \calP \propto
@@ -694,7 +610,6 @@ e^{-\frac{E_S}{\kB T} }
 \lr{ e^{ -\beta (\hat{H} - \mu \hat{N} ) } }
 \end{dmath}
 \end{subequations}
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:2020}
 P V = \frac{2}{3} U
@@ -715,7 +630,6 @@ z
 \cdots
 \end{dmath}
 \end{subequations}
-
 \begin{equation}\label{eqn:statMechCheatSheet:2080}
 z \frac{d f_\nu^{\pm}(z) }{dz} =
 f_{\nu-1}^{\pm}(z)
@@ -724,19 +638,15 @@ f_{\nu-1}^{\pm}(z)
 \frac{d f_{3/2}^{\pm}(z) }{dT} = -\frac{3}{2T} f_{3/2}^{\pm}(z)
 f_{\nu-1}^{\pm}(z)
 \end{equation}
-
 \paragraph{Fermions}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:2120}
 \sum_{n_k = 0}^1 e^{-\beta(\epsilon_k - \mu) n_k}
 =
 1 + e^{-\beta(\epsilon_k - \mu)}
 \end{dmath}
-
 \begin{equation}\label{eqn:statMechCheatSheet:2140}
 N = (2 S + 1) V \int_0^{\kF} \frac{4 \pi k^2 dk}{(2 \pi)^3}
 \end{equation}
-
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:2160}
 k_{\txtF} =
@@ -749,19 +659,15 @@ k_{\txtF} =
 ^{2/3}
 \end{dmath}
 \end{subequations}
-
 %\begin{dmath}\label{eqn:statMechCheatSheet:2200}
 %\mu(T = 0) = \epsilon_{\txtF}
 %\end{dmath}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:2220}
 \mu = \epsilon_{\txtF} - \frac{\pi^2}{12} \frac{(\kB T)^2}{\epsilon_{\txtF}} + \cdots
 \end{dmath}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:2240}
 \lambda \equiv \frac{h}{\sqrt{2 \pi m \kB T}}
 \end{dmath}
-
 \begin{equation}\label{eqn:statMechCheatSheet:2260}
 \frac{N}{V}
 =
@@ -770,9 +676,7 @@ k_{\txtF} =
 \frac{g}{\lambda^3}
 \lr{ e^{\beta \mu} - \frac{e^{2 \beta \mu}}{2^{3/2}} + \cdots }
 \end{equation}
-
 (so \(n = \frac{g}{\lambda^3} e^{\beta \mu}\) for large temperatures)
-
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:2280}
 P \beta = \frac{g}{\lambda^3} f_{5/2}(z)
@@ -785,13 +689,11 @@ f_{3/2}(z)
 }.
 \end{dmath}
 \end{subequations}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:2320}
 f_\nu^+(e^y) \approx
 \frac{y^\nu}{\Gamma(\nu + 1)}
 \lr{ 1 + 2 \nu \sum_{j = 1, 3, 5, \cdots} (\nu-1) \cdots(\nu - j) \left( 1 - 2^{-j} \right) \frac{\zeta(j+1)}{ y^{j + 1} } }
 \end{dmath}
-
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:2340}
 \frac{C}{N} =
@@ -802,13 +704,10 @@ A = N \kB T
 \lr{ \ln z - \frac{f_{5/2}(z)}{f_{3/2}(z)} }
 \end{dmath}
 \end{subequations}
-
 \paragraph{Bosons}
-
 \begin{equation}\label{eqn:statMechCheatSheet:2380}
 \ZG = \prod_\epsilon \inv{ 1 - z e^{-\beta \epsilon} }
 \end{equation}
-
 \begin{equation}\label{eqn:statMechCheatSheet:2400}
 P \beta = \inv{\lambda^3} g_{5/2}(z)
 \end{equation}
@@ -820,24 +719,19 @@ N_e = N - N_0 = N
 \lr{ \frac{T}{T_c} }
 ^{3/2}
 \end{equation}
-
 For \(T < T_c\), \(z = 1\).
-
 \begin{equation}\label{eqn:statMechCheatSheet:2460}
 g_\nu(1) = \zeta(\nu).
 \end{equation}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:2480}
 \sum_{n_k = 0}^\infty e^{-\beta(\epsilon_k - \mu) n_k} =
 \inv{
 1 - e^{-\beta(\epsilon_k - \mu)}
 }
 \end{dmath}
-
 \begin{dmath}\label{eqn:statMechCheatSheet:2500}
 f_\nu^-( e^{-\alpha} ) = \frac{ \Gamma(1 - \nu)}{ \alpha^{1 - \nu} } + \cdots
 \end{dmath}
-
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:2520}
 \rho \lambda^3 = g_{3/2}(z) \le \zeta(3/2) \approx 2.612
@@ -848,9 +742,7 @@ f_\nu^-( e^{-\alpha} ) = \frac{ \Gamma(1 - \nu)}{ \alpha^{1 - \nu} } + \cdots
 ^{2/3} \frac{ 2 \pi \Hbar^2}{m}
 \end{dmath}
 \end{subequations}
-
 BEC
-
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:2560}
 \rho
@@ -867,7 +759,6 @@ g_{3/2}(z)
 \right)
 \end{equation}
 \end{subequations}
-
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:2600}
 \frac{E}{V} \propto
@@ -883,9 +774,7 @@ g_{3/2}(z)
 \frac{S}{N \kB} = \frac{5}{2} \frac{g_{5/2}}{g_{3/2}} - \ln z \Theta(T - T_c)
 \end{dmath}
 \end{subequations}
-
 \paragraph{Density of states}
-
 Low velocities
 \begin{subequations}
 \begin{equation}\label{eqn:statMechCheatSheet:2660}
@@ -908,7 +797,6 @@ V
 ^{3/2} \inv{4 \pi^2} \sqrt{\epsilon}
 \end{equation}
 \end{subequations}
-
 relativistic
 \begin{subequations}
 \begin{dmath}\label{eqn:statMechCheatSheet:2720}
@@ -938,5 +826,4 @@ relativistic
 }{\epsilon}
 \end{dmath}
 \end{subequations}
-
 %\EndNoBibArticle

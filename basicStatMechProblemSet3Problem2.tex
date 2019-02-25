@@ -46,16 +46,18 @@ d_N
 }
 &=
 2 a \sqrt{n}
-\lr{\inv{(2 \pi)(\pi)}}^{n}
-\int_{\theta_j \in [0, \pi]}
+\lr{\inv{(2 \pi)(\pi)}}^{n} \times \\
+&\quad\int_{\theta_j \in [0, \pi]}
 d\theta_1 d\theta_2 \cdots d\theta_n
 \int_{\phi_j \in [0, 2 \pi]}
 d\phi_1 d\phi_2 \cdots d\phi_n \times \\
-&\quad \lr{ 1 + \frac{2}{n} \sum_{1 \le k < m \le n}
-\sin\theta_k \cos\phi_k \sin\theta_m \cos\phi_m
-+
-\sin\theta_k \sin\phi_k \sin\theta_m \sin\phi_m
-+
+&\quad 
+\Biglr{ 
+1 + \frac{2}{n} \sum_{1 \le k < m \le n}
+\sin\theta_k \cos\phi_k \sin\theta_m \cos\phi_m \\
+&\qquad+
+\sin\theta_k \sin\phi_k \sin\theta_m \sin\phi_m \\
+&\qquad+
 \cos\theta_k \cos\theta_m
 }^{1/2}.
 \end{aligned}
@@ -64,23 +66,25 @@ d\phi_1 d\phi_2 \cdots d\phi_n \times \\
 Observing that even \(\int \sqrt{1 + a \cos\theta} d\theta\) is an elliptic integral, we don't have any hope of evaluating this in closed form.  However, to first order, we have
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem2:100}
 \begin{aligned}
+\expectation{
 d_N
-&\approx
-2 a \sqrt{n}
-\lr{\inv{(2 \pi)(\pi)}}^{n}
-\int_{\theta_j \in [0, \pi]}
-d\theta_1 d\theta_2 \cdots d\theta_n
-\int_{\phi_j \in [0, 2 \pi]}
-d\phi_1 d\phi_2 \cdots d\phi_n \times \\
-&\quad \lr{ 1 + \frac{1}{n} \sum_{1 \le k < m \le n}
-\sin\theta_k \cos\phi_k \sin\theta_m \cos\phi_m
-+
-\sin\theta_k \sin\phi_k \sin\theta_m \sin\phi_m
-+
-\cos\theta_k \cos\theta_m
 }
- \\
-&=
+%%&\approx
+%%2 a \sqrt{n}
+%%\lr{\inv{(2 \pi)(\pi)}}^{n}
+%%\int_{\theta_j \in [0, \pi]}
+%%d\theta_1 d\theta_2 \cdots d\theta_n
+%%\int_{\phi_j \in [0, 2 \pi]}
+%%d\phi_1 d\phi_2 \cdots d\phi_n \times \\
+%%&\quad \lr{ 1 + \frac{1}{n} \sum_{1 \le k < m \le n}
+%%\sin\theta_k \cos\phi_k \sin\theta_m \cos\phi_m
+%%+
+%%\sin\theta_k \sin\phi_k \sin\theta_m \sin\phi_m
+%%+
+%%\cos\theta_k \cos\theta_m
+%%}
+%% \\
+&\approx
 2 a \sqrt{n}
 \lr{\inv{(2 \pi)(\pi)}}^{n}
 \lr{2 \pi^2}^n \\
@@ -95,8 +99,8 @@ d\theta'
 \int_0^{2 \pi}
 d\phi
 \int_0^{2 \pi}
-d\phi'
-\lr{
+d\phi' \times \\
+&\quad \Biglr{ 
 \sin\theta \cos\phi \sin\theta' \cos\phi'
 +
 \sin\theta \sin\phi \sin\theta' \sin\phi'
