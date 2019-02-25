@@ -84,7 +84,7 @@ For the quantum case, we count exactly the number of states that satisfy the ene
 
 How do the multiplicities scale by energy?  We'll have expect something like \cref{fig:lecture7ThreeDSHOInBoxNumStates:lecture7ThreeDSHOInBoxNumStatesFig2}.
 
-\imageFigure{../figures/phy452-basicstatmech/lecture7ThreeDSHOInBoxNumStatesFig2}{Multiplicities for free quantum particle in a 3D box.}{fig:lecture7ThreeDSHOInBoxNumStates:lecture7ThreeDSHOInBoxNumStatesFig2}{0.3}
+\imageFigure{../figures/phy452-basicstatmech/lecture7ThreeDSHOInBoxNumStatesFig2}{Multiplicities for free quantum particle in a 3D box.}{fig:lecture7ThreeDSHOInBoxNumStates:lecture7ThreeDSHOInBoxNumStatesFig2}{0.2}
 
 Provided the energies \(E \gg 3h^2/(8 m L)\) are large enough, we can approximate the sum with
 \begin{equation}\label{eqn:basicStatMechLecture7:220}
@@ -137,11 +137,13 @@ Rescale
 \end{subequations}
 so that we have
 \begin{equation}\label{eqn:basicStatMechLecture7:320}
+\begin{aligned}
 \gamma^{\mathrm{classical}}(E)
-= \int d\tilde{x} d \tilde{p} \sqrt{\frac{2 \times 2 m}{k}} \Theta\lr{ E - \tilde{x}^2 - \tilde{p}^2 }
-=
-2 \sqrt{\frac{m}{k}} \pi E
-= 2 \pi \sqrt{\frac{m}{k}} E.
+&= \int d\tilde{x} d \tilde{p} \sqrt{\frac{2 \times 2 m}{k}} \Theta\lr{ E - \tilde{x}^2 - \tilde{p}^2 } \\
+&=
+2 \sqrt{\frac{m}{k}} \pi E \\
+&= 2 \pi \sqrt{\frac{m}{k}} E.
+\end{aligned}
 \end{equation}
 \begin{equation}\label{eqn:basicStatMechLecture7:340}
 \gamma^{\mathrm{SHO}}_{\mathrm{corrected}}(E)  = 2 \pi \sqrt{\frac{m}{k}} \frac{E}{h}.
@@ -163,7 +165,7 @@ E_n^{\mathrm{SHO}} = \lr{ n + \inv{2} } \Hbar \omega
 \end{equation}
 \end{subequations}
 graphing the counts \cref{fig:lecture71DquantumSHOStatesPerEnergyLevel:lecture71DquantumSHOStatesPerEnergyLevelFig4}, we again have stepping as a function of energy, but no multiplicities this time
-\imageFigure{../figures/phy452-basicstatmech/lecture71DquantumSHOStatesPerEnergyLevelFig4}{1D quantum SHO states per energy level.}{fig:lecture71DquantumSHOStatesPerEnergyLevel:lecture71DquantumSHOStatesPerEnergyLevelFig4}{0.3}
+\imageFigure{../figures/phy452-basicstatmech/lecture71DquantumSHOStatesPerEnergyLevelFig4}{1D quantum SHO states per energy level.}{fig:lecture71DquantumSHOStatesPerEnergyLevel:lecture71DquantumSHOStatesPerEnergyLevelFig4}{0.2}
 \begin{equation}\label{eqn:basicStatMechLecture7:420}
 \gamma_{\mathrm{quantum}}(E)
 = \sum_{n = 0}^\infty \Theta\lr{ E - \lr{n + \inv{2}} \Hbar \omega}.
@@ -261,7 +263,7 @@ This has a logical inconsistency that we'll now examine.
 
 We have a problem with our counting here.  Consider some particles in a box as in \cref{fig:lecture7threeParticlesInABox:lecture7threeParticlesInABoxFig5}.
 
-\imageFigure{../figures/phy452-basicstatmech/lecture7threeParticlesInABoxFig5}{Three particles in a box.}{fig:lecture7threeParticlesInABox:lecture7threeParticlesInABoxFig5}{0.3}
+\imageFigure{../figures/phy452-basicstatmech/lecture7threeParticlesInABoxFig5}{Three particles in a box.}{fig:lecture7threeParticlesInABox:lecture7threeParticlesInABoxFig5}{0.2}
 
 \begin{itemize}
 \item particle \(1\) at \(\Bx_1\)
@@ -301,7 +303,7 @@ N \ln V + \frac{3 N}{2} \ln \lr{ \frac{4 \pi m E }{3 N h^2} } + \frac{3 N}{2}
 \end{dmath}
 
 Suppose we double the volume as in \cref{fig:lecture7gibbsVolumeDoubling:lecture7gibbsVolumeDoublingFig6}, then our total entropy for the bigger system would be
-\imageFigure{../figures/phy452-basicstatmech/lecture7gibbsVolumeDoublingFig6}{Gibbs volume doubling argument.  Two identical systems allowed to mix.}{fig:lecture7gibbsVolumeDoubling:lecture7gibbsVolumeDoublingFig6}{0.3}
+\imageFigure{../figures/phy452-basicstatmech/lecture7gibbsVolumeDoublingFig6}{Gibbs volume doubling argument.  Two identical systems allowed to mix.}{fig:lecture7gibbsVolumeDoubling:lecture7gibbsVolumeDoublingFig6}{0.2}
 \begin{dmath}\label{eqn:basicStatMechLecture7:480}
 S_{\mathrm{total}}^{(\txtE, \txtN, \txtV)}
 = \kB \ln \lr{ \frac{\Omega_{\mathrm{classical}}}{h^{3N}} }
@@ -321,29 +323,31 @@ This is telling us that each particle could be in either the left or the right s
 
 It turns out that we can do exactly this by dividing \(\Omega\) by \(N!\).  Working directly from \eqnref{eqn:basicStatMechLecture6:380d} this adjusted \underlineAndIndex{statistical entropy} is
 \begin{dmath}\label{eqn:basicStatMechLecture7:520}
-S_{\mathrm{ideal}} \rightarrow
+\begin{aligned}
+S_{\mathrm{ideal}} &\rightarrow
 \kB \lr{
 N \ln \lr{ \frac{V}{h^3}
 \lr{ \frac{ 4 \pi m E}{3 N} }^{3/2}
 }
 + \frac{3 N}{2}
 - \ln N!
-}
-\approx
-\kB \lr{
+} \\
+&\approx
+\kB \biglr{
 N \ln \lr{ \frac{V}{h^3}
 \lr{ \frac{ 4 \pi m E}{3 N} }^{3/2}
 }
-+ \frac{3N}{2}
-- N \ln N + N
-}
-=
++ \frac{3N}{2} \\
+&\qquad - N \ln N + N
+} \\
+&=
 \kB N \lr{
 \ln \lr{ \frac{V}{N h^3}
 \lr{ \frac{ 4 \pi m E}{3 N} }^{3/2}
 }
 + \frac{5}{2}
 }.
+\end{aligned}
 \end{dmath}
 
 If we use this as the starting point of our doubling argument, we see that we'd have a \(\ln (2 V/2N) = 0\) term and the entropies would be strictly additive as desired.

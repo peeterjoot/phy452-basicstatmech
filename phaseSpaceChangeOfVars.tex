@@ -16,7 +16,7 @@
 \label{chap:phaseSpaceChangeOfVars}
 %\section{Motivation}
 
-\makeproblem{Cartesian to cylindrical change of variables in 2d phase space}{pr:phaseSpaceChangeOfVars:1}{
+\makeproblem{2D phase space, cartesian to cylindrical.}{pr:phaseSpaceChangeOfVars:1}{
 In \citep{pathriastatistical} problem 2.2, it's suggested to try a spherical change of vars to verify explicitly that phase space volume is preserved, and to explore some related ideas.  As a first step let's try a similar, but presumably easier change of variables, going from Cartesian to cylindrical phase spaces.
 } % makeproblem
 
@@ -87,24 +87,27 @@ p_\theta = p_y x - p_x y.
 
 Our phase space volume element change of variables is
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVars:280}
-dr d\theta dp_r dp_\theta =
+\begin{aligned}
+dr d\theta dp_r dp_\theta &=
 \frac{\partial(r, \theta, p_r, p_\theta)}{\partial(x, y, p_x, p_y)}
-dx dy dp_x dp_y
-=
+dx dy dp_x dp_y \\
+&=
 \begin{vmatrix}
  \frac{x}{\sqrt{x^2+y^2}} & \frac{y}{\sqrt{x^2+y^2}} & 0 & 0 \\
  -\frac{y}{x^2+y^2} & \frac{x}{x^2+y^2} & 0 & 0 \\
  \frac{y \left(y p_x-x p_y\right)}{\left(x^2+y^2\right)^{3/2}} & \frac{x \left(x p_y-y p_x\right)}{\left(x^2+y^2\right)^{3/2}} & \frac{x}{\sqrt{x^2+y^2}} & \frac{y}{\sqrt{x^2+y^2}} \\
  p_y & -p_x & -y & x
-\end{vmatrix}
-dx dy dp_x dp_y
-=
+\end{vmatrix} \times \\
+&\qquad dx dy dp_x dp_y \\
+&=
 \frac{x^2 + y^2}{\left(x^2 + y^2\right)^{3/2}}
 \frac{x^2 + y^2}{\left(x^2 + y^2\right)^{1/2}}
 %\frac{x^6+3 x^4 y^2+3 x^2 y^4+y^6}{\left(x^2+y^2\right)^3}
 %dx dy dp_x dp_y
-=
+\\
+&=
 dx dy dp_x dp_y.
+\end{aligned}
 \end{dmath}
 
 We see explicitly that this point transformation has a unit Jacobian, preserving area.
