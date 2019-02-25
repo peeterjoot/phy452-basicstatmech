@@ -2,7 +2,7 @@
 % Copyright © 2013 Peeter Joot.  All Rights Reserved.
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
-\makeoproblem{Surface area of a sphere in d-dimensions}{basicStatMech:problemSet3:1}{2013 ps3, p1}{
+\makeoproblem{Surface area of a d-sphere}{basicStatMech:problemSet3:1}{2013 ps3, p1}{
 Consider a \(d\)-dimensional sphere with radius \(R\). Derive the volume of the sphere \(V_d(R)\) and its surface area \(S_d(R)\) using \(S_d(R) = dV_d(R)/dR\).
 } % makeoproblem
 
@@ -88,7 +88,9 @@ dr d\theta_4 d\theta_3 d\theta_2 d\theta_1.
 
 That Jacobian is
 \begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:180}
-J_5 =
+\begin{aligned}
+&J_5 \\
+&= 
 \left\lvert
 \begin{array}{lllll}
 C_4               &          -  r S_4               & \phantom{-} 0                  & \phantom{-} 0                 & \phantom{-} 0                  \\
@@ -97,9 +99,9 @@ S_4 S_3 C_2       & \phantom{-} r C_4 S_3 C_2       & \phantom{-} r S_4 C_3 C_2 
 S_4 S_3 S_2 C_1   & \phantom{-} r C_4 S_3 S_2 C_1   & \phantom{-} r S_4 C_3 S_2 C_1  & \phantom{-} r S_4 S_3 C_2 C_1 &          -  r S_4 S_3 S_2 S_1  \\
 S_4 S_3 S_2 S_1   & \phantom{-} r C_4 S_3 S_2 S_1   & \phantom{-} r S_4 C_3 S_2 S_1  & \phantom{-} r S_4 S_3 C_2 S_1 & \phantom{-} r S_4 S_3 S_2 C_1
 \end{array}
-\right\rvert
-=
-r^4 S_4^3 S_3^2 S_2^1 S_1^0
+\right\rvert \\
+&=
+r^4 S_4^3 S_3^2 S_2^1 S_1^0 \times \\
 %\begin{vmatrix}
 %C_4               & -S_4               &   0            &  0       &  0   \\
 %S_4 C_3           &  C_4 C_3           & - S_3          &  0       &  0   \\
@@ -107,7 +109,7 @@ r^4 S_4^3 S_3^2 S_2^1 S_1^0
 %S_4 S_3 S_2 C_1   &  C_4 S_3 S_2 C_1   &   C_3 S_2 C_1  &  C_2 C_1 & -S_1 \\
 %S_4 S_3 S_2 S_1   &  C_4 S_3 S_2 S_1   &   C_3 S_2 S_1  &  C_2 S_1 &  C_1
 %\end{vmatrix}
-\left\lvert
+&\left\lvert
 \begin{array}{lllll}
 % row 1
       \begin{array}{l}
@@ -189,6 +191,7 @@ S_3 S_2 S_1
 \end{array}
 \end{array}
 \right\rvert.
+\end{aligned}
 \end{dmath}
 
 Observe above that the cofactors of both the \(1,1\) and the \(1,2\) elements, when expanded along the first row, have a common factor.  This allows us to work recursively

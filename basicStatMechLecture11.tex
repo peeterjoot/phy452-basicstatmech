@@ -54,8 +54,9 @@ H',
 \end{equation}
 so that the number of states in the phase space volume in the phase space region associated with the energy is
 \begin{dmath}\label{eqn:basicStatMechLecture11:80}
-\Omega(N, E)
-=
+\begin{aligned}
+\Omega&(N, E) \\
+&=
 \frac{V^N}{h^{3N} N!}
 \int
 d\Bp_1
@@ -64,8 +65,8 @@ d\Bp_2
 d\Bp_3
 \cdots
 d\Bp_N
-\delta( E - H' - H_1)
-=
+\delta( E - H' - H_1) \\
+&=
 \frac{V^{N-1}}{h^{3(N-1)} (N-1)!} \frac{V}{h^3 N}
 \int
 d\Bp_1
@@ -74,9 +75,10 @@ d\Bp_2
 d\Bp_3
 \cdots
 d\Bp_N
-\delta( E - H' - H_1)
-=
+\delta( E - H' - H_1) \\
+&=
 \frac{ V }{ h^3 N} \int d\Bp_1 \Omega( N-1, E - H_1 ).
+\end{aligned}
 \end{dmath}
 With entropy defined by
 \begin{equation}\label{eqn:basicStatMechLecture11:220}
@@ -104,11 +106,12 @@ so that
 
 For \(N \gg 1\) and \(E \gg \Bp_1^2/2m\), the exponential can be approximated by
 \begin{equation}\label{eqn:basicStatMechLecture11:140}
-\exp\lr{
+\begin{aligned}
+\exp&\lr{
 \frac{1}{\kB} S
 \lr{N-1, E - \frac{\Bp_1^2}{2m}}
-}
-=
+} \\
+&=
 \exp\lr{
 \frac{1}{\kB}
 \lr{
@@ -120,6 +123,7 @@ S(N, E)
 \lr{\PD{E}{S}}_{N, V}
 }
 },
+\end{aligned}
 \end{equation}
 so that
 \begin{equation}\label{eqn:basicStatMechLecture11:160}
@@ -172,19 +176,21 @@ H = H_1 + H_2,
 \end{equation}
 we have
 \begin{dmath}\label{eqn:basicStatMechLecture11:260}
-\Omega(N, V, E)
-=
+\begin{aligned}
+\Omega(N, V, E) 
+&=
 \int
 d\{x_1\}
 d\{p_1\}
 d\{x_2\}
-d\{p_2\}
-\delta( E - H_1 - H_2 ) \inv{ h^{3N_1} N_1! h^{3 N_2} N_2!}
-\propto
+d\{p_2\} \times \\
+&\qquad \delta( E - H_1 - H_2 ) \inv{ h^{3N_1} N_1! h^{3 N_2} N_2!} \\
+&\propto
 \int
 d\{x_1\}
 d\{p_1\}
 e^{\inv{\kB} S(E - H_1, N - N_1)}.
+\end{aligned}
 \end{dmath}
 \begin{equation}\label{eqn:basicStatMechLecture11:280}
 \Omega(N, V, E)

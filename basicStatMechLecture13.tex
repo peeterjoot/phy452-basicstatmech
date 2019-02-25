@@ -264,10 +264,11 @@ We could use this to calculate the specific heat directly, but let's express the
 
 After a bit of work, we find for the second partial of the partition function
 \begin{equation}\label{eqn:basicStatMechLecture13:500}
+\begin{aligned}
 \PDSq{\beta}{Z_1}
-=
-e^{-\beta J/4}
-\lr{
+&=
+e^{-\beta J/4} \times \\
+&\quad \lr{
 \lr{\frac{3 J}{4}}^2 e^{\beta J} + 2 \cosh(\beta B)
 \lr{
 \lr{\frac{J}{4}}^2 + B^2
@@ -275,8 +276,8 @@ e^{-\beta J/4}
 - J B \sinh( \beta B )
 + \lr{\frac{J}{4} }^2
 }.
+\end{aligned}
 \end{equation}
-
 That gives us the specific heat, but it's a messy expression, and not particularly illuminating.
 
 Our magnetization \(\mu\) is

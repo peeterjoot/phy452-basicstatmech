@@ -189,7 +189,8 @@ This approximation, which has taken the sums to infinity, is plotted in \cref{fi
 
 From \eqnref{eqn:kittelRotationalPartition:250}, we can take one more derivative to calculate the exact specific heat
 \begin{dmath}\label{eqn:kittelRotationalPartition:290}
-\CV =
+\begin{aligned}
+\CV &= 
 \epsilon_0
 \PD{\tau}{}
 \lr{
@@ -199,25 +200,25 @@ From \eqnref{eqn:kittelRotationalPartition:250}, we can take one more derivative
 {
 \lr{ \sum_{l = 0}^\infty (2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}
 }
-}
-=
+} \\
+&=
 \lr{\frac{\epsilon_0}{\tau}}^2
-\lr{
-\frac{
-\lr{ \sum_{l = 1}^\infty l^2 (l + 1)^2 (2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}
-}
-{
-\lr{ \sum_{l = 0}^\infty (2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}
-}
-+
-\frac{
-\lr{ \sum_{l = 1}^\infty l (l + 1)(2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}^2
-}
-{
-\lr{ \sum_{l = 0}^\infty (2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}^2
-}
-}
-=
+\Biglr{
+   \frac{
+   \lr{ \sum_{l = 1}^\infty l^2 (l + 1)^2 (2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}
+   }
+   {
+   \lr{ \sum_{l = 0}^\infty (2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}
+   } \\
+&\qquad +
+   \frac{
+   \lr{ \sum_{l = 1}^\infty l (l + 1)(2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}^2
+   }
+   {
+   \lr{ \sum_{l = 0}^\infty (2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}^2
+   }
+} \\
+&=
 \lr{\frac{\epsilon_0}{\tau}}^2
 \lr{
 \frac{
@@ -225,8 +226,8 @@ From \eqnref{eqn:kittelRotationalPartition:250}, we can take one more derivative
 }
 {Z}
 + \frac{U^2}{\epsilon_0^2}
-}
-=
+} \\
+&=
 \frac{U^2}{\epsilon_0^2}
 +
 \lr{\frac{\epsilon_0}{\tau}}^2
@@ -234,6 +235,7 @@ From \eqnref{eqn:kittelRotationalPartition:250}, we can take one more derivative
 \lr{ \sum_{l = 1}^\infty l^2 (l + 1)^2 (2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}}
 }
 {Z}.
+\end{aligned}
 \end{dmath}
 
 This is plotted to 30 terms in \cref{fig:kittelRotationalPartition:kittelRotationalPartitionFig7}.
