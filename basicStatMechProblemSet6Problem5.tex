@@ -628,7 +628,10 @@ With a change of variables \(u = \theta x + 1\), we have
 \lr{ u^2 - 1}
 ^{3/2}  \\
 &=
-\frac{1}{8} \left((2 \theta  y (\theta  y+2)-3) \sqrt{\theta  y (\theta  y+2)} (\theta  y+1)+3 \ln  \left(\theta  y+\sqrt{\theta  y (\theta  y+2)}+1\right)\right) \\
+\frac{1}{8} \Biglr{
+   (2 \theta  y (\theta  y+2)-3) \sqrt{\theta  y (\theta  y+2)} (\theta  y+1) \\
+&\qquad +3 \ln  \left(\theta  y+\sqrt{\theta  y (\theta  y+2)}+1\right)
+}       \\
 &\approx
 \frac{1}{4}
 \lr{ \theta \ln \barz }^4
@@ -642,7 +645,10 @@ With a change of variables \(u = \theta x + 1\), we have
    \int_{1}^{\theta y + 1x}
       (u^2 - u)\sqrt{u^2 - 1}  \\
 &=
-\frac{3}{24} \left(\sqrt{\theta  y (\theta  y+2)} (\theta  y (2 \theta  y (3 \theta  y+5)-1)+3)-3 \left(\ln  \left(\theta  y+\sqrt{\theta  y (\theta  y+2)}+1\right)\right)\right) \\
+\frac{3}{24} \Biglr{
+\sqrt{\theta  y (\theta  y+2)} (\theta  y (2 \theta  y (3 \theta  y+5)-1)+3) \\
+&\qquad - 3 \left(\ln  \left(\theta  y+\sqrt{\theta  y (\theta  y+2)}+1\right)\right)
+} \\
 &\approx
 \frac{3}{4}
 \lr{ \theta \ln \barz }^4
@@ -691,7 +697,9 @@ e^{-x(1 + s)} \\
 \lr{ \frac{s+1}{\theta } }
  \\
 &=
-\frac{3 \sqrt{\frac{\pi }{2}} \theta ^{3/2}}{(s+1)^{5/2}}+\frac{45 \sqrt{\frac{\pi }{2}} \theta ^{5/2}}{8 (s+1)^{7/2}}+\frac{315 \sqrt{\frac{\pi }{2}} \theta ^{7/2}}{128 (s+1)^{9/2}}-\frac{945 \sqrt{\frac{\pi }{2}} \theta ^{9/2}}{1024 (s+1)^{11/2}}+\frac{31185 \sqrt{\frac{\pi }{2}} \theta ^{11/2}}{32768 (s+1)^{13/2}} + \cdots
+\frac{3 \sqrt{\frac{\pi }{2}} \theta ^{3/2}}{(s+1)^{5/2}}+\frac{45 \sqrt{\frac{\pi }{2}} \theta ^{5/2}}{8 (s+1)^{7/2}}+\frac{315 \sqrt{\frac{\pi }{2}} \theta ^{7/2}}{128 (s+1)^{9/2}}-\frac{945 \sqrt{\frac{\pi }{2}} \theta ^{9/2}}{1024 (s+1)^{11/2}}
+%+\frac{31185 \sqrt{\frac{\pi }{2}} \theta ^{11/2}}{32768 (s+1)^{13/2}} 
++ \cdots
 \end{aligned}
 \end{equation}
 
@@ -850,30 +858,32 @@ Here the binomial coefficient has the meaning given in the definitions of \statm
 
 Expanding in series to a couple of orders in \(\theta\) and \(\barz\) we have
 \begin{equation}\label{eqn:huang93:1020}
-\frac{n}{n_0} =
-\frac{\sqrt{2 \pi}}{36} \theta^{1/2} \left(\left(2 \sqrt{3} \barz - 9/\sqrt{2} \right) \barz +18 \right) \barz
-+\frac{5 \sqrt{ 2 \pi}}{576} \theta^{3/2} \left(\left(4 \sqrt{3} \barz - 27/\sqrt{2}\right) \barz +108 \right) \barz
+\begin{aligned}
+\frac{n}{n_0} 
+&=
+\frac{\sqrt{2 \pi}}{36} \theta^{1/2} \left(\left(2 \sqrt{3} \barz - 9/\sqrt{2} \right) \barz +18 \right) \barz \\
+&\quad+\frac{5 \sqrt{ 2 \pi}}{576} \theta^{3/2} \left(\left(4 \sqrt{3} \barz - 27/\sqrt{2}\right) \barz +108 \right) \barz 
 + \cdots
+\end{aligned}
 \end{equation}
 
 To first order in \(\theta\) and \(\barz\) this is
 \begin{equation}\label{eqn:huang93:1040}
 \frac{n}{n_0} = \inv{2} \sqrt{ 2 \pi } \barz \theta^{1/2},
 \end{equation}
-
 which allows a relation to pressure
 \begin{equation}\label{eqn:huang93:1060}
 P V = 3 N (\kB T)^2 /\epsilon_0.
 \end{equation}
-
 It's kind of odd seeming that this is quadratic in temperature.  Is there an error?
 
 \paragraph{Energy integral}
 
 Starting from \eqnref{eqn:huang93:780} and integrating by parts we have
 \begin{dmath}\label{eqn:huang93:1080}
-\frac{\expectation{\epsilon - \epsilon_0}}{V \epsilon_0 n_0}
-=
+\begin{aligned}
+&\frac{\expectation{\epsilon - \epsilon_0}}{V \epsilon_0 n_0} \\
+&=
 3 \theta^2
    \int_{0}^\infty dx
    \frac
@@ -882,15 +892,15 @@ Starting from \eqnref{eqn:huang93:780} and integrating by parts we have
    }
    {
       \barz^{-1} e^{x} + 1
-   }
-=
+   } \\
+&=
 -\theta^2
    \int_{0}^\infty dx
 \lr{(\theta x + 1)^2 - 1}
 ^{3/2}
 \frac{d}{dx}
-\lr{ \frac{x} { \barz^{-1} e^{x} + 1 } }
-=
+\lr{ \frac{x} { \barz^{-1} e^{x} + 1 } } \\
+&=
 -\theta^2
    \int_{0}^\infty dx
 \lr{(\theta x + 1)^2 - 1}
@@ -905,8 +915,8 @@ Starting from \eqnref{eqn:huang93:780} and integrating by parts we have
    {
 \lr{\barz^{-1} e^{x} + 1}^2
    }
-}
-=
+} \\
+&=
 \theta^2
    \int_{0}^\infty dx
       \lr{(\theta x + 1)^2 - 1}
@@ -916,8 +926,8 @@ Starting from \eqnref{eqn:huang93:780} and integrating by parts we have
 }
    {
       \lr{\barz^{-1} e^{x} + 1}^2
-   }
-=
+   } \\
+&=
 \theta^2
    \int_{0}^\infty dx
       \lr{(\theta x + 1)^2 - 1}
@@ -927,22 +937,23 @@ Starting from \eqnref{eqn:huang93:780} and integrating by parts we have
 }
    {
       \lr{1 + \barz e^{-x}}^2
-   }
-=
+   } \\
+&=
 \theta^2
 \sum_{s=0}^\infty \binom{-2}{s}
    \int_{0}^\infty dx
 \lr{(\theta x + 1)^2 - 1}
 ^{3/2}
    \lr{ (x - 1)\barz e^{-x} - \barz^2 e^{-2 x} }
-(\barz e^{-x})^s
-=
+(\barz e^{-x})^s \\
+&=
 \theta^2
 \sum_{s=0}^\infty \binom{-2}{s} \barz^{s + 1}
    \int_{0}^\infty dx
 \lr{(\theta x + 1)^2 - 1}
 ^{3/2}
    \lr{ (x - 1) e^{-x(s + 1)} - \barz e^{-x(s + 2)} }.
+\end{aligned}
 \end{dmath}
 
 The integral with the factor of \(x\) doesn't have a nice closed form as before (if you consider the \(K_2\) a nice closed form), but instead evaluates to a confluent hypergeometric function \citep{wolframHyperGeometricU}.  That integral is
@@ -961,9 +972,20 @@ U\left(-\frac{3}{2},-4,\frac{2 (s+1)}{\theta }\right)
 \end{dmath}
 so our multiplication by \(\theta^5\) brings us to zero as seen in the plot.  Evaluating the complete integral yields the unholy mess
 \begin{dmath}\label{eqn:huang93:1140}
-\frac{\expectation{\epsilon - \epsilon_0}}{V \epsilon_0 n_0}
+\begin{aligned}
+&\frac{\expectation{\epsilon - \epsilon_0}}{V \epsilon_0 n_0}
 =
-\sum_{s=0}^\infty \theta^2 (-1)^s (s+1) \barz^{s+1} \left(\frac{105 \sqrt{\pi } \theta^3 U\left(-\frac{1}{2},-4,\frac{2 (s+1)}{\theta }\right)}{16 (s+1)^5}-\frac{3 \sqrt{\pi } \theta^2 U\left(-\frac{1}{2},-2,\frac{2 (s+1)}{\theta }\right)}{2 (s+1)^3}-\frac{3 \sqrt{\pi } \theta^2 \barz U\left(-\frac{1}{2},-2,\frac{2 (s+2)}{\theta }\right)}{2 (s+2)^3}+\frac{(\theta -2) (-3 \theta +2 s+2) e^{\frac{s+1}{\theta }} K_2\left(\frac{s+1}{\theta }\right)}{\theta  (s+1)^2}-\frac{2 (\theta -2) e^{\frac{s+1}{\theta }} K_1\left(\frac{s+1}{\theta }\right)}{\theta  (s+1)}+\frac{\barz (-3 \theta +2 s+4) e^{\frac{s+2}{\theta }} K_2\left(\frac{s+2}{\theta }\right)}{(s+2)^2}-\frac{2 \barz e^{\frac{s+2}{\theta }} K_1\left(\frac{s+2}{\theta }\right)}{s+2}\right),
+\sum_{s=0}^\infty \theta^2 (-1)^s (s+1) \barz^{s+1}  \times \\
+&\qquad\Biglr{
+\frac{105 \sqrt{\pi } \theta^3 U\left(-\frac{1}{2},-4,\frac{2 (s+1)}{\theta }\right)}{16 (s+1)^5}
+-\frac{3 \sqrt{\pi } \theta^2 U\left(-\frac{1}{2},-2,\frac{2 (s+1)}{\theta }\right)}{2 (s+1)^3} \\
+&\qquad -\frac{3 \sqrt{\pi } \theta^2 \barz U\left(-\frac{1}{2},-2,\frac{2 (s+2)}{\theta }\right)}{2 (s+2)^3} \\
+&\qquad +\frac{(\theta -2) (-3 \theta +2 s+2) e^{\frac{s+1}{\theta }} K_2\left(\frac{s+1}{\theta }\right)}{\theta  (s+1)^2} \\
+&\qquad -\frac{2 (\theta -2) e^{\frac{s+1}{\theta }} K_1\left(\frac{s+1}{\theta }\right)}{\theta  (s+1)}
++\frac{\barz (-3 \theta +2 s+4) e^{\frac{s+2}{\theta }} K_2\left(\frac{s+2}{\theta }\right)}{(s+2)^2} \\
+&\qquad -\frac{2 \barz e^{\frac{s+2}{\theta }} K_1\left(\frac{s+2}{\theta }\right)}{s+2}
+},
+\end{aligned}
 \end{dmath}
 to first order in \(\barz\) and \(\theta\) this is
 \begin{dmath}\label{eqn:huang93:1160}

@@ -80,14 +80,16 @@ so that the total number of microstates of the combined system is now
 
 As before, if \(\overbar{P}^\mu_i\) denotes an equilibrium value of \(P_i^\mu\), then maximizing \eqnref{eqn:relStatMechExploration:200} requires all the derivatives (no sum over \(\mu\) here)
 \begin{dmath}\label{eqn:relStatMechExploration:220}
+\begin{aligned}
+0 &=
 \PDc{P^\mu_1}{\Omega_1(P_1)}{P_1 = \overbar{P_1}}
-\Omega_2(\overbar{P}_2)
-+
+\Omega_2(\overbar{P}_2) \\
+&+
 \Omega_1(\overbar{P}_1)
 \PDc{P^\mu}{\Omega_2(P_2)}{P_2 = \overbar{P_2}}
 \times
-\PD{P_1^\mu}{P_2^\mu}
-= 0.
+\PD{P_1^\mu}{P_2^\mu}.
+\end{aligned}
 \end{dmath}
 
 With each of the components of the total four-momentum \(P^\mu_1 + P^\mu_2\) separately constant, we have \(\PDi{P_1^\mu}{P_2^\mu} = -1\), so that we have
@@ -113,7 +115,7 @@ Generalizing the arguments of \S 3.1.
 
 As in the text, let's consider a very large heat reservoir \(A'\) and a subsystem \(A\) as in \cref{fig:relStatMechExploration:relStatMechExplorationFig2} that has come to a state of mutual equilibrium.  This likely needs to be defined as a state in which the four vector \(\beta_\mu\) is common, as opposed to just \(\beta_0\) the temperature field being common.
 
-\imageFigure{../figures/phy452-basicstatmech/relStatMechExplorationFig2}{A system \(A\) immersed in heat reservoir \(A'\).}{fig:relStatMechExploration:relStatMechExplorationFig2}{0.2}
+\imageFigure{../figures/phy452-basicstatmech/relStatMechExplorationFig2}{A system \(A\) immersed in heat reservoir \(A'\).}{fig:relStatMechExploration:relStatMechExplorationFig2}{0.15}
 
 If the four momentum of the heat reservoir is \(P_r'\) with \(P_r\) for the subsystem, and
 \begin{equation}\label{eqn:relStatMechExploration:300}
@@ -136,11 +138,12 @@ for the number of microstates in the reservoir, so that a Taylor expansion of th
 
 Here we've inserted the definition of \(\beta^\mu\) from \eqnref{eqn:relStatMechExploration:260}, so that at equilibrium, with \(\beta_\mu' = \beta_\mu\), we obtain
 \begin{equation}\label{eqn:relStatMechExploration:360}
-\Omega'({P^\mu_r}') =
+\begin{aligned}
+\Omega'({P^\mu_r}') &=
 \exp\lr{
 - \beta_\mu P^\mu
-}
-=
+} \\
+&=
 \exp\lr{
 - \beta E
 }
@@ -153,6 +156,7 @@ Here we've inserted the definition of \(\beta^\mu\) from \eqnref{eqn:relStatMech
 \exp\lr{
 - \beta_3 P^3
 }.
+\end{aligned}
 \end{equation}
 
 \paragraph{Next steps}

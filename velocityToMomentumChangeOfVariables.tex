@@ -41,23 +41,26 @@ p_\alpha = \frac{ m u_\alpha }{\sqrt{1 - \Bu^2/c^2}}.
 
 This is enough to calculate the Jacobian for our volume element change of variables
 \begin{dmath}\label{eqn:huang93:160}
-du_x \wedge du_y \wedge du_z
+\begin{aligned}
+du_x &\wedge du_y \wedge du_z
 =
 \frac
 {\partial(u_x, u_y, u_z)}
 {\partial(p_x, p_y, p_z)}
+dp_x \wedge dp_y \wedge dp_z \\
+&=
+\frac{
 dp_x \wedge dp_y \wedge dp_z
-=
-\inv{c^6 \lr{ m^2 + (\Bp/c)^2 }^{9/2}}
-\begin{vmatrix}
+}{c^6 \lr{ m^2 + (\Bp/c)^2 }^{9/2}} \times \\
+&\begin{vmatrix}
 m^2 c^2 + p_y^2 + p_z^2 & - p_y p_x & - p_z p_x \\
 -p_x p_y & m^2 c^2 + p_x^2 + p_z^2 & - p_z p_y \\
 -p_x p_z & -p_y p_z & m^2 c^2 + p_x^2 + p_y^2
-\end{vmatrix}
-dp_x \wedge dp_y \wedge dp_z
-=
+\end{vmatrix} \\
+&=
 m^2 \lr{ m^2 + \Bp^2/c^2 }^{-5/2}
 dp_x \wedge dp_y \wedge dp_z.
+\end{aligned}
 \end{dmath}
 
 That final simplification of the determinant was a little hairy, but yielded nicely to Mathematica \nbref{huang93relativisiticGas.nb}.

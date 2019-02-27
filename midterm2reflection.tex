@@ -140,7 +140,7 @@ This gives us
 }.
 \end{dmath}
 
-After some simplification (done offline in \nbref{midtermTwoQ1FinalSimplificationMu.nb}) we get
+After some simplification (\nbref{midtermTwoQ1FinalSimplificationMu.nb}) we get
 \boxedEquation{eqn:midterm2reflection:240}{
 \mu
 =
@@ -157,7 +157,7 @@ I got something like this on the midterm, but recall doing it somehow much diffe
 
 } % makeanswer
 
-\makeoproblem{Perturbation of classical harmonic oscillator}{pr:midterm2reflection:2}{2013 midterm II p2}{
+\makeoproblem{Perturbation of classical SHO}{pr:midterm2reflection:2}{2013 midterm II p2}{
 %(10 points)
 
 Consider a single particle perturbation of a classical simple harmonic oscillator Hamiltonian
@@ -404,11 +404,12 @@ Z \approx
 
 Now we can calculate the average energy
 \begin{dmath}\label{eqn:midterm2reflection:500}
+\begin{aligned}
 \expectation{H}
-=
+&=
 - \PD{\beta}{}
-\ln Z
-=
+\ln Z \\
+&=
 - \PD{\beta}{}
 \lr{
    -2 \ln \beta + \ln
@@ -417,9 +418,9 @@ Now we can calculate the average energy
       - \frac{3 a }{\beta (m \omega^2)^2}
       - \frac{15 b }{\beta^2 (m \omega^2)^3}
    }
-}
+} \\
 =
-\frac{2 \beta}
+\frac{2}{\beta}
 -
 \frac{
     \frac{3 a }{\beta^2 (m \omega^2)^2}
@@ -431,13 +432,14 @@ Now we can calculate the average energy
    - \frac{3 a }{\beta (m \omega^2)^2}
    - \frac{15 b }{\beta^2 (m \omega^2)^3}
 }.
+\end{aligned}
 \end{dmath}
 
 Dropping the \(c\), \(d\) terms of the denominator above, we have
 \boxedEquation{eqn:midterm2reflection:520}{
 \expectation{H}
 =
-\frac{2 \beta}
+\frac{2}{\beta}
 -
     \frac{3 a }{\beta^2 (m \omega^2)^2}
 -

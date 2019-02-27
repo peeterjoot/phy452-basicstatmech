@@ -2,7 +2,7 @@
 % Copyright © 2013 Peeter Joot.  All Rights Reserved.
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
-\makeoproblem{Estimating the BEC transition temperature}{basicStatMech:problemSet7:2}{2013 ps7 p2}{
+\makeoproblem{Estimating BEC transition temp.}{basicStatMech:problemSet7:2}{2013 ps7 p2}{
 \makesubproblem{}{basicStatMech:problemSet7:2a}
 
 Find data for the atomic mass of liquid \ce{{}^4He} and its density at ambient atmospheric pressure and hence estimate its BEC temperature assuming interactions are unimportant (even though this assumption is a very bad one!).
@@ -38,17 +38,19 @@ With the density of liquid \ce{{}^4He}, at 5.2K (boiling point): 125 grams per l
 
 In class the \(T_{\mathrm{BEC}}\) was found to be
 \begin{dmath}\label{eqn:basicStatMechProblemSet7Problem2:60}
+\begin{aligned}
 T_{\mathrm{BEC}}
-=
+&=
 \inv{\kB}
 \lr{ \frac{\rho}{\zeta(3/2)} }
-^{2/3} \frac{ 2 \pi \Hbar^2}{M}
-=
+^{2/3} \frac{ 2 \pi \Hbar^2}{M} \\
+&=
 \inv{1.3806488 \times 10^{-23} m^2 kg/s^2/K}
-\lr{ \frac{\rho}{ 2.61238 } }
-^{2/3} \frac{ 2 \pi (1.05457173 × 10^{-34} m^2 kg / s)^2}{M}
-=
+\lr{ \frac{\rho}{ 2.61238 } }^{2/3}  \times \\
+&\qquad \frac{ 2 \pi (1.05457173 × 10^{-34} m^2 kg / s)^2}{M} \\
+&=
 2.66824 \times 10^{-45} \frac{\rho^{2/3}}{M} K.
+\end{aligned}
 \end{dmath}
 
 So for liquid helium we have

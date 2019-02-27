@@ -93,15 +93,17 @@ we have
 
 We can now evaluate the density of states, and do the 3D case first.  We have
 \begin{dmath}\label{eqn:relativisticDensityOfStates:160}
+\begin{aligned}
 \calD_3(\epsilon)
-=
-\frac{V}{ (c h)^3 } \int_0^\infty 4 \pi (c p)^2 d (c p)
-\lr{
-	\delta\lr{ c p - \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }
-	+
+&=
+\frac{V}{ (c h)^3 } \int_0^\infty 4 \pi (c p)^2 d (c p) \times \\
+&\quad \Biglr{
+	\delta\lr{ c p - \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } } \\
+&\qquad +
 	\delta\lr{ c p + \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }
 }
 \frac{ \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }{\epsilon}.
+\end{aligned}
 \end{dmath}
 
 Observe that in the switch to spherical coordinates in momentum space, our integration is now over a ``radius'' of momentum space, requiring just integration over the positive values.  This will kill off one of our delta functions, leaving just
@@ -141,13 +143,13 @@ For 2D we have
 \begin{aligned}
 \calD_2(\epsilon)
 &=
-\frac{A}{ (c h)^2 } \int_0^\infty 2 \pi \Abs{c p} d (c p) \times \\
-&\qquad \lr{
-	\delta\lr{ c p - \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }
-	+
+\frac{A}{ (c h)^2 } \int_0^\infty 2 \pi \Abs{c p} d (c p) 
+\frac{ \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }{\epsilon} \times \\
+&\quad \Biglr{
+	\delta\lr{ c p - \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } } \\
+&\qquad +
 	\delta\lr{ c p + \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }
-}
-\frac{ \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }{\epsilon}.
+}.
 \end{aligned}
 \end{dmath}
 
@@ -176,15 +178,15 @@ For an extreme relativistic gas where \(\epsilon \gg m c^2\) (or photons where \
 
 \paragraph{1D case}
 \begin{dmath}\label{eqn:relativisticDensityOfStates:280}
-\calD_1(\epsilon)
-=
-\frac{L}{ c h } \int d (c p)
-\lr{
+\begin{aligned}
+\calD_1&(\epsilon) = \frac{L}{ c h } \int d (c p) 
+\frac{ \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }{\epsilon} \times \\
+&\lr{
 	\delta\lr{ c p - \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }
 	+
 	\delta\lr{ c p + \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }
 }
-\frac{ \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }{\epsilon}.
+\end{aligned}
 \end{dmath}
 
 We have to be a bit careful here.  In this 1D case, we don't have to make a switch to spherical or cylindrical coordinates, and must include the effects of the second delta function, maintaining the full integration range over positive and negative values of \(c p\).  This gives us
