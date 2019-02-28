@@ -86,11 +86,9 @@ dV_5 =
 dr d\theta_4 d\theta_3 d\theta_2 d\theta_1.
 \end{equation}
 
-That Jacobian is
+That Jacobian \( J_5 \) is
 \begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:180}
 \begin{aligned}
-&J_5 \\
-&= 
 \left\lvert
 \begin{array}{lllll}
 C_4               &          -  r S_4               & \phantom{-} 0                  & \phantom{-} 0                 & \phantom{-} 0                  \\
@@ -99,8 +97,14 @@ S_4 S_3 C_2       & \phantom{-} r C_4 S_3 C_2       & \phantom{-} r S_4 C_3 C_2 
 S_4 S_3 S_2 C_1   & \phantom{-} r C_4 S_3 S_2 C_1   & \phantom{-} r S_4 C_3 S_2 C_1  & \phantom{-} r S_4 S_3 C_2 C_1 &          -  r S_4 S_3 S_2 S_1  \\
 S_4 S_3 S_2 S_1   & \phantom{-} r C_4 S_3 S_2 S_1   & \phantom{-} r S_4 C_3 S_2 S_1  & \phantom{-} r S_4 S_3 C_2 S_1 & \phantom{-} r S_4 S_3 S_2 C_1
 \end{array}
-\right\rvert \\
-&=
+\right\rvert,
+\end{aligned}
+\end{dmath}
+or
+\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:n}
+\begin{aligned}
+&J5
+=
 r^4 S_4^3 S_3^2 S_2^1 S_1^0 \times \\
 %\begin{vmatrix}
 %C_4               & -S_4               &   0            &  0       &  0   \\

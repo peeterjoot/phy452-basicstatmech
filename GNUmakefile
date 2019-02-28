@@ -4,6 +4,10 @@ THISBOOK := phy452
 include make.revision
 include ../latex/make.bookvars
 
+# Override my default:
+MY_CLASSICTHESIS_FRONTBACK_FILES := $(filter-out ../classicthesis_mine/FrontBackmatter/Contents.tex,$(MY_CLASSICTHESIS_FRONTBACK_FILES))
+MY_CLASSICTHESIS_FRONTBACK_FILES := $(filter-out ../classicthesis_mine/FrontBackmatter/Version.tex,$(MY_CLASSICTHESIS_FRONTBACK_FILES))
+
 FIGURES := ../figures/phy452-basicstatmech
 
 SOURCE_DIRS += appendix

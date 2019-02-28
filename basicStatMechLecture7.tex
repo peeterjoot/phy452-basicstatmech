@@ -202,29 +202,31 @@ This gives us
 
 With the state counting that we've done, we want to look at \textAndIndex{entropy}
 \begin{equation}\label{eqn:basicStatMechLecture6:420}
-\mathLabelBox
-[
-   labelstyle={xshift=-2cm},
-   linestyle={out=270,in=90, latex-}
-]
-{S}{Entropy}
- =
-\mathLabelBox
-[
-   labelstyle={below of=m\themathLableNode, below of=m\themathLableNode}
-]
-{\kB}{Boltzmann's constant}
-\ln
-\mathLabelBox
-[
-   labelstyle={xshift=2cm},
-   linestyle={out=270,in=90, latex-}
-]
-{
-\Omega_{\mathrm{correct}}
-}{phase space volume (number of configurations)}.
+S = \kB \ln 
+\Omega_{\mathrm{correct}},
+%\mathLabelBox
+%[
+%   labelstyle={xshift=-2cm},
+%   linestyle={out=270,in=90, latex-}
+%]
+%{S}{Entropy}
+% =
+%\mathLabelBox
+%[
+%   labelstyle={below of=m\themathLableNode, below of=m\themathLableNode}
+%]
+%{\kB}{Boltzmann's constant}
+%\ln
+%\mathLabelBox
+%[
+%   labelstyle={xshift=2cm},
+%   linestyle={out=270,in=90, latex-}
+%]
+%{
+%\Omega_{\mathrm{correct}}
+%}{phase space volume (number of configurations)}.
 \end{equation}
-
+where \( S \) is the entropy, \( \kB \) is Boltzmann's constant, and \( \Omega_{\mathrm{correct}} \) is the phase space volume (number of configurations).
 For an ideal gas, with the quantum correction, but not the \(N!\) correction of \eqnref{eqn:basicStatMechLecture6:380}, we have
 \begin{equation}\label{eqn:basicStatMechLecture6:380b}
 \Omega = \frac{V^N}{h^{3N}} \frac{( 2 \pi m E)^{3 N/2 }}{E} \frac{1}{\Gamma( 3N/2 ) }.
