@@ -85,4 +85,6 @@ basicStatMechProblemSet6.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet7.pdf :: $(PDF_DEPS)
 
 clean ::
+	git checkout FrontBackmatter/Contents.tex
+	git checkout FrontBackmatter/Version.tex
 	git checkout $(THISBOOK).tex

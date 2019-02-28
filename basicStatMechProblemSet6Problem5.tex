@@ -749,14 +749,15 @@ For small \(\barz\) it can be seen graphically that there is very little contrib
 +\frac{5 \barz^3}{24 \sqrt{6}}
 -\frac{45 \barz^4}{1024 \sqrt{2}}
 +\frac{9 \barz^5}{200 \sqrt{10}}
-\\
-&+\sqrt{\pi} \theta^{9/2} \left(
-\frac{315 \barz}{128 \sqrt{2}}
--\frac{315 \barz^2}{4096}
-+\frac{35 \barz^3}{1152 \sqrt{6}}
--\frac{315 \barz^4}{65536 \sqrt{2}}
-+\frac{63 \barz^5}{16000 \sqrt{10}}
-\right).
+%\\
+%&+\sqrt{\pi} \theta^{9/2} \left(
+%\frac{315 \barz}{128 \sqrt{2}}
+%-\frac{315 \barz^2}{4096}
+%+\frac{35 \barz^3}{1152 \sqrt{6}}
+%-\frac{315 \barz^4}{65536 \sqrt{2}}
+%+\frac{63 \barz^5}{16000 \sqrt{10}}
+%\right)
+.
 \end{aligned}
 \end{equation}
 
@@ -940,7 +941,8 @@ Starting from \eqnref{eqn:huang93:780} and integrating by parts we have
    } \\
 &=
 \theta^2
-\sum_{s=0}^\infty \binom{-2}{s}
+\sum_{s=0}^\infty \binom{-2}{s} \times \\
+&\quad
    \int_{0}^\infty dx
 \lr{(\theta x + 1)^2 - 1}
 ^{3/2}
@@ -948,7 +950,8 @@ Starting from \eqnref{eqn:huang93:780} and integrating by parts we have
 (\barz e^{-x})^s \\
 &=
 \theta^2
-\sum_{s=0}^\infty \binom{-2}{s} \barz^{s + 1}
+\sum_{s=0}^\infty \binom{-2}{s} \barz^{s + 1} \times \\
+&\quad
    \int_{0}^\infty dx
 \lr{(\theta x + 1)^2 - 1}
 ^{3/2}
