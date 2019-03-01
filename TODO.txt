@@ -1,3 +1,7 @@
+- 
+
+/Applications/Inkscape.app/Contents/MacOS/Inkscape -D --file=batteryAndWireFig1.svg --export-pdf=batteryAndWireFig1.pdf --export-latex
+
 - probably remove: midterm1review.tex (now in the appendix)
 
 - why eqnref instead of cref?
