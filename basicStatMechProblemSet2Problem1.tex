@@ -352,62 +352,63 @@ e^{ i k_0 ( x + 2 u \sqrt{D t} ) }
 -e^{ -i k_0 ( x + 2 u \sqrt{D t} ) }
 \right)
 e^{-u^2} \\
-&=
-\frac{A}{2 i \sqrt{\pi}}
-\left(
-e^{ i k_0 x }
-\int_{-\frac{L/2 +x}{2 \sqrt{D t}}}^{\frac{L/2 - x}{2 \sqrt{Dt}}}
-du
-e^{ -u^2 + 2 i k_0 u \sqrt{D t} }
--
-e^{ -i k_0 x }
-\int_{-\frac{L/2 +x}{2 \sqrt{D t}}}^{\frac{L/2 - x}{2 \sqrt{Dt}}}
-du
-e^{ -u^2 -2 i k_0 u \sqrt{D t} }
-\right) \\
-&=
-\frac{A}{2 i \sqrt{\pi}}
-e^{ -k_0^2 D t }
-\left(
-e^{ i k_0 x }
-\int_{-\frac{L/2 +x}{2 \sqrt{D t}}}^{\frac{L/2 - x}{2 \sqrt{Dt}}}
-du
-e^{ -(u - i k_0 \sqrt{D t})^2 }
--
-e^{ -i k_0 x }
-\int_{-\frac{L/2 +x}{2 \sqrt{D t}}}^{\frac{L/2 - x}{2 \sqrt{Dt}}}
-du
-e^{ -(u + i k_0 \sqrt{D t})^2 }
-\right) \\
-&=
-\frac{A}{2 i \sqrt{\pi}}
-e^{ -k_0^2 D t }
-\left(
-e^{ i k_0 x }
-\int_{-\frac{L/2 +x}{2 \sqrt{D t}} - i k_0 \sqrt{D t}}^{\frac{L/2 - x}{2 \sqrt{Dt}} - i k_0 \sqrt{D t}}
-dv
-e^{ -v^2 }
--
-e^{ -i k_0 x }
-\int_{-\frac{L/2 +x}{2 \sqrt{D t}} + i k_0 \sqrt{D t}}^{\frac{L/2 - x}{2 \sqrt{Dt}} + i k_0 \sqrt{D t}}
-dv
-e^{ -v^2 }
-\right),
+%%&=
+%%\frac{A}{2 i \sqrt{\pi}}
+%%\left(
+%%e^{ i k_0 x }
+%%\int_{-\frac{L/2 +x}{2 \sqrt{D t}}}^{\frac{L/2 - x}{2 \sqrt{Dt}}}
+%%du
+%%e^{ -u^2 + 2 i k_0 u \sqrt{D t} }
+%%-
+%%e^{ -i k_0 x }
+%%\int_{-\frac{L/2 +x}{2 \sqrt{D t}}}^{\frac{L/2 - x}{2 \sqrt{Dt}}}
+%%du
+%%e^{ -u^2 -2 i k_0 u \sqrt{D t} }
+%%\right) \\
+%%&=
+%%\frac{A}{2 i \sqrt{\pi}}
+%%e^{ -k_0^2 D t }
+%%\left(
+%%e^{ i k_0 x }
+%%\int_{-\frac{L/2 +x}{2 \sqrt{D t}}}^{\frac{L/2 - x}{2 \sqrt{Dt}}}
+%%du
+%%e^{ -(u - i k_0 \sqrt{D t})^2 }
+%%-
+%%e^{ -i k_0 x }
+%%\int_{-\frac{L/2 +x}{2 \sqrt{D t}}}^{\frac{L/2 - x}{2 \sqrt{Dt}}}
+%%du
+%%e^{ -(u + i k_0 \sqrt{D t})^2 }
+%%\right) \\
+%%&=
+%%\frac{A}{2 i \sqrt{\pi}}
+%%e^{ -k_0^2 D t }
+%%\left(
+%%e^{ i k_0 x }
+%%\int_{-\frac{L/2 +x}{2 \sqrt{D t}} - i k_0 \sqrt{D t}}^{\frac{L/2 - x}{2 \sqrt{Dt}} - i k_0 \sqrt{D t}}
+%%dv
+%%e^{ -v^2 }
+%%-
+%%e^{ -i k_0 x }
+%%\int_{-\frac{L/2 +x}{2 \sqrt{D t}} + i k_0 \sqrt{D t}}^{\frac{L/2 - x}{2 \sqrt{Dt}} + i k_0 \sqrt{D t}}
+%%dv
+%%e^{ -v^2 }
+%%\right)
+,
 \end{aligned}
 \end{dmath}
-which is
+which reduces to
 \begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:n}
 \begin{aligned}
-P_{\mathrm{sin}}(x, t)
-&=
-\frac{A}{4 i }
+P_{\mathrm{sin}}&(x, t)
+= \\
+&\frac{A}{4 i }
 e^{ -k_0^2 D t }
 e^{ i k_0 x }
 \erf\left(
    -\frac{L/2 +x}{2 \sqrt{D t}} - i k_0 \sqrt{D t},
    \frac{L/2 - x}{2 \sqrt{Dt}} - i k_0 \sqrt{D t}
 \right) \\
-&-
+&\quad -
 \frac{A}{4 i }
 e^{ -k_0^2 D t }
 e^{ -i k_0 x }
@@ -428,22 +429,22 @@ The diffusion of this, again for \(A = D = L = 1\), \(k_0 = 8 \pi\), and \(t \in
 Putting both the rectangular and the windowed sine portions of the probability distribution together, we have the diffusion result for the entire distribution
 \boxedEquation{eqn:basicStatMechProblemSet2Problem1:460}{
 \begin{aligned}
-P(x, t)
-&=
+P&(x, t)
+=
 \inv{2 L} \erf
 \left(
 -\frac{L/2 +x}{2 \sqrt{D t}}
 ,
 \frac{L/2 -x}{2 \sqrt{D t}}
 \right) \\
-&+
+&\quad +
 \frac{A}{4 i }
 e^{ -k_0^2 D t + i k_0 x }
 \erf\left(
    -\frac{L/2 +x}{2 \sqrt{D t}} - i k_0 \sqrt{D t},
    \frac{L/2 - x}{2 \sqrt{Dt}} - i k_0 \sqrt{D t}
 \right) \\
-&-
+&\quad -
 \frac{A}{4 i }
 e^{ -k_0^2 D t -i k_0 x }
 \erf\left(
