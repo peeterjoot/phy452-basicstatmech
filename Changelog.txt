@@ -1,0 +1,18 @@
+Changelog
+
+phy452.V0.1.10.pdf
+
+- Re-export mathematica based figures as .pdf instead of .png
+- Add commas and periods into equation,dmath contexts.
+- remove blank lines between text and equation/dmath that are connected.
+- switch to 6x9 format for kindle direct publishing and reformat various equations that overflowed page boundaries.
+- use tcolorbox for tables
+- suppress page numbers for list of figures, table of contents, and first page in chapters.
+   This is a hack to deal with my hacking of classicthesis.sty, as it wants to put some of those page
+   numbers in an unprintable region that kdp doesn't like (and won't ignore.)
+- replace crude battery/resistor diagram with an svg based figure (with
+  transparency)
+- shrink various figures.
+- periods on chapter, section, and figure captions.
+- move versioning to separate file: make.revision
+
