@@ -15,7 +15,8 @@
 \markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
 \emptypage
 \tableofcontents
-%\thispagestyle{empty}
+\thispagestyle{empty}
+\endgroup
 \automark[section]{chapter}
 \renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
@@ -23,8 +24,7 @@
 % List of Figures and of the Tables
 %*******************************************************
 \clearpage
-
-\begingroup
+%\begingroup
     %\let\clearpage\relax
     %\let\cleardoublepage\relax
     %\let\cleardoublepage\relax
@@ -37,6 +37,7 @@
     \pdfbookmark[1]{\listfigurename}{lof}
     \emptypage\listoffigures
     %\listoffigures
+    \endgroup
     %\thispagestyle{empty}
 
     %\vspace*{8ex}
@@ -77,6 +78,5 @@
 %        \acro{API}{Application Programming Interface}
 %        \acro{UML}{Unified Modeling Language}
 %    \end{acronym}
-\endgroup
-
+%\endgroup
 \cleardoublepage

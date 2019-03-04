@@ -1,12 +1,15 @@
 THISDIR := phy452-basicstatmech
 THISBOOK := phy452
 
+MY_CLASSICTHESIS_FRONTBACK_FILES += ../classicthesis_mine/FrontBackmatter/Index.tex
+
 include make.revision
 include ../latex/make.bookvars
 
 # Override my default:
 MY_CLASSICTHESIS_FRONTBACK_FILES := $(filter-out ../classicthesis_mine/FrontBackmatter/Contents.tex,$(MY_CLASSICTHESIS_FRONTBACK_FILES))
 MY_CLASSICTHESIS_FRONTBACK_FILES := $(filter-out ../classicthesis_mine/FrontBackmatter/Version.tex,$(MY_CLASSICTHESIS_FRONTBACK_FILES))
+MY_CLASSICTHESIS_FRONTBACK_FILES := $(filter-out ../classicthesis_mine/FrontBackmatter/Bibliography.tex,$(MY_CLASSICTHESIS_FRONTBACK_FILES))
 
 FIGURES := ../figures/phy452-basicstatmech
 
@@ -87,4 +90,5 @@ basicStatMechProblemSet7.pdf :: $(PDF_DEPS)
 clean ::
 	git checkout FrontBackmatter/Contents.tex
 	git checkout FrontBackmatter/Version.tex
+	git checkout FrontBackmatter/Bibliography.tex
 	git checkout $(THISBOOK).tex
