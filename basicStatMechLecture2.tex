@@ -17,32 +17,37 @@
 %
 %Peeter's lecture notes from class.  May not be entirely coherent.
 
-\section{Probability.}
-
-The discrete case is plotted roughly in \cref{fig:basicStatMechLecture2:basicStatMechLecture2Fig1}.
-%P(x) : F1
-\imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture2Fig1}{Discrete probability distribution.}{fig:basicStatMechLecture2:basicStatMechLecture2Fig1}{0.2}
+A discrete probability distribution is a function satisfying
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechLecture2:20}
-P(x) \ge 1
+P(x) \ge 0
 \end{equation}
 \begin{equation}\label{eqn:basicStatMechLecture2:40}
 \sum_x P(x) = 1.
 \end{equation}
 \end{subequations}
+Such a distribution is sketched in
+\cref{fig:basicStatMechLecture2:basicStatMechLecture2Fig1}.
+%P(x) : F1
+\imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture2Fig1}{Discrete probability distribution.}{fig:basicStatMechLecture2:basicStatMechLecture2Fig1}{0.2}
+The probability that event is in the interval \(x_1 - x_0 = \Delta x\) is
+\begin{equation}\label{eqn:basicStatMechLecture2:100}
+\sum_{k = x_0}^{x_1} P(k).
+\end{equation}
 
-A continuous probability distribution may look like \cref{fig:basicStatMechLecture2:basicStatMechLecture2Fig2}.
-\imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture2Fig2}{Continuous probability distribution.}{fig:basicStatMechLecture2:basicStatMechLecture2Fig2}{0.2}
+A continuous probability is a function satisfying
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechLecture2:60}
-\calP(x) > 0
+\calP(x) \ge 0
 \end{equation}
 \begin{equation}\label{eqn:basicStatMechLecture2:80}
 \int \calP(x) dx = 1.
 \end{equation}
 \end{subequations}
-
-Probability that event is in the interval \(x_1 - x_0 = \Delta x\) is
+One such function is sketched in
+\cref{fig:basicStatMechLecture2:basicStatMechLecture2Fig2}.
+\imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture2Fig2}{Continuous probability distribution.}{fig:basicStatMechLecture2:basicStatMechLecture2Fig2}{0.2}
+The probability that an event is in the interval \(x_1 - x_0 = \Delta x\) is
 \begin{equation}\label{eqn:basicStatMechLecture2:100}
 \int_{x_0}^{x_1} \calP(x) dx.
 \end{equation}

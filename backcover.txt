@@ -1,4 +1,6 @@
-This book is based on my lecture notes for the Winter 2013, University of Toronto Basic Statistical Mechanics course (PHY452H1S), taught by Prof. Arun Paramekanti.
+This book contains lecture notes taken during the Winter 2013 session of
+Basic Statistical Mechanics (PHY452H1S), a University of Toronto course that was 
+taught by Prof. Arun Paramekanti.
 
 Official course description:
 
@@ -9,5 +11,5 @@ This book contains:
 - Plain old lecture notes.   These mirror what was covered in class, possibly augmented with additional details.
 - Personal notes exploring details that were not clear to me from the lectures, or from the texts associated with the lecture material.
 - Assigned problems.  Like anything else take these as is.  I may or may not have gone back and corrected errors, and did not see the graded versions of the last two problem sets.
-- Some worked problems attempted as course prep, for fun, or for test preparation, or post test reflection.
+- Some worked problems attempted as course prep, test preparation, or post test reflection.
 - Links to Mathematica workbooks associated with these notes.
