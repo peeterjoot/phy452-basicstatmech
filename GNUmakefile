@@ -5,6 +5,7 @@ BIBLIOGRAPHY_PATH := classicthesis_mine
 HAVE_OWN_CONTENTS := 1
 MY_CLASSICTHESIS_FRONTBACK_FILES += ../latex/classicthesis_mine/FrontBackmatter/Index.tex
 MY_CLASSICTHESIS_FRONTBACK_FILES += ../latex/classicthesis_mine/FrontBackmatter/ContentsAndFigures.tex
+BOOKTEMPLATE := ../latex/classicthesis_mine/ClassicThesis2.tex
 
 include make.revision
 include ../latex/make.bookvars
@@ -16,6 +17,8 @@ SOURCE_DIRS += $(FIGURES)
 #SOURCE_DIRS += solutions
 
 GENERATED_SOURCES += mathematica.tex 
+GENERATED_SOURCES += backmatter.tex
+ 
 #GENERATED_PDFS += basicStatMechProblemSet1.pdf
 #GENERATED_PDFS += basicStatMechProblemSet2.pdf
 #GENERATED_PDFS += basicStatMechProblemSet3.pdf
@@ -85,5 +88,6 @@ basicStatMechProblemSet5.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet6.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet7.pdf :: $(PDF_DEPS)
 
-clean ::
-	git checkout $(THISBOOK).tex
+backmatter.tex: ../latex/classicthesis_mine/backmatter2.tex
+	rm -f $@
+	ln -s ../latex/classicthesis_mine/backmatter2.tex backmatter.tex
