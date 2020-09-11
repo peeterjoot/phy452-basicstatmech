@@ -41,7 +41,16 @@ PDFS_FROM_EPS := $(subst eps,pdf,$(EPS_FILES))
 
 THISBOOK_DEPS += $(PDFS_FROM_EPS)
 
+DO_SPELL_CHECK := $(shell cat spellcheckem.txt)
+
 include ../latex/make.rules
+
+.PHONY: spellcheck
+spellcheck: $(patsubst %.tex,%.sp,$(filter-out $(DONT_SPELL_CHECK),$(DO_SPELL_CHECK)))
+
+%.sp : %.tex
+	spellcheck $^
+	touch $@
 
 #$(THISBOOK).pdf :: classicthesis.sty
 #
