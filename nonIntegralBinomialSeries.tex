@@ -15,9 +15,9 @@
 \label{chap:nonIntegralBinomialSeries}
 
 In \citep{pathriastatistical} appendix \S F was the use of binomial coefficients in a non-integral binomial expansion.  This surprised me, since I'd never seen that before.  However, on reflection, this is a very sensible notation, provided the binomial coefficients are defined in terms of the gamma function.  Let's explore this little detail explicitly.
-
+%
 \paragraph{Taylor series}
-
+%
 We start with a Taylor expansion of
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:20}
 f(x) = (a + x)^b.
@@ -43,9 +43,9 @@ Note that if \(b\) is a positive integer, then all the elements of this series b
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:80}
 (a + x)^b = \sum_{k = 0}^k \inv{k!} b(b-1)\cdots (b-(k-1)) a^{b-k} x^k.
 \end{dmath}
-
+%
 \paragraph{Gamma function}
-
+%
 Let's now relate this to the gamma function.  From \citep{abramowitz1964handbook} \S 6.1.1 we have
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:100}
 \Gamma(z) = \int_0^\infty t^{z-1} e^{-t} dt.
@@ -83,9 +83,9 @@ z (z - 1) \cdots (z - k)
 =
 \frac{\Gamma(z + 1)}{\Gamma( z - (k-1) )}.
 \end{dmath}
-
+%
 \paragraph{Binomial coefficient for positive exponents and non-integer negative exponents}
-
+%
 Considering first positive exponents \(b\), we can now use this in our Taylor expansion \eqnref{eqn:nonIntegralBinomialSeries:60}
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:180}
 (a + x)^b
@@ -113,9 +113,9 @@ If we do that, then the binomial expansion for non-integral values of \(b\) is s
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:240}
 (a + x)^b = \sum_{k = 0}^\infty \binom{b}{k} a^{b-k} x^k.
 \end{dmath}
-
+%
 \paragraph{Binomial coefficient for negative integer exponents}
-
+%
 Using the relation \eqnref{eqn:nonIntegralBinomialSeries:220} blindly leads to some trouble, since \(\Gamma(-\Abs{m})\) goes to infinity for integer values of \(m > 0\).  We have to modify the definition of the binomial coefficient for negative integer values.  Let's rewrite \eqnref{eqn:nonIntegralBinomialSeries:60} for negative integer values of \(b = -m\) as
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:260}
 (a + x)^{-m}
@@ -177,7 +177,7 @@ or
 =
 (-1)^k \frac{m}{m + k} \binom{m+k}{m}.
 \end{equation}
-
+%
 %\paragraph{Negative non-integral binomial coefficients}
 %
 %TODO.  There will be some ugliness due to the changes of sign in the products \(b(b-1)\cdots (b -k + 1)\) since \(b\) and \(b -k + 1\) may have different sign.  A product of two ratios of gamma functions will be required to express this product, which will further complicate the definition of binomial coefficient.

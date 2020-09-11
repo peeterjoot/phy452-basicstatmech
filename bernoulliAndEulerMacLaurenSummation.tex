@@ -16,11 +16,11 @@
 
 %fermiNumberDensityLargeVolume
 \paragraph{Motivation}
-
+%
 In \citep{pathriastatistical} I saw the Euler-summation \index{Euler-MacLauren summation} formula casually used in a few places (\S 6.5.19, \S 8.3.44, \S B.29), allowing an approximation of a sum with evaluations of the function and its derivatives at the origin.  This rather powerful relationship was used in passing, and seemed like it was worth some exploration.
-
+%
 \paragraph{Bernoulli polynomials and numbers}
-
+%
 Before tackling Euler summation, we first need to understand some properties of Bernoulli polynomials \citep{ wiki:bernoulliPolynomial} \index{Bernoulli polynomial}, and Bernoulli numbers \index{Bernoulli number} \citep{wiki:bernoulliNumber}.  The properties of interest required for the derivation of the Euler summation formula appear to follow fairly easily with the following choice for the definition of the Bernoulli polynomials \(B_k(x)\) and Bernoulli numbers \(B_k\)
 \begin{subequations}
 \label{eqn:bernoulliAndEulerMacLarenSummation:20a}
@@ -279,9 +279,9 @@ or
 We don't need this result for the Euler summation formula, but it's cool!
 
 To arrive at some of these results I've followed, in part, portions of the approach outlined in \citep{behnke1974fundamentalsV3}.  That treatment however, starts by deriving some difference calculus results and uses associated generating functions for a more abstract difference equation related to the Bernoulli polynomials.  In this summary of relationships above, I've attempted to avoid any requirement to first study the difference equation formalism (although that is also cool too, and not actually that difficult).
-
+%
 \paragraph{Euler-MacLauren summation}
-
+%
 Following wikipedia \citep{wiki:eulerMacLaurin}, we utilize the simple boundary conditions for the Bernoulli polynomials in the \([0, 1]\) interval.  We can exploit these using integration by parts if we do a periodic extension of these polynomials in that interval.
 
 Writing \(\largestIntLessThan{x}\) for the largest integer less than or equal to \(x\), our periodical extension of the \([0, 1]\) interval Bernoulli polynomial is
