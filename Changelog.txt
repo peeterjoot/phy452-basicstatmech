@@ -1,5 +1,30 @@
 Changelog
 
+phy452.V0.1.14.pdf (not published.)
+
+- spellcheck rules, and spell check.
+- prune blank lines surrounding \paragraph
+- undo s/center/centre/
+...
+
+phy452.V0.1.13.pdf, Sept 10, 2020 (commit 309bc76da70f3dd7aa38ee343f5f40750f516da0)
+
+Dup word check and url fixes.
+
+phy452.V0.1.12.pdf, Wed Aug 5, 2020 (commit 7bbcdf66b26e950fa01ae6cbae86f987bc2c8d49)
+
+Fix hyphens in listing, typos in bio.
+Remove appendix part so that the index and bib aren’t grouped with the appendix.
+Tweak the preface and backcover
+Group intro probability text together, and expand on probability distribution definition.
+Remove singlton part heading so that chapters are the highest level.
+Fix pdfbookmarks for contents and list of figures (so that they don’t show up under the preface)
+Streamline FrontBack specialization.
+
+phy452.V0.1.11.pdf, Sun Mar 3, 2019 (commit 5120e0354cfd1ef0303623644c252437556a730f)
+
+Fix latex errors that caused NO page numbers!
+
 phy452.V0.1.10.pdf
 
 - Re-export mathematica based figures as .pdf instead of .png
