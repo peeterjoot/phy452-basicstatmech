@@ -12,40 +12,40 @@
 %\generatetitle{PHY452H1S Basic Statistical Mechanics.  Lecture 15: Grand Canonical/Fermion-Bosons.  Taught by Prof.\ Arun Paramekanti}
 %\chapter{Grand Canonical/Fermion-Bosons}
 \label{chap:basicStatMechLecture15}
-
+%
 %\section{Disclaimer}
 %
 %Peeter's lecture notes from class.  May not be entirely coherent.
 %
-
+%
 Was mentioned that three dimensions confines us to looking at either Fermions or Bosons, and that two dimensions is a rich subject (interchange of two particles isn't the same as one particle cycling around the other ending up in the same place -- how is that different than a particle cycling around another in a two dimensional space?)
-
+%
 Definitions
-
+%
 \begin{itemize}
 \item \textAndIndex{Fermion}.  Antisymmetric under exchange.  \(n_k = 0, 1\).  
-
+%
 Paramekanti: ``Fermions: basically they hate each other''.
 \item \textAndIndex{Boson}.  Symmetric under exchange.  \(n_k = 0, 1, 2, \cdots\).  
-
+%
 Unlike Fermions, Bosons ``love each other''.  You can pack as many Bosons as you want into a space.  This allows Bosons to all collectively collapse into the ground state (Bose-Einstein condensation).
 \end{itemize}
-
+%
 In either case our energies are
 \begin{dmath}\label{eqn:basicStatMechLecture15:20}
 \epsilon_k = \frac{\Hbar^2 k^2}{2m}.
 \end{dmath}
-
+%
 For Fermions we'll have occupation filling of the form \cref{fig:lecture15:lecture15Fig1a}, where there can be only one particle at any given site (an energy level for that value of momentum).  For Bosonic systems as in \cref{fig:lecture15:lecture15Fig1b}, we don't have a restriction of only one particle for each state, and can have any given number of particles for each value of momentum.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture15Fig1a}{Fermionic energy level filling for free particle in a box.}{fig:lecture15:lecture15Fig1a}{0.2}
 \imageFigure{../figures/phy452-basicstatmech/lecture15Fig1b}{Bosonic free particle in a box energy level filling.}{fig:lecture15:lecture15Fig1b}{0.2}
-
+%
 Our Hamiltonian is
 \begin{dmath}\label{eqn:basicStatMechLecture15:40}
 H = \sum_k \hat{n}_k \epsilon_k,
 \end{dmath}
-
+%
 where we have a number operator
 \begin{dmath}\label{eqn:basicStatMechLecture15:60}
 N = \sum \hat{n}_k,
@@ -59,7 +59,7 @@ such that
 = \sum_{N=0}^\infty e^{\beta \mu N}
 \sum_{n_k, \sum n_m = N} e^{-\beta \sum_m n_m \epsilon_m}.
 \end{dmath}
-
+%
 While the second sum is constrained, because we are summing over all \(n_k\), this is essentially an unconstrained sum, so we can write
 \begin{dmath}\label{eqn:basicStatMechLecture15:120}
 \ZG
@@ -73,7 +73,7 @@ e^{-\beta \sum_m (\epsilon_m - \mu) n_m}
 =
 \prod_{k} \lr{ \sum_{n_k} e^{-\beta(\epsilon_k - \mu) n_k}}.
 \end{dmath}
-
+%
 \input{fdGrandPartition.tex}
 %
 \paragraph{Fermions}
@@ -90,7 +90,7 @@ e^{-\beta \sum_m (\epsilon_m - \mu) n_m}
 1 - e^{-\beta(\epsilon_k - \mu)}
 }.
 \end{dmath}
-
+%
 Observe that we require \(\epsilon_k - \mu \ge 0\).
 Our grand partition functions are then
 \begin{subequations}
@@ -103,7 +103,7 @@ Our grand partition functions are then
 \inv{ 1 - e^{-\beta(\epsilon_k - \mu)} }.
 \end{dmath}
 \end{subequations}
-
+%
 We can use these to compute the average number of particles
 \begin{dmath}\label{eqn:basicStatMechLecture15:220}
 \expectation{n_k^f}
@@ -122,7 +122,7 @@ or
 \inv
 { e^{\beta(\epsilon_k - \mu)} + 1}
 }
-
+%
 For Bosons we have
 \begin{dmath}\label{eqn:basicStatMechLecture15:240}
 \expectation{n_k^b}
@@ -144,7 +144,7 @@ e^{-2 \beta(\epsilon_k - \mu)}
 %=
 %\inv{ e^{\beta(\epsilon_k - \mu)} - 1}.
 \end{dmath}
-
+%
 This \textAndIndex{chemical potential} over temperature exponential
 \begin{dmath}\label{eqn:basicStatMechLecture15:260}
 e^{\beta \mu} \equiv z,
@@ -174,7 +174,7 @@ which is exactly the numerator, or
 \begin{dmath}\label{eqn:basicStatMechLecture15:320}
 N = z \PD{z}{D}.
 \end{dmath}
-
+%
 Proceeding
 \begin{dmath}\label{eqn:basicStatMechLecture15:340}
 \expectation{n_k^b}
@@ -202,12 +202,12 @@ For Fermions
 \inv{V} \sum_{\Bk}
 \inv{ e^{\beta(\epsilon_\Bk - \mu)} + 1}.
 \end{dmath}
-
+%
 The simplest such system is the ``free particle in a box'', with Hamiltonian
 \begin{dmath}\label{eqn:basicStatMechLecture15:620}
 -\frac{\Hbar^2}{2 m} \spacegrad^2 \Psi = \epsilon \Psi.
 \end{dmath}
-
+%
 For a box with one corner fixed at the origin, and all sides of length \(L\), we have solutions
 \begin{dmath}\label{eqn:basicStatMechLecture15:640}
 \Psi =
@@ -215,12 +215,12 @@ For a box with one corner fixed at the origin, and all sides of length \(L\), we
 \sin\lr{ \frac{\pi n_y y}{L} }
 \sin\lr{ \frac{\pi n_z z}{L} },
 \end{dmath}
-
+%
 and an energy quantization given by
 \begin{dmath}\label{eqn:basicStatMechLecture15:660}
 \frac{\Hbar^2 \pi^2}{2 m L^2} \lr{n_x^2 + n_y^2 + n_z^2} = \epsilon.
 \end{dmath}
-
+%
 With \(\epsilon_{\Bk} = \Hbar^2 \Bk^2/2m\), we have \(k_\alpha = \pi n_\alpha/L\), and can make an integral approximation of the sum
 \begin{dmath}\label{eqn:basicStatMechLecture15:680}
 \inv{V} \sum_\Bk f_{\Bk}
@@ -231,30 +231,30 @@ With \(\epsilon_{\Bk} = \Hbar^2 \Bk^2/2m\), we have \(k_\alpha = \pi n_\alpha/L\
 =
 \frac{L^3}{V} \int \frac{d^3 \Bk}{(2 \pi)^3} f_\Bk.
 \end{dmath}
-
+%
 Since \(V = L^3\), the leading term cancels out.  Generalizing to other (possibly lower) dimensional spaces, our Fermionic density in a \(d\)-dimensional space is approximated by
 \boxedEquation{eqn:basicStatMechLecture15:380}{
 \rho =
 \int \frac{d^d k}{(2 \pi)^d}
 \inv{ e^{\beta(\epsilon_{\Bk} - \mu)} + 1}.
 }
-
+%
 This integral is actually difficult to evaluate.  However, for \(T \rightarrow 0\) (\(\beta \rightarrow \infty\)), we can evaluate the limit.
 If \(\epsilon_\Bk -\mu(0) < 0\), the exponential term goes as \(e^{-1/0}\) which tends to zero, so we have \(\expectation{n_k^f} = 1\) for \(\epsilon_\Bk < \mu(0)\).  When \(\epsilon_\Bk - \mu(0) > 0\), the exponential term goes as \(e^{1/0}\) which tends to infinity, so \(\expectation{n_k^f} \rightarrow 1\) for \(\epsilon_\Bk > \mu(0)\).  This can be summarized as
 \begin{dmath}\label{eqn:basicStatMechLecture15:400}
 \evalbar{\expectation{n_k^f}}{T = 0}
 = \Theta(\mu(0) - \epsilon_k).
 \end{dmath}
-
+%
 This is illustrated in \cref{fig:lecture15:lecture15Fig2}, where the smearing that occurs with increasing temperature is also indicated.  \citep{kittel1980thermal} \S 7 calls \(\EF\) as defined above the \underlineAndIndex{Fermi energy}, the energy at which all the lowest order orbitals are exactly filled.  Without any limiting assumption, a discussion of why this energy is being equated with the \(T = 0\) \textAndIndex{chemical potential} energy can be found in \citep{pathriastatistical} \S 8.1 (where the exact integral is evaluated, or at least expressed).  When that integral approximation of the sum is performed exactly, we see that at \(T = 0\), the illustrated cutoff occurs at this \(\EF = \mu(0)\) point.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture15Fig2}{Occupation numbers for different energies.}{fig:lecture15:lecture15Fig2}{0.2}
-
+%
 With
 \begin{equation}\label{eqn:basicStatMechLecture15:420}
 E_{\txtF} = \mu(T = 0),
 \end{equation}
-
+%
 we want to ask what is the radius of the ball for which
 \begin{dmath}\label{eqn:basicStatMechLecture15:560}
 \epsilon_k = E_{\txtF},
@@ -263,12 +263,12 @@ or
 \begin{dmath}\label{eqn:basicStatMechLecture15:440}
 E_{\txtF} = \frac{\Hbar^2 k_{\txtF}^2}{2m}.
 \end{dmath}
-
+%
 With this definition
 \begin{dmath}\label{eqn:basicStatMechLecture15:460}
 k_{\txtF} = \sqrt{\frac{2 m E_{\txtF}}{\Hbar^2}},
 \end{dmath}
-
+%
 so that our density where \(\epsilon_k = \mu\) is
 \begin{dmath}\label{eqn:basicStatMechLecture15:480}
 \rho
@@ -289,15 +289,15 @@ Our \textAndIndex{chemical potential} at zero temperature is then
 \begin{dmath}\label{eqn:basicStatMechLecture15:540}
 \rho^{-1/3} = \mbox{interparticle spacing}.
 \end{dmath}
-
+%
 We can convince our self that the chemical potential must have the form \cref{fig:lecture15:lecture15Fig3}.
 \imageFigure{../figures/phy452-basicstatmech/lecture15Fig3}{Large negative chemical potential at high temperatures.}{fig:lecture15:lecture15Fig3}{0.2}
-
+%
 Given large negative chemical potential at high temperatures our number distribution will have the form
 \begin{dmath}\label{eqn:basicStatMechLecture15:580}
 \expectation{n_k} = e^{-\beta (\epsilon_k - \mu)} \propto e^{-\beta \epsilon_k}.
 \end{dmath}
-
+%
 We see that the classical Boltzmann distribution is recovered for high temperatures.
 We can also calculate the chemical potential at high temperatures.  We'll find that this has the form
 \begin{dmath}\label{eqn:basicStatMechLecture15:700}
@@ -307,10 +307,10 @@ e^{\beta \mu} =
 \end{dmath}
 %
 %FIXME: this isn't the result we found in lectures 16 and 17 (no \(4/3\) factor).
-
+%
 where this quantity \(\lambda_T\) is called the \underlineAndIndex{thermal de Broglie wavelength}.
 \begin{dmath}\label{eqn:basicStatMechLecture15:600}
 \lambda_T = \sqrt{\frac{ 2 \pi \Hbar^2}{m \kB T}}.
 \end{dmath}
-
+%
 %\EndNoBibArticle

@@ -22,7 +22,7 @@ For photons and high velocity particles our non-relativistic \textAndIndex{densi
 \lr{m c^2}^2
 + (p c)^2 }.
 \end{dmath}
-
+%
 We want to convert a sum over momentum values to an energy integral
 \begin{dmath}\label{eqn:relativisticDensityOfStates:40}
 \calD_3(\epsilon)
@@ -42,7 +42,7 @@ L^d
 \int \frac{d^d (c \Bp)}{(c h)^d}
 \delta( \epsilon - \epsilon_\Bp ).
 \end{dmath}
-
+%
 Now we want to use
 \begin{dmath}\label{eqn:relativisticDensityOfStates:60}
 \delta(g(x))
@@ -56,7 +56,7 @@ g( cp ) = \epsilon - \sqrt{
 \lr{ m c^2 }^2
 + ( c p )^2 }.
 \end{dmath}
-
+%
 Writing \(p^\conj\) for the roots we have
 \begin{dmath}\label{eqn:relativisticDensityOfStates:100}
 c p^\conj
@@ -65,7 +65,7 @@ c p^\conj
 \lr{ m c^2 }^2
 }.
 \end{dmath}
-
+%
 Note that
 \begin{equation}\label{eqn:relativisticDensityOfStates:120}
 \sqrt{
@@ -74,7 +74,7 @@ Note that
 =
 \sqrt{ \epsilon^2 } = \epsilon.
 \end{equation}
-
+%
 we have
 \begin{dmath}\label{eqn:relativisticDensityOfStates:140}
 \Abs{g'( c p )}_{p = p^\conj}
@@ -105,7 +105,7 @@ We can now evaluate the density of states, and do the 3D case first.  We have
 \frac{ \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }{\epsilon}.
 \end{aligned}
 \end{dmath}
-
+%
 Observe that in the switch to spherical coordinates in momentum space, our integration is now over a ``radius'' of momentum space, requiring just integration over the positive values.  This will kill off one of our delta functions, leaving just
 \begin{dmath}\label{eqn:relativisticDensityOfStates:340}
 \calD_3(\epsilon)
@@ -126,14 +126,14 @@ or
 }^{3/2}
 }{\epsilon}.
 }
-
+%
 In particular, for very high energy particles where \(\epsilon \gg \lr{m c^2}\), our 3D density of states is
 \boxedEquation{eqn:relativisticDensityOfStates:380}{
 \calD_3(\epsilon)
 \approx
 \frac{4 \pi V}{ (c h)^3 } \epsilon^2
 }
-
+%
 This is also the desired result for photons or other massless particles.
 %
 \paragraph{2D case}
@@ -152,7 +152,7 @@ For 2D we have
 }.
 \end{aligned}
 \end{dmath}
-
+%
 Note again that we are dealing with a ``radius'' over this shell of momentum space volume.  This is a strictly positive value.  That and the corresponding integration range is important in this case since including the negative range of \(c p\) would kill the entire density function because of the pair of delta functions.  That wasn't the case in 3D, where it would have resulted in an off by two error instead.  Continuing the evaluation we have
 \begin{dmath}\label{eqn:relativisticDensityOfStates:220}
 \calD_2(\epsilon)
@@ -168,7 +168,7 @@ or
 \frac{2 \pi A}{ (c h)^2 }
 \frac{ \epsilon^2 - \lr{ m c^2 }^2 }{ \epsilon }.
 }
-
+%
 For an extreme relativistic gas where \(\epsilon \gg m c^2\) (or photons where \(m = 0\)), we have
 \boxedEquation{eqn:relativisticDensityOfStates:260}{
 \calD_2(\epsilon)
@@ -188,7 +188,7 @@ For an extreme relativistic gas where \(\epsilon \gg m c^2\) (or photons where \
 }
 \end{aligned}
 \end{dmath}
-
+%
 We have to be a bit careful here.  In this 1D case, we don't have to make a switch to spherical or cylindrical coordinates, and must include the effects of the second delta function, maintaining the full integration range over positive and negative values of \(c p\).  This gives us
 \boxedEquation{eqn:relativisticDensityOfStates:300}{
 \calD_1(\epsilon)
@@ -196,7 +196,7 @@ We have to be a bit careful here.  In this 1D case, we don't have to make a swit
 \frac{2 L}{ c h }
 \frac{ \sqrt{ \epsilon^2 - \lr{ m c^2 }^2 } }{\epsilon}.
 }
-
+%
 For \(\epsilon \gg m c^2\) or \(m = 0\) this reduces to
 \boxedEquation{eqn:relativisticDensityOfStates:320}{
 \calD_1(\epsilon)
@@ -212,5 +212,5 @@ Note that the integration range given a non-zero mass in the density of states h
 \rightarrow \int \frac{d^d \Bk}{(2\pi)^d} f(\Bk)
 \rightarrow \inv{L^d} \int_{m c^2}^\infty d\epsilon D_d(\epsilon) f(\epsilon).
 \end{dmath}
-
+%
 %\EndNoBibArticle

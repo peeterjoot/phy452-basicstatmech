@@ -16,11 +16,11 @@ P_N(X) = 2^{-N} \frac{N!}{
 \end{equation}
 derive the Gaussian distribution which results when \(N \gg 1\) and \(\Abs{X} \ll N\).
 } % makeoproblem
-
+%
 \makeanswer{basicStatMech:problemSet1:1}{
-
+%
 We'll work with the logarithms of \(P_N(X)\).
-
+%
 Note that the logarithm of the Stirling approximation takes the form
 \begin{dmath}\label{eqn:basicStatMechProblemSet1Problem1:40}
 \ln a!
@@ -28,7 +28,7 @@ Note that the logarithm of the Stirling approximation takes the form
 =
 \ln \sqrt{2\pi} + \left( a + \inv{2} \right) \ln a - a.
 \end{dmath}
-
+%
 Using this we have
 \begin{dmath}\label{eqn:basicStatMechProblemSet1Problem1:60}
 \ln
@@ -60,7 +60,7 @@ Using this we have
 \right)
 - \frac{N + X}{2}.
 \end{dmath}
-
+%
 Adding \(\ln \left( (N + X)/2 \right)! + \ln \left( (N - X)/2 \right)!\), we have
 \begin{equation}\label{eqn:basicStatMechProblemSet1Problem1:80}
 \begin{aligned}
@@ -118,7 +118,7 @@ Adding \(\ln \left( (N + X)/2 \right)! + \ln \left( (N - X)/2 \right)!\), we hav
 \right)
 \end{aligned}
 \end{equation}
-
+%
 Recall that we can expand the log around \(1\) with the slowly converging Taylor series
 \begin{subequations}
 \begin{dmath}\label{eqn:basicStatMechProblemSet1Problem1:100}
@@ -155,7 +155,7 @@ but if \(x \ll 1\) the first order term will dominate, so in this case where we 
 + \frac{X^2}{2 N}
 + (N + 1) \ln \frac{N}{2}.
 \end{dmath}
-
+%
 Putting the bits together, we have
 \begin{dmath}\label{eqn:basicStatMechProblemSet1Problem1:160}
 \ln P_N(X) \approx - N \ln 2 +
@@ -178,7 +178,7 @@ Putting the bits together, we have
 \right)
 -\frac{X^2}{2 N}.
 \end{dmath}
-
+%
 Exponentiating gives us the desired result
 \boxedEquation{eqn:basicStatMechProblemSet1Problem1:180}{
 P_N(X) \rightarrow \frac{2}{\sqrt{2 \pi N}} e^{-\frac{X^2}{2 N}}.

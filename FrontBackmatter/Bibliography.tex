@@ -11,5 +11,16 @@
 \addcontentsline{toc}{chapter}{\tocEntry{\bibname}}
 \bibliographystyle{plainnat}
 \label{app:bibliography} 
+%\thispagestyle{empty}
+%\renewcommand{\thepage}{}
+%\preto{\bibitem}{\thispagestyle{empty}}
+
+% ece1228 ends up with a bib page number in the gutter, and kdp doesn't like it.
+% this is a hack to just remove that page number:
+% ref: https://tex.stackexchange.com/a/153269/15
+\newbool{firstbib}
+\booltrue{firstbib}
+\preto{\bibitem}{\ifbool{firstbib}{\thispagestyle{empty}\setbool{firstbib}{false}}{}}
+
 \bibliography{Bibliography}
 \endgroup

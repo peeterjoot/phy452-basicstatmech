@@ -14,13 +14,13 @@
 %\generatetitle{Velocity volume element to momentum volume element}
 %\chapter{Velocity volume element to momentum volume element}
 \label{chap:velocityToMomentumChangeOfVariables}
-
+%
 %\section{Motivation}
-
+%
 One of the problems I attempted had integrals over velocity space with volume element \(d^3\Bu\).  Initially I thought that I'd need a change of variables to momentum space, and calculated the corresponding momentum space volume element.  Here's that calculation.
-
+%
 %\section{Guts}
-
+%
 We are working with a Hamiltonian
 \begin{dmath}\label{eqn:velocityToMomentumChangeOfVariables:200}
 \epsilon = \sqrt{ (p c)^2 + \epsilon_0^2 },
@@ -29,7 +29,7 @@ where the rest energy is
 \begin{dmath}\label{eqn:velocityToMomentumChangeOfVariables:220}
 \epsilon_0 = m c^2.
 \end{dmath}
-
+%
 Hamilton's equations give us
 \begin{dmath}\label{eqn:velocityToMomentumChangeOfVariables:240}
 u_\alpha = \frac{ p_\alpha/c^2 }{\epsilon},
@@ -38,7 +38,7 @@ or
 \begin{dmath}\label{eqn:velocityToMomentumChangeOfVariables:260}
 p_\alpha = \frac{ m u_\alpha }{\sqrt{1 - \Bu^2/c^2}}.
 \end{dmath}
-
+%
 This is enough to calculate the Jacobian for our volume element change of variables
 \begin{dmath}\label{eqn:huang93:160}
 \begin{aligned}
@@ -62,12 +62,12 @@ m^2 \lr{ m^2 + \Bp^2/c^2 }^{-5/2}
 dp_x \wedge dp_y \wedge dp_z.
 \end{aligned}
 \end{dmath}
-
+%
 That final simplification of the determinant was a little hairy, but yielded nicely to Mathematica \nbref{huang93relativisiticGas.nb}.
-
+%
 Our final result for the velocity volume element in momentum space, in terms of the particle energy is
 \begin{dmath}\label{eqn:huang93:180}
 d^3 \Bu = \frac{c^6 \epsilon_0^2 } {\epsilon^5} d^3 \Bp.
 \end{dmath}
-
+%
 %\EndNoBibArticle

@@ -16,16 +16,16 @@
 %\generatetitle{Midterm II reflection}
 %\chapter{Midterm II reflection}
 \label{chap:midterm2reflection}
-
+%
 %Here's some reflection about this Thursday's midterm, redoing the problems without the mad scramble.  I don't think my results are too different from what I did in the midterm, even doing them casually now, but I'll have to see after grading if these solutions are good.
-
+%
 \makeoproblem{Magnetic spin level splitting}{pr:midterm2reflection:1}{2013 midterm II p1}{
 %(5 points)
 A particle with spin \(S\) has \(2 S + 1\) states \(-S, -S + 1, \cdots S-1, S\).  When exposed to a magnetic field, state splitting results in energy \(E_m = \Hbar m B\).  Calculate the partition function, and use this to find the temperature specific magnetization.  A ``sum the geometric series'' hint was given.
 } % makeoproblem
-
+%
 \makeanswer{pr:midterm2reflection:1}{
-
+%
 Our partition function is
 \begin{dmath}\label{eqn:midterm2reflection:20}
 Z
@@ -37,7 +37,7 @@ e^{-\Hbar \beta S B}
 e^{\Hbar \beta S B}
 \sum_{n = 0}^{2 S} e^{-\Hbar \beta n B}.
 \end{dmath}
-
+%
 Writing
 \begin{equation}\label{eqn:midterm2reflection:40}
 a = e^{-\Hbar \beta B},
@@ -54,7 +54,7 @@ a^{-S} \frac{ a^{2 S + 1} - 1 }{a - 1}
 =
 \frac{ a^{S + 1/2} - a^{-S - 1/2} }{a^{1/2} - a^{-1/2}}.
 \end{dmath}
-
+%
 Substitution of \(a\) gives us
 \boxedEquation{eqn:midterm2reflection:80}{
 Z =
@@ -62,19 +62,19 @@ Z =
 { \sinh( \Hbar \beta B (S + 1/2) ) }
 { \sinh( \Hbar \beta B /2 )  }.
 }
-
+%
 To calculate the magnetization \(M\), I used
 \begin{equation}\label{eqn:midterm2reflection:100}
 M = -\expectation{H}/B.
 \end{equation}
-
+%
 As \citep{kittel1980thermal} defines magnetization for a spin system.  It was pointed out to me after the test that magnetization was defined differently in class as
 \begin{equation}\label{eqn:midterm2reflection:140}
 \mu = \PD{B}{F}.
 \end{equation}
-
+%
 These are, up to a sign, identical, at least in this case, since we have \(\beta\) and \(B\) travelling together in the partition function.
-
+%
 In terms of the average energy
 \begin{dmath}\label{eqn:midterm2reflection:580}
 M = -\frac{\expectation{H}}{B}
@@ -82,7 +82,7 @@ M = -\frac{\expectation{H}}{B}
 = \inv{Z B} \PD{\beta}{}Z(\beta B)
 = \inv{Z} \PD{(\beta B)}{} Z(\beta B).
 \end{dmath}
-
+%
 Compare this to the in-class definition of magnetization
 \begin{dmath}\label{eqn:midterm2reflection:180}
 \mu
@@ -92,7 +92,7 @@ Compare this to the in-class definition of magnetization
 = -\inv{\beta Z} \PD{B}{} Z(\beta B)
 = -\inv{Z} \PD{(\beta B)}{} Z(\beta B).
 \end{dmath}
-
+%
 Defining the magnetic moment in either of these fashions is really a cheat, because it's done without any connection to physics of the situation.  In \S 3.9 of \citep{pathriastatistical} is a much better seeming approach, where the moment is defined as \(M_z = -\expectation{\Bmu \cdot \BH}/H\), but this is then shown to have the form \eqnref{eqn:midterm2reflection:180}.
 %
 \paragraph{Calculating it}
@@ -117,7 +117,7 @@ For this derivative we have
    - \coth( \Hbar \beta B /2 )
 }.
 \end{dmath}
-
+%
 This gives us
 \begin{dmath}\label{eqn:midterm2reflection:620}
 \mu
@@ -139,7 +139,7 @@ This gives us
    - \coth( \Hbar \beta B /2 )
 }.
 \end{dmath}
-
+%
 After some simplification (\nbref{midtermTwoQ1FinalSimplificationMu.nb}) we get
 \boxedEquation{eqn:midterm2reflection:240}{
 \mu
@@ -152,31 +152,31 @@ After some simplification (\nbref{midtermTwoQ1FinalSimplificationMu.nb}) we get
 \cosh(\Hbar \beta B(2 s+1)) - 1
 }.
 }
-
+%
 I got something like this on the midterm, but recall doing it somehow much differently (after getting my marked paper back, saw that was because I'd made an error, and everything after that got messed up).
-
+%
 } % makeanswer
-
+%
 \makeoproblem{Perturbation of classical SHO}{pr:midterm2reflection:2}{2013 midterm II p2}{
 %(10 points)
-
+%
 Consider a single particle perturbation of a classical simple harmonic oscillator Hamiltonian
 \begin{equation}\label{eqn:midterm2reflection:120}
 H = \inv{2} m \omega^2 \lr{x^2 + y^2} + \inv{2 m} \lr{p_x^2 + p_y^2} + a x^4 + by^6.
 \end{equation}
-
+%
 Calculate the canonical partition function, mean energy and specific heat of this system.
-
+%
 \makesubproblem{}{pr:midterm2reflection:2:a}
 This problem can be attempted in two ways, the first of which was how I did it on the midterm, differentiating under the integral sign, leaving the integrals in exact form, but not evaluated explicitly in any way.
-
+%
 \makesubproblem{}{pr:midterm2reflection:2:b}
 By Taylor expanding around \(c = 0\) and \(d = 0\) with those as the variables in the Taylor expansion (as now done in the Pathria 3.29 problem), we can form a solution in short order (this was the desired approach).  %Given my low midterm mark, it seems very likely that this was what was expected.
-
+%
 } % makeoproblem
-
+%
 \makeanswer{pr:midterm2reflection:2}{
-
+%
 The canonical partition function is
 \begin{dmath}\label{eqn:midterm2reflection:260}
 Z
@@ -195,7 +195,7 @@ Z
 }
 \int dp_x dp_y e^{-\beta p_x^2/2 m} e^{-\beta p_y^2/2 m}.
 \end{dmath}
-
+%
 With
 \begin{subequations}
 \begin{dmath}\label{eqn:midterm2reflection:280}
@@ -220,7 +220,7 @@ the momentum integrals are
 \frac{2 \pi m}{\beta}.
 \end{aligned}
 \end{dmath}
-
+%
 Writing
 \begin{subequations}
 \begin{dmath}\label{eqn:midterm2reflection:340}
@@ -237,7 +237,7 @@ Z =
 \int dx e^{- \beta f(x)}
 \int dy e^{- \beta g(y)}.
 }
-
+%
 \makeSubAnswer{Attempt 1: differentiation under the integral sign}{pr:midterm2reflection:2:a}
 The mean energy is
 \begin{dmath}\label{eqn:midterm2reflection:400}
@@ -265,7 +265,7 @@ The mean energy is
 \int dy e^{- \beta g(y)}
 }.
 \end{dmath}
-
+%
 The specific heat follows by differentiating once more
 \begin{dmath}\label{eqn:midterm2reflection:420}
 \CV
@@ -299,7 +299,7 @@ The specific heat follows by differentiating once more
 }
 }.
 \end{dmath}
-
+%
 Differentiating the integral terms we have, for example,
 \begin{dmath}\label{eqn:midterm2reflection:440}
 \PD{\beta}{}
@@ -326,7 +326,7 @@ Differentiating the integral terms we have, for example,
 }
 }^2,
 \end{dmath}
-
+%
 so that the specific heat is
 \boxedEquation{eqn:midterm2reflection:460}{
 \begin{aligned}
@@ -369,11 +369,11 @@ so that the specific heat is
 }.
 \end{aligned}
 }
-
+%
 That's as far as I took this problem.  There was a discussion after the midterm with Eric about Taylor expansion of these integrals.  That's not something that I tried.
-
+%
 \makeSubAnswer{Attempt 2: Taylor expanding in \(c\) and \(d\)}{pr:midterm2reflection:2:b}
-
+%
 Performing a two variable Taylor expansion of \(Z\), about \((c, d) = (0, 0)\) we have
 \begin{dmath}\label{eqn:midterm2reflection:381}
 Z \approx
@@ -401,7 +401,7 @@ Z \approx
 - \frac{15 b }{\beta^2 (m \omega^2)^3}
 }.
 }
-
+%
 Now we can calculate the average energy
 \begin{dmath}\label{eqn:midterm2reflection:500}
 \begin{aligned}
@@ -434,7 +434,7 @@ Now we can calculate the average energy
 }.
 \end{aligned}
 \end{dmath}
-
+%
 Dropping the \(c\), \(d\) terms of the denominator above, we have
 \boxedEquation{eqn:midterm2reflection:520}{
 \expectation{H}
@@ -445,7 +445,7 @@ Dropping the \(c\), \(d\) terms of the denominator above, we have
 -
     \frac{30 b }{\beta^3 (m \omega^2)^3}.
 }
-
+%
 The heat capacity follows immediately
 \boxedEquation{eqn:midterm2reflection:540}{
 \CV
@@ -456,7 +456,7 @@ The heat capacity follows immediately
 - \frac{90 \kB^2 T^2 b }{(m \omega^2)^3}.
 }
 }
-
+%
 } % makeanswer
-
+%
 %\EndArticle

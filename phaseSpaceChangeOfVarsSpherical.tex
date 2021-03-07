@@ -14,11 +14,11 @@
 %\generatetitle{Cartesian to spherical change of variables in 3d phase space}
 %\chapter{Cartesian to spherical change of variables in 3d phase space}
 %\label{chap:phaseSpaceChangeOfVarsSpherical}
-
+%
 \makeoproblem{3D phase space, Cartesian to spherical}{pr:phaseSpaceChangeOfVarsSpherical:1}{\citep{pathriastatistical} pr. 2.2 (a)}{
 Try a spherical change of vars to verify explicitly that phase space volume is preserved.
 } % makeoproblem
-
+%
 \makeanswer{pr:phaseSpaceChangeOfVarsSpherical:1}{
 Our kinetic Lagrangian in spherical coordinates is
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVarsSpherical:20}
@@ -26,7 +26,7 @@ Our kinetic Lagrangian in spherical coordinates is
 = \inv{2} m \lr{ \rdot \rcap + r \sin\theta \phidot \phicap + r \thetadot \thetacap}^2
 = \inv{2} m \lr{ \rdot^2 + r^2 \sin^2\theta \phidot^2 + r^2 \thetadot^2 }.
 \end{dmath}
-
+%
 We read off our canonical momentum
 \begin{subequations}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVarsSpherical:40}
@@ -49,7 +49,7 @@ H = \inv{2} m \lr{
 =
 \frac{p_r^2}{2m} + \frac{p_\phi^2}{2 m r^2 \sin^2\theta} + \frac{p_\theta^2}{2 m r^2}.
 \end{dmath}
-
+%
 Now we want to do a change of variables.  The coordinates transform as
 \begin{subequations}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVarsSpherical:120}
@@ -74,7 +74,7 @@ r = \sqrt{x^2 + y^2 + z^2}
 \phi = \arctan(y/x).
 \end{equation}
 \end{subequations}
-
+%
 It's not too hard to calculate the change of variables for the momenta (verified in \nbref{sphericalPhaseSpaceChangeOfVars.nb}).  We have
 \begin{subequations}
 \begin{equation}\label{eqn:phaseSpaceChangeOfVarsSpherical:240}
@@ -91,7 +91,7 @@ p_\theta = \frac{
 p_\phi = x p_y - y p_x.
 \end{equation}
 \end{subequations}
-
+%
 Now let's compute the volume element in spherical coordinates.  With \(\rho^2 = x^2 + y^2\), this is
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVarsSpherical:300}
 d\omega
@@ -115,12 +115,12 @@ but
 \end{vmatrix}.
 \end{aligned}
 \end{dmath*}
-
+%
 We find after a bit of computation that this determinant is also unity, as we found in the similar cylindrical change of phase space variables, so we have
 \begin{dmath}\label{eqn:phaseSpaceChangeOfVarsSpherical:300b}
 dr d\theta d\phi p_r p_\theta p_\phi = dx dy dz dp_x dp_y dp_z,
 \end{dmath}
 without the \(r^2 \sin\theta\) dependence that we have in the volume element for a change of variables from Cartesian to spherical coordinates in the spatial domain.
 } % makeanswer
-
+%
 %\EndArticle

@@ -13,7 +13,7 @@
 %
 %\generatetitle{Bernoulli polynomials and numbers and Euler-MacLauren summation}
 \label{chap:bernoulliAndEulerMacLarenSummation}
-
+%
 %fermiNumberDensityLargeVolume
 \paragraph{Motivation}
 %
@@ -31,12 +31,12 @@ B_m(z) = \sum_{k = 0}^m \binom{m}{k} B_k z^{m - k}
 0 = \sum_{k = 0}^{m-1} \binom{m}{k} B_k \inv{m!}, \qquad \mbox{m > 1}.
 \end{dmath}
 \end{subequations}
-
+%
 It is conventional to fix \(B_0 = 1\).  \Eqnref{eqn:bernoulliAndEulerMacLarenSummation:60} provides an iterative method to calculate all the higher Bernoulli numbers.  Without calculating the Bernoulli numbers explicitly, we can relate these to the values of the polynomials at the origin
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:120}{
 B_m(0) = B_m.
 }
-
+%
 Now, let's calculate the first few of these, to verify that we've got the conventions right.  Starting with \(m = 2\) we have
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:80}
 0
@@ -65,7 +65,7 @@ B_2(z) &= z^2 - z + \inv{6}.
 \end{aligned}
 \end{equation}
 \end{subequations}
-
+%
 The Bernoulli polynomials have a simple relation to their derivative.  Proceeding directly, taking derivatives we have
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:200}
 B_m'(z)
@@ -77,19 +77,19 @@ B_m'(z)
 m
 \sum_{k = 0}^{m-1} \frac{(m - 1)!}{(m - 1 - k)! k!} B_k z^{m - 1 - k},
 \end{dmath}
-
+%
 or
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:220}{
 B_m'(z)
 =
 m B_{m-1}(z)
 }
-
+%
 There's a number of difference relations that the polynomials satisfy.  The one that we need is
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:40}{
 B_m(z + 1) - B_m(z) = m z^{m -1}.
 }
-
+%
 To prepare for demonstrating this difference in general, let's perform this calculation for the specific cases of \(m = 1\) and \(m = 3\) to remove some of the index abstraction from the mix.  For \(m = 1\) we have
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:160a}
 B_1(z + 1) - B_1(z)
@@ -117,7 +117,7 @@ B_1
 B_0
 = 1.
 \end{dmath}
-
+%
 For \(m = 3\) (a value of \(m > 1\) that is representative) we have
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:160}
 B_3(z + 1) - B_3(z)
@@ -175,7 +175,7 @@ B_2
 \lr{ 1 - \frac{3}{2} + \frac{3}{6} }
 = 3 z^2.
 \end{dmath}
-
+%
 Evaluating this in general, we see that the term with the highest order Bernoulli number is immediately killed, and we'll have just one highest order monomial out of the mix.  We expect all the remaining monomial terms to be killed term by term.  That general difference is, for \(m \ge 2\) is
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:180}
 B_m(z + 1) - B_m(z)
@@ -213,9 +213,9 @@ m! \sum_{s = 0}^{m - 2}
 \frac{z^s}{s!}
 \lr{ \sum_{k = 0}^{(m-s) - 1} \binom{m - s}{s} B_k \inv{(m - s)!} }.
 \end{dmath}
-
+%
 This last sum up to \(m -s -1\) has the form of \eqnref{eqn:bernoulliAndEulerMacLarenSummation:60}, so is killed off.  This proves \eqnref{eqn:bernoulliAndEulerMacLarenSummation:40} as desired.
-
+%
 From this difference result we find for \(m > 1\)
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:260}
 B_m(1)
@@ -240,7 +240,7 @@ B_m & \quad \mbox{if \(m > 1\)} \\
 \end{array}
 \right.
 }
-
+%
 Integrating \eqnref{eqn:bernoulliAndEulerMacLarenSummation:220} after an \(m \rightarrow m + 1\) substitution, and comparing to the difference equation, we have
 \begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:300}
 (m + 1) z^m =
@@ -251,12 +251,12 @@ or
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:320}{
 \int_z^{z+1} B_m(z) dz = z^m.
 }
-
+%
 Evaluating this at \(z = 0\) shows that our polynomials are odd functions around the center of the \([0, 1]\) interval, or
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:340}{
 \int_0^{1} B_m(z) dz = 0.
 }
-
+%
 We also obtain Bernoulli's sum of powers result
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:360}
 \int_0^n B_m(z) dz
@@ -275,21 +275,21 @@ or
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:380}{
 \sum_{k = 1}^{n-1} k^m = \int_1^n B_m(z) dz.
 }
-
+%
 We don't need this result for the Euler summation formula, but it's cool!
-
+%
 To arrive at some of these results I've followed, in part, portions of the approach outlined in \citep{behnke1974fundamentalsV3}.  That treatment however, starts by deriving some difference calculus results and uses associated generating functions for a more abstract difference equation related to the Bernoulli polynomials.  In this summary of relationships above, I've attempted to avoid any requirement to first study the difference equation formalism (although that is also cool too, and not actually that difficult).
 %
 \paragraph{Euler-MacLauren summation}
 %
 Following wikipedia \citep{wiki:eulerMacLaurin}, we utilize the simple boundary conditions for the Bernoulli polynomials in the \([0, 1]\) interval.  We can exploit these using integration by parts if we do a periodic extension of these polynomials in that interval.
-
+%
 Writing \(\largestIntLessThan{x}\) for the largest integer less than or equal to \(x\), our periodical extension of the \([0, 1]\) interval Bernoulli polynomial is
 \begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:400}
 P_m(x) = B_m
 \lr{ x = \largestIntLessThan{x} }.
 \end{equation}
-
+%
 From \eqnref{eqn:bernoulliAndEulerMacLarenSummation:120} and \eqnref{eqn:bernoulliAndEulerMacLarenSummation:280}, our end points are
 \begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:420}
 P_m(1) =
@@ -300,7 +300,7 @@ B_m(0) = B_m & \quad \mbox{if \(m > 1\)} \\
 \end{array}
 \right.
 \end{equation}
-
+%
 Utilizing \eqnref{eqn:bernoulliAndEulerMacLarenSummation:220} we can integrate by parts in a specific unit interval
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:440}
 \int_k^{k+1} f(x) dx
@@ -346,7 +346,7 @@ or
 -
 \int_0^{n} f'(x) P_1(x) dx.
 \end{dmath}
-
+%
 Continuing the integration by parts we have
 \begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:500}
 \int_0^{n} f'(x) P_1(x) dx
@@ -386,7 +386,7 @@ Continuing the integration by parts we have
 (-1)^{m-1}
 \int_0^{n} f^m(x) \frac{P_m(x)}{m!} dx,
 \end{dmath}
-
+%
 or
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:481}{
 \begin{aligned}
@@ -406,5 +406,5 @@ or
 \int_0^{n} f^m(x) \frac{P_m(x)}{m!} dx.
 \end{aligned}
 }
-
+%
 %\EndArticle

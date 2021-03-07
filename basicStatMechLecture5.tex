@@ -7,17 +7,17 @@
 %\renewcommand{\dirname}{notes/phy452/}
 %\newcommand{\keywords}{Statistical mechanics, PHY452H1S, Poincare recurrence, Liouville's theorem, phase space volume}
 %\input{../peeter_prologue_print2.tex}
-
+%
 %\beginArtNoToc
 %\generatetitle{PHY452H1S Basic Statistical Mechanics.  Lecture 5: Motion in phase space.  Liouville and Poincar\'e theorems.  Taught by Prof.\ Arun Paramekanti}
 \label{chap:basicStatMechLecture5}
-
+%
 %\section{Disclaimer}
 %
 %Peeter's lecture notes from class.  May not be entirely coherent.
-
+%
 \section{Motion in phase space.}
-
+%
 Classical system: \(\Bx_i, \Bp_i\) with dimensionality
 \begin{equation}\label{eqn:basicStatMechLecture5:20}
 \mathLabelBox{
@@ -35,7 +35,7 @@ Classical system: \(\Bx_i, \Bp_i\) with dimensionality
 ]
 {N}{Number of particles}.
 \end{equation}
-
+%
 Hamiltonian \(H\) is the ``energy function''
 \begin{equation}\label{eqn:basicStatMechLecture5:40}
 H =
@@ -70,7 +70,7 @@ V(\Bx_i)
 \mathbf{\dot{x}}_i = \frac{\Bp_i}{m}.
 \end{equation}
 \end{subequations}
-
+%
 Expressed in terms of the Hamiltonian this is
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechLecture5:100}
@@ -80,13 +80,13 @@ Expressed in terms of the Hamiltonian this is
 \dot{x}_{i_\alpha} = \PD{p_{i_\alpha}}{H}.
 \end{equation}
 \end{subequations}
-
+%
 In phase space we can have any number of possible trajectories as illustrated in \cref{fig:basicStatMechLecture5:basicStatMechLecture5Fig1}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture5Fig1}{Disallowed and allowed phase space trajectories.}{fig:basicStatMechLecture5:basicStatMechLecture5Fig1}{0.2}
-
+%
 \section{Liouville's theorem.}
-
+%
 We are interested in asking the question of how the density of a region in phase space evolves as illustrated in \cref{fig:basicStatMechLecture5:basicStatMechLecture5Fig2}.  We define a phase space density
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture5Fig2}{Evolution of a phase space volume.}{fig:basicStatMechLecture5:basicStatMechLecture5Fig2}{0.2}
 \begin{equation}\label{eqn:basicStatMechLecture5:140}
@@ -150,7 +150,7 @@ and seek to demonstrate \underlineAndIndex{Liouville's theorem}, that the phase 
 }
 {\(= 0\)}.
 \end{dmath}
-
+%
 We've implicitly defined a current density \(\Bj\) above by comparing to the continuity equation
 \begin{equation}\label{eqn:basicStatMechLecture5:180}
 \PD{t}{\rho} + \spacegrad \cdot \Bj = 0.
@@ -186,20 +186,20 @@ With this identification the implication is that
 \begin{equation}\label{eqn:landauSection11Problem2b:280}
 \ddt{\rho} = 0.
 \end{equation}
-
+%
 We can say that flow in phase space is very similar to an ``incompressible fluid''.
-
+%
 \section{Time averages, and Poincar\'e recurrence theorem.}
-
+%
 We want to look at how various observables behave over time
 \begin{equation}\label{eqn:basicStatMechLecture5:300}
 \overbar{A} = \inv{T} \int_0^T dt \rho(x, p, t) A(p, x)
 \end{equation}
-
+%
 We'd like to understand how such averages behave over long time intervals, looking at \(\rho(x, p, t \rightarrow \infty)\).
-
+%
 This long term behaviour is described by the \underlineAndIndex{Poincar\'e recurrence theorem}.  If we wait long enough a point in phase space will come arbitrarily close to its starting point, recurring or ``closing the trajectory loops''.
-
+%
 A simple example of a recurrence is an undamped SHO, such as a pendulum.  That pendulum bob when it hits the bottom of the cycle will have the same velocity (and position) each time it goes through a complete cycle.  If we imagine a much more complicated system, such as \(N\) harmonic oscillators, each with different periods, we can imagine that it will take infinitely long for this cycle or recurrence to occur, and the trajectory will end up sweeping through all of phase space.
-
+%
 %\EndNoBibArticle

@@ -15,14 +15,14 @@
 %\generatetitle{One dimensional random walk}
 %\chapter{One dimensional random walk}
 \label{chap:1dRandomWalk}
-
+%
 \makeoproblem{1D random walk}{pr:1dRandomWalk:1}{2013 midterm 1, pr. 2}{
 Random walk in 1D by unit steps.  With the probability to go right of \(p\) and a probability to go left of \(1 -p\) what are the first two moments of the final position of the particle?
 } % makeoproblem
-
+%
 \makeanswer{pr:1dRandomWalk:1}{
 %This was a problem from the first midterm.  I ran out of time and didn't take the answer as far as I figured I should have.  Here's a more casual bash at the problem.
-
+%
 First we need the probabilities.
 %
 \paragraph{One step: \(N = 1\)}
@@ -86,7 +86,7 @@ and
 \begin{equation}\label{eqn:1dRandomWalk:280}
 k = \frac{D + N}{2}.
 \end{equation}
-
+%
 Our probabilities are therefore
 \boxedEquation{eqn:1dRandomWalk:300}{
 P_{X = D} = \binom{N}{(N + D)/2}
@@ -104,7 +104,7 @@ For the expectations let's work with \(k\) instead of \(D\), so that the expecta
 = 2 N p \sum_{k = 1}^N \frac{(N-1)!}{(N - 1 - (k - 1))!(k-1)!} p^{k-1} (1 - p)^{N - 1 - (k - 1)} - N
 = 2 N p \sum_{s = 0}^{N-1} \binom{N-1}{s} p^{s} (1 - p)^{N -1 - s} - N.
 \end{dmath}
-
+%
 This gives us
 \boxedEquation{eqn:1dRandomWalk:340}{
 \expectation{X}
@@ -123,17 +123,17 @@ This gives us
 = 4 N p ((N-1) p + 1) + N^2(1 - 4 p)
 = N^2 ( 1 - 4 p + 4 p^2 ) + 4 N p ( 1 - p ).
 \end{dmath}
-
+%
 So the second moment is
 \boxedEquation{eqn:1dRandomWalk:380}{
 \expectation{X^2} = N^2 ( 1 - 2 p )^2 + 4 N p ( 1 - p )
 }
-
+%
 From this we see that the variance is just this second term
 \begin{equation}\label{eqn:1dRandomWalk:400}
 \sigma^2 = \expectation{X^2} - \expectation{X}^2 = 4 N p ( 1 - p ).
 \end{equation}
-
+%
 } % makeanswer
-
+%
 %\EndNoBibArticle

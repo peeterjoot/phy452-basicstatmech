@@ -15,17 +15,17 @@
 %\section{Disclaimer}
 %
 %Peeter's lecture notes from class.  May not be entirely coherent.
-
+%
 This lecture had a large amount of spoken content not captured in these notes.  Reference to \S 4 \citep{pathriastatistical} was made for additional details.
-
-
+%
+%
 %\cref{fig:lecture14:lecture14Fig1}.
 \imageFigure{../figures/phy452-basicstatmech/lecture14Fig1}{Ensemble pictures.}{fig:lecture14:lecture14Fig1}{0.2}
 %\cref{fig:lecture14:lecture14Fig2}.
 %\imageFigure{../figures/phy452-basicstatmech/lecture14Fig2}{CAPTION}{fig:lecture14:lecture14Fig2}{0.2}
 %F1
 %F2
-
+%
 We are now going to allow particles to move to and from the system and the reservoir.  The total number of states in the system is
 \begin{dmath}\label{eqn:basicStatMechLecture14:20}
 \Omega_{\mathrm{total}} (N, V, E) =
@@ -65,14 +65,14 @@ where the \textAndIndex{chemical potential} and \textAndIndex{temperature} are d
 e^{\frac{\mu}{\kB T} N_S}
 e^{-\frac{E_S}{\kB T} }.
 \end{dmath}
-
+%
 With \(\{c\}\) as the set of all possible configuration pairs \(\{N_S, E_S\}\), we define the grand partition function
 \begin{dmath}\label{eqn:basicStatMechLecture14:120}
 \ZG = \sum_{\{c\}}
 e^{\frac{\mu}{\kB T} N_S}
 e^{-\frac{E_S}{\kB T} }.
 \end{dmath}
-
+%
 So that the probability of finding a given state with energy and particle numbers \(\{E_S, N_S\}\) is
 \begin{dmath}\label{eqn:basicStatMechLecture14:140}
 \calP(E_S, N_S) =
@@ -81,7 +81,7 @@ e^{\frac{\mu}{\kB T} N_S}
 e^{-\frac{E_S}{\kB T} }
 }{\ZG}.
 \end{dmath}
-
+%
 For a classical system we have
 \begin{dmath}\label{eqn:basicStatMechLecture14:160}
 \{ c \} \rightarrow \{ x \} \{ p \},
@@ -97,7 +97,7 @@ whereas in a quantum content we have
    }
 }.
 \end{dmath}
-
+%
 We want to do this because the calculation of the number of states
 \begin{dmath}\label{eqn:basicStatMechLecture14:220}
 \int_{
@@ -128,27 +128,27 @@ e^{-\beta \lr{
 + \cdots
 }},
 \end{dmath}
-
+%
 yields the same results, but can be much easier to compute.  We have a similar reason to go to the grand canonical ensemble, because this computation, once we allow the number of particles to vary also becomes very hard.
-
+%
 We are now going to define a notion of equilibrium so that it includes
-
+%
 \begin{itemize}
 \item All forces are equal (mechanical equilibrium)
 \item Temperatures are equal (no net heat flow)
 \item Chemical potentials \index{chemical potential} are equal (no net particle flow)
 \end{itemize}
-
+%
 We'll isolate a subsystem, containing a large number of particles \cref{fig:lecture14:lecture14Fig3}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture14Fig3}{A subsystem to and from which particle motion is allowed.}{fig:lecture14:lecture14Fig3}{0.2}
-
+%
 When we think about Fermions we have to respect the ``Pauli exclusion'' principle \index{Pauli exclusion principle}.
-
+%
 Suppose we have just a one dimensional Fermion system for some potential as in \cref{fig:lecture14:lecture14Fig4}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture14Fig4}{Energy level filling in a quantum system.}{fig:lecture14:lecture14Fig4}{0.2}
-
+%
 For every momentum \(k\) there are two possible occupation numbers \(n_k \in \{0, 1\}\)
 our partition function is
 \begin{dmath}\label{eqn:basicStatMechLecture14:240}
@@ -157,9 +157,9 @@ n_k,
 \sum_k n_k = N
 } e^{-\beta \sum_k \epsilon_k n_k}.
 \end{dmath}
-
+%
 We'd find that this calculation with this \(\sum_k n_k = N\) constraint becomes essentially impossible.
-
+%
 We'll see that relaxing this constraint will allow this calculation to become tractable.
-
+%
 %\EndArticle

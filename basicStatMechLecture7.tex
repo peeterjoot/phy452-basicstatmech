@@ -20,17 +20,17 @@
 \begin{equation}\label{eqn:basicStatMechLecture7:20}
 E_{\mathrm{ideal}} = \sum_i \frac{\Bp_i^2}{2 m}.
 \end{equation}
-
+%
 From this we calculated \(\gamma(E)\), and
 \begin{equation}\label{eqn:basicStatMechLecture7:40}
 \frac{d\gamma(E)}{dE} = \Omega_{\mathrm{classical}}(E).
 \end{equation}
-
+%
 Fudging with a requirement that \(\Delta x \Delta p \sim h\), we corrected this as
 \begin{equation}\label{eqn:basicStatMechLecture7:60}
 \Omega_{\mathrm{quantum}}(E) = \frac{\Omega_{\mathrm{classical}}(E)}{N! h^{3N}}.
 \end{equation}
-
+%
 Recapping explicitly for a single particle, we have
 \begin{dmath}\label{eqn:basicStatMechLecture7:160}
 \gamma^{3d}_{\mathrm{classical}}(E) =
@@ -48,7 +48,7 @@ so that
 \gamma^{3d}_{\mathrm{corrected}}(E)
 = V \frac{4 \pi}{3} \frac{(2 m E)^{3/2}}{h^3}.
 \end{equation}
-
+%
 Now let's do the quantum calculation.
 %
 \paragraph{Quantum calculation}
@@ -62,7 +62,7 @@ where \(n = 1, 2, \cdots\), and
 \begin{equation}\label{eqn:basicStatMechLecture7:100}
 \epsilon_n = \frac{n^2 h^2}{8 m L^2}.
 \end{equation}.
-
+%
 In three dimensions, with \(n_i = 1, 2, \cdots\) we have
 \begin{equation}\label{eqn:basicStatMechLecture7:120}
 \Psi_{n_1, n_2, n_3}(x, y, z) = \lr{\frac{2}{L}}^{3/2}
@@ -74,18 +74,18 @@ and
 \begin{equation}\label{eqn:basicStatMechLecture7:140}
 \epsilon_{n_1, n_2, n_3} = \frac{h^2}{8 m L^2} \lr{ n_1^2 + n_2^2 + n_3^2 }
 \end{equation}
-
+%
 For the quantum case, we count exactly the number of states that satisfy the energy constraints
 \begin{equation}\label{eqn:basicStatMechLecture7:200}
 \gamma^{3d}_{\mathrm{quantum}}(E)
 =
 \sum_{n_1, n_2, n_3} \Theta(E - \epsilon_{n_1, n_2, n_3} ).
 \end{equation}
-
+%
 How do the multiplicities scale by energy?  We'll have expect something like \cref{fig:lecture7ThreeDSHOInBoxNumStates:lecture7ThreeDSHOInBoxNumStatesFig2}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture7ThreeDSHOInBoxNumStatesFig2}{Multiplicities for free quantum particle in a 3D box.}{fig:lecture7ThreeDSHOInBoxNumStates:lecture7ThreeDSHOInBoxNumStatesFig2}{0.2}
-
+%
 Provided the energies \(E \gg 3h^2/(8 m L)\) are large enough, we can approximate the sum with
 \begin{equation}\label{eqn:basicStatMechLecture7:220}
 \sum_{n_1, n_2, n_3} \sim \int_0^\infty dn_1 dn_2 dn_3,
@@ -113,19 +113,19 @@ L^3
 \end{aligned}
 \end{dmath}
 Observe that this matches our corrected classical result \eqnref{eqn:basicStatMechLecture7:180}, justifying that correction procedure.
-
+%
 \makeexample{Harmonic oscillator in 1D}{example:Lec7:1}{
-
+%
 Our phase space is of the form \cref{fig:lecture71DclassicalSHOphasespace:lecture71DclassicalSHOphasespaceFig3}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture71DclassicalSHOphasespaceFig3}{1D classical SHO phase space.}{fig:lecture71DclassicalSHOphasespace:lecture71DclassicalSHOphasespaceFig3}{0.2}
-
+%
 Where the number of states in this classical picture are found with:
 \begin{equation}\label{eqn:basicStatMechLecture7:260}
 \gamma^{\mathrm{classical}}(E)
 = \int dx dp \Theta\lr{ E - \lr{\inv{2} k x^2 + \inv{2m } p^2 }}.
 \end{equation}
-
+%
 Rescale
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechLecture7:280}
@@ -149,7 +149,7 @@ so that we have
 \gamma^{\mathrm{SHO}}_{\mathrm{corrected}}(E)  = 2 \pi \sqrt{\frac{m}{k}} \frac{E}{h}.
 \end{equation}
 }
-
+%
 \makeexample{Quantum Harmonic oscillator in 1D}{example:Lec7:2}{
 How about the quantum calculation?
 We have for the energy
@@ -170,24 +170,24 @@ graphing the counts \cref{fig:lecture71DquantumSHOStatesPerEnergyLevel:lecture71
 \gamma_{\mathrm{quantum}}(E)
 = \sum_{n = 0}^\infty \Theta\lr{ E - \lr{n + \inv{2}} \Hbar \omega}.
 \end{equation}
-
+%
 We make the continuous approximation for the summation again and throw away the zero point energy
 \begin{dmath}\label{eqn:basicStatMechLecture7:440}
 \gamma_{\mathrm{quantum}}(E \gg \Hbar \omega)
 \approx
 \int_{0}^\infty dn \Theta\lr{ E - n \Hbar \omega }.
 \end{dmath}
-
+%
 Let's think through what this Heaviside function means.  It is unity only when
 \begin{dmath}\label{eqn:basicStatMechLecture7:440d}
 E - n \Hbar \omega > 0,
 \end{dmath}
-
+%
 or
 \begin{dmath}\label{eqn:basicStatMechLecture7:440b}
 \frac{E}{\Hbar \omega} > n.
 \end{dmath}
-
+%
 This gives us
 \begin{dmath}\label{eqn:basicStatMechLecture7:440c}
 \gamma_{\mathrm{quantum}}(E \gg \Hbar \omega)
@@ -197,9 +197,9 @@ This gives us
 = 2 \pi \frac{E}{h} \sqrt{\frac{m}{k}}.
 \end{dmath}
 }
-
+%
 \section{Entropy.}
-
+%
 With the state counting that we've done, we want to look at \textAndIndex{entropy}
 \begin{equation}\label{eqn:basicStatMechLecture6:420}
 S = \kB \ln 
@@ -231,7 +231,7 @@ For an ideal gas, with the quantum correction, but not the \(N!\) correction of 
 \begin{equation}\label{eqn:basicStatMechLecture6:380b}
 \Omega = \frac{V^N}{h^{3N}} \frac{( 2 \pi m E)^{3 N/2 }}{E} \frac{1}{\Gamma( 3N/2 ) }.
 \end{equation}
-
+%
 For large \(N\), Stirling's approximation gives us
 \begin{equation}\label{eqn:basicStatMechLecture6:380c}
 \begin{aligned}
@@ -257,29 +257,29 @@ S =
 + \frac{3}{2}
 }.
 \end{dmath}
-
+%
 This has a logical inconsistency that we'll now examine.
-
+%
 \section{Gibbs paradox.}
 \paragraph{Why \(N!\)?}
 %
 We have a problem with our counting here.  Consider some particles in a box as in \cref{fig:lecture7threeParticlesInABox:lecture7threeParticlesInABoxFig5}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture7threeParticlesInABoxFig5}{Three particles in a box.}{fig:lecture7threeParticlesInABox:lecture7threeParticlesInABoxFig5}{0.2}
-
+%
 \begin{itemize}
 \item particle \(1\) at \(\Bx_1\)
 \item particle \(2\) at \(\Bx_2\)
 \item particle \(3\) at \(\Bx_3\)
 \end{itemize}
-
+%
 or
 \begin{itemize}
 \item particle \(1\) at \(\Bx_2\)
 \item particle \(2\) at \(\Bx_3\)
 \item particle \(3\) at \(\Bx_1\)
 \end{itemize}
-
+%
 This is fine in the classical picture, but in the quantum picture with an assumption of indistinguishably, no two particles (say electrons) cannot be labelled in this fashion.
 %
 \paragraph{Gibbs paradox}
@@ -303,7 +303,7 @@ S_{\mathrm{ideal}}^{(\txtE, \txtN, \txtV)}
 N \ln V + \frac{3 N}{2} \ln \lr{ \frac{4 \pi m E }{3 N h^2} } + \frac{3 N}{2}
 }.
 \end{dmath}
-
+%
 Suppose we double the volume as in \cref{fig:lecture7gibbsVolumeDoubling:lecture7gibbsVolumeDoublingFig6}, then our total entropy for the bigger system would be
 \imageFigure{../figures/phy452-basicstatmech/lecture7gibbsVolumeDoublingFig6}{Gibbs volume doubling argument.  Two identical systems allowed to mix.}{fig:lecture7gibbsVolumeDoubling:lecture7gibbsVolumeDoublingFig6}{0.2}
 \begin{dmath}\label{eqn:basicStatMechLecture7:480}
@@ -314,15 +314,15 @@ S_{\mathrm{total}}^{(\txtE, \txtN, \txtV)}
 (2 N) \ln (2 V) + \frac{3 (2 N)}{2} \ln \lr{ \frac{4 \pi m (2 E) }{2 ( 2 N) h^2} } + \frac{3 (2 N)}{2}
 }.
 \end{dmath}
-
+%
 We have
 \begin{equation}\label{eqn:basicStatMechLecture7:500}
 S_{\mathrm{total}} = S_1 + S_2 + \kB (2 N) \ln 2 V
 = S_1 + S_2 + \kB \ln (2 V)^{2 N}.
 \end{equation}
-
+%
 This is telling us that each particle could be in either the left or the right side, but we know that this uncertainty shouldn't be in the final answer.  We must drop this \(\kB\) term.
-
+%
 It turns out that we can do exactly this by dividing \(\Omega\) by \(N!\).  Working directly from \eqnref{eqn:basicStatMechLecture6:380d} this adjusted \underlineAndIndex{statistical entropy} is
 \begin{dmath}\label{eqn:basicStatMechLecture7:520}
 \begin{aligned}
@@ -351,7 +351,7 @@ N \ln \lr{ \frac{V}{h^3}
 }.
 \end{aligned}
 \end{dmath}
-
+%
 If we use this as the starting point of our doubling argument, we see that we'd have a \(\ln (2 V/2N) = 0\) term and the entropies would be strictly additive as desired.
-
+%
 %\EndNoBibArticle

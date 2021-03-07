@@ -13,7 +13,7 @@
 %
 %\generatetitle{Non integral binomial coefficient}
 \label{chap:nonIntegralBinomialSeries}
-
+%
 In \citep{pathriastatistical} appendix \S F was the use of binomial coefficients in a non-integral binomial expansion.  This surprised me, since I'd never seen that before.  However, on reflection, this is a very sensible notation, provided the binomial coefficients are defined in terms of the gamma function.  Let's explore this little detail explicitly.
 %
 \paragraph{Taylor series}
@@ -22,7 +22,7 @@ We start with a Taylor expansion of
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:20}
 f(x) = (a + x)^b.
 \end{dmath}
-
+%
 Our derivatives are
 \begin{equation}\label{eqn:nonIntegralBinomialSeries:40}
 \begin{aligned}
@@ -33,12 +33,12 @@ f^3(x) &= b(b-1)(b-(3-1)) (a + x)^{b-3} \\
 f^k(x) &= b(b-1)\cdots (b-(k-1)) (a + x)^{b-k}.
 \end{aligned}
 \end{equation}
-
+%
 Our Taylor series is then
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:60}
 (a + x)^b = \sum_{k = 0}^\infty \inv{k!} b(b-1)\cdots (b-(k-1)) a^{b-k} x^k.
 \end{dmath}
-
+%
 Note that if \(b\) is a positive integer, then all the elements of this series become zero at \(b = k - 1\), or
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:80}
 (a + x)^b = \sum_{k = 0}^k \inv{k!} b(b-1)\cdots (b-(k-1)) a^{b-k} x^k.
@@ -50,7 +50,7 @@ Let's now relate this to the gamma function.  From \citep{abramowitz1964handbook
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:100}
 \Gamma(z) = \int_0^\infty t^{z-1} e^{-t} dt.
 \end{dmath}
-
+%
 Iteratively integrating by parts, we find the usual relation between gamma functions of integral separation
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:120}
 \Gamma(z + 1)
@@ -76,7 +76,7 @@ or
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:140}
 \Gamma(z + 1) = z (z - 1) \cdots (z - (k-1)) \Gamma( z - (k-1) ).
 \end{dmath}
-
+%
 Flipping this gives us a nice closed form expression for the products of a number of positive unit separated values
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:160}
 z (z - 1) \cdots (z - k)
@@ -94,7 +94,7 @@ a^{b-k} x^k
 = \sum_{k = 0}^\infty \frac{\Gamma(b + 1)}{\Gamma(k + 1)\Gamma(b - k + 1)}
 a^{b-k} x^k.
 \end{dmath}
-
+%
 Observe that when \(b\) is a positive integer we have
 \begin{equation}\label{eqn:nonIntegralBinomialSeries:200}
 \frac{\Gamma(b + 1)}{\Gamma(k + 1)\Gamma(b - k + 1)}
@@ -102,13 +102,13 @@ Observe that when \(b\) is a positive integer we have
 \frac{b!}{k!(b-k)!}
 = \binom{b}{k}.
 \end{equation}
-
+%
 So for positive values of \(b\), integer or otherwise, and negative non-integer values, we see that is then very reasonable to define the \textAndIndex{binomial coefficient} explicitly in terms of the gamma function
 \begin{equation}\label{eqn:nonIntegralBinomialSeries:220}
 \binom{b}{k} \equiv
 \frac{\Gamma(b + 1)}{\Gamma(k + 1)\Gamma(b - k + 1)}.
 \end{equation}
-
+%
 If we do that, then the binomial expansion for non-integral values of \(b\) is simply
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:240}
 (a + x)^b = \sum_{k = 0}^\infty \binom{b}{k} a^{b-k} x^k.
@@ -126,12 +126,12 @@ Using the relation \eqnref{eqn:nonIntegralBinomialSeries:220} blindly leads to s
 (-1)^k
 m(m+1)\cdots (m+(k-1)) a^{-m-k} x^k.
 \end{dmath}
-
+%
 Let's also put the ratio of gamma functions relation of \eqnref{eqn:nonIntegralBinomialSeries:160}, in a slightly more general form.  For \(u, v > 0\), where \(u - v\) is an integer, we can write
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:280}
 u (u - 1) \cdots (v) = \frac{\Gamma(u + 1)}{\Gamma( v )}.
 \end{dmath}
-
+%
 Our Taylor series takes the form
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:300}
 (a + x)^{-m}
@@ -144,22 +144,22 @@ a^{-m-k} x^k
 (-1)^k \frac{ \Gamma(m + k) }{\Gamma(m)\Gamma(k+1)}
 a^{-m-k} x^k.
 \end{dmath}
-
+%
 We can now define, for negative integers \(-m\)
 \begin{equation}\label{eqn:nonIntegralBinomialSeries:320}
 \binom{-m}{k}
 \equiv
 (-1)^k \frac{ \Gamma(m + k) }{ \Gamma(m)\Gamma(k+1) }.
 \end{equation}
-
+%
 With such a definition, our Taylor series takes the tidy form
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:300b}
 (a + x)^{-m}
 = \sum_{k = 0}^\infty \binom{-m}{k} a^{-m-k} x^k.
 \end{dmath}
-
+%
 For negative integer values of \(b = -m\), this is now consistent with \eqnref{eqn:nonIntegralBinomialSeries:240}.
-
+%
 Observe that we can put \eqnref{eqn:nonIntegralBinomialSeries:320} into the standard binomial form with a bit of manipulation
 \begin{dmath}\label{eqn:nonIntegralBinomialSeries:340}
 \binom{-m}{k}
@@ -170,7 +170,7 @@ Observe that we can put \eqnref{eqn:nonIntegralBinomialSeries:320} into the stan
 =
 (-1)^k \frac{ m (m + k)! }{ (m + k) m! k! },
 \end{dmath}
-
+%
 or
 \begin{equation}\label{eqn:nonIntegralBinomialSeries:360}
 \binom{-m}{k}
@@ -181,5 +181,5 @@ or
 %\paragraph{Negative non-integral binomial coefficients}
 %
 %TODO.  There will be some ugliness due to the changes of sign in the products \(b(b-1)\cdots (b -k + 1)\) since \(b\) and \(b -k + 1\) may have different sign.  A product of two ratios of gamma functions will be required to express this product, which will further complicate the definition of binomial coefficient.
-
+%
 %\EndArticle

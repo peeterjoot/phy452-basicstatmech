@@ -33,7 +33,7 @@ C \sim T
 P \sim \text{constant}.
 \end{dmath}
 \end{subequations}
-
+%
 The physics of Fermi gases has an extremely wide range of applicability.  Illustrating some of this range, here are some examples of Fermi temperatures (from \(E_{\txtF} = \kB T_{\txtF}\))
 \begin{itemize}
 \item Electrons in copper: \(T_{\txtF} \sim 10^4 \mbox{K}\)
@@ -47,24 +47,24 @@ We'd like to work with a fixed number of particles, but the calculations are har
 \begin{dmath}\label{eqn:basicStatMechLecture19:200}
 n_{\txtB}(\Bk) = \inv{ e^{\beta(\epsilon_\Bk - \mu)} - 1 }.
 \end{dmath}
-
+%
 Again, we'll consider free particles with energy as in \cref{fig:lecture19:lecture19Fig3}, or
 \begin{dmath}\label{eqn:basicStatMechLecture19:100}
 \epsilon_\Bk = \frac{\Hbar^2 k^2}{2 m}.
 \end{dmath}
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture19Fig3}{Free particle energy momentum distribution.}{fig:lecture19:lecture19Fig3}{0.2}
-
+%
 Again introducing fugacity \(z = e^{\beta \mu}\), we have
 \begin{dmath}\label{eqn:basicStatMechLecture19:220}
 n_{\txtB}(\Bk) = \inv{ z^{-1} e^{\beta \epsilon_\Bk} - 1 }.
 \end{dmath}
-
+%
 We'll consider systems for which
 \begin{dmath}\label{eqn:basicStatMechLecture19:120}
 N = \sum_\Bk n_{\txtB}(\Bk) = \text{fixed}.
 \end{dmath}
-
+%
 Observe that at large energies we have
 \begin{dmath}\label{eqn:basicStatMechLecture19:240}
 n_{\txtB}(\text{large} \, \Bk) \sim z e^{-\beta \epsilon_\Bk}.
@@ -73,10 +73,10 @@ For small energies
 \begin{dmath}\label{eqn:basicStatMechLecture19:260}
 n_{\txtB}(\Bk \rightarrow 0) \sim \inv{z^{-1} - 1} = \frac{z}{1 - z}.
 \end{dmath}
-
+%
 Observe that we require \(z < 1\) (or \(\mu < 0\)) so that the number distribution is strictly positive for all energies.  This tells us that the fugacity is a function of temperature, but there will be a point at which it must saturate.  This is illustrated in \cref{fig:lecture19:lecture19Fig4}.
 \imageFigure{../figures/phy452-basicstatmech/lecture19Fig4}{Density times cubed thermal de Broglie wavelength.}{fig:lecture19:lecture19Fig4}{0.2}
-
+%
 Let's calculate this density (assumed fixed for all temperatures)
 \begin{dmath}\label{eqn:basicStatMechLecture19:140}
 \rho = \frac{N}{V}
@@ -99,7 +99,7 @@ Let's calculate this density (assumed fixed for all temperatures)
 ^{3/2}
 k^2 dk \inv{z^{-1} e^{\beta \Hbar^2 k^2/2m} -1 }.
 \end{dmath}
-
+%
 With the substitution
 \begin{dmath}\label{eqn:basicStatMechLecture19:160}
 x^2 = \beta \frac{\Hbar^2 k^2}{2m},
@@ -120,11 +120,11 @@ x^2 dx \inv{z^{-1} e^{x^2} -1 }
 = \frac{4}{\sqrt{\pi}} \int_0^\infty dx \frac{x^2}{z^{-1} e^{x^2} - 1 }
 \equiv g_{3/2}(z).
 \end{dmath}
-
+%
 An exact plot of this is shown in \cref{fig:lecture19f32:lecture19f32Fig1}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture19f32Fig1}{\(g_{3/2}(z)\).}{fig:lecture19f32:lecture19f32Fig1}{0.2}
-
+%
 This implicitly defines a relationship for the fugacity as a function of temperature \(z = z(T)\).
 It can be shown that
 \begin{dmath}\label{eqn:basicStatMechLecture19:280}
@@ -134,7 +134,7 @@ g_{3/2}(z)
 + \frac{z^3}{3^{3/2}}
 + \cdots
 \end{dmath}
-
+%
 As \(z \rightarrow 1\) we end up with a zeta function, for which we can look up the value
 \begin{dmath}\label{eqn:basicStatMechLecture19:300}
 g_{3/2}(z \rightarrow 1)
@@ -150,7 +150,7 @@ where the \underlineAndIndex{Riemann zeta function} is defined as
 \begin{dmath}\label{eqn:basicStatMechLecture19:340}
 g_{3/2}(z) = \rho \lambda^3.
 \end{dmath}
-
+%
 At high temperatures we have
 \begin{dmath}\label{eqn:basicStatMechLecture19:360}
 \rho \lambda^3 \rightarrow 0,
@@ -166,12 +166,12 @@ Looking at \(g_{3/2}(z = 1) = \rho \lambda^3(T_{\txtc})\) leads to
 \paragraph{How do I satisfy number conservation?}
 %
 We have a problem here since as \(T \rightarrow 0\) the \(1/\lambda^3 \sim T^{3/2}\) term in \(\rho\) above drops to zero, yet \(g_{3/2}(z)\) cannot keep increasing without bounds to compensate and keep the density fixed.  The way to deal with this was worked out by
-
+%
 \begin{itemize}
 \item Bose (1924) for photons (examining statistics for symmetric wave functions).
 \item Einstein (1925) for conserved particles.
 \end{itemize}
-
+%
 To deal with this issue, we (somewhat arbitrarily, because we need to) introduce a non-zero density for \(\Bk = 0\).  This is an adjustment of the approximation so that we have
 \begin{dmath}\label{eqn:basicStatMechLecture19:400}
 \sum_{\Bk} \rightarrow \int \frac{d^3 \Bk}{(2 \pi)^3} \qquad \mbox{Except around \(\Bk = 0\)},
@@ -182,14 +182,14 @@ as in \cref{fig:lecture19:lecture19Fig6}, so that
 \sum_\Bk
 = \lr{ \mbox{Contribution at \(\Bk = 0\)} } + V \int \frac{d^3 \Bk}{(2 \pi)^3}.
 \end{dmath}
-
+%
 Given this, we have
 \begin{dmath}\label{eqn:basicStatMechLecture19:420b}
 N
 = N_{\Bk = 0}
 + V \int \frac{d^3 \Bk}{(2 \pi)^3} n_{\txtB}(\Bk).
 \end{dmath}
-
+%
 We can illustrate this as in \cref{fig:lecture19:lecture19Fig7}.
 \imageFigure{../figures/phy452-basicstatmech/lecture19Fig7}{Boson occupation vs momentum.}{fig:lecture19:lecture19Fig7}{0.2}
 \begin{dmath}\label{eqn:basicStatMechLecture19:420c}
@@ -203,7 +203,7 @@ g_{3/2}(z)
 \inv{ \lambda^3(T_{\txtc})}
 g_{3/2}(z).
 \end{dmath}
-
+%
 At \(T > T_{\txtc}\) we have \(\rho_{\Bk = 0}\), whereas at \(T < T_{\txtc}\) we must introduce a non-zero density if we want to be able to keep a constant density constraint.
-
+%
 %\EndNoBibArticle

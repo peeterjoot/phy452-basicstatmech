@@ -12,7 +12,7 @@
 %\generatetitle{PHY452H1S Basic Statistical Mechanics.  Lecture 18: Fermi gas thermodynamics.  Taught by Prof.\ Arun Paramekanti}
 %\chapter{Fermi gas thermodynamics}
 \label{chap:basicStatMechLecture18}
-
+%
 %\section{Disclaimer}
 %
 %Peeter's lecture notes from class.  May not be entirely coherent.
@@ -27,7 +27,7 @@ Last time we found that the low temperature behaviour or the \textAndIndex{chemi
 %\kB T ?
 .
 \end{dmath}
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture18Fig1}{Fermi gas chemical potential.}{fig:lecture18:lecture18Fig1}{0.2}
 %
 \paragraph{Specific heat}
@@ -54,7 +54,7 @@ N(\epsilon) = \inv{4 \pi^2}
 \int_0^\infty d\epsilon N(\epsilon)
 \lr{ n_{\txtF}(\epsilon, T) - n_{\txtF}(\epsilon, 0)}
 \end{dmath}
-
+%
 The only change in the distribution \cref{fig:lecture18:lecture18Fig2}, that is of interest is over the step portion of the distribution, and over this range of interest \(N(\epsilon)\) is approximately constant as in \cref{fig:lecture18:lecture18Fig3}.
 \imageFigure{../figures/phy452-basicstatmech/lecture18Fig2}{Fermi distribution.}{fig:lecture18:lecture18Fig2}{0.2}
 \imageFigure{../figures/phy452-basicstatmech/lecture18Fig3}{Fermi gas density of states.}{fig:lecture18:lecture18Fig3}{0.2}
@@ -79,7 +79,7 @@ N(\epsilon_{\txtF})
 \int_{-\epsilon_{\txtF}}^\infty d x (\epsilon_{\txtF} + x)
 \lr{ n_{\txtF}(\epsilon + x, T) - n_{\txtF}(\epsilon_{\txtF} + x, 0)}.
 \end{dmath}
-
+%
 Here we've made a change of variables \(\epsilon = \epsilon_{\txtF} + x\), so that we have near cancellation of the \(\epsilon_{\txtF}\) factor
 \begin{dmath}\label{eqn:basicStatMechLecture18:180}
 \Delta e
@@ -103,7 +103,7 @@ N(\epsilon_{\txtF})
 \evalbar{\inv{ e^{\beta x} +1 }}{T \rightarrow 0}
 }.
 \end{dmath}
-
+%
 Here we've extended the integration range to \(-\infty\) since this doesn't change much.  FIXME: justify this to myself?  Taking derivatives with respect to temperature we have
 \begin{dmath}\label{eqn:basicStatMechLecture18:200}
 \frac{\delta e}{T}
@@ -119,7 +119,7 @@ N(\epsilon_{\txtF})
 e^{\beta x}
 \frac{x}{\kB T^2}.
 \end{dmath}
-
+%
 With \(\beta x = y\), we have for \(T \ll T_{\txtF}\)
 \begin{dmath}\label{eqn:basicStatMechLecture18:220}
 \frac{C}{V}
@@ -139,7 +139,7 @@ N(\epsilon_{\txtF}) \kB^2 T
 =
 \frac{\pi^2}{3} N(\epsilon_{\txtF}) \kB (\kB T).
 \end{dmath}
-
+%
 Using \eqnref{eqn:basicStatMechLecture18:80} at the Fermi energy and
 \begin{subequations}
 \begin{dmath}\label{eqn:basicStatMechLecture18:240}
@@ -173,7 +173,7 @@ N(\epsilon_{\txtF})
 \lr{\frac{2m}{\Hbar^2}}
 \lr{6 \pi^2 \frac{N}{V}}^{1/3}.
 \end{dmath}
-
+%
 Giving
 \begin{dmath}\label{eqn:basicStatMechLecture18:480}
 \frac{C}{N}
@@ -205,8 +205,8 @@ or
 \frac{C}{N} =
 \frac{\pi^2}{2} \kB \frac{ \kB T}{\epsilon_{\txtF}}.
 }
-
+%
 This is illustrated in \cref{fig:lecture18:lecture18Fig4}.  Note that \citep{pathriastatistical} outlines this derivation in the tail end of \S 8.1, and you can look there to see the high level view without any of the details above obscuring things.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture18Fig4}{Specific heat per Fermion.}{fig:lecture18:lecture18Fig4}{0.25}
-
+%

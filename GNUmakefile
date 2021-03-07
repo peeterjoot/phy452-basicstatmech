@@ -12,6 +12,16 @@ include ../latex/make.bookvars
 
 FIGURES := ../figures/phy452-basicstatmech
 
+# comment this out for online pdf version (uncomment for KDP)
+PRINT_VERSION := 1
+
+ifndef PRINT_VERSION
+PARAMS += --no-print
+endif
+ifdef PRINT_VERSION
+DISTEXTRA := $(DISTEXTRA).kdp
+endif
+
 SOURCE_DIRS += appendix
 SOURCE_DIRS += $(FIGURES)
 #SOURCE_DIRS += solutions
@@ -96,6 +106,13 @@ basicStatMechProblemSet4.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet5.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet6.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet7.pdf :: $(PDF_DEPS)
+
+parameters.sty : ../latex/bin/mkparams
+	../latex/bin/mkparams $(PARAMS) > $@
+
+# https://tex.stackexchange.com/questions/570899/use-of-amsmath-binom-causes-missing-number-if-breqn-is-used
+#mathstyle.sty : 
+#	wget -o $@ http://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/latex/breqn/mathstyle.sty?revision=54801&view=co
 
 backmatter.tex: ../latex/classicthesis_mine/backmatter2.tex
 	rm -f $@

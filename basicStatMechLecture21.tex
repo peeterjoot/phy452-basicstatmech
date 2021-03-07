@@ -22,7 +22,7 @@
 %\paragraph{Phonons and other systems}
 %
 We have phenomena in matter that are very similar to Boson particle statistics.  We can discuss lattice vibrations in a solid.  These are called phonon modes, and will have the same distribution function where the only difference is that the speed of light is replaced by the speed of the sound wave in the solid.  Once we understand the photon system, we are able to look at other Bose distributions such as these phonon systems.  %We'll touch on this very briefly next time.
-
+%
 If we model a solid as a set of interconnected springs, as in \cref{fig:lecture21:lecture21Fig1}, then the potentials are of the form
 \imageFigure{../figures/phy452-basicstatmech/lecture21Fig1}{Solid oscillator model.}{fig:lecture21:lecture21Fig1}{0.1}
 \begin{equation}\label{eqn:basicStatMechLecture21:20}
@@ -33,7 +33,7 @@ with kinetic energies
 \begin{equation}\label{eqn:basicStatMechLecture21:40}
 K = \sum_n \frac{p_n^2}{2m}.
 \end{equation}
-
+%
 It's possible to introduce generalized forces
 \begin{equation}\label{eqn:basicStatMechLecture21:60}
 F = -\PD{u_n}{V},
@@ -44,7 +44,7 @@ m \frac{d^2 u_n}{dt^2} =
 - C \lr{ u_n - u_{n+1}}
 - C \lr{ u_n - u_{n-1}}.
 \end{equation}
-
+%
 Assuming a Fourier representation
 \begin{equation}\label{eqn:basicStatMechLecture21:100}
 u_n = \sum_k \tilde{u}(k) e^{i k n a},
@@ -55,18 +55,18 @@ m \frac{d^2 \tilde{u}(k)}{dt^2} = - 2 C
 \lr{ 1 - \cos k a}
 \tilde{u}(k).
 \end{equation}
-
+%
 This looks like a harmonic oscillator with
 \begin{equation}\label{eqn:basicStatMechLecture21:140}
 \omega(k) = \sqrt{ \frac{2 C}{m} ( 1 - \cos k a)}.
 \end{equation}
-
+%
 This is plotted in \cref{fig:lecture21:lecture21Fig2}.  In particular note that for \(k a \ll 1\) we can use a linear approximation
 \imageFigure{../figures/phy452-basicstatmech/lecture21Fig2}{Angular frequency of solid oscillator model.}{fig:lecture21:lecture21Fig2}{0.2}
 \begin{equation}\label{eqn:basicStatMechLecture21:160}
 \omega(k) \approx \sqrt{ \frac{C}{m} a^2 } \Abs{k}.
 \end{equation}
-
+%
 Experimentally, looking at specific for a complex atomic structure like Gold, we find for example good fit for a model such as
 \begin{equation}\label{eqn:basicStatMechLecture21:180}
 C
@@ -80,5 +80,5 @@ C
 {B T^3.}{Contribution due to phonon like modes},
 \end{equation}
 where the phonon like modes are associated with linear energy-momentum relationships.
-
+%
 %\EndNoBibArticle

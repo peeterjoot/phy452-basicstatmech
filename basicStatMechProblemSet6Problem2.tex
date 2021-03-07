@@ -13,20 +13,20 @@ where
 \Gamma(\nu) = \int_0^\infty dy y^{\nu-1} e^{-y},
 \end{dmath}
 denotes the gamma function.
-
+%
 \makesubproblem{}{basicStatMech:problemSet6:2a}
 Obtain the behaviour of \(f_\nu^\pm(z)\) for \(z \rightarrow 0\) keeping the two leading terms in the expansion.
-
+%
 \makesubproblem{}{basicStatMech:problemSet6:2b}
 For Fermions, obtain the behaviour of \(f_\nu^\pm(z)\) for \(z \rightarrow \infty\) again keeping the two leading terms.
-
+%
 \makesubproblem{}{basicStatMech:problemSet6:2c}
 For Bosons, we must have \(z \le 1\) (why?), obtain the leading term of \(f_\nu^-(z)\) for \(z \rightarrow 1\).
 } % makeoproblem
-
+%
 \makeanswer{basicStatMech:problemSet6:2}{
 \makeSubAnswer{}{basicStatMech:problemSet6:2a}
-
+%
 For \(z \rightarrow 0\) we can rewrite the integrand in a form that allows for series expansion
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:60}
 \frac{x^{\nu - 1}}{z^{-1} e^x \pm 1}
@@ -42,7 +42,7 @@ z e^{-x} x^{\nu - 1}
 \cdots
 }
 \end{dmath}
-
+%
 For the \(k\)th power of \(z e^{-x}\) in this series our integral is
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:80}
 \int_0^\infty dx z e^{-x} x^{\nu - 1} (z e^{-x})^k
@@ -55,7 +55,7 @@ z^{k+1}
 =
 \frac{z^{k+1}}{(k+1)^\nu} \Gamma(\nu).
 \end{dmath}
-
+%
 Putting everything back together we have for small \(z\)
 \boxedEquation{eqn:basicStatMechProblemSet6Problem2:100}{
 f_\nu^\pm(z) =
@@ -69,9 +69,9 @@ z
 +
 \cdots
 }
-
+%
 \makeSubAnswer{}{basicStatMech:problemSet6:2b}
-
+%
 We'll expand \(\Gamma(\nu) f_\nu^+(e^y)\) about \(z = e^y\), writing
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:340}
 F_\nu(e^y)
@@ -84,17 +84,17 @@ F_\nu(e^y)
 +
 \int_y^\infty dx \frac{x^{\nu - 1}}{e^{x - y} + 1}.
 \end{dmath}
-
+%
 The integral has been split into two since the behaviour of the exponential in the denominator is quite different in the \(x < y\) and \(x > y\) ranges.  Observe that in the first integral we have
 \begin{equation}\label{eqn:basicStatMechProblemSet6Problem2:260}
 \inv{2} \le \frac{1}{e^{x - y} + 1} \le \inv{1 + e^{-y}}.
 \end{equation}
-
+%
 Since this term is of order 1, let's consider the difference of this from \(1\), writing
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:280}
 \frac{1}{e^{x - y} + 1} = 1 + u,
 \end{dmath}
-
+%
 or
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:220}
 u
@@ -125,7 +125,7 @@ e^{x - y} + 1
 1 + e^{y - x}
 }.
 \end{dmath}
-
+%
 This gives us
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:120}
 F_\nu(e^y)
@@ -146,7 +146,7 @@ x^{\nu - 1}
 +
 \int_y^\infty dx \frac{x^{\nu - 1}}{e^{x - y} + 1}.
 \end{dmath}
-
+%
 Now let's make a change of variables \(a = y - x\) in the first integral and \(b = x - y\) in the second.  This gives
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:320}
 F_\nu(e^y)
@@ -160,7 +160,7 @@ F_\nu(e^y)
 +
 \int_0^\infty db \frac{(y + b)^{\nu - 1}}{e^{b} + 1}.
 \end{dmath}
-
+%
 As \(a\) gets large in the first integral the integrand is approximately \(e^{-a} (y-a)^{\nu -1}\).  The exponential dominates this integrand.  Since we are considering large \(y\), we can approximate the upper bound of the integral by extending it to \(\infty\).  Also expanding in series we have
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:360}
 F_\nu(e^y)
@@ -221,7 +221,7 @@ F_\nu(e^y)
 \frac{ \Gamma(\nu) } {\Gamma(\nu - j)}
 \int_0^\infty da \frac{a^j}{e^a + 1}.
 \end{dmath}
-
+%
 For the remaining integral, we find in \nbref{basicStatMechProblemSet6Problem2.nb}
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:380}
 \int_0^\infty da \frac{a^j}{e^a + 1}
@@ -234,7 +234,7 @@ where for \(s > 1\)
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:400}
 \zeta(s) = \sum_{k=1}^{\infty} k^{-s}.
 \end{dmath}
-
+%
 This gives
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:420}
 F_\nu(e^y)
@@ -270,7 +270,7 @@ y^{j + 1}
 \frac{\zeta(j+1)}{ y^{j + 1} }
 },
 \end{dmath}
-
+%
 or
 \boxedEquation{eqn:basicStatMechProblemSet6Problem2:460}{
 \begin{aligned}
@@ -286,7 +286,7 @@ f_\nu^+(e^y) &\approx
 }.
 \end{aligned}
 }
-
+%
 Evaluating the numerical portions explicitly, with
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:480}
 c(j) = 2 \left(1-2^{-j}\right) \zeta (j+1),
@@ -311,9 +311,9 @@ f_\nu^+(e^y) &\approx
 }.
 \end{aligned}
 }
-
+%
 \makeSubAnswer{}{basicStatMech:problemSet6:2c}
-
+%
 In order for the Boson occupation numbers to be non-singular we require \(\mu\) less than all \(\epsilon\).  If that lowest energy level is set to zero, this is equivalent to \(z < 1\).  Given this restriction, a \(z = e^{-\alpha}\) substitution is convenient for investigation of the \(z \rightarrow 1\) case.  Following the text, we'll write
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:540}
 G_\nu(e^{-\alpha})
@@ -323,7 +323,7 @@ f_\nu^-(e^{-\alpha})
 =
 \int_0^\infty dx \frac{x^{\nu - 1}}{e^{x + \alpha} - 1}.
 \end{dmath}
-
+%
 For \(\nu = 1\), this is integrable
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:560}
 \frac{d}{dx} \ln\lr{ 1 - e^{-x - \alpha} }
@@ -334,7 +334,7 @@ For \(\nu = 1\), this is integrable
 \inv
 { e^{x + \alpha} - 1},
 \end{dmath}
-
+%
 so that
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:580}
 G_1(e^{-\alpha})
@@ -351,12 +351,12 @@ G_1(e^{-\alpha})
 =
 -\ln \lr{1 - e^{- \alpha} }.
 \end{dmath}
-
+%
 Taylor expanding \(1 - e^{-\alpha}\) we have
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:600}
 1 - e^{-\alpha} = 1 - \lr{ 1 - \alpha + \alpha^2/2 - \cdots}.
 \end{dmath}
-
+%
 Noting that \(\Gamma(1) = 1\), we have for the limit
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:640}
 \lim_{\alpha \rightarrow 0} G_1(e^{-\alpha})
@@ -368,13 +368,13 @@ or
 \lim_{z\rightarrow 1} f_\nu^-(z)
 = -\ln (-\ln z).
 \end{dmath}
-
+%
 For values of \(\nu \ne 1\), the denominator is
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:660}
 e^{\alpha + x} - 1
 = (\alpha + x) + (\alpha + x)^2/2 + \cdots
 \end{dmath}
-
+%
 To first order this gives us
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:680}
 f_\nu^-( e^{-\alpha} )
@@ -382,7 +382,7 @@ f_\nu^-( e^{-\alpha} )
 \inv{\Gamma(\nu)}
 \int_0^\infty dx \frac{1}{x + \alpha}.
 \end{dmath}
-
+%
 Of this integral Mathematica says it can be evaluated for \(0 < \nu < 1\), and has the value
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:700}
 \inv{\Gamma(\nu)}
@@ -390,7 +390,7 @@ Of this integral Mathematica says it can be evaluated for \(0 < \nu < 1\), and h
 =
 \frac{\pi}{\sin(\pi\nu)} \frac{1}{\alpha^{1 - \nu} \Gamma (\nu )}.
 \end{dmath}
-
+%
 From \citep{abramowitz1964handbook} 6.1.17 we find
 \begin{dmath}\label{eqn:basicStatMechProblemSet6Problem2:720}
 \Gamma(z) \Gamma(1-z) = \frac{\pi}{\sin(\pi z)},

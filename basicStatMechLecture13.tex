@@ -11,24 +11,24 @@
 %\beginArtNoToc
 %\generatetitle{PHY452H1S Basic Statistical Mechanics.  Lecture 13: Interacting spin.  Taught by Prof.\ Arun Paramekanti}
 \label{chap:basicStatMechLecture13}
-
+%
 %\section{Interacting spin}
-
+%
 For this section
 \boxedEquationStarred{
 \Hbar = \kB = 1.
 }
-
+%
 This lecture requires concepts from phy456 \citep{phy456:qmTwoL16TwoSpin}.
-
+%
 We'll look at pairs of spins as a toy model of interacting spins as depicted in \cref{fig:lecture13:lecture13Fig1}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture13Fig1}{Pairs of interacting spins.}{fig:lecture13:lecture13Fig1}{0.2}
 %
 \paragraph{Example: }
 %
 Simple atomic system, with the nucleus and the electron can interact with each other (hyper-fine interaction).
-
+%
 Consider two interacting spin \(1/2\) operators \(\BS\) each with components \(\hat{S}^x\), \(\hat{S}^y\), \(\hat{S}^z\)
 \begin{equation}\label{eqn:basicStatMechLecture13:20}
 H = J \BS_1 \cdot \BS_2 - B (\hat{S}_1^z + \hat{S}_2^z)
@@ -36,13 +36,13 @@ H = J \BS_1 \cdot \BS_2 - B (\hat{S}_1^z + \hat{S}_2^z)
 \begin{equation}\label{eqn:basicStatMechLecture13:40}
 \hat{S}_1^z + \hat{S}_2^z \propto \mbox{magnetization along \(\zcap\)}.
 \end{equation}
-
+%
 We rewrite the dot product term of the Hamiltonian in terms of just the squares of the spin operators
 \begin{equation}\label{eqn:basicStatMechLecture13:25}
 H = J \frac{(\BS_1 + \BS_2)^2 - \BS_1^2 - \BS_2^2}{2}
 - B (\hat{S}_1^z + \hat{S}_2^z).
 \end{equation}
-
+%
 The squares \(\BS_1^2\), \(\BS_2^2\), \((\BS_1 + \BS_2)^2\) can be thought of as ``length''s of the respective angular momentum vectors.
 We write
 \begin{equation}\label{eqn:basicStatMechLecture13:60}
@@ -60,12 +60,12 @@ For this case the energy eigenvalue of \(H\) is
 \begin{equation}\label{eqn:basicStatMechLecture13:120}
 J \frac{0 -3/4 -3/4}{2} - B (0) = -\frac{3}{4} J.
 \end{equation}
-
+%
 This happens to be the eigenvalue corresponding to the eigenvector
 \begin{equation}\label{eqn:basicStatMechLecture13:100}
 \inv{\sqrt{2}} \lr{ \uparrow \downarrow - \downarrow \uparrow },
 \end{equation}
-
+%
 but that isn't actually required for the stat mech problem.
 %
 \paragraph{\(S_{\mathrm{total}} = 1\) state, \(m = 1\)}
@@ -74,7 +74,7 @@ As above we can compute the energy eigenvalue
 \begin{equation}\label{eqn:basicStatMechLecture13:160}
 J \frac{2 - \frac{3}{4} -\frac{3}{4}}{2} - B = \frac{J}{4} - B.
 \end{equation}
-
+%
 It can be shown that the eigenvector for this state is
 \begin{equation}\label{eqn:basicStatMechLecture13:140}
 \inv{\sqrt{2}} \lr{ \uparrow \uparrow }.
@@ -86,7 +86,7 @@ Our energy eigenvalue is
 \begin{equation}\label{eqn:basicStatMechLecture13:200}
 J \frac{2 - \frac{3}{4} -\frac{3}{4}}{2} - (0)B = \frac{J}{4}.
 \end{equation}
-
+%
 For which the corresponding state is
 \begin{equation}\label{eqn:basicStatMechLecture13:180}
 \inv{\sqrt{2}} \lr{ \uparrow \downarrow + \downarrow \uparrow }.
@@ -98,16 +98,16 @@ Our energy eigenvalue is
 \begin{equation}\label{eqn:basicStatMechLecture13:240}
 J \frac{2 - \frac{3}{4} -\frac{3}{4}}{2} - (-1)B = \frac{J}{4} + B.
 \end{equation}
-
+%
 With corresponding state
 \begin{equation}\label{eqn:basicStatMechLecture13:220}
 \inv{\sqrt{2}} \lr{ \downarrow \downarrow }.
 \end{equation}
-
+%
 The energy eigenvalues for the singlet and these last three (triplet) states are illustrated schematically in \cref{fig:lecture13:lecture13Fig2}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture13Fig2}{Energy levels for two interacting spins as a function of magnetic field.}{fig:lecture13:lecture13Fig2}{0.2}
-
+%
 Our single pair partition function is
 \begin{equation}\label{eqn:basicStatMechLecture13:260a}
 Z_1 =
@@ -126,7 +126,7 @@ e^{ -\beta J/4}
 +e^{ -\beta (J/4 + B)}
 }^N.
 \end{equation}
-
+%
 Our free energy is
 \begin{dmath}\label{eqn:basicStatMechLecture13:280}
 F
@@ -136,7 +136,7 @@ F
 \lr{ e^{ +\beta 3 J/4} + e^{ -\beta (J/4 - B)} + e^{ -\beta J/4} + e^{ -\beta (J/4 + B)} }
 .
 \end{dmath}
-
+%
 We can use this to find the average energy
 \begin{dmath}\label{eqn:basicStatMechLecture13:300}
 \expectation{H}
@@ -144,7 +144,7 @@ We can use this to find the average energy
 = -N \PD{\beta}{} \ln Z_1
 = -\frac{N}{Z_1} \PD{\beta}{Z_1}.
 \end{dmath}
-
+%
 The partition function derivative is
 \begin{dmath}\label{eqn:basicStatMechLecture13:440}
 \PD{\beta}{Z_1}
@@ -216,7 +216,7 @@ e^{ - \beta J/4}
    + 2 B \sinh(\beta B)
 }.
 \end{dmath}
-
+%
 So that the average energy is
 \begin{equation}\label{eqn:basicStatMechLecture13:460}
 \expectation{H}
@@ -231,7 +231,7 @@ e^{ - \beta J/4}
    + 2 B \sinh(\beta B)
 }.
 \end{equation}
-
+%
 We could use this to calculate the specific heat directly, but let's express the specific heat first in terms of \(\beta\) derivatives of \(Z_1\).
 \begin{dmath}\label{eqn:basicStatMechLecture13:480}
 \CV
@@ -261,7 +261,7 @@ We could use this to calculate the specific heat directly, but let's express the
 \lr{\PD{\beta}{Z_1}}^2
 }.
 \end{dmath}
-
+%
 After a bit of work, we find for the second partial of the partition function
 \begin{equation}\label{eqn:basicStatMechLecture13:500}
 \begin{aligned}
@@ -279,7 +279,7 @@ e^{-\beta J/4} \times \\
 \end{aligned}
 \end{equation}
 That gives us the specific heat, but it's a messy expression, and not particularly illuminating.
-
+%
 Our magnetization \(\mu\) is
 \begin{dmath}\label{eqn:basicStatMechLecture13:320}
 \mu =
@@ -300,7 +300,7 @@ e^{\beta B}
 =
 \frac{2 N}{Z_1} e^{-\beta J/4 } \sinh( \beta B ).
 \end{dmath}
-
+%
 The moment per particle, is
 \begin{equation}\label{eqn:basicStatMechLecture13:340}
 m
@@ -326,38 +326,38 @@ Z_1 \approx e^{3 J \beta/4}
 m \approx 2 e^{-\beta J}
 \sinh\lr{\frac{B}{T}}.
 \end{equation}
-
+%
 %\cref{fig:lecture13:lecture13Fig3}.
 \imageFigure{../figures/phy452-basicstatmech/lecture13Fig3}{magnetic moment.}{fig:lecture13:lecture13Fig3}{0.2}
-
+%
 The specific heat has a similar behaviour
 \begin{equation}\label{eqn:basicStatMechLecture13:400}
 \CV \sim e^{-\beta J}.
 \end{equation}
-
+%
 Considering a single spin \(1/2\) system, we have energies as illustrated in \cref{fig:lecture13:lecture13Fig4}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture13Fig4}{Single particle spin energies as a function of magnetic field.}{fig:lecture13:lecture13Fig4}{0.2}
-
+%
 At zero temperatures we have a finite non-zero magnetization as illustrated in \cref{fig:lecture13:lecture13Fig4a}, but as we heat the system up, the state of the system will randomly switch between the 1, and 2 states.  The partition function democratically averages over all such possible states.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture13Fig4a}{Single spin magnetization.}{fig:lecture13:lecture13Fig4a}{0.2}
-
+%
 Once the system heats up, the spins are democratically populated within the entire set of possible states.
-
+%
 We contrast this to this interacting spins problem which has a magnetization of the form \cref{fig:lecture13:lecture13Fig5}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture13Fig5}{Interacting spin magnetization.}{fig:lecture13:lecture13Fig5}{0.2}
-
+%
 For the single particle specific heat we have specific heat of the form \cref{fig:lecture13:lecture13Fig6}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture13Fig6}{Single particle specific heat.}{fig:lecture13:lecture13Fig6}{0.2}
-
+%
 We'll see the same kind of specific heat distribution with temperature for the interacting spins problem, but the peak will be found at an energy that's given by the difference in energies of the two states as illustrated in \cref{fig:lecture13:lecture13Fig7}.
 \begin{equation}\label{eqn:basicStatMechLecture13:420}
 \Delta E = \frac{J}{4} - \frac{-3J}{4} = J.
 \end{equation}
-
+%
 \imageFigure{../figures/phy452-basicstatmech/lecture13Fig7}{Magnetization for interacting spins.}{fig:lecture13:lecture13Fig7}{0.2}
-
+%
 %\EndArticle

@@ -14,33 +14,33 @@
 %\generatetitle{Rotation of diatomic molecules}
 %\chapter{Rotation of diatomic molecules}
 %\label{chap:kittelRotationalPartition}
-
+%
 \makeoproblem{Rotation of diatomic molecules}{pr:kittelRotationalPartition:3:6}{\citep{kittel1980thermal} pr. 3.6}{
 In our first look at the ideal gas we considered only the translational energy of the particles.  But molecules can rotate, with kinetic energy.  The rotation motion is quantized; and the energy levels of a diatomic molecule are of the form
 \begin{equation}\label{eqn:kittelRotationalPartition:10}
 \epsilon(j) = j(j + 1) \epsilon_0,
 \end{equation}
 where \(j\) is any positive integer including zero: \(j = 0, 1, 2, \cdots\).  The multiplicity of each rotation level is \(g(j) = 2 j + 1\).
-
+%
 \makesubproblem{}{pr:kittelRotationalPartition:3:6:a}
-
+%
 Find the partition function \(Z_R(\tau)\) for the rotational states of one molecule.  Remember that \(Z\) is a sum over all states, not over all levels -- this makes a difference.
 \makesubproblem{}{pr:kittelRotationalPartition:3:6:b}
 Evaluate \(Z_R(\tau)\) approximately for \(\tau \gg \epsilon_0\), by converting the sum to an integral.
 \makesubproblem{}{pr:kittelRotationalPartition:3:6:c}
-
+%
 Do the same for \(\tau \ll \epsilon_0\), by truncating the sum after the second term.
 \makesubproblem{}{pr:kittelRotationalPartition:3:6:d}
-
+%
 Give expressions for the energy \(U\) and the heat capacity \(C\), as functions of \(\tau\), in both limits.  Observe that the rotational contribution to the heat capacity of a diatomic molecule approaches 1 (or, in conventional units, \(\kB\)) when \(\tau \gg \epsilon_0\).
 \makesubproblem{}{pr:kittelRotationalPartition:3:6:e}
-
+%
 Sketch the behaviour of \(U(\tau)\) and \(C(\tau)\), showing the limiting behaviours for \(\tau \rightarrow \infty\) and \(\tau \rightarrow 0\).
 } % makeproblem
-
+%
 \makeanswer{pr:kittelRotationalPartition:3:6}{
 \makeSubAnswer{Partition function \(Z_R(\tau)\)}{pr:kittelRotationalPartition:3:6:a}
-
+%
 To understand the reference to multiplicity recall (\S 4.13 \citep{desai2009quantum}) that the rotational Hamiltonian was of the form
 \begin{equation}\label{eqn:kittelRotationalPartition:30}
 H = \frac{\BL^2}{2 M r^2},
@@ -64,19 +64,19 @@ Z_R(\tau)
 = \sum_{l = 0}^\infty \sum_{m = -l}^l e^{-l (l + 1)\epsilon_0/\tau}
 = \sum_{l = 0}^\infty (2 l + 1) e^{-l (l + 1)\epsilon_0/\tau}.
 \end{equation}
-
+%
 We have no dependence on \(m\) in the sum, and just have to sum terms like \cref{fig:kittelCh3Pr6:kittelCh3Pr6Fig1}, and are able to sum over \(m\) trivially, which is where the multiplicity comes from.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/kittelCh3Pr6Fig1}{Summation over \(m\).}{fig:kittelCh3Pr6:kittelCh3Pr6Fig1}{0.2}
-
+%
 To get a feel for how many terms are significant in these sums, we refer to the plot of \cref{fig:kittelRotationalPartition:kittelRotationalPartitionFig4}.  We plot the partition function itself in, truncation at \(l = 30\) terms in \cref{fig:kittelRotationalPartition:kittelRotationalPartitionFig2}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/kittelRotationalPartitionFig4}{Plotting the partition function summand.}{fig:kittelRotationalPartition:kittelRotationalPartitionFig4}{0.2}
-
+%
 \imageFigure{../figures/phy452-basicstatmech/kittelRotationalPartitionFig2}{\(Z_R(\tau)\) truncated after 30 terms in log plot.}{fig:kittelRotationalPartition:kittelRotationalPartitionFig2}{0.2}
-
+%
 \makeSubAnswer{Evaluate partition function for large temperatures}{pr:kittelRotationalPartition:3:6:b}
-
+%
 If \(\tau \gg \epsilon_0\), so that \(\epsilon_0/\tau \ll 1\), all our exponentials are close to unity.  Employing an integral approximation of the partition function, we can somewhat miraculously integrate this directly
 \begin{dmath}\label{eqn:kittelRotationalPartition:130}
 Z_R(\tau)
@@ -86,16 +86,16 @@ Z_R(\tau)
 \lr{ -\frac{\tau}{\epsilon_0} e^{-l(l+1)\epsilon_0/\tau} }
 = \frac{\tau}{\epsilon_0}.
 \end{dmath}
-
+%
 \makeSubAnswer{Evaluate partition function for small temperatures}{pr:kittelRotationalPartition:3:6:c}
-
+%
 When \(\tau \ll \epsilon_0\), so that \(\epsilon_0/\tau \gg 1\), all our exponentials are increasingly close to zero as \(l\) increases.  Dropping all the second and higher order terms we have
 \begin{equation}\label{eqn:kittelRotationalPartition:150}
 Z_R(\tau) \approx 1 + 3 e^{-2 \epsilon_0/\tau}.
 \end{equation}
-
+%
 \makeSubAnswer{Energy and heat capacity}{pr:kittelRotationalPartition:3:6:d}
-
+%
 In the large \(\epsilon_0/\tau\) domain (small temperatures) we have
 \begin{dmath}\label{eqn:kittelRotationalPartition:210}
 U
@@ -108,7 +108,7 @@ U
 \frac{6 \epsilon_0}{1 + 3 e^{-2 \epsilon_0/\tau}}
 \approx 6 \epsilon_0.
 \end{dmath}
-
+%
 The specific heat
 \footnote{ This is a dimensionless specific heat, whereas in traditional units \(\CV = \PDi{T}{U}\)}
 in this domain is
@@ -119,7 +119,7 @@ in this domain is
 \lr{ \frac{6 \epsilon_0/\tau}{1 + 3 e^{-2 \epsilon_0/\tau}} }^2
 \approx \lr{ \frac{6 \epsilon_0}{\tau} }^2.
 \end{dmath}
-
+%
 For the small \(\epsilon_0/\tau\) (large temperatures) case we have
 \begin{dmath}\label{eqn:kittelRotationalPartition:170}
 U
@@ -128,24 +128,24 @@ U
 = \tau^2 \inv{\tau}
 = \tau.
 \end{dmath}
-
+%
 The heat capacity in this large temperature region is
 \begin{equation}\label{eqn:kittelRotationalPartition:190}
 \CV = \PD{\tau}{U} = 1,
 \end{equation}
-
+%
 which is unity as described in the problem.
-
+%
 \makeSubAnswer{Sketch}{pr:kittelRotationalPartition:3:6:e}
-
+%
 The energy and heat capacities are roughly sketched in \cref{fig:kittelRotationalPartition:kittelRotationalPartitionFig3}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/kittelRotationalPartitionFig3}{Energy and heat capacity.}{fig:kittelRotationalPartition:kittelRotationalPartitionFig3}{0.2}
-
+%
 It's somewhat odd seeming that we have a zero point energy at zero temperature.  Plotting the energy (truncating the sums to 30 terms) in \cref{fig:kittelRotationalPartition:kittelRotationalPartitionFig5}, we don't see such a zero point energy.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/kittelRotationalPartitionFig5}{Exact plot of the energy for a range of temperatures (30 terms of the sums retained).}{fig:kittelRotationalPartition:kittelRotationalPartitionFig5}{0.2}
-
+%
 That plotted energy is as follows, computed without first dropping any terms of the partition function
 \begin{dmath}\label{eqn:kittelRotationalPartition:250}
 U
@@ -168,7 +168,7 @@ U
 }
 {Z}.
 \end{dmath}
-
+%
 To avoid the zero point energy, we have to use this and not the truncated partition function to do the integral approximation.  Doing that calculation (which isn't as convenient but can be done in software \nbref{kittelRotationalPartition.nb}).  We obtain
 \begin{dmath}\label{eqn:kittelRotationalPartition:270}
 U \approx
@@ -182,11 +182,11 @@ U \approx
 \epsilon_0 e^{2 \epsilon_0/\tau}
 \lr{ 2 + \frac{\tau}{\epsilon_0} }.
 \end{dmath}
-
+%
 This approximation, which has taken the sums to infinity, is plotted in \cref{fig:kittelRotationalPartition:kittelRotationalPartitionFig6}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/kittelRotationalPartitionFig6}{Low temperature approximation of the energy.}{fig:kittelRotationalPartition:kittelRotationalPartitionFig6}{0.2}
-
+%
 From \eqnref{eqn:kittelRotationalPartition:250}, we can take one more derivative to calculate the exact specific heat
 \begin{dmath}\label{eqn:kittelRotationalPartition:290}
 \begin{aligned}
@@ -237,10 +237,10 @@ From \eqnref{eqn:kittelRotationalPartition:250}, we can take one more derivative
 {Z}.
 \end{aligned}
 \end{dmath}
-
+%
 This is plotted to 30 terms in \cref{fig:kittelRotationalPartition:kittelRotationalPartitionFig7}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/kittelRotationalPartitionFig7}{Specific heat to 30 terms.}{fig:kittelRotationalPartition:kittelRotationalPartitionFig7}{0.2}
 } % makeanswer
-
+%
 %\EndArticle

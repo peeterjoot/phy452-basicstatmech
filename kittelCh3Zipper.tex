@@ -14,7 +14,7 @@
 %\generatetitle{Kittel Zipper problem}
 %\chapter{Kittel Zipper problem}
 \label{chap:kittelCh3Zipper}
-
+%
 \makeoproblem{Zipper problem}{pr:kittelCh3Zipper:7}{\citep{kittel1980thermal} pr. 3.7}{
 A zipper has \(N\) links; each link has a state in which it is closed with energy \(0\) and a state in which it is open with energy \(\epsilon\).  we require, however, that the zipper can only unzip from the left end, and that the link number \(s\) can only open if all links to the left \((1, 2, \cdots, s - 1)\) are already open.
 \makesubproblem{}{pr:kittelCh3Zipper:7:a}
@@ -22,15 +22,15 @@ Find (and sum) the partition function.
 \makesubproblem{}{pr:kittelCh3Zipper:7:b}
 In the low temperature limit \(\kB T \ll \epsilon\), find the average number of open links.  The model is a very simplified model of the unwinding of two-stranded DNA molecules.
 } % makeoproblem
-
+%
 \makeanswer{pr:kittelCh3Zipper:7}{
-
+%
 The system is depicted in \cref{fig:kittelCh3Zipper:kittelCh3ZipperFig1}, in the \(E = 0\) and \(E = \epsilon\) states.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/kittelCh3ZipperFig1}{Zipper molecule model in first two states.}{fig:kittelCh3Zipper:kittelCh3ZipperFig1}{0.2}
-
+%
 The left opening only constraint simplifies the combinatorics, since this restricts the available energies for the complete molecule to \(0, \epsilon, 2 \epsilon, \cdots, N \epsilon\).
-
+%
 The probability of finding the molecule with \(s\) links open is then
 \begin{dmath}\label{eqn:kittelCh3Zipper:20}
 P_s =
@@ -40,18 +40,18 @@ with
 \begin{dmath}\label{eqn:kittelCh3Zipper:40}
 Z = \sum_{s = 0}^N e^{- \beta s \epsilon}.
 \end{dmath}
-
+%
 \makeSubAnswer{}{pr:kittelCh3Zipper:7:a}
-
+%
 We can sum this geometric series immediately
 \boxedEquation{eqn:kittelCh3Zipper:60}{
 Z =
 \frac{e^{-\beta (N+1) \epsilon} - 1}
 {e^{-\beta \epsilon } - 1}.
 }
-
+%
 \makeSubAnswer{}{pr:kittelCh3Zipper:7:b}
-
+%
 The expectation value for the number of links is
 \begin{dmath}\label{eqn:kittelCh3Zipper:80}
 \expectation{s}
@@ -59,7 +59,7 @@ The expectation value for the number of links is
 = \inv{Z} \sum_{s = 1}^N s e^{- \beta s \epsilon}
 = -\inv{Z} \PD{(\beta \epsilon)}{} \sum_{s = 1}^N e^{- \beta s \epsilon}.
 \end{dmath}
-
+%
 Let's write
 \begin{dmath}\label{eqn:kittelCh3Zipper:100}
 a = e^{-\beta \epsilon},
@@ -112,7 +112,7 @@ N a^{N+1}
 a^N ( N (a - 1) - 1 ) + 1
 }.
 \end{dmath}
-
+%
 The average number of links is thus
 \begin{dmath}\label{eqn:kittelCh3Zipper:160}
 \expectation{k} =
@@ -134,7 +134,7 @@ or
 e^{-\beta \epsilon N} ( N (e^{-\beta \epsilon} - 1) - 1 ) + 1
 }.
 }
-
+%
 In the very low temperature limit where \(\beta \epsilon \gg 1\) (small \(T\), big \(\beta\)), we have
 \begin{dmath}\label{eqn:kittelCh3Zipper:200}
 \expectation{k} \approx
@@ -142,13 +142,13 @@ In the very low temperature limit where \(\beta \epsilon \gg 1\) (small \(T\), b
 =
 e^{-\beta \epsilon},
 \end{dmath}
-
+%
 showing that on average no links are open at such low temperatures.  An exact plot of \(\expectation{s}\) for a few small \(N\) values is in \cref{fig:kittelZipper:kittelZipperFig2}.
-
+%
 \imageFigure{../figures/phy452-basicstatmech/kittelZipperFig2}{Average number of open links.}{fig:kittelZipper:kittelZipperFig2}{0.2}
-
+%
 % FIXME: reference easier way pointed out in http://peeterjoot.wordpress.com/2013/03/20/kittel-zipper-problem-2/
-
+%
 } % makeanswer
-
+%
 %\EndArticle
