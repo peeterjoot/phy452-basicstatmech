@@ -19,7 +19,7 @@ ifndef PRINT_VERSION
 PARAMS += --no-print
 endif
 ifdef PRINT_VERSION
-DISTEXTRA := $(DISTEXTRA).kdp
+DISTEXTRA := kdp
 endif
 
 SOURCE_DIRS += appendix
