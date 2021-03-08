@@ -107,9 +107,6 @@ basicStatMechProblemSet5.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet6.pdf :: $(PDF_DEPS)
 basicStatMechProblemSet7.pdf :: $(PDF_DEPS)
 
-parameters.sty : ../latex/bin/mkparams
-	../latex/bin/mkparams $(PARAMS) > $@
-
 # https://tex.stackexchange.com/questions/570899/use-of-amsmath-binom-causes-missing-number-if-breqn-is-used
 #mathstyle.sty : 
 #	wget -o $@ http://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/latex/breqn/mathstyle.sty?revision=54801&view=co
