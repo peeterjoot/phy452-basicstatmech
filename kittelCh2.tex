@@ -38,12 +38,14 @@ Suppose \(g(U) = C U^{3N/2}\), where \(C\) is a constant and \(N\) is the number
 \makeSubAnswer{Temperature}{pr:kittelCh2:1:a}
 %
 We've got
-\begin{dmath}\label{eqn:kittelCh2:20}
+\begin{equation}\label{eqn:kittelCh2:20}
+\begin{aligned}
 \inv{\tau}
-= \PD{U}{\sigma}
-= \PD{U}{} \left( \ln C + \frac{3N}{2} \ln U \right)
-= \frac{3N}{2} \inv{U},
-\end{dmath}
+&= \PD{U}{\sigma} \\
+&= \PD{U}{} \left( \ln C + \frac{3N}{2} \ln U \right) \\
+&= \frac{3N}{2} \inv{U},
+\end{aligned}
+\end{equation}
 or
 \begin{equation}\label{eqn:kittelCh2:40}
 U = \frac{3N}{2} \tau.
@@ -104,15 +106,14 @@ and we can substitute that for \(s\)
 \sigma(U) = \sigma_0 - \frac{U^2}{2 m^2 B^2 N},
 \end{equation}
 and take derivatives for the temperature
-\begin{dmath}\label{eqn:kittelCh2:340}
+\begin{equation}\label{eqn:kittelCh2:340}
+\begin{aligned}
 \inv{\tau}
-= \PD{U}{\sigma}
-= \PD{U}{}
-\left(
-\sigma_0 - \frac{U^2}{2 m^2 B^2 N} \right)
-=
-- \frac{U}{m^2 B^2 N}.
-\end{dmath}
+&= \PD{U}{\sigma} \\
+&= \PD{U}{} \left( \sigma_0 - \frac{U^2}{2 m^2 B^2 N} \right) \\
+&= - \frac{U}{m^2 B^2 N}.
+\end{aligned}
+\end{equation}
 %
 This gives us a relation between temperature and the energy of the system with spin excess \(2 s\), and we could write
 \begin{equation}\label{eqn:kittelCh2:360}
@@ -125,16 +126,13 @@ Two things I don't understand from this problem:
 %
 \begin{enumerate}
 \item Where does \(2 \expectation{s}/N\) come from?  If we calculate the expectation of the spin excess, we find that it is zero
-\begin{dmath}\label{eqn:kittelCh2:380}
-\expectation{2 s} = \frac{ \sqrt{ \frac{2}{\pi N}} 2^N \int_{-\infty}^\infty
-ds 2 s
-e^{-\frac{2s^2}{N}}
-}
-{
-2^N
-}
-=0.
-\end{dmath}
+\begin{equation}\label{eqn:kittelCh2:380}
+\begin{aligned}
+\expectation{2 s} 
+&= \frac{ \sqrt{ \frac{2}{\pi N}} 2^N \int_{-\infty}^\infty ds 2 s e^{-\frac{2s^2}{N}} } { 2^N } \\
+&= 0.
+\end{aligned}
+\end{equation}
 %
 \item If \(2 \expectation{s}\) has a non-zero value, then doesn't that make \(\expectation{U}\) also zero?  It seems to me that \(U\) in \eqnref{eqn:kittelCh2:340} is the energy of a system with spin excess \(s\), and not any sort of average energy?
 \end{enumerate}
@@ -163,40 +161,36 @@ g(N, n) = \frac{(N + n -1)!}{n! (N-1)!}
 I wasn't actually able to follow the argument in the text, and found the purely combinatoric wikipedia argument \citep{wiki:einsteinSolid} much clearer.  A similar diagram and argument can also be found in \citep{pathriastatistical} \S 3.8.
 %
 Taking logarithms and applying the Stirling approximation, our entropy is
-\begin{dmath}\label{eqn:kittelCh2:120}
+\begin{equation}\label{eqn:kittelCh2:120}
+\begin{aligned}
 \sigma
-= \ln g
-= \ln (N + n - 1)!  - \ln (N - 1)!  - \ln n!
-\approx
-(N + n - 1) \ln (N + n - 1) - (N + n - 1)
-- (N  - 1) \ln (N  - 1) + (N  - 1)
-- n \ln n + n
-=
-(N - 1) \ln \frac{N + n - 1}{N - 1}
-+ n \ln \frac{N + n - 1}{n}.
-\end{dmath}
+&= \ln g \\
+&= \ln (N + n - 1)!  - \ln (N - 1)!  - \ln n! \\
+&\approx (N + n - 1) \ln (N + n - 1) - (N + n - 1) - (N  - 1) \ln (N  - 1) + (N  - 1) - n \ln n + n \\
+&= (N - 1) \ln \frac{N + n - 1}{N - 1} + n \ln \frac{N + n - 1}{n}.
+\end{aligned}
+\end{equation}
 %
 \makeSubAnswer{Planck Energy}{pr:kittelCh2:3b}
 %
 Now we make the \(N - 1 \rightarrow N\) replacement suggested in the problem (ie. assuming \(N \gg 1\)), for
-\begin{dmath}\label{eqn:kittelCh2:140}
+\begin{equation}\label{eqn:kittelCh2:140}
+\begin{aligned}
 \sigma
-\approx
-N \ln \frac{N + n}{N}
-+ n \ln \frac{N + n}{n}
-=
-(N + n)\ln (N + n) - N \ln N - n \ln n
-=
-\left(N + \frac{U}{\Hbar\omega} \right)\ln \left(N + \frac{U}{\Hbar\omega} \right) - N \ln N - \frac{U}{\Hbar\omega} \ln \frac{U}{\Hbar\omega}.
-\end{dmath}
+&\approx N \ln \frac{N + n}{N} + n \ln \frac{N + n}{n} \\
+&= (N + n)\ln (N + n) - N \ln N - n \ln n \\
+&= \left(N + \frac{U}{\Hbar\omega} \right)\ln \left(N + \frac{U}{\Hbar\omega} \right) - N \ln N - \frac{U}{\Hbar\omega} \ln \frac{U}{\Hbar\omega}.
+\end{aligned}
+\end{equation}
 %
 With \((x \ln x)' = \ln x + 1\), we have
-\begin{dmath}\label{eqn:kittelCh2:160}
+\begin{equation}\label{eqn:kittelCh2:160}
+\begin{aligned}
 \inv{\tau}
-= \PD{U}{\sigma}
-=
-\inv{\Hbar\omega} \left( \ln \left(N + \frac{U}{\Hbar\omega} \right) - 1 -\ln \frac{U}{\Hbar\omega} + 1 \right),
-\end{dmath}
+&= \PD{U}{\sigma} \\
+&= \inv{\Hbar\omega} \left( \ln \left(N + \frac{U}{\Hbar\omega} \right) - 1 -\ln \frac{U}{\Hbar\omega} + 1 \right),
+\end{aligned}
+\end{equation}
 %
 or
 \begin{equation}\label{eqn:kittelCh2:180}

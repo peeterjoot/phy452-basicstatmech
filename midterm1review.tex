@@ -10,26 +10,21 @@
 %
 This was a unit stepping problem as illustrated in \cref{fig:lecture8:lecture8Fig2}.
 \imageFigure{../figures/phy452-basicstatmech/lecture8Fig2}{Unit one dimensional random walk.}{fig:lecture8:lecture8Fig2}{0.1}
-\begin{dmath}\label{eqn:midterm1review:120b}
+\begin{equation}\label{eqn:midterm1review:120b}
 \expectation{X} = \sum_i \expectation{x_i}
-\end{dmath}
-\begin{dmath}\label{eqn:midterm1review:120}
-\expectation{X^2} =
-\expectation{
-\lr{\sum_{i = 1}^N x_i}
-\lr{\sum_{j = 1}^N x_i}
-}
-=
-\expectation{
-\lr{\sum_{i = 1}^N x_i^2}
-+
-\lr{\sum_{i \ne j = 1}^N x_i x_j}
-}
-\end{dmath}
+\end{equation}
+\begin{equation}\label{eqn:midterm1review:120}
+\begin{aligned}
+\expectation{X^2} 
+&= \expectation{ \lr{\sum_{i = 1}^N x_i} \lr{\sum_{j = 1}^N x_i} } \\
+&= \expectation{ \lr{\sum_{i = 1}^N x_i^2} + \lr{\sum_{i \ne j = 1}^N x_i x_j} }
+\end{aligned}
+\end{equation}
 %
 \item State and prove Liouville's theorem
-\begin{dmath}\label{eqn:midterm1review:140}
-\frac{d\rho}{dt} =
+\begin{equation}\label{eqn:midterm1review:140}
+\frac{d\rho}{dt} 
+=
 \PD{t}{\rho} +
 \sum_{i = 1}^{3N}
 \PD{x_i}{
@@ -39,7 +34,7 @@ This was a unit stepping problem as illustrated in \cref{fig:lecture8:lecture8Fi
 \PD{x_i}{
 \lr{\dot{x}_i \rho}
 }.
-\end{dmath}
+\end{equation}
 %
 \item Harmonic oscillator in 1D.
 %

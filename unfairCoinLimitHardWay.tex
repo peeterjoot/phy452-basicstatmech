@@ -30,9 +30,10 @@ Calculate the limit for \(N \gg 1\) and \(N \gg X\), without using the central l
 %
 \makeanswer{pr:unfairCoinDistributionHardWay:1}{
 Application of Stirling's approximation gives us
-\begin{dmath}\label{eqn:unfairCoinLimitHardWay:60}
+\begin{equation}\label{eqn:unfairCoinLimitHardWay:60}
+\begin{aligned}
 P_N(r, k)
-\approx
+&\approx
 \frac{
 \sqrt{2 \pi N} \cancel{e^{-N}} N^N
 }
@@ -40,8 +41,8 @@ P_N(r, k)
 \sqrt{2 \pi (N - k)} \cancel{e^{-N + k}} (N - k)^{N-k}
 \sqrt{2 \pi k} \cancel{e^{-k}} k^{k}
 }
-r^{N-k} s^k
-=
+r^{N-k} s^k \\
+&=
 \sqrt{\frac{N}{2 \pi k(N-k)}}
 N^{N
 \mathLabelBox
@@ -55,13 +56,14 @@ N^{N
 }
 \lr{ \frac{r}{N-k} }
 ^{N-k}
-\lr{ \frac{s}{k} }^k
-=
+\lr{ \frac{s}{k} }^k \\
+&=
 \sqrt{\frac{N}{2 \pi k(N-k)}}
 \lr{ \frac{N r}{N-k} }
 ^{N-k}
 \lr{ \frac{N s}{k} }^k.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 The \(N r/(N-k)\) term looks like it can probably be coerced into \(1/(1 - y/N)\) form that will allow for Taylor expansion of the log.  With that change of variables, we find
 %1 - \frac{y}{N} = \inv{N r}(N - k)
@@ -89,18 +91,21 @@ This is a bit unsymmetrical, so let's write \(y r = x\) so that
 \end{subequations}
 %
 We've also got terms in \(k\) and \(N - k\) above that we need to express.  With \(k = N s + x\), we have \(N - k = N r - x\), and
-\begin{dmath}\label{eqn:unfairCoinLimitHardWay:180}
+\begin{equation}\label{eqn:unfairCoinLimitHardWay:180}
+\begin{aligned}
 \frac{(N - k) k}{N}
-= \inv{N}(N r - x)(N s + x)
-= \inv{N}( -x^2 + N^2 r s + x N(r - s) )
-= -\frac{x^2}{N} + N r s + x( 2 r - 1 )
-\approx N r s.
-\end{dmath}
+&= \inv{N}(N r - x)(N s + x) \\
+&= \inv{N}( -x^2 + N^2 r s + x N(r - s) ) \\
+&= -\frac{x^2}{N} + N r s + x( 2 r - 1 ) \\
+&\approx N r s.
+\end{aligned}
+\end{equation}
 %
 Taking logs of \eqnref{eqn:unfairCoinLimitHardWay:60} we have
-\begin{dmath}\label{eqn:unfairCoinLimitHardWay:200}
+\begin{equation}\label{eqn:unfairCoinLimitHardWay:200}
+\begin{aligned}
 \ln P_N(r, k)
-\approx
+&\approx
 \ln \sqrt{\frac{1}{2 \pi N r s}}
 -
 (N r - x)
@@ -109,8 +114,8 @@ Taking logs of \eqnref{eqn:unfairCoinLimitHardWay:60} we have
 -
 (N s + x)
 \ln
-\lr{ 1 + \frac{x}{N s} }
-\approx
+\lr{ 1 + \frac{x}{N s} } \\
+&\approx
 \ln \sqrt{\frac{1}{2 \pi N r s}}
 +
 (x - N r)
@@ -125,8 +130,8 @@ Taking logs of \eqnref{eqn:unfairCoinLimitHardWay:60} we have
 \frac{x}{N s}
 - \inv{2}
 \lr{\frac{x}{N s} }^2
-}
-=
+} \\
+&=
 \ln \sqrt{\frac{1}{2 \pi N r s}}
 + \inv{2} \frac{x^2}{N}
 \lr{ \inv{r} + \inv{s} }
@@ -134,17 +139,18 @@ Taking logs of \eqnref{eqn:unfairCoinLimitHardWay:60} we have
 \lr{ \inv{r} + \inv{s} }
 + \frac{x^3}{(N)^2}
 \lr{ \inv{r^2} - \inv{s^2} }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Dropping the \(O(1/N^2)\) term and noting that
-\begin{dmath}\label{eqn:unfairCoinLimitHardWay:220}
+\begin{equation}\label{eqn:unfairCoinLimitHardWay:220}
+\begin{aligned}
 -\inv{2}
 \lr{ \inv{r} + \inv{s} }
-=
--\inv{2 r s} \lr{ r + (1 - r) }
-=
--\inv{2 r s}.
-\end{dmath}
+&= -\inv{2 r s} \lr{ r + (1 - r) } \\
+&= -\inv{2 r s}.
+\end{aligned}
+\end{equation}
 %
 We have
 \begin{equation}\label{eqn:unfairCoinLimitHardWay:240}
@@ -155,13 +161,16 @@ P_N(r, k) \approx
 \end{equation}
 %
 With
-\begin{dmath}\label{eqn:unfairCoinLimitHardWay:260}
-x = k - N s
-= \inv{2} ( N + X ) - N s
-= \inv{2} ( N + X - 2 N s )
-= \inv{2} ( X + N ( 1 - 2 s) )
-= \inv{2} ( X - N ( 1 - 2 r) ),
-\end{dmath}
+\begin{equation}\label{eqn:unfairCoinLimitHardWay:260}
+\begin{aligned}
+x
+&= k - N s \\
+&= \inv{2} ( N + X ) - N s \\
+&= \inv{2} ( N + X - 2 N s ) \\
+&= \inv{2} ( X + N ( 1 - 2 s) ) \\
+&= \inv{2} ( X - N ( 1 - 2 r) ),
+\end{aligned}
+\end{equation}
 we have
 \boxedEquation{eqn:unfairCoinLimitHardWay:280}{
 P_N(r, k) \approx

@@ -15,28 +15,28 @@
 \label{chap:langevinSmallApprox}
 %
 The Langevin function is given by
-\begin{dmath}\label{eqn:langevinSmallApprox:20}
+\begin{equation}\label{eqn:langevinSmallApprox:20}
 L(x) = \coth x - \inv{x}.
-\end{dmath}
+\end{equation}
 %
 According to \citep{pathriastatistical}, the small \(x\) approximation of this is
-\begin{dmath}\label{eqn:langevinSmallApprox:40}
+\begin{equation}\label{eqn:langevinSmallApprox:40}
 \frac{x}{3} - \frac{x^3}{45}.
-\end{dmath}
+\end{equation}
 %
 Let's confirm this.
-\begin{dmath}\label{eqn:langevinSmallApprox:60}
+\begin{equation}\label{eqn:langevinSmallApprox:60}
+\begin{aligned}
 L(x)
-= \coth x - \inv{x}
-= \frac{\cosh x}{\sinh x} - \inv{x}
-=
-\lr{ \frac{\cosh x - (\sinh x)/x}{\sinh x} }
-=
+&= \coth x - \inv{x} \\
+&= \frac{\cosh x}{\sinh x} - \inv{x} \\
+&= \lr{ \frac{\cosh x - (\sinh x)/x}{\sinh x} } \\
+&=
 \frac{
   \lr{1 + x^2/2! + x^4/4! + \cdots}
 - \lr{1 + x^2/3! + x^4/5! + \cdots}
-}{\sinh x}
-=
+}{\sinh x} \\
+&=
 \inv{\sinh x}
 \lr{
    x^2
@@ -51,8 +51,8 @@ L(x)
    -\inv{5!}
    }
    + \cdots
-}
-=
+} \\
+&=
 \frac{
    x^2
    \lr{
@@ -69,8 +69,8 @@ L(x)
 }
 {
 x + \frac{x^3}{3!} + \cdots
-}
-=
+} \\
+&=
 \frac{
    x
    \lr{
@@ -87,8 +87,8 @@ x + \frac{x^3}{3!} + \cdots
 }
 {
 1 + \frac{x^2}{3!} + \cdots
-}
-\approx
+} \\
+&\approx
 \lr{
    x
    \lr{
@@ -105,8 +105,8 @@ x + \frac{x^3}{3!} + \cdots
 }
 \lr{
 1 - \frac{x^2}{3!} - \frac{x^4}{5!} - \cdots
-}
-=
+} \\
+&=
 x
 \lr{
 \inv{2!}
@@ -126,8 +126,9 @@ x^3
 -\inv{3!}
 }
 }
-+ \cdots
-= x - \frac{x^3}{45} + \cdots
-\end{dmath}
++ \cdots \\
+&= x - \frac{x^3}{45} + \cdots
+\end{aligned}
+\end{equation}
 %
 %\EndArticle

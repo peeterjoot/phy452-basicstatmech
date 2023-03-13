@@ -59,24 +59,25 @@ p/m
 \end{equation}
 %
 It's convenient to non-dimensionalize this.  Using \(\omega = \sqrt{k/m}\), which has dimensions of \(1/T\), we form
-\begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:140}
+\begin{equation}\label{eqn:hamiltonianSHOphaseSpace:140}
+\begin{aligned}
 \ddt{}
 \begin{bmatrix}
 p/m \\
 \omega x
 \end{bmatrix}
-=
+&=
 \begin{bmatrix}
 - (k/m) x \\
 (\omega) p/m
-\end{bmatrix}
-=
+\end{bmatrix} \\
+&=
 \omega
 \begin{bmatrix}
 - \omega x \\
 p/m
-\end{bmatrix}
-=
+\end{bmatrix} \\
+&=
 \omega
 \begin{bmatrix}
 0 & -1 \\
@@ -86,7 +87,8 @@ p/m
 p/m \\
 \omega x
 \end{bmatrix}
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 With definitions
 \begin{subequations}
@@ -116,12 +118,11 @@ The solution follows immediately
 \end{equation}
 %
 We expect matrix exponential to have the structure of a rotation matrix, so let's write it out explicitly to see its structure
-\begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:240}
+\begin{equation}\label{eqn:hamiltonianSHOphaseSpace:240}
+\begin{aligned}
 e^{i \omega t}
-=
-I \cos(\omega t)
-+ i \sin(\omega t)
-=
+&= I \cos(\omega t) + i \sin(\omega t) \\
+&=
 \begin{bmatrix}
 1 & 0 \\
 0 & 1
@@ -132,16 +133,17 @@ I \cos(\omega t)
 0 & -1 \\
 1 & 0
 \end{bmatrix}
-\sin(\omega t)
-=
+\sin(\omega t) \\
+&=
 \begin{bmatrix}
 \cos(\omega t) & - \sin(\omega t) \\
 \sin(\omega t) & \cos(\omega t)
 \end{bmatrix}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 In this non-dimensionalized phase space, with \(p/m\) on the horizontal axis and \(\omega x\) on the vertical axis, this is a counterclockwise rotation.  The (squared) radius of the rotation is
-\begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:300}
+\begin{equation}\label{eqn:hamiltonianSHOphaseSpace:300}
 \begin{aligned}
 (p_0/m)^2
 +
@@ -161,7 +163,7 @@ In this non-dimensionalized phase space, with \(p/m\) on the horizontal axis and
 &=
 \frac{2 E}{m}.
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 % dim check: [E/m] = [v^2]
 It makes sense to put the initial position in phase space in polar form too.  We can write
@@ -226,21 +228,15 @@ Observe that the rotation angle \(\theta\) doesn't specify a geometric rotation 
 \paragraph{Aside.  Complex representation of phase space points}
 %
 It's interesting to note that we can also work in a complex representation of phase space, instead of a matrix picture (for this 1D SHO problem).
-\begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:380}
+\begin{equation}\label{eqn:hamiltonianSHOphaseSpace:380}
+\begin{aligned}
 \ddt{} \lr{
 \frac{p}{m} + i \omega x
 }
-=
-\omega
-\lr{
-- \omega x + i \frac{p}{m}
-}
-=
-i \omega
-\lr{
-\frac{p}{m} + i \omega x
-}.
-\end{dmath}
+&= \omega \lr{ - \omega x + i \frac{p}{m} } \\
+&= i \omega \lr{ \frac{p}{m} + i \omega x }.
+\end{aligned}
+\end{equation}
 %
 Writing
 \begin{equation}\label{eqn:hamiltonianSHOphaseSpace:400}
@@ -292,21 +288,23 @@ Consider the following phase space picture \cref{fig:densityCurrentThroughPhaseS
 \imageFigure{../figures/phy452-basicstatmech/densityCurrentThroughPhaseSpaceAreaFig2}{Phase space current.}{fig:densityCurrentThroughPhaseSpaceArea:densityCurrentThroughPhaseSpaceAreaFig2}{0.2}
 %
 With this geometrical picture in mind, the \(6N\) dimensional phase space equivalent of \eqnref{eqn:hamiltonianSHOphaseSpace:460}, and a basis \(\Be_{i_{\alpha}}\) for the positions \(q_{i_\alpha}\) and \(\Bf_{i_\alpha}\) for the momentum components \(p_{i_\alpha}\) is then
-\begin{dmath}\label{eqn:hamiltonianSHOphaseSpace:520}
+\begin{equation}\label{eqn:hamiltonianSHOphaseSpace:520}
+\begin{aligned}
 \PD{t}{} \int_{V_{6N}} \rho d^{3N} q d^{3N} p
-= -\int_{\partial V_{6N}} \lr{ \rho
+&= -\int_{\partial V_{6N}} \lr{ \rho
 \sum_{i_\alpha} \lr{
 \Be_{i_\alpha} \dot{q}_{i_\alpha}
 +\Bf_{i_\alpha} \dot{p}_{i_\alpha}
 }
-} \cdot \ncap dA
-= -\int_{V_{6N}} d^{3N} q d^{3N} p
+} \cdot \ncap dA \\
+&= -\int_{V_{6N}} d^{3N} q d^{3N} p
 \sum_{i_\alpha}
 \lr{
 \PD{q_{i_\alpha}}{\lr{\rho \dot{q}_{i_\alpha}}}
 +\PD{p_{i_\alpha}}{\lr{\rho \dot{p}_{i_\alpha}}}
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Here \(dA\) is the surface area element for the phase space and \(\ncap\) is the unit normal to this surface.  We have to assume the existence of a divergence theorem for the \(6N\) dimensional space.
 %

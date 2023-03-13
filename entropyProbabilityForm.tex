@@ -18,17 +18,17 @@
 \makeproblem{Entropy as probability}{pr:entropyProbabilityForm:1}{
 %
 \citep{jackson2000equilibrium} points out that entropy can be written as
-\begin{dmath}\label{eqn:entropyProbabilityForm:20}
+\begin{equation}\label{eqn:entropyProbabilityForm:20}
 S = - \kB \sum_i P_i \ln P_i,
-\end{dmath}
+\end{equation}
 where
 \begin{subequations}
-\begin{dmath}\label{eqn:entropyProbabilityForm:40}
+\begin{equation}\label{eqn:entropyProbabilityForm:40}
 P_i = \frac{e^{-\beta E_i}}{Z}
-\end{dmath}
-\begin{dmath}\label{eqn:entropyProbabilityForm:60}
+\end{equation}
+\begin{equation}\label{eqn:entropyProbabilityForm:60}
 Z = \sum_i e^{-\beta E_i}.
-\end{dmath}
+\end{equation}
 \end{subequations}
 Show that this follows from the free energy \(F = U - T S = -\kB \ln Z\).
 } % makeproblem
@@ -36,17 +36,17 @@ Show that this follows from the free energy \(F = U - T S = -\kB \ln Z\).
 \makeanswer{pr:entropyProbabilityForm:1}{
 %
 In terms of the free and average energies, we have
-\begin{dmath}\label{eqn:entropyProbabilityForm:80}
+\begin{equation}\label{eqn:entropyProbabilityForm:80}
+\begin{aligned}
 \frac{S}{\kB}
-= \frac{U - F}{\kB T}
-=   \beta \lr{ -\PD{\beta}{\ln Z}}
-  - \beta \lr{-\kB T \ln Z}
-= \frac{\sum_i \beta E_i e^{-\beta E_i}}{Z}
-  +\ln Z
-= -\sum_i P_i \ln e^{-\beta E_i} + \sum_i P_i \ln Z
-= -\sum_i P_i \ln \frac{e^{-\beta E_i}}{Z} P_i
-= -\sum_i P_i \ln P_i.
-\end{dmath}
+&= \frac{U - F}{\kB T} \\
+&= \beta \lr{ -\PD{\beta}{\ln Z}} - \beta \lr{-\kB T \ln Z} \\
+&= \frac{\sum_i \beta E_i e^{-\beta E_i}}{Z} +\ln Z \\
+&= -\sum_i P_i \ln e^{-\beta E_i} + \sum_i P_i \ln Z \\
+&= -\sum_i P_i \ln \frac{e^{-\beta E_i}}{Z} P_i \\
+&= -\sum_i P_i \ln P_i.
+\end{aligned}
+\end{equation}
 %
 } % makeanswer
 %
@@ -71,9 +71,9 @@ q = \ln \ZG,
 \end{equation}
 \end{subequations}
 and show
-\begin{dmath}\label{eqn:entropyProbabilityForm:180}
+\begin{equation}\label{eqn:entropyProbabilityForm:180}
 S = - \kB \sum_{r,s} P_{r,s} \ln P_{r,s}.
-\end{dmath}
+\end{equation}
 } % makeoproblem
 %
 \makeanswer{pr:entropyProbabilityForm:2}{
@@ -87,31 +87,33 @@ the free energy takes the form
 F = N \mu - P V = N \mu - q/\beta,
 \end{equation}
 so that the entropy (scaled by \(\kB\)) leads us to the desired result
-\begin{dmath}\label{eqn:entropyProbabilityForm:240}
+\begin{equation}\label{eqn:entropyProbabilityForm:240}
+\begin{aligned}
 \frac{S}{\kB}
-= \beta U - N \mu \beta + q/(\beta \kB T)
-= -\beta \PD{\beta}{q} - z \mu \beta \PD{z}{q} + q
-= \inv{\ZG}
+&= \beta U - N \mu \beta + q/(\beta \kB T) \\
+&= -\beta \PD{\beta}{q} - z \mu \beta \PD{z}{q} + q \\
+&= \inv{\ZG}
 \sum_{r, s}
 \lr{
 -\beta (-E_s) - \mu \beta N_r
 } e^{-\alpha N_r - \beta E_s}
 +
-\ln \ZG
-=
+\ln \ZG \\
+&=
 \sum_{r, s}
 \ln e^{ \alpha N_r + \beta E_s } P_{r,s}
 +
 \lr{ \sum_{r, s} P_{r, s} }
-\ln \ZG
-=
+\ln \ZG \\
+&=
 -\sum_{r, s}
 \ln
-\frac{e^{ -\alpha N_r - \beta E_s }}{\ZG} P_{r,s}
-=
+\frac{e^{ -\alpha N_r - \beta E_s }}{\ZG} P_{r,s} \\
+&=
 -\sum_{r, s}
-P_{r, s} \ln P_{r, s}
-\end{dmath}
+P_{r, s} \ln P_{r, s}.
+\end{aligned}
+\end{equation}
 %
 } % makeanswer
 %

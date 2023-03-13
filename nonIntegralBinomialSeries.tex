@@ -19,9 +19,9 @@ In \citep{pathriastatistical} appendix \S F was the use of binomial coefficients
 \paragraph{Taylor series}
 %
 We start with a Taylor expansion of
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:20}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:20}
 f(x) = (a + x)^b.
-\end{dmath}
+\end{equation}
 %
 Our derivatives are
 \begin{equation}\label{eqn:nonIntegralBinomialSeries:40}
@@ -35,65 +35,58 @@ f^k(x) &= b(b-1)\cdots (b-(k-1)) (a + x)^{b-k}.
 \end{equation}
 %
 Our Taylor series is then
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:60}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:60}
 (a + x)^b = \sum_{k = 0}^\infty \inv{k!} b(b-1)\cdots (b-(k-1)) a^{b-k} x^k.
-\end{dmath}
+\end{equation}
 %
 Note that if \(b\) is a positive integer, then all the elements of this series become zero at \(b = k - 1\), or
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:80}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:80}
 (a + x)^b = \sum_{k = 0}^k \inv{k!} b(b-1)\cdots (b-(k-1)) a^{b-k} x^k.
-\end{dmath}
+\end{equation}
 %
 \paragraph{Gamma function}
 %
 Let's now relate this to the gamma function.  From \citep{abramowitz1964handbook} \S 6.1.1 we have
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:100}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:100}
 \Gamma(z) = \int_0^\infty t^{z-1} e^{-t} dt.
-\end{dmath}
+\end{equation}
 %
 Iteratively integrating by parts, we find the usual relation between gamma functions of integral separation
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:120}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:120}
+\begin{aligned}
 \Gamma(z + 1)
-= \int_0^\infty t^{z} e^{-t} dt
-= \int_0^\infty t^{z} d \left( \frac{ e^{-t}}{-1} \right)
-=
-\evalrange{
-t^z \frac{e^{-t}}{-1}
-}{0}{\infty}
-- \int_0^\infty z t^{z-1} \frac{e^{-t}}{-1} dt
-=
-z \int_0^\infty t^{z-1} e^{-t} dt
-=
-z (z - 1)\int_0^\infty t^{z-2} e^{-t} dt
-=
-z (z - 1)(z - (3-1))\int_0^\infty t^{z-3} e^{-t} dt
-=
-z (z - 1) \cdots (z - (k-1))\int_0^\infty t^{z-k} e^{-t} dt
-=
-z (z - 1) \cdots (z - (k-1))\int_0^\infty t^{(z + 1 - k) - 1} e^{-t} dt,
-\end{dmath}
+&= \int_0^\infty t^{z} e^{-t} dt \\
+&= \int_0^\infty t^{z} d \left( \frac{ e^{-t}}{-1} \right) \\
+&= \evalrange{ t^z \frac{e^{-t}}{-1} }{0}{\infty} - \int_0^\infty z t^{z-1} \frac{e^{-t}}{-1} dt \\
+&= z \int_0^\infty t^{z-1} e^{-t} dt \\
+&= z (z - 1)\int_0^\infty t^{z-2} e^{-t} dt \\
+&= z (z - 1)(z - (3-1))\int_0^\infty t^{z-3} e^{-t} dt \\
+&= z (z - 1) \cdots (z - (k-1))\int_0^\infty t^{z-k} e^{-t} dt \\
+&= z (z - 1) \cdots (z - (k-1))\int_0^\infty t^{(z + 1 - k) - 1} e^{-t} dt,
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:140}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:140}
 \Gamma(z + 1) = z (z - 1) \cdots (z - (k-1)) \Gamma( z - (k-1) ).
-\end{dmath}
+\end{equation}
 %
 Flipping this gives us a nice closed form expression for the products of a number of positive unit separated values
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:160}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:160}
 z (z - 1) \cdots (z - k)
 =
 \frac{\Gamma(z + 1)}{\Gamma( z - (k-1) )}.
-\end{dmath}
+\end{equation}
 %
 \paragraph{Binomial coefficient for positive exponents and non-integer negative exponents}
 %
 Considering first positive exponents \(b\), we can now use this in our Taylor expansion \eqnref{eqn:nonIntegralBinomialSeries:60}
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:180}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:180}
+\begin{aligned}
 (a + x)^b
-= \sum_{k = 0}^\infty \inv{k!} \frac{\Gamma(b+1)}{\Gamma(b - k + 1)}
-a^{b-k} x^k
-= \sum_{k = 0}^\infty \frac{\Gamma(b + 1)}{\Gamma(k + 1)\Gamma(b - k + 1)}
-a^{b-k} x^k.
-\end{dmath}
+&= \sum_{k = 0}^\infty \inv{k!} \frac{\Gamma(b+1)}{\Gamma(b - k + 1)} a^{b-k} x^k \\
+&= \sum_{k = 0}^\infty \frac{\Gamma(b + 1)}{\Gamma(k + 1)\Gamma(b - k + 1)} a^{b-k} x^k.
+\end{aligned}
+\end{equation}
 %
 Observe that when \(b\) is a positive integer we have
 \begin{equation}\label{eqn:nonIntegralBinomialSeries:200}
@@ -110,40 +103,34 @@ So for positive values of \(b\), integer or otherwise, and negative non-integer 
 \end{equation}
 %
 If we do that, then the binomial expansion for non-integral values of \(b\) is simply
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:240}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:240}
 (a + x)^b = \sum_{k = 0}^\infty \binom{b}{k} a^{b-k} x^k.
-\end{dmath}
+\end{equation}
 %
 \paragraph{Binomial coefficient for negative integer exponents}
 %
 Using the relation \eqnref{eqn:nonIntegralBinomialSeries:220} blindly leads to some trouble, since \(\Gamma(-\Abs{m})\) goes to infinity for integer values of \(m > 0\).  We have to modify the definition of the binomial coefficient for negative integer values.  Let's rewrite \eqnref{eqn:nonIntegralBinomialSeries:60} for negative integer values of \(b = -m\) as
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:260}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:260}
+\begin{aligned}
 (a + x)^{-m}
-= \sum_{k = 0}^\infty \inv{k!}
-(-m)(-m-1)\cdots (-m-(k-1)) a^{-m-k} x^k
-= \sum_{k = 0}^\infty
-\inv{k!}
-(-1)^k
-m(m+1)\cdots (m+(k-1)) a^{-m-k} x^k.
-\end{dmath}
+&= \sum_{k = 0}^\infty \inv{k!} (-m)(-m-1)\cdots (-m-(k-1)) a^{-m-k} x^k \\
+&= \sum_{k = 0}^\infty \inv{k!} (-1)^k m(m+1)\cdots (m+(k-1)) a^{-m-k} x^k.
+\end{aligned}
+\end{equation}
 %
 Let's also put the ratio of gamma functions relation of \eqnref{eqn:nonIntegralBinomialSeries:160}, in a slightly more general form.  For \(u, v > 0\), where \(u - v\) is an integer, we can write
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:280}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:280}
 u (u - 1) \cdots (v) = \frac{\Gamma(u + 1)}{\Gamma( v )}.
-\end{dmath}
+\end{equation}
 %
 Our Taylor series takes the form
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:300}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:300}
+\begin{aligned}
 (a + x)^{-m}
-= \sum_{k = 0}^\infty
-\inv{k!}
-(-1)^k
-(m+k-1) (m+k-2) \cdots (m)
-a^{-m-k} x^k
-= \sum_{k = 0}^\infty
-(-1)^k \frac{ \Gamma(m + k) }{\Gamma(m)\Gamma(k+1)}
-a^{-m-k} x^k.
-\end{dmath}
+&= \sum_{k = 0}^\infty \inv{k!} (-1)^k (m+k-1) (m+k-2) \cdots (m) a^{-m-k} x^k \\
+&= \sum_{k = 0}^\infty (-1)^k \frac{ \Gamma(m + k) }{\Gamma(m)\Gamma(k+1)} a^{-m-k} x^k.
+\end{aligned}
+\end{equation}
 %
 We can now define, for negative integers \(-m\)
 \begin{equation}\label{eqn:nonIntegralBinomialSeries:320}
@@ -153,23 +140,22 @@ We can now define, for negative integers \(-m\)
 \end{equation}
 %
 With such a definition, our Taylor series takes the tidy form
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:300b}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:300b}
 (a + x)^{-m}
 = \sum_{k = 0}^\infty \binom{-m}{k} a^{-m-k} x^k.
-\end{dmath}
+\end{equation}
 %
 For negative integer values of \(b = -m\), this is now consistent with \eqnref{eqn:nonIntegralBinomialSeries:240}.
 %
 Observe that we can put \eqnref{eqn:nonIntegralBinomialSeries:320} into the standard binomial form with a bit of manipulation
-\begin{dmath}\label{eqn:nonIntegralBinomialSeries:340}
+\begin{equation}\label{eqn:nonIntegralBinomialSeries:340}
+\begin{aligned}
 \binom{-m}{k}
-=
-(-1)^k \frac{ \Gamma(m + k) }{ \Gamma(m)\Gamma(k+1) }
-=
-(-1)^k \frac{ (m + k -1)! }{ (m-1)! k! }
-=
-(-1)^k \frac{ m (m + k)! }{ (m + k) m! k! },
-\end{dmath}
+&= (-1)^k \frac{ \Gamma(m + k) }{ \Gamma(m)\Gamma(k+1) } \\
+&= (-1)^k \frac{ (m + k -1)! }{ (m-1)! k! } \\
+&= (-1)^k \frac{ m (m + k)! }{ (m + k) m! k! },
+\end{aligned}
+\end{equation}
 %
 or
 \begin{equation}\label{eqn:nonIntegralBinomialSeries:360}

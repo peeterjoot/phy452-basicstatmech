@@ -84,13 +84,14 @@ So, if we want to calculate integrals of the form \eqnref{eqn:hyperSphereVolume:
 The essence of the trick is to do such an integral in both Cartesian coordinates to get the left hand sides, and then do the radial right hand side integrals.  Comparing these provides the constants \(B\) and \(C\) and thus completes the ``volume'' formulas for the circle and sphere.
 %
 The function chosen for this integral in the text was a Gaussian exponential \(f(r) = e^{-r^2/2}\), something that is strictly radial, and can be integrated over all space.  For the 2D case, we'll integrate
-\begin{dmath}\label{eqn:hyperSphereVolume:180}
+\begin{equation}\label{eqn:hyperSphereVolume:180}
+\begin{aligned}
 \iint e^{-(x^2 +y^2)/2} dx dy = (\sqrt{2 \pi})^2
-= 2 B \int_0^\infty dr r e^{-r^2/2}
-= -2 B
-\evalrange{e^{-r^2/2}}{0}{\infty}
-= 2 B.
-\end{dmath}
+&= 2 B \int_0^\infty dr r e^{-r^2/2} \\
+&= -2 B \evalrange{e^{-r^2/2}}{0}{\infty} \\
+&= 2 B.
+\end{aligned}
+\end{equation}
 %
 We find that \(B = \pi\), so the 2D spherical ``volume'' (the area of the circle) is \(V = \pi r^2\).
 %
@@ -108,25 +109,25 @@ For the 3D sphere, we have
 So we have for the volume of the 3D sphere, \(V = 4 \pi r^3/3\) as expected.
 %
 It's also clear that the exponential integral isn't a requirement for this trick.  It's just convenient because boundary value conditions aren't required.  For example, suppose we want to calculate the area of a circle using this trick.  We can do so by integrating
-\begin{dmath}\label{eqn:hyperSphereVolume:240}
+\begin{equation}\label{eqn:hyperSphereVolume:240}
 4 \int_0^r dx \int_0^{\sqrt{r^2 - x^2}} dy (x^2 + y^2) = \int_0^r r^2 2 B r dr.
-\end{dmath}
+\end{equation}
 %
 The LHS can be integrated using a sine or cosine substitution and then integrating by parts (or by Mathematica as in \nbref{nVolumeTrickToCalculateAreaOfCircle.nb}).  Comparison of the two gives
-\begin{dmath}\label{eqn:hyperSphereVolume:260}
+\begin{equation}\label{eqn:hyperSphereVolume:260}
 4 r^4 \frac{\pi}{8} = 2 B \frac{r^4}{4},
-\end{dmath}
+\end{equation}
 %
 So that \(B = \pi\) and \(V_2 = \pi r^2\) as expected.
 %
 The same idea can be extended to higher dimensional spheres.  The text does the even values of \(N\).  Treating both even and odd values, this would have to yield the result calculated using the Jacobian volume element method
-\begin{dmath}\label{eqn:hyperSphereVolume:220}
+\begin{equation}\label{eqn:hyperSphereVolume:220}
 V_{m}
 =
 \frac{ \pi^{m/2} R^{m} }
 {
    \Gamma\left( m/2 + 1 \right)
 }.
-\end{dmath}
+\end{equation}
 %
 %\EndArticle

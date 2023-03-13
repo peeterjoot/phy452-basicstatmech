@@ -16,10 +16,10 @@
 %
 \makeoproblem{Diatomic molecule}{pr:pathriaDiatomic:4:7}{\citep{pathriastatistical} pr. 4.7}{
 Consider a classical system of non-interacting, diatomic molecules enclosed in a box of volume \(V\) at temperature \(T\).  The Hamiltonian of a single molecule is given by
-\begin{dmath}\label{eqn:pathriaDiatomic:4:7}
+\begin{equation}\label{eqn:pathriaDiatomic:4:7}
 H(\Br_1, \Br_2, \Bp_1, \Bp_2) = \inv{2m} \lr{ \Bp_1^2 + \Bp_2^2 }
 +\inv{2} K \Abs{\Br_1 - \Br_2}^2.
-\end{dmath}
+\end{equation}
 %
 Study the thermodynamics of this system, including the dependence of the quantity \(\expectation{r_{12}^2}\) on \(T\).
 } % makeoproblem
@@ -28,9 +28,10 @@ Study the thermodynamics of this system, including the dependence of the quantit
 %
 \paragraph{Partition function}
 First consider the partition function for a single diatomic pair
-\begin{dmath}\label{eqn:pathriaDiatomic:27}
+\begin{equation}\label{eqn:pathriaDiatomic:27}
+\begin{aligned}
 Z_1
-=
+&=
 \inv{h^6}
 \int d^6 \Bp d^6 \Br
 e^{-\beta
@@ -38,46 +39,48 @@ e^{-\beta
 }
 e^{-\beta K
 \frac{ \Abs{\Br_1 - \Br_2}^2 }{2}
-}
-=
+} \\
+&=
 \inv{h^6}
 \lr{\frac{2 \pi m}{\beta}}^{6/2}
 \int d^3 \Br_1 d^3 \Br_2
 e^{-\beta K
 \frac{ \Abs{\Br_1 - \Br_2}^2 }{2}.
-}\end{dmath}
+\end{aligned}
+}\end{equation}
 %
 Now we can make a change of variables to simplify the exponential.  Let's write
 \begin{subequations}
-\begin{dmath}\label{eqn:pathriaDiatomic:47}
+\begin{equation}\label{eqn:pathriaDiatomic:47}
 \Bu = \Br_1 - \Br_2
-\end{dmath}
-\begin{dmath}\label{eqn:pathriaDiatomic:67}
+\end{equation}
+\begin{equation}\label{eqn:pathriaDiatomic:67}
 \Bv = \Br_2,
-\end{dmath}
+\end{equation}
 \end{subequations}
 or
 \begin{subequations}
-\begin{dmath}\label{eqn:pathriaDiatomic:87}
+\begin{equation}\label{eqn:pathriaDiatomic:87}
 \Br_2 = \Bv
-\end{dmath}
-\begin{dmath}\label{eqn:pathriaDiatomic:107}
+\end{equation}
+\begin{equation}\label{eqn:pathriaDiatomic:107}
 \Br_1
 =
 \Bu + \Bv.
-\end{dmath}
+\end{equation}
 \end{subequations}
 %
 Our volume element is
-\begin{dmath}\label{eqn:pathriaDiatomic:127}
+\begin{equation}\label{eqn:pathriaDiatomic:127}
 d^3 \Br_1 d^3 \Br_2
 = d^3 \Bu d^3 \Bv \frac{\partial(\Br_1, \Br_2)}{\partial(\Bu, \Bv)}.
-\end{dmath}
+\end{equation}
 %
 It wasn't obvious to me that this change of variables preserves the volume element, but a quick calculation shows this to be the case
-\begin{dmath}\label{eqn:pathriaDiatomic:147}
+\begin{equation}\label{eqn:pathriaDiatomic:147}
+\begin{aligned}
 \frac{\partial(\Br_1, \Br_2)}{\partial(\Bu, \Bv)}
-=
+&=
 \begin{vmatrix}
 \PDi{u_{1}}{r_{11}} &\PDi{u_{2}}{r_{11}} &\PDi{u_{3}}{r_{11}} &\PDi{v_{1}}{r_{11}} &\PDi{v_{2}}{r_{11}} &\PDi{v_{3}}{r_{11}} \\
 \PDi{u_{1}}{r_{12}} &\PDi{u_{2}}{r_{12}} &\PDi{u_{3}}{r_{12}} &\PDi{v_{1}}{r_{12}} &\PDi{v_{2}}{r_{12}} &\PDi{v_{3}}{r_{12}} \\
@@ -85,8 +88,8 @@ It wasn't obvious to me that this change of variables preserves the volume eleme
 \PDi{u_{1}}{r_{21}} &\PDi{u_{2}}{r_{21}} &\PDi{u_{3}}{r_{21}} &\PDi{v_{1}}{r_{21}} &\PDi{v_{2}}{r_{21}} &\PDi{v_{3}}{r_{21}} \\
 \PDi{u_{1}}{r_{22}} &\PDi{u_{2}}{r_{22}} &\PDi{u_{3}}{r_{22}} &\PDi{v_{1}}{r_{22}} &\PDi{v_{2}}{r_{22}} &\PDi{v_{3}}{r_{22}} \\
 \PDi{u_{1}}{r_{23}} &\PDi{u_{2}}{r_{23}} &\PDi{u_{3}}{r_{23}} &\PDi{v_{1}}{r_{23}} &\PDi{v_{2}}{r_{23}} &\PDi{v_{3}}{r_{23}}
-\end{vmatrix}
-=
+\end{vmatrix} \\
+&=
 \begin{vmatrix}
 1 & 0 & 0 & 1 & 0 & 0 \\
 0 & 1 & 0 & 0 & 1 & 0 \\
@@ -94,38 +97,33 @@ It wasn't obvious to me that this change of variables preserves the volume eleme
 0 & 0 & 0 & 1 & 0 & 0 \\
 0 & 0 & 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 0 & 0 & 1
-\end{vmatrix}
-= 1.
-\end{dmath}
+\end{vmatrix} \\
+&= 1.
+\end{aligned}
+\end{equation}
 %
 Our remaining integral can now be evaluated
-\begin{dmath}\label{eqn:pathriaDiatomic:167}
+\begin{equation}\label{eqn:pathriaDiatomic:167}
+\begin{aligned}
 \int d^3 \Br_1 d^3 \Br_2
 e^{-\beta K
 \frac{ \Abs{\Br_1 - \Br_2}^2 }{2}
 }
-=
-\int d^3 \Bu d^3 \Bv
-e^{-\beta K \Abs{\Bu}^2 /2 }
-=
-V
-\int d^3 \Bu e^{-\beta K \Abs{\Bu}^2 /2 }
-=
-V
-\int d^3 \Bu e^{-\beta K \Abs{\Bu}^2 /2 }
-=
-V
-\lr{ \frac{ 2 \pi }{ K \beta } }^{3/2}.
-\end{dmath}
+&= \int d^3 \Bu d^3 \Bv e^{-\beta K \Abs{\Bu}^2 /2 } \\
+&= V \int d^3 \Bu e^{-\beta K \Abs{\Bu}^2 /2 } \\
+&= V \int d^3 \Bu e^{-\beta K \Abs{\Bu}^2 /2 } \\
+&= V \lr{ \frac{ 2 \pi }{ K \beta } }^{3/2}.
+\end{aligned}
+\end{equation}
 %
 Our partition function is now completely evaluated
-\begin{dmath}\label{eqn:pathriaDiatomic:187}
+\begin{equation}\label{eqn:pathriaDiatomic:187}
 Z_1 =
 V
 \inv{h^6}
 \lr{\frac{2 \pi m}{\beta}}^{3}
 \lr{ \frac{ 2 \pi }{ K \beta } }^{3/2}.
-\end{dmath}
+\end{equation}
 %
 As a function of \(V\) and \(T\) as in the text, we write
 \begin{subequations}
@@ -142,9 +140,9 @@ f(T) =
 \paragraph{Gibbs sum}
 %
 Our Gibbs sum, summing over the number of molecules (not atoms), is
-\begin{dmath}\label{eqn:pathriaDiatomic:247}
+\begin{equation}\label{eqn:pathriaDiatomic:247}
 \ZG = \sum_{N_r = 0}^\infty \frac{z^{N_r}}{N_r!} Z_1^{N_r} = e^{ z V f(T) },
-\end{dmath}
+\end{equation}
 or
 \begin{equation}\label{eqn:pathriaDiatomic:267}
 q = \ln \ZG = z V f(T) = P V \beta.
@@ -155,65 +153,65 @@ The fact that we can sum this as an exponential series so nicely looks like it's
 \paragraph{Pressure}
 %
 The pressure follows
-\begin{dmath}\label{eqn:pathriaDiatomic:287}
+\begin{equation}\label{eqn:pathriaDiatomic:287}
 P = z f(T) \kB T
 =
 e^{\mu/\kB T}
 \lr{\frac{m }{h^2 } \sqrt{\frac{(2\pi)^3}{K}} }^3
 \lr{\kB T}^{11/2}.
-\end{dmath}
+\end{equation}
 %
 \paragraph{Average energy}
-\begin{dmath}\label{eqn:pathriaDiatomic:307}
+\begin{equation}\label{eqn:pathriaDiatomic:307}
+\begin{aligned}
 \expectation{H}
-= -\PD{\beta}{q}
-= - z V \frac{9}{2} \frac{f(T)}{T} \PD{\beta}{T}
-= z V \frac{9}{2} \frac{f(T)}{T^3} \inv{\kB},
-\end{dmath}
+&= -\PD{\beta}{q} \\
+&= - z V \frac{9}{2} \frac{f(T)}{T} \PD{\beta}{T} \\
+&= z V \frac{9}{2} \frac{f(T)}{T^3} \inv{\kB},
+\end{aligned}
+\end{equation}
 %
 or
-\begin{dmath}\label{eqn:pathriaDiatomic:327}
+\begin{equation}\label{eqn:pathriaDiatomic:327}
 \expectation{H}
 =
 e^{\mu/\kB T}
 V \frac{9}{2} \kB^2
 \lr{\frac{m }{h^2 } \sqrt{\frac{(2\pi)^3}{K}} }^3
 \lr{\kB T}^{3/2}.
-\end{dmath}
+\end{equation}
 %
 \paragraph{Average occupancy}
-\begin{dmath}\label{eqn:pathriaDiatomic:347}
+\begin{equation}\label{eqn:pathriaDiatomic:347}
+\begin{aligned}
 \expectation{N}
-= z \PD{z}{} \ln \ZG
-= z \PD{z}{} \lr{ z V f(T) }
-= z V f(T),
-\end{dmath}
+&= z \PD{z}{} \ln \ZG \\
+&= z \PD{z}{} \lr{ z V f(T) } \\
+&= z V f(T),
+\end{aligned}
+\end{equation}
 but this is just \(q\), or
-\begin{dmath}\label{eqn:pathriaDiatomic:367}
+\begin{equation}\label{eqn:pathriaDiatomic:367}
 \expectation{N}
 =
 e^{\mu/\kB T}
 V
 \lr{\frac{m }{h^2 } \sqrt{\frac{(2\pi)^3}{K}} }^3
 \lr{\kB T}^{9/2}.
-\end{dmath}
+\end{equation}
 %
 \paragraph{Free energy}
-\begin{dmath}\label{eqn:pathriaDiatomic:387}
+\begin{equation}\label{eqn:pathriaDiatomic:387}
+\begin{aligned}
 F
-= - \kB T \ln \frac{ \ZG }{z^N}
-=
-- \kB T
-\lr{
-q - N \ln z
-}
-= N \kB T \beta \mu - \kB T q
-=
-z V f(T) \mu - \kB T z V f(T)
-=
-z V f(T) \lr{ \mu - \kB T }.
-\end{dmath}
-\begin{dmath}\label{eqn:pathriaDiatomic:407}
+&= - \kB T \ln \frac{ \ZG }{z^N} \\
+&= - \kB T \lr{ q - N \ln z } \\
+&= N \kB T \beta \mu - \kB T q \\
+&= z V f(T) \mu - \kB T z V f(T) \\
+&= z V f(T) \lr{ \mu - \kB T }.
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eqn:pathriaDiatomic:407}
 F
 =
 e^{\mu/\kB T}
@@ -221,13 +219,14 @@ V
 \lr{ \mu - \kB T }
 \lr{\frac{m }{h^2 } \sqrt{\frac{(2\pi)^3}{K}} }^3
 \lr{\kB T}^{9/2}.
-\end{dmath}
+\end{equation}
 %
 \paragraph{Entropy}
-\begin{dmath}\label{eqn:pathriaDiatomic:427}
+\begin{equation}\label{eqn:pathriaDiatomic:427}
+\begin{aligned}
 S
-= \frac{U - F}{T}
-=
+&= \frac{U - F}{T} \\
+&=
 \frac{V}{T}
 e^{\mu/\kB T}
 \lr{\kB T}^{3/2}
@@ -239,14 +238,16 @@ e^{\mu/\kB T}
 \lr{\kB T}^{3}
 }
 .
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 \paragraph{Expectation of atomic separation}
 %
 The momentum portions of the average will just cancel out, leaving just
-\begin{dmath}\label{eqn:pathriaDiatomic:447}
+\begin{equation}\label{eqn:pathriaDiatomic:447}
+\begin{aligned}
 \expectation{r_{12}^2}
-=
+&=
 \frac{
 \int
 d^3 \Br_1
@@ -257,8 +258,8 @@ d^3 \Br_2
 d^3 \Br_1
 d^3 \Br_2
 e^{-\beta K \lr{\Br_1 - \Br_2}^2 /2 }
-}
-=
+} \\
+&=
 \frac{
 \int
 d^3 \Bu
@@ -268,8 +269,8 @@ e^{-\beta K \Bu^2 /2 }
 \int
 d^3 \Bu
 e^{-\beta K \Bu^2 /2 }
-}
-=
+} \\
+&=
 \frac{
 \int
 da db dc
@@ -278,8 +279,8 @@ e^{-\beta K \lr{a^2 + b^2 + c^2} /2 }
 }{
 \int
 e^{-\beta K \lr{a^2 + b^2 + c^2} /2 }
-}
-=
+} \\
+&=
 3 \frac{
 \int
 da
@@ -291,8 +292,8 @@ e^{-\beta K \lr{b^2 + c^2} /2 }
 }{
 \int
 e^{-\beta K \lr{a^2 + b^2 + c^2} /2 }
-}
-=
+} \\
+&=
 3 \frac{
 \int
 da
@@ -302,29 +303,17 @@ e^{-\beta K a^2/2}
 \int
 e^{-\beta K a^2/2}
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Expanding the numerator by parts we have
-\begin{dmath}\label{eqn:pathriaDiatomic:467}
-\int
-da
-a^2
-e^{-\beta K a^2/2}
-=
-\int
-a
-d\lr{\frac{
-e^{-\beta K a^2/2}
-}
-{
-- 2 \beta K/2
-}
-}
-=
-\frac{1}{\beta K}
-\int
-e^{-\beta K a^2/2}.
-\end{dmath}
+\begin{equation}\label{eqn:pathriaDiatomic:467}
+\begin{aligned}
+\int da a^2 e^{-\beta K a^2/2}
+&= \int a d\lr{\frac{ e^{-\beta K a^2/2} } { - 2 \beta K/2 } } \\
+&= \frac{1}{\beta K} \int e^{-\beta K a^2/2}.
+\end{aligned}
+\end{equation}
 %
 This gives us
 \boxedEquation{eqn:pathriaDiatomic:487}{

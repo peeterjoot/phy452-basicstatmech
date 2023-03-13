@@ -34,24 +34,17 @@ Show this.
 \makeanswer{pr:poissonStirling:1}{
 %
 This is another Stirling's approximation problem.  With \(p = v \alpha/N\), and working with log expansion of the \(N!\) and \((N-n)!\) terms of the binomial coefficient we have
-\begin{dmath}\label{eqn:poissonStirling:60}
+\begin{equation}\label{eqn:poissonStirling:60}
+\begin{aligned}
 \ln \rho
-\approx
-\lr{ N + \inv{2} } \ln N - \cancel{N} - \lr{ N - n + \inv{2} } \ln (N - n) + (\cancel{N} - n) - \ln n! + n \ln p + (N - n) \ln (1 - p)
-=
-\lr{ N + \inv{2} } \ln N - \lr{ N - n + \inv{2} } \ln (N - n) - n - \ln n! + n \ln \frac{v \alpha}{N} + (N - n) \ln \lr{1 - \frac{v \alpha}{N}}
-=
-\lr{ N + \inv{2} - N + n - \inv{2} -n } \ln N - \lr{ N - n + \inv{2} } \ln \lr{1 - \frac{n}{N}} - n - \ln n! + n \ln v \alpha + (N - n) \ln \lr{1 - \frac{v \alpha}{N}}
-\approx
-\ln \frac{(v\alpha)^n}{n!} - n
-- \lr{ N - n + \inv{2} } \lr{- \frac{n}{N} - \inv{2}\frac{n^2}{N^2} } + (N - n) \lr{- \frac{v \alpha}{N} - \inv{2} \frac{v^2 \alpha^2}{N^2}}
-=
-\ln \frac{(v\alpha)^n}{n!} - n
-+ n \lr{ 1 - \frac{n}{N} + \inv{2N} } \lr{1 + \inv{2}\frac{n}{N} } - v\alpha \lr{1 - \frac{n}{N} } \lr{1 + \inv{2} \frac{v \alpha}{N}}
-\approx
-\ln \frac{(v\alpha)^n}{n!} - n
-+ n - v\alpha.
-\end{dmath}
+&\approx \lr{ N + \inv{2} } \ln N - \cancel{N} - \lr{ N - n + \inv{2} } \ln (N - n) + (\cancel{N} - n) - \ln n! + n \ln p + (N - n) \ln (1 - p) \\
+&= \lr{ N + \inv{2} } \ln N - \lr{ N - n + \inv{2} } \ln (N - n) - n - \ln n! + n \ln \frac{v \alpha}{N} + (N - n) \ln \lr{1 - \frac{v \alpha}{N}} \\
+&= \lr{ N + \inv{2} - N + n - \inv{2} -n } \ln N - \lr{ N - n + \inv{2} } \ln \lr{1 - \frac{n}{N}} - n - \ln n! + n \ln v \alpha + (N - n) \ln \lr{1 - \frac{v \alpha}{N}} \\
+&\approx \ln \frac{(v\alpha)^n}{n!} - n - \lr{ N - n + \inv{2} } \lr{- \frac{n}{N} - \inv{2}\frac{n^2}{N^2} } + (N - n) \lr{- \frac{v \alpha}{N} - \inv{2} \frac{v^2 \alpha^2}{N^2}} \\
+&= \ln \frac{(v\alpha)^n}{n!} - n + n \lr{ 1 - \frac{n}{N} + \inv{2N} } \lr{1 + \inv{2}\frac{n}{N} } - v\alpha \lr{1 - \frac{n}{N} } \lr{1 + \inv{2} \frac{v \alpha}{N}} \\
+&\approx \ln \frac{(v\alpha)^n}{n!} - n + n - v\alpha.
+\end{aligned}
+\end{equation}
 %
 Here all the \(1/N\) terms have been dropped, and we are left with
 \begin{equation}\label{eqn:poissonStirling:80}

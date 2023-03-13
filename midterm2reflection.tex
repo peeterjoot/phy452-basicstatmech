@@ -27,33 +27,29 @@ A particle with spin \(S\) has \(2 S + 1\) states \(-S, -S + 1, \cdots S-1, S\).
 \makeanswer{pr:midterm2reflection:1}{
 %
 Our partition function is
-\begin{dmath}\label{eqn:midterm2reflection:20}
+\begin{equation}\label{eqn:midterm2reflection:20}
+\begin{aligned}
 Z
-= \sum_{m = -S}^S e^{-\Hbar \beta m B}
-=
-e^{-\Hbar \beta S B}
-\sum_{m = -S}^S e^{-\Hbar \beta (m + S) B}
-=
-e^{\Hbar \beta S B}
-\sum_{n = 0}^{2 S} e^{-\Hbar \beta n B}.
-\end{dmath}
+&= \sum_{m = -S}^S e^{-\Hbar \beta m B} \\
+&= e^{-\Hbar \beta S B} \sum_{m = -S}^S e^{-\Hbar \beta (m + S) B} \\
+&= e^{\Hbar \beta S B} \sum_{n = 0}^{2 S} e^{-\Hbar \beta n B}.
+\end{aligned}
+\end{equation}
 %
 Writing
 \begin{equation}\label{eqn:midterm2reflection:40}
 a = e^{-\Hbar \beta B},
 \end{equation}
 that is
-\begin{dmath}\label{eqn:midterm2reflection:560}
-Z =
-a^{-S}
-\sum_{n = 0}^{2 S} a^n
-=
-a^{-S} \frac{ a^{2 S + 1} - 1 }{a - 1}
-=
-\frac{ a^{S + 1} - a^{-S} }{a - 1}
-=
-\frac{ a^{S + 1/2} - a^{-S - 1/2} }{a^{1/2} - a^{-1/2}}.
-\end{dmath}
+\begin{equation}\label{eqn:midterm2reflection:560}
+\begin{aligned}
+Z 
+&= a^{-S} \sum_{n = 0}^{2 S} a^n \\
+&= a^{-S} \frac{ a^{2 S + 1} - 1 }{a - 1} \\
+&= \frac{ a^{S + 1} - a^{-S} }{a - 1} \\
+&= \frac{ a^{S + 1/2} - a^{-S - 1/2} }{a^{1/2} - a^{-1/2}}.
+\end{aligned}
+\end{equation}
 %
 Substitution of \(a\) gives us
 \boxedEquation{eqn:midterm2reflection:80}{
@@ -76,59 +72,67 @@ As \citep{kittel1980thermal} defines magnetization for a spin system.  It was po
 These are, up to a sign, identical, at least in this case, since we have \(\beta\) and \(B\) travelling together in the partition function.
 %
 In terms of the average energy
-\begin{dmath}\label{eqn:midterm2reflection:580}
-M = -\frac{\expectation{H}}{B}
-= \inv{B} \PD{\beta}{} \ln Z(\beta B)
-= \inv{Z B} \PD{\beta}{}Z(\beta B)
-= \inv{Z} \PD{(\beta B)}{} Z(\beta B).
-\end{dmath}
+\begin{equation}\label{eqn:midterm2reflection:580}
+\begin{aligned}
+M
+&= -\frac{\expectation{H}}{B} \\
+&= \inv{B} \PD{\beta}{} \ln Z(\beta B) \\
+&= \inv{Z B} \PD{\beta}{}Z(\beta B) \\
+&= \inv{Z} \PD{(\beta B)}{} Z(\beta B).
+\end{aligned}
+\end{equation}
 %
 Compare this to the in-class definition of magnetization
-\begin{dmath}\label{eqn:midterm2reflection:180}
+\begin{equation}\label{eqn:midterm2reflection:180}
+\begin{aligned}
 \mu
-= \PD{B}{F}
-= \PD{B}{} \lr{ - \kB T \ln Z(\beta B) }
-= -\PD{B}{} \frac{\ln Z (\beta B)}{\beta}
-= -\inv{\beta Z} \PD{B}{} Z(\beta B)
-= -\inv{Z} \PD{(\beta B)}{} Z(\beta B).
-\end{dmath}
+&= \PD{B}{F} \\
+&= \PD{B}{} \lr{ - \kB T \ln Z(\beta B) } \\
+&= -\PD{B}{} \frac{\ln Z (\beta B)}{\beta} \\
+&= -\inv{\beta Z} \PD{B}{} Z(\beta B) \\
+&= -\inv{Z} \PD{(\beta B)}{} Z(\beta B).
+\end{aligned}
+\end{equation}
 %
 Defining the magnetic moment in either of these fashions is really a cheat, because it's done without any connection to physics of the situation.  In \S 3.9 of \citep{pathriastatistical} is a much better seeming approach, where the moment is defined as \(M_z = -\expectation{\Bmu \cdot \BH}/H\), but this is then shown to have the form \eqnref{eqn:midterm2reflection:180}.
 %
 \paragraph{Calculating it}
 %
 For this derivative we have
-\begin{dmath}\label{eqn:midterm2reflection:600}
+\begin{equation}\label{eqn:midterm2reflection:600}
+\begin{aligned}
 \PD{(\beta B)}{} \ln Z
-=
+&=
 \PD{(\beta B)}{} \ln
 \frac
 { \sinh( \Hbar \beta B (S + 1/2) ) }
-{ \sinh( \Hbar \beta B /2 )  }
-=
+{ \sinh( \Hbar \beta B /2 )  } \\
+&=
 \PD{(\beta B)}{} \lr{
    \ln \sinh( \Hbar \beta B (S + 1/2) )
    - \ln \sinh( \Hbar \beta B /2 )
-}
-=
+} \\
+&=
 \frac{\Hbar }{2}
 \lr{
    (2 S + 1) \coth( \Hbar \beta B (S + 1/2) )
    - \coth( \Hbar \beta B /2 )
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 This gives us
-\begin{dmath}\label{eqn:midterm2reflection:620}
+\begin{equation}\label{eqn:midterm2reflection:620}
+\begin{aligned}
 \mu
-=
+&=
 -\inv{Z}
 \frac{\Hbar }{2}
 \lr{
    (2 S + 1) \coth( \Hbar \beta B (S + 1/2) )
    - \coth( \Hbar \beta B /2 )
-}
-=
+} \\
+&=
 -
 \frac
 { \sinh( \Hbar \beta B /2 )  }
@@ -138,7 +142,8 @@ This gives us
    (2 S + 1) \coth( \Hbar \beta B (S + 1/2) )
    - \coth( \Hbar \beta B /2 )
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 After some simplification (\nbref{midtermTwoQ1FinalSimplificationMu.nb}) we get
 \boxedEquation{eqn:midterm2reflection:240}{
@@ -178,11 +183,12 @@ By Taylor expanding around \(c = 0\) and \(d = 0\) with those as the variables i
 \makeanswer{pr:midterm2reflection:2}{
 %
 The canonical partition function is
-\begin{dmath}\label{eqn:midterm2reflection:260}
+\begin{equation}\label{eqn:midterm2reflection:260}
+\begin{aligned}
 Z
-=
-\int dx dy dp_x dp_y e^{-\beta H}
-=
+&=
+\int dx dy dp_x dp_y e^{-\beta H} \\
+&=
 \int dx e^{-\beta
 \lr{
 \inv{2} m \omega^2 x^2 + a x^4
@@ -194,19 +200,20 @@ Z
 }
 }
 \int dp_x dp_y e^{-\beta p_x^2/2 m} e^{-\beta p_y^2/2 m}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 With
 \begin{subequations}
-\begin{dmath}\label{eqn:midterm2reflection:280}
+\begin{equation}\label{eqn:midterm2reflection:280}
 u = \sqrt{\frac{\beta}{2m}} p_x
-\end{dmath}
-\begin{dmath}\label{eqn:midterm2reflection:300}
+\end{equation}
+\begin{equation}\label{eqn:midterm2reflection:300}
 v = \sqrt{\frac{\beta}{2m}} p_y,
-\end{dmath}
+\end{equation}
 \end{subequations}
 the momentum integrals are
-\begin{dmath}\label{eqn:midterm2reflection:320}
+\begin{equation}\label{eqn:midterm2reflection:320}
 \begin{aligned}
 \int dp_x dp_y e^{-\beta p_x^2/2 m} e^{-\beta p_y^2/2 m}
 &=
@@ -219,16 +226,16 @@ the momentum integrals are
 &=
 \frac{2 \pi m}{\beta}.
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 Writing
 \begin{subequations}
-\begin{dmath}\label{eqn:midterm2reflection:340}
+\begin{equation}\label{eqn:midterm2reflection:340}
 f(x) = \inv{2} m \omega^2 x^2 + a x^4
-\end{dmath}
-\begin{dmath}\label{eqn:midterm2reflection:360}
+\end{equation}
+\begin{equation}\label{eqn:midterm2reflection:360}
 g(x) = \inv{2} m \omega^2 y^2 + b y^6,
-\end{dmath}
+\end{equation}
 \end{subequations}
 we have
 \boxedEquation{eqn:midterm2reflection:380}{
@@ -240,17 +247,18 @@ Z =
 %
 \makeSubAnswer{Attempt 1: differentiation under the integral sign}{pr:midterm2reflection:2:a}
 The mean energy is
-\begin{dmath}\label{eqn:midterm2reflection:400}
+\begin{equation}\label{eqn:midterm2reflection:400}
+\begin{aligned}
 \expectation{H}
-= \frac{\int H e^{-\beta H}}{\int e^{-\beta H}}
-= -\PD{\beta}{} \ln \int e^{-\beta H}
-= \PD{\beta}{}
+&= \frac{\int H e^{-\beta H}}{\int e^{-\beta H}} \\
+&= -\PD{\beta}{} \ln \int e^{-\beta H} \\
+&= \PD{\beta}{}
 \lr{
 \ln \beta
 -\ln \int dx e^{- \beta f(x)}
 -\ln \int dy e^{- \beta g(y)}
-}
-=
+} \\
+&=
 \inv{\beta}
 + \frac{
 \int dx f(x) e^{- \beta f(x)}
@@ -264,21 +272,18 @@ The mean energy is
 {
 \int dy e^{- \beta g(y)}
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 The specific heat follows by differentiating once more
-\begin{dmath}\label{eqn:midterm2reflection:420}
+\begin{equation}\label{eqn:midterm2reflection:420}
+\begin{aligned}
 \CV
-=
-\PD{T}{\expectation{H}}
-=
-\PD{T}{\beta}
-\PD{\beta}{\expectation{H}}
-= -\inv{\kB T^2}
-\PD{\beta}{\expectation{H}}
-= -\kB \beta^2
-\PD{\beta}{\expectation{H}}
-=
+&= \PD{T}{\expectation{H}} \\
+&= \PD{T}{\beta} \PD{\beta}{\expectation{H}} \\
+&= -\inv{\kB T^2} \PD{\beta}{\expectation{H}} \\
+&= -\kB \beta^2 \PD{\beta}{\expectation{H}} \\
+&=
 - \kB \beta^2
 \lr{
 -\inv{\beta^2}
@@ -298,10 +303,11 @@ The specific heat follows by differentiating once more
 }
 }
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Differentiating the integral terms we have, for example,
-\begin{dmath}\label{eqn:midterm2reflection:440}
+\begin{equation}\label{eqn:midterm2reflection:440}
 \PD{\beta}{}
 \frac{
 \int dx f(x) e^{- \beta f(x)}
@@ -325,7 +331,7 @@ Differentiating the integral terms we have, for example,
 \int dx e^{- \beta f(x)}
 }
 }^2,
-\end{dmath}
+\end{equation}
 %
 so that the specific heat is
 \boxedEquation{eqn:midterm2reflection:460}{
@@ -375,14 +381,16 @@ That's as far as I took this problem.  There was a discussion after the midterm 
 \makeSubAnswer{Attempt 2: Taylor expanding in \(c\) and \(d\)}{pr:midterm2reflection:2:b}
 %
 Performing a two variable Taylor expansion of \(Z\), about \((c, d) = (0, 0)\) we have
-\begin{dmath}\label{eqn:midterm2reflection:381}
-Z \approx
+\begin{equation}\label{eqn:midterm2reflection:381}
+\begin{aligned}
+Z 
+&\approx
 \frac{2 \pi m}{\beta}
 \int dx dy
 e^{- \beta m \omega^2 x^2/2}
 e^{- \beta m \omega^2 y^2/2}
-\lr{ 1 - \beta a x^4 - \beta b y^6 }
-=
+\lr{ 1 - \beta a x^4 - \beta b y^6 } \\
+&=
 \frac{2 \pi m}{\beta}
 \frac{ 2 \pi}{\beta m \omega^2}
 \lr{
@@ -390,7 +398,8 @@ e^{- \beta m \omega^2 y^2/2}
 - \beta a \frac{3!!}{(\beta m \omega^2)^2}
 - \beta b \frac{5!!}{(\beta m \omega^2)^3}
 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:midterm2reflection:480}{
 Z \approx
@@ -403,7 +412,7 @@ Z \approx
 }
 %
 Now we can calculate the average energy
-\begin{dmath}\label{eqn:midterm2reflection:500}
+\begin{equation}\label{eqn:midterm2reflection:500}
 \begin{aligned}
 \expectation{H}
 &=
@@ -433,7 +442,7 @@ Now we can calculate the average energy
    - \frac{15 b }{\beta^2 (m \omega^2)^3}
 }.
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 Dropping the \(c\), \(d\) terms of the denominator above, we have
 \boxedEquation{eqn:midterm2reflection:520}{

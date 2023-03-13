@@ -24,12 +24,13 @@ Consider a Bose gas with particles having no spin and obeying an ultra relativis
 \makeanswer{pr:spinZeroBoseCondensation:2}{
 %
 For the number of particles in the gas, as with photons, we still have
-\begin{dmath}\label{eqn:spinZeroBoseCondensation:20}
+\begin{equation}\label{eqn:spinZeroBoseCondensation:20}
+\begin{aligned}
 \expectation{N}
-= \sum_\Bk \inv{z^{-1} e^{\beta \epsilon_\Bk} - 1}
-= \inv{z^{-1} - 1}
-+ \sum_{\Bk \ne 0} \inv{z^{-1} e^{\beta \epsilon_\Bk} - 1}.
-\end{dmath}
+&= \sum_\Bk \inv{z^{-1} e^{\beta \epsilon_\Bk} - 1} \\
+&= \inv{z^{-1} - 1} + \sum_{\Bk \ne 0} \inv{z^{-1} e^{\beta \epsilon_\Bk} - 1}.
+\end{aligned}
+\end{equation}
 %
 As in the discussion of low velocity particles in \cite{pathriastatistical} \S 7.1, the ground state term has been split out, before making any continuum approximation of the sum over the energetic states.
 Writing
@@ -42,26 +43,28 @@ N_0 = \frac{z}{1 - z}.
 \end{equation}
 %
 We proceed with the continuum approximation for the number of particles in the energetic states
-\begin{dmath}\label{eqn:spinZeroBoseCondensation:80}
+\begin{equation}\label{eqn:spinZeroBoseCondensation:80}
+\begin{aligned}
 N_e
-=
-\sum_{\Bk \ne 0} \inv{z^{-1} e^{\beta \epsilon_\Bk} - 1}
-\sim
+&=
+\sum_{\Bk \ne 0} \inv{z^{-1} e^{\beta \epsilon_\Bk} - 1} \\
+&\sim
 V \int \frac{d^3 \Bk}{(2 \pi)^3}
-\inv{z^{-1} e^{\beta \epsilon_\Bk} - 1}
-=
+\inv{z^{-1} e^{\beta \epsilon_\Bk} - 1} \\
+&=
 \frac{4 \pi V}{(2 \pi)^3} \int_0^\infty k^2 dk
-\inv{z^{-1} e^{\beta c k} - 1}
-=
+\inv{z^{-1} e^{\beta c k} - 1} \\
+&=
 \frac{V}{2 \pi^2}
 \lr{ \inv{\beta c} }^3
 \int_0^\infty x^2 dx
-\inv{z^{-1} e^{x} - 1}
-=
+\inv{z^{-1} e^{x} - 1} \\
+&=
 \frac{V}{2 \pi^2}
 \lr{ \inv{\beta c} }^3
 \Gamma(3) g_3(z).
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 So we have
 \begin{equation}\label{eqn:spinZeroBoseCondensation:100}

@@ -22,25 +22,25 @@ One of the problems I attempted had integrals over velocity space with volume el
 %\section{Guts}
 %
 We are working with a Hamiltonian
-\begin{dmath}\label{eqn:velocityToMomentumChangeOfVariables:200}
+\begin{equation}\label{eqn:velocityToMomentumChangeOfVariables:200}
 \epsilon = \sqrt{ (p c)^2 + \epsilon_0^2 },
-\end{dmath}
+\end{equation}
 where the rest energy is
-\begin{dmath}\label{eqn:velocityToMomentumChangeOfVariables:220}
+\begin{equation}\label{eqn:velocityToMomentumChangeOfVariables:220}
 \epsilon_0 = m c^2.
-\end{dmath}
+\end{equation}
 %
 Hamilton's equations give us
-\begin{dmath}\label{eqn:velocityToMomentumChangeOfVariables:240}
+\begin{equation}\label{eqn:velocityToMomentumChangeOfVariables:240}
 u_\alpha = \frac{ p_\alpha/c^2 }{\epsilon},
-\end{dmath}
+\end{equation}
 or
-\begin{dmath}\label{eqn:velocityToMomentumChangeOfVariables:260}
+\begin{equation}\label{eqn:velocityToMomentumChangeOfVariables:260}
 p_\alpha = \frac{ m u_\alpha }{\sqrt{1 - \Bu^2/c^2}}.
-\end{dmath}
+\end{equation}
 %
 This is enough to calculate the Jacobian for our volume element change of variables
-\begin{dmath}\label{eqn:huang93:160}
+\begin{equation}\label{eqn:huang93:160}
 \begin{aligned}
 du_x &\wedge du_y \wedge du_z
 =
@@ -61,13 +61,13 @@ m^2 c^2 + p_y^2 + p_z^2 & - p_y p_x & - p_z p_x \\
 m^2 \lr{ m^2 + \Bp^2/c^2 }^{-5/2}
 dp_x \wedge dp_y \wedge dp_z.
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 That final simplification of the determinant was a little hairy, but yielded nicely to Mathematica \nbref{huang93relativisiticGas.nb}.
 %
 Our final result for the velocity volume element in momentum space, in terms of the particle energy is
-\begin{dmath}\label{eqn:huang93:180}
+\begin{equation}\label{eqn:huang93:180}
 d^3 \Bu = \frac{c^6 \epsilon_0^2 } {\epsilon^5} d^3 \Bp.
-\end{dmath}
+\end{equation}
 %
 %\EndNoBibArticle

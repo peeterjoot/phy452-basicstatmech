@@ -108,27 +108,24 @@ With a solution that we can read off by inspection
 \end{equation}
 %
 Let's put the initial phase space point into polar form
-\begin{dmath}\label{eqn:pendulumPhaseSpace:200}
+\begin{equation}\label{eqn:pendulumPhaseSpace:200}
+\begin{aligned}
 \Bu_0^2
-= \theta_0^2 + \frac{p_0^2}{\omega^2 m^2 l^4}
-=
-\frac{2}{\omega^2 m l^2}
-\lr{ \frac{p_0^2}{2 m l^2} + \inv{2} \omega^2 m l^2 \theta_0^2 }
-=
-\frac{2}{g m l}
-\lr{ \frac{p_0^2}{2 m l^2} + \inv{2} g m l \theta_0^2 }.
-\end{dmath}
+&= \theta_0^2 + \frac{p_0^2}{\omega^2 m^2 l^4} \\
+&= \frac{2}{\omega^2 m l^2} \lr{ \frac{p_0^2}{2 m l^2} + \inv{2} \omega^2 m l^2 \theta_0^2 } \\
+&= \frac{2}{g m l} \lr{ \frac{p_0^2}{2 m l^2} + \inv{2} g m l \theta_0^2 }.
+\end{aligned}
+\end{equation}
 %
 This doesn't appear to be an exact match for \eqnref{eqn:pendulumPhaseSpace:60}, but we can write for small \(\theta_0\)
-\begin{dmath}\label{eqn:pendulumPhaseSpace:220}
+\begin{equation}\label{eqn:pendulumPhaseSpace:220}
+\begin{aligned}
 1 - \cos\theta_0
-=
-2 \sin^2 \lr{ \frac{\theta_0}{2} }
-\approx
-2 \lr{ \frac{\theta_0}{2} }^2
-=
-\frac{\theta_0^2}{2}.
-\end{dmath}
+&= 2 \sin^2 \lr{ \frac{\theta_0}{2} } \\
+&\approx 2 \lr{ \frac{\theta_0}{2} }^2 \\
+&= \frac{\theta_0^2}{2}.
+\end{aligned}
+\end{equation}
 %
 This shows that we can rewrite our initial conditions as
 \begin{equation}\label{eqn:pendulumPhaseSpace:240}
@@ -208,13 +205,15 @@ p_\theta = -m l \sqrt{\frac{2 E}{m}} \sin(\omega t + \phi).
 \end{subequations}
 %
 We have
-\begin{dmath}\label{eqn:pendulumPhaseSpace:380}
+\begin{equation}\label{eqn:pendulumPhaseSpace:380}
+\begin{aligned}
 \oint p_\theta d\theta
-= \frac{m l}{\omega l} \frac{2 E}{m} \int_0^{2\pi/\omega} \sin^2( \omega t + \phi) \omega dt
-= 2 E \int_0^{2\pi/\omega} \frac{ 1 - \cos\lr{ 2(\omega t + \phi) } }{2} dt
-= E \frac{2 \pi}{\omega}
-= E \tau.
-\end{dmath}
+&= \frac{m l}{\omega l} \frac{2 E}{m} \int_0^{2\pi/\omega} \sin^2( \omega t + \phi) \omega dt \\
+&= 2 E \int_0^{2\pi/\omega} \frac{ 1 - \cos\lr{ 2(\omega t + \phi) } }{2} dt \\
+&= E \frac{2 \pi}{\omega} \\
+&= E \tau.
+\end{aligned}
+\end{equation}
 } % makeanswer
 %
 %\EndArticle

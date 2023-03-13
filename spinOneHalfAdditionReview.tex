@@ -12,19 +12,19 @@
 \label{chap:spinOneHalfAdditionReview}
 %
 In class an example of interacting spin was given where the Hamiltonian included a two spins dot product
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:20}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:20}
 H = \BS_1 \cdot \BS_2.
-\end{dmath}
+\end{equation}
 %
 The energy eigenvalues for this Hamiltonian were derived by using the trick to rewrite this in terms of just squared spin operators
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:40}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:40}
 H = \frac{(\BS_1 + \BS_2)^2 - \BS_1^2 - \BS_2^2}{2}.
-\end{dmath}
+\end{equation}
 %
 For each of these terms we can calculate the total energy eigenvalues from
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:60}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:60}
 \BS^2 \Psi = \Hbar^2 S (S + 1) \Psi,
-\end{dmath}
+\end{equation}
 where \(S\) takes on the values of the total spin for the (possibly composite) spin operator.  Thinking about the spin operators in their matrix representation, it's not obvious to me that we can just add the total spins, so that if \(\BS_1\) and \(\BS_2\) are the spin operators for two respective particle, then the total system has a spin operator \(\BS = \BS_1 + \BS_2\) (really \(\BS = \BS_1 \otimes I_2 + I_1 \otimes \BS_2\), since the respective spin operators only act on their respective particles).
 %
 Let's develop a bit of intuition on this, by calculating the energy eigenvalues of \(\BS_1 \cdot \BS_2\) using Pauli matrices.
@@ -126,28 +126,29 @@ i
 %
 Summarizing, these are
 \begin{subequations}
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:200}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:200}
 \sigma_x \ket{\pm} = \ket{\mp}
-\end{dmath}
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:220}
+\end{equation}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:220}
 \sigma_y \ket{\pm} = \pm i \ket{\mp}
-\end{dmath}
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:240}
+\end{equation}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:240}
 \sigma_z \ket{\pm} = \pm \ket{\pm}.
-\end{dmath}
+\end{equation}
 \end{subequations}
 %
 For convenience let's avoid any sort of direct product notation, with the composite operations defined implicitly by
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:260}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:260}
+\begin{aligned}
 \lr{ S_{1k} \otimes S_{2k}}
 \lr{ \ket{\alpha} \otimes \ket{\beta} }
-=
-S_{1k} S_{2k} \ket{\alpha \beta}
-=
+&= S_{1k} S_{2k} \ket{\alpha \beta} \\
+&=
 \lr{ S_{1k} \ket{\alpha} }
 \otimes
 \lr{ S_{2k} \ket{\beta} }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Now let's compute all the various operations
 \begin{subequations}
@@ -202,42 +203,46 @@ Now we are set to write out the Hamiltonian matrix.  Doing this with respect to 
 \ket{+-},
 \ket{-+}
 \}$, we have
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:380}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:380}
+\begin{aligned}
 H
-= \BS_1 \cdot \BS_2
-= \frac{\Hbar^2}{4}
+&= \BS_1 \cdot \BS_2 \\
+&= \frac{\Hbar^2}{4}
 \begin{bmatrix}
 \bra{++} H \ket{++} & \bra{++} H \ket{--} & \bra{++} H \ket{+-} & \bra{++} H \ket{-+} \\
 \bra{--} H \ket{++} & \bra{--} H \ket{--} & \bra{--} H \ket{+-} & \bra{--} H \ket{-+} \\
 \bra{+-} H \ket{++} & \bra{+-} H \ket{--} & \bra{+-} H \ket{+-} & \bra{+-} H \ket{-+} \\
 \bra{-+} H \ket{++} & \bra{-+} H \ket{--} & \bra{-+} H \ket{+-} & \bra{-+} H \ket{-+}
-\end{bmatrix}
-= \frac{\Hbar^2}{4}
+\end{bmatrix} \\
+&= \frac{\Hbar^2}{4}
 \begin{bmatrix}
 1 & 0 & 0 & 0 \\
 0 & 1 & 0 & 0 \\
 0 & 0 & -1 & 2 \\
 0 & 0 & 2 & -1
 \end{bmatrix}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Two of the eigenvalues we can read off by inspection, and for the other two need to solve
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:400}
-0 =
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:400}
+\begin{aligned}
+0 
+&=
 \begin{vmatrix}
 -\Hbar^2/4 - \lambda & \Hbar^2/2 \\
 \Hbar^2/2 & -\Hbar^2/4 - \lambda
-\end{vmatrix}
-=
-(\Hbar^2/4 + \lambda)^2 - (\Hbar^2/2)^2,
-\end{dmath}
+\end{vmatrix} \\
+&= (\Hbar^2/4 + \lambda)^2 - (\Hbar^2/2)^2,
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:420}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:420}
 \lambda = -\frac{\Hbar^2}{4} \pm \frac{\Hbar^2}{2} = \frac{\Hbar^2}{4}, -\frac{3 \Hbar^2}{4}.
-\end{dmath}
+\end{equation}
 %
 These are the last of the triplet energy eigenvalues and the singlet value that we expected from the spin addition method.  The eigenvectors for the \(\Hbar^2/4\) eigenvalue is given by the solution of
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:440}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:440}
 0 =
 \frac{\Hbar^2}{2}
 \begin{bmatrix}
@@ -248,14 +253,14 @@ These are the last of the triplet energy eigenvalues and the singlet value that 
 a \\
 b
 \end{bmatrix},
-\end{dmath}
+\end{equation}
 so the eigenvector is
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:460}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:460}
 \inv{\sqrt{2}} \lr{\ket{+-} + \ket{-+}}.
-\end{dmath}
+\end{equation}
 %
 For our \(-3\Hbar^2/4\) eigenvalue we seek
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:480}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:480}
 0 =
 \frac{\Hbar^2}{2}
 \begin{bmatrix}
@@ -266,15 +271,15 @@ For our \(-3\Hbar^2/4\) eigenvalue we seek
 a \\
 b
 \end{bmatrix}.
-\end{dmath}
+\end{equation}
 %
 So the eigenvector is
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:500}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:500}
 \inv{\sqrt{2}} \lr{\ket{+-} - \ket{-+}}.
-\end{dmath}
+\end{equation}
 %
 An orthonormal basis with eigenvalues \(\Hbar^2/4 (\times 3) \), and \( -3\Hbar^2/4\) is thus given by
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:520}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:520}
 \begin{aligned}
 \beta' &= \Biggl\{
 \ket{++},
@@ -283,28 +288,28 @@ An orthonormal basis with eigenvalues \(\Hbar^2/4 (\times 3) \), and \( -3\Hbar^
 \inv{\sqrt{2}} \lr{\ket{+-} - \ket{-+}}
 \Biggr\}.
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 \paragraph{Confirmation of spin additivity.}
 %
 Let's use this to confirm that for \(H = (\BS_1 + \BS_2)^2\), the two spin \(1/2\) particles have a combined spin given by
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:540}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:540}
 S(S + 1) \Hbar^2.
-\end{dmath}
+\end{equation}
 %
 With
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:560}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:560}
 (\BS_1 + \BS_2)^2 = \BS_1^2 + \BS_2^2 + 2 \BS_1 \cdot \BS_2,
-\end{dmath}
+\end{equation}
 we have for the \(\Hbar^2/4\) energy eigenstate of \(\BS_1 \cdot \BS_2\)
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:580}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:580}
 2 \Hbar^2 \inv{2} \lr{ 1 + \inv{2} } + 2 \frac{\Hbar^2}{4} = 2 \Hbar^2,
-\end{dmath}
+\end{equation}
 and for the \(-3\Hbar^2/4\) energy eigenstate of \(\BS_1 \cdot \BS_2\)
-\begin{dmath}\label{eqn:spinOneHalfAdditionReview:600}
+\begin{equation}\label{eqn:spinOneHalfAdditionReview:600}
 2 \Hbar^2 \inv{2} \lr{ 1 + \inv{2} } + 2 \lr{ - \frac{3 \Hbar^2}{4} }
 = 0.
-\end{dmath}
+\end{equation}
 %
 We get the \(2 \Hbar^2\) and \(0\) eigenvalues respectively as expected.
 %

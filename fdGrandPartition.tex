@@ -80,9 +80,10 @@ Our grand canonical partition function, when written out explicitly, will have t
 \end{equation}
 %
 Okay, that's simple enough and really what the primed notation is getting at.  Now let's verify that after simplification this matches up with \eqnref{eqn:fdGrandPartition:120}.  Expanding this out a bit we have
-\begin{dmath}\label{eqn:fdGrandPartition:121}
+\begin{equation}\label{eqn:fdGrandPartition:121}
+\begin{aligned}
 \Omega
-=
+&=
 \left(
 \sum_{n_0 = 0}^1
 \lr{ z e^{-\beta \epsilon_0} }
@@ -93,8 +94,8 @@ Okay, that's simple enough and really what the primed notation is getting at.  N
 \lr{ z e^{-\beta \epsilon_1} }
 ^{n_1}
 \right)
-\cdots
-=
+\cdots \\
+&=
 \left(
 1 +
 z e^{-\beta \epsilon_0}
@@ -107,8 +108,8 @@ z e^{-\beta \epsilon_1}
 1 +
 z e^{-\beta \epsilon_2}
 \right)
-\cdots
-=
+\cdots \\
+&=
 \left(
 1 +
 z e^{-\beta \epsilon_0}
@@ -129,8 +130,8 @@ z^2 e^{-\beta (\epsilon_2 + \epsilon_3)}
 1 +
 z e^{-\beta \epsilon_4}
 \right)
-\cdots
-=
+\cdots \\
+&=
 \left(
 1 +
 z \left(
@@ -162,7 +163,8 @@ e^{-\beta (\epsilon_0 + \epsilon_1 + \epsilon_2)}
 z e^{-\beta \epsilon_4}
 \right)
 \cdots
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 This completes the verification of the result as expected.  It is definitely a brute force way of doing so, but easy to understand and I found for myself that it removed some of the notation that obfuscated what is really a simple statement.
 %

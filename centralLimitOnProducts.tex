@@ -34,12 +34,14 @@ now we have something that the central limit theorem can be applied to.  It will
 \end{equation}
 %
 Conceivably, if we knew all the moments of \(X\) we could expand the logarithm in Taylor series.  In fact we need more than that.  If we suppose that \(0 < X < 2 \mu\), so that \(\Abs{X/\mu - 1} \le 1\), we can write
-\begin{dmath}\label{eqn:centralLimitOnProducts:60}
+\begin{equation}\label{eqn:centralLimitOnProducts:60}
+\begin{aligned}
 \ln X
-= \ln \mu + (X - \mu)
-= \ln \mu + \ln \lr{ 1 + \lr{\frac{X}{\mu} - 1} }
-= \ln \mu + \sum_{k = 1}^{\infty} (-1)^{k+1} \frac{\lr{\frac{X}{\mu} -1}^k}{k}.
-\end{dmath}
+&= \ln \mu + (X - \mu) \\
+&= \ln \mu + \ln \lr{ 1 + \lr{\frac{X}{\mu} - 1} } \\
+&= \ln \mu + \sum_{k = 1}^{\infty} (-1)^{k+1} \frac{\lr{\frac{X}{\mu} -1}^k}{k}.
+\end{aligned}
+\end{equation}
 %
 With such a bounding for the random variable \(X\) we'd have
 \begin{equation}\label{eqn:centralLimitOnProducts:140}
