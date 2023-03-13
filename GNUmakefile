@@ -111,6 +111,9 @@ basicStatMechProblemSet7.pdf :: $(PDF_DEPS)
 #mathstyle.sty : 
 #	wget -o $@ http://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/latex/breqn/mathstyle.sty?revision=54801&view=co
 
+scrpage2.sty : ../latex/scrpage2.sty
+	cp $^ $@
+
 backmatter.tex: ../latex/classicthesis_mine/backmatter2.tex
 	rm -f $@
 	ln -s ../latex/classicthesis_mine/backmatter2.tex backmatter.tex
