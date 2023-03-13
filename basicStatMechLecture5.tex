@@ -7,17 +7,13 @@
 %\renewcommand{\dirname}{notes/phy452/}
 %\newcommand{\keywords}{Statistical mechanics, PHY452H1S, Poincare recurrence, Liouville's theorem, phase space volume}
 %\input{../peeter_prologue_print2.tex}
-%
 %\beginArtNoToc
 %\generatetitle{PHY452H1S Basic Statistical Mechanics.  Lecture 5: Motion in phase space.  Liouville and Poincar\'e theorems.  Taught by Prof.\ Arun Paramekanti}
 \label{chap:basicStatMechLecture5}
-%
 %\section{Disclaimer}
 %
 %Peeter's lecture notes from class.  May not be entirely coherent.
-%
 \section{Motion in phase space.}
-%
 Classical system: \(\Bx_i, \Bp_i\) with dimensionality
 \begin{equation}\label{eqn:basicStatMechLecture5:20}
 \mathLabelBox{
@@ -93,23 +89,24 @@ We are interested in asking the question of how the density of a region in phase
 \rho(p_{i_\alpha}, x_{i_\alpha}, t),
 \end{equation}
 and seek to demonstrate \underlineAndIndex{Liouville's theorem}, that the phase space density does not change.  To do so, consider the total time derivative of the phase space density
-\begin{dmath}\label{eqn:basicStatMechLecture5:160}
+\begin{equation}\label{eqn:basicStatMechLecture5:160}
+\begin{aligned}
 \ddt{\rho}
-=
+&=
 \PD{t}{\rho}
 + \sum_{i_\alpha}
 \PD{t}{p_{i_\alpha}} \PD{p_{i_\alpha}}{\rho}
 +
-\PD{t}{x_{i_\alpha}} \PD{x_{i_\alpha}}{\rho}
-=
+\PD{t}{x_{i_\alpha}} \PD{x_{i_\alpha}}{\rho} \\
+&=
 \PD{t}{\rho}
 + \sum_{i_\alpha}
 \dot{p}_{i_\alpha}
 \PD{p_{i_\alpha}}{\rho}
 +
 \dot{x}_{i_\alpha}
-\PD{x_{i_\alpha}}{\rho}
-=
+\PD{x_{i_\alpha}}{\rho} \\
+&=
 \PD{t}{\rho}
 +
 \sum_{i_\alpha}
@@ -149,7 +146,8 @@ and seek to demonstrate \underlineAndIndex{Liouville's theorem}, that the phase 
 \right)
 }
 {\(= 0\)}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 We've implicitly defined a current density \(\Bj\) above by comparing to the continuity equation
 \begin{equation}\label{eqn:basicStatMechLecture5:180}

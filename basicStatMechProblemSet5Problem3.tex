@@ -82,11 +82,13 @@ These are sketched as a function of \(\calE\) in \cref{fig:basicStatMechProblemS
 \makeSubAnswer{Partition function}{pr:basicStatMechProblemSet5Problem3:b}
 %
 Our partition function, in general, is
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:220}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:220}
+\begin{aligned}
 Z
-= \sum_{l = 0}^\infty \sum_{m = -l}^l e^{-\lambda_{l,m} \beta}
-= \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}} \sum_{m = -l}^l e^{ m \mu \Hbar \calE \beta}.
-\end{dmath}
+&= \sum_{l = 0}^\infty \sum_{m = -l}^l e^{-\lambda_{l,m} \beta} \\
+&= \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}} \sum_{m = -l}^l e^{ m \mu \Hbar \calE \beta}.
+\end{aligned}
+\end{equation}
 %
 Dropping all but \(l = 0, 1\) terms this is
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:380}
@@ -109,29 +111,25 @@ Z
 \makeSubAnswer{Average dipole moment}{pr:basicStatMechProblemSet5Problem3:c}
 %
 For the average dipole moment, averaging over both the states and the partitions, we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:260}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:260}
+\begin{aligned}
 Z \expectation{ \mu L_z }
-= \sum_{l = 0}^\infty \sum_{m = -l}^l
-\bra{l m} \mu L_z \ket{l m} e^{-\beta \lambda_{l, m}}
-= \sum_{l = 0}^\infty \sum_{m = -l}^l
-\mu \bra{l m} m \Hbar \ket{l m} e^{-\beta \lambda_{l, m}}
-= \mu \Hbar \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}}
-\sum_{m = -l}^l
-m e^{ \mu m \Hbar \calE \beta}
-= \mu \Hbar \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}}
-\sum_{m = 1}^l
-m
-\lr{ e^{ \mu m \Hbar \calE \beta} -e^{-\mu m \Hbar \calE \beta} }
-= 2 \mu \Hbar \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}}
-\sum_{m = 1}^l m \sinh (\mu m \Hbar \calE \beta).
-\end{dmath}
+&= \sum_{l = 0}^\infty \sum_{m = -l}^l \bra{l m} \mu L_z \ket{l m} e^{-\beta \lambda_{l, m}} \\
+&= \sum_{l = 0}^\infty \sum_{m = -l}^l \mu \bra{l m} m \Hbar \ket{l m} e^{-\beta \lambda_{l, m}} \\
+&= \mu \Hbar \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}} \sum_{m = -l}^l m e^{ \mu m \Hbar \calE \beta} \\
+&= \mu \Hbar \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}} \sum_{m = 1}^l m \lr{ e^{ \mu m \Hbar \calE \beta} -e^{-\mu m \Hbar \calE \beta} } \\
+&= 2 \mu \Hbar \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}} \sum_{m = 1}^l m \sinh (\mu m \Hbar \calE \beta).
+\end{aligned}
+\end{equation}
 %
 For the cap of \(l = 1\) we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:280}
-\expectation{ \mu L_z } \approx
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:280}
+\begin{aligned}
+\expectation{ \mu L_z }
+&\approx
 \frac{2 \mu \Hbar }{Z}
-\lr{ 1 (0) + e^{-\Hbar^2 \beta/ I} \sinh (\mu \Hbar \calE \beta) }
-\approx
+\lr{ 1 (0) + e^{-\Hbar^2 \beta/ I} \sinh (\mu \Hbar \calE \beta) } \\
+&\approx
 2 \mu \Hbar
 \frac{
 e^{-\Hbar^2 \beta/ I} \sinh (\mu \Hbar \calE \beta)
@@ -140,7 +138,8 @@ e^{-\Hbar^2 \beta/ I} \sinh (\mu \Hbar \calE \beta)
 1 + e^{-\Hbar^2 \beta/I}
 \lr{1 + 2 \cosh( \mu \Hbar \calE \beta)}
 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 or
 \boxedEquation{eqn:basicStatMechProblemSet5Problem3:300}{
@@ -160,8 +159,10 @@ This is plotted in \cref{fig:basicStatMechProblemSet5Problem3:basicStatMechProbl
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechProblemSet5Problem3Fig3A}{Dipole moment.}{fig:basicStatMechProblemSet5Problem3:basicStatMechProblemSet5Problem3Fig3}{0.2}
 %
 For high temperatures \(\mu \Hbar \calE \beta \ll 1\) or \(\kB T \gg \mu \Hbar \calE\), expanding the hyperbolic sine and cosines to first and second order respectively and the exponential to first order we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:720}
-\expectation{ \mu L_z } \approx
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:720}
+\begin{aligned}
+\expectation{ \mu L_z } 
+&\approx
 2 \mu \Hbar
 \frac
 {
@@ -170,12 +171,13 @@ For high temperatures \(\mu \Hbar \calE \beta \ll 1\) or \(\kB T \gg \mu \Hbar \
 {
    4 + \frac{h^2}{I \kB T} +
    \lr{\frac{\mu \Hbar \calE}{\kB T} }^2
-}
-=
-\frac{2 (\mu \Hbar)^2 \calE \kB T}{4 (\kB T)^2 + \Hbar^2 \kB T/I + (\mu \Hbar \calE)^2 }
-\approx
+} \\
+&=
+\frac{2 (\mu \Hbar)^2 \calE \kB T}{4 (\kB T)^2 + \Hbar^2 \kB T/I + (\mu \Hbar \calE)^2 } \\
+&\approx
 \frac{(\mu \Hbar)^2 \calE}{4 \kB T}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Our dipole moment tends to zero approximately inversely proportional to temperature.   These last two respective approximations are plotted along with the all temperature range result in \cref{fig:basicStatMechProblemSet5Problem3:basicStatMechProblemSet5Problem3Fig4A}.
 %
@@ -185,33 +187,34 @@ Our dipole moment tends to zero approximately inversely proportional to temperat
 %\end{equation}
 %
 For low temperatures \(\kB T \ll \mu \Hbar \calE\), where \(\mu \Hbar \calE \beta \gg 1\) we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:740}
-\expectation{ \mu L_z } \approx
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:740}
+\begin{aligned}
+\expectation{ \mu L_z } 
+&\approx
 \frac
 { 2 \mu \Hbar e^{\mu \Hbar \calE \beta} }
-{ e^{\Hbar^2 \beta/I} + e^{\mu \Hbar \calE \beta} }
+{ e^{\Hbar^2 \beta/I} + e^{\mu \Hbar \calE \beta} } \\
 =
 \frac
 { 2 \mu \Hbar }
 { 1 + e^{ (\Hbar^2 \beta/I - \mu \Hbar \calE)/{\kB T} } }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Provided the electric field is small enough (which means here that \(\calE < \Hbar/\mu I\)) this will look something like \cref{fig:basicStatMechProblemSet5Problem3:basicStatMechProblemSet5Problem3Fig5A}.
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechProblemSet5Problem3Fig5A}{Low temperature dipole moment behavior.}{fig:basicStatMechProblemSet5Problem3:basicStatMechProblemSet5Problem3Fig5A}{0.2}
 \makeSubAnswer{Approximation validation}{pr:basicStatMechProblemSet5Problem3:d}
 %
 In order to validate the approximation, let's first put the partition function and the numerator of the dipole moment into a tidier closed form, evaluating the sums over the radial indices \(l\).  First let's sum the exponentials for the partition function, making an \(n = m + l\)
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:420}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:420}
+\begin{aligned}
 \sum_{m = -l}^l a^m
-=
-a^{-l} \sum_{n=0}^{2l} a^n
-=
-a^{-l} \frac{a^{2l + 1} - 1}{a - 1}
-=
-\frac{a^{l + 1} - a^{-l}}{a - 1}
-=
-\frac{a^{l + 1/2} - a^{-(l+1/2)}}{a^{1/2} - a^{-1/2}}.
-\end{dmath}
+&= a^{-l} \sum_{n=0}^{2l} a^n \\
+&= a^{-l} \frac{a^{2l + 1} - 1}{a - 1} \\
+&= \frac{a^{l + 1} - a^{-l}}{a - 1} \\
+&= \frac{a^{l + 1/2} - a^{-(l+1/2)}}{a^{1/2} - a^{-1/2}}.
+\end{aligned}
+\end{equation}
 %
 With a substitution of \(a = e^b\), we have
 \boxedEquation{eqn:basicStatMechProblemSet5Problem3:440}{
@@ -226,24 +229,15 @@ With a substitution of \(a = e^b\), we have
 }
 %
 Now we can sum the azimuthal exponentials for the dipole moment.  This sum is of the form
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:460}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:460}
+\begin{aligned}
 \sum_{m = -l}^l m a^m
-= a
-\lr{ \sum_{m = 1}^l + \sum_{m = -l}^{-1} }
-m a^{m-1}
-= a
-\frac{d}{da}
-\sum_{m = 1}^l
-\lr{ a^{m} + a^{-m} }
-=
-a
-\frac{d}{da}
-\lr{ \sum_{m = -l}^l a^m - \cancel{1} }
-=
-a
-\frac{d}{da}
-\lr{ \frac{a^{l + 1/2} - a^{-(l+1/2)}}{a^{1/2} - a^{-1/2}} }.
-\end{dmath}
+&= a \lr{ \sum_{m = 1}^l + \sum_{m = -l}^{-1} } m a^{m-1} \\
+&= a \frac{d}{da} \sum_{m = 1}^l \lr{ a^{m} + a^{-m} } \\
+&= a \frac{d}{da} \lr{ \sum_{m = -l}^l a^m - \cancel{1} } \\
+&= a \frac{d}{da} \lr{ \frac{a^{l + 1/2} - a^{-(l+1/2)}}{a^{1/2} - a^{-1/2}} }.
+\end{aligned}
+\end{equation}
 %
 With \(a = e^{b}\), and \(1 = a db/da\), we have
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:480}
@@ -277,9 +271,10 @@ l \sinh(b (l+1)) - (l+1) \sinh(b l)
 }
 %
 We can now express the average dipole moment with only sums over radial indices \(l\)
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:540}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:540}
+\begin{aligned}
 \expectation{ \mu L_z }
-=
+&=
 \mu \Hbar
 \frac{
    \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}}
@@ -288,8 +283,8 @@ We can now express the average dipole moment with only sums over radial indices 
 {
    \sum_{l = 0}^\infty \exp\lr{ -\frac{l (l+1) \Hbar^2 \beta}{2 I}}
    \sum_{m = -l}^l e^{ m \mu \Hbar \calE \beta}
-}
-=
+} \\
+&=
 \mu \Hbar
 \frac
 {
@@ -312,7 +307,8 @@ We can now express the average dipole moment with only sums over radial indices 
       \sinh(\mu \Hbar \calE \beta/2)
    }
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 So our average dipole moment, with \( x = \mu \Hbar \calE \beta \), is
 \boxedEquation{eqn:basicStatMechProblemSet5Problem3:560}{
@@ -336,27 +332,29 @@ The hyperbolic sine in the denominator from the partition function and the diffe
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechProblemSet5Problem3Fig2A}{Hyperbolic sine plots for dipole moment.}{fig:basicStatMechProblemSet5Problem3:basicStatMechProblemSet5Problem3Fig2}{0.2}
 %
 Let's look at the order of these hyperbolic sines for large arguments.  For the numerator we have a difference of the form
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem3:580}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:580}
+\begin{aligned}
 x \sinh( x + 1 ) - (x + 1) \sinh ( x )
-=
+&=
 \inv{2}
 \lr{
 x \lr{ e^{x + 1} - e^{-x - 1} }
 -(x +1 )\lr{ e^{x } - e^{-x } }
-}
-\approx
+} \\
+&\approx
 \inv{2}
 \lr{
 x e^{x + 1}
 -(x +1 ) e^{x }
-}
-=
+} \\
+&=
 \inv{2}
 \lr{
 x e^{x}  ( e - 1 ) - e^x
-}
-= O(x e^x).
-\end{dmath}
+} \\
+&= O(x e^x).
+\end{aligned}
+\end{equation}
 %
 For the hyperbolic sine from the partition function we have for large \(x\)
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem3:600}

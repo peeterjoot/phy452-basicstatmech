@@ -14,7 +14,6 @@
 %\generatetitle{Bose gas specific heat above condensation temperature}
 %\chapter{Bose gas specific heat above condensation temperature}
 \label{chap:boseSpecificHeatAboveCondensationTemp}
-%
 \makeoproblem{Boson \(\CV\) above condensation temp.}{pr:boseSpecificHeatAboveCondensationTemp:1}{\citep{pathriastatistical} \S 7.1.37}{
 Equation 7.1.33 provides a relation for specific heat for a Bose gas
 \begin{equation}\label{eqn:boseSpecificHeatAboveCondensationTemp:20}
@@ -51,14 +50,13 @@ With
 \frac{h^3}{\lr{2 \pi m \kB T}^{3/2}},
 \end{equation}
 we have for constant \(v\)
-\begin{dmath}\label{eqn:boseSpecificHeatAboveCondensationTemp:80}
+\begin{equation}\label{eqn:boseSpecificHeatAboveCondensationTemp:80}
+\begin{aligned}
 \PDc{T}{g_{3/2}}{v}
-=
--\frac{3}{2}
-\frac{h^3}{\lr{2 \pi m \kB}^{3/2} T^{5/2}}
-=
--\frac{3}{2 T} \gBose{3/2}.
-\end{dmath}
+&= -\frac{3}{2} \frac{h^3}{\lr{2 \pi m \kB}^{3/2} T^{5/2}} \\
+&= -\frac{3}{2 T} \gBose{3/2}.
+\end{aligned}
+\end{equation}
 %
 From the series expansion
 \begin{equation}\label{eqn:boseSpecificHeatAboveCondensationTemp:100}
@@ -66,17 +64,17 @@ From the series expansion
 \end{equation}
 %
 we have
-\begin{dmath}\label{eqn:boseSpecificHeatAboveCondensationTemp:120}
-z \PD{z}{} \gBose{\nu} =
-z
-\sum_{k = 1}^\infty k \frac{z^{k-1}}{k^\nu}
-=
-\sum_{k = 1}^\infty \frac{z^{k}}{k^{\nu-1}}
-= \gBose{\nu-1}.
-\end{dmath}
+\begin{equation}\label{eqn:boseSpecificHeatAboveCondensationTemp:120}
+\begin{aligned}
+z \PD{z}{} \gBose{\nu} 
+&= z \sum_{k = 1}^\infty k \frac{z^{k-1}}{k^\nu} \\
+&= \sum_{k = 1}^\infty \frac{z^{k}}{k^{\nu-1}} \\
+&= \gBose{\nu-1}.
+\end{aligned}
+\end{equation}
 %
 Taken together we have
-\begin{dmath}\label{eqn:boseSpecificHeatAboveCondensationTemp:140}
+\begin{equation}\label{eqn:boseSpecificHeatAboveCondensationTemp:140}
 \begin{aligned}
 -\frac{3}{2 T} \gBose{3/2}
 &=
@@ -91,19 +89,20 @@ z \PD{z}{} \gBose{3/2} \\
 \inv{z} \PDc{T}{z}{v}
 \gBose{1/2},
 \end{aligned}
-\end{dmath}
+\end{equation}
 or
-\begin{dmath}\label{eqn:boseSpecificHeatAboveCondensationTemp:160}
+\begin{equation}\label{eqn:boseSpecificHeatAboveCondensationTemp:160}
 \inv{z} \PDc{T}{z}{v} = -\frac{3}{2 T}
 \frac{\gBose{3/2}}{
 \gBose{1/2}}
 .
-\end{dmath}
+\end{equation}
 %
 We are now ready to evaluate the derivative and find the specific heat
-\begin{dmath}\label{eqn:boseSpecificHeatAboveCondensationTemp:180}
+\begin{equation}\label{eqn:boseSpecificHeatAboveCondensationTemp:180}
+\begin{aligned}
 \frac{\CV}{N \kB}
-=
+&=
 \left(
 \PD{T}{}
 \lr{
@@ -111,8 +110,8 @@ We are now ready to evaluate the derivative and find the specific heat
 \frac{ g_{5/2}(z) }
 { g_{3/2}(z) }
 }
-\right)_v
-=
+\right)_v \\
+&=
 \frac{3}{2}
 \frac{ g_{5/2}(z) }
 { g_{3/2}(z) }
@@ -123,8 +122,8 @@ We are now ready to evaluate the derivative and find the specific heat
 \lr{
 \frac{ g_{5/2}(z) }
 { g_{3/2}(z) }
-}
-=
+} \\
+&=
 \frac{3}{2}
 \frac{ g_{5/2}(z) }
 { g_{3/2}(z) }
@@ -137,8 +136,8 @@ z
 \lr{
 \frac{ g_{5/2}(z) }
 { g_{3/2}(z) }
-}
-=
+} \\
+&=
 \frac{3}{2}
 \frac{ g_{5/2}(z) }
 { g_{3/2}(z) }
@@ -155,7 +154,7 @@ z
 \frac{\cancel{\gBose{3/2}}}{
 \cancel{\gBose{1/2}}}
 \frac{ g_{5/2}(z) \cancel{g_{1/2}(z)}}
-{ \lr{g_{3/2}(z)}^{\cancel{2}} }
+{ \lr{g_{3/2}(z)}^{\cancel{2}} } \\
 =
 \frac{3}{2}
 \frac{ g_{5/2}(z) }
@@ -167,8 +166,8 @@ z
 +
 \frac{9 }{4}
 \frac{ g_{5/2}(z) }
-{ g_{3/2}(z) }
-=
+{ g_{3/2}(z) } \\
+&=
 \frac{15}{4}
 \frac{ g_{5/2}(z) }
 { g_{3/2}(z) }
@@ -176,9 +175,9 @@ z
 \frac{9 }{4}
 \frac{\gBose{3/2}}{
 \gBose{1/2}}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 This is the desired result.
 } % makeanswer
-%
 %\EndArticle

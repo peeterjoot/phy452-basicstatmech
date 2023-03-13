@@ -20,14 +20,17 @@ Let's start with some terminology and notation, borrowing from \citep{wiki:nsphe
 %
 To calculate the volume, we require a parameterization allowing for expression of the volume element in an easy to integrate fashion.  For the \(1\)-sphere, we can use the usual circular and spherical coordinate volume elements
 \begin{subequations}
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:20}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:20}
 V_2(R) = 4 \int_0^R r dr \int_0^{\pi/2} d\theta = 4 \frac{R^2}{2} \frac{\pi}{2} = \pi R^2
-\end{dmath}
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:40}
-V_3(R) = 8 \int_0^R r^2 dr \int_0^{\pi/2} \sin\theta d\theta \int_0^{\pi/2} d\phi
-= 8 \frac{R^3}{3} (1) \frac{\pi}{2}
-= \frac{4}{3} \pi R^3.
-\end{dmath}
+\end{equation}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:40}
+\begin{aligned}
+V_3(R) 
+&= 8 \int_0^R r^2 dr \int_0^{\pi/2} \sin\theta d\theta \int_0^{\pi/2} d\phi \\
+&= 8 \frac{R^3}{3} (1) \frac{\pi}{2} \\
+&= \frac{4}{3} \pi R^3.
+\end{aligned}
+\end{equation}
 \end{subequations}
 %
 Here, to simplify the integration ranges, we've calculated the ``volume'' integral for just one quadrant or octet of the circle and sphere respectively, as in \cref{fig:basicStatMechProblemSet3:basicStatMechProblemSet3Fig1}.
@@ -88,7 +91,7 @@ dr d\theta_4 d\theta_3 d\theta_2 d\theta_1.
 %
 After factoring out common terms, that Jacobian reduces to
 %\( J_5 \) is
-%\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:180}
+%\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:180}
 %\begin{aligned}
 %\left\lvert
 %\begin{array}{lllll}
@@ -100,9 +103,9 @@ After factoring out common terms, that Jacobian reduces to
 %\end{array}
 %\right\rvert,
 %\end{aligned}
-%\end{dmath}
+%\end{equation}
 %or
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:180}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:180}
 \begin{aligned}
 &J5
 =
@@ -197,12 +200,13 @@ S_3 S_2 S_1
 \end{array}
 \right\rvert.
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 Observe above that the cofactors of both the \(1,1\) and the \(1,2\) elements, when expanded along the first row, have a common factor.  This allows us to work recursively
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:200}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:200}
+\begin{aligned}
 J_5
-= r^4 S_4^3 S_3^2 S_2^1 S_1^0
+&= r^4 S_4^3 S_3^2 S_2^1 S_1^0
 (C_4^2 - - S_4^2)
 \left\lvert
 \begin{array}{llll}
@@ -211,15 +215,17 @@ S_3 C_2       & \phantom{-} C_3 C_2      &          -  S_2     & \phantom{-} 0  
 S_3 S_2 C_1   & \phantom{-} C_3 S_2 C_1  & \phantom{-} C_2 C_1 &          -  S_1  \\
 S_3 S_2 S_1   & \phantom{-} C_3 S_2 S_1  & \phantom{-} C_2 S_1 & \phantom{-} C_1
 \end{array}
-\right\rvert
-=
+\right\rvert \\
+&=
 r S_4^3 J_4.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Similarly for the 4D volume
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:220}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:220}
+\begin{aligned}
 J_4
-= r^3 S_3^2 S_2^1 S_1^0
+&= r^3 S_3^2 S_2^1 S_1^0
 \left\lvert
 \begin{array}{llll}
 C_3           &          -  S_3          & \phantom{-} 0       & \phantom{-} 0    \\
@@ -227,76 +233,83 @@ S_3 C_2       & \phantom{-} C_3 C_2      &          -  S_2     & \phantom{-} 0  
 S_3 S_2 C_1   & \phantom{-} C_3 S_2 C_1  & \phantom{-} C_2 C_1 &          -  S_1  \\
 S_3 S_2 S_1   & \phantom{-} C_3 S_2 S_1  & \phantom{-} C_2 S_1 & \phantom{-} C_1
 \end{array}
-\right\rvert
-= r^3 S_3^2 S_2^1 S_1^0 (C_2^2 + S_2^2)
+\right\rvert \\
+&= r^3 S_3^2 S_2^1 S_1^0 (C_2^2 + S_2^2)
 \left\lvert
 \begin{array}{lll}
 \phantom{-} C_2      &          -  S_2     & \phantom{-} 0    \\
 \phantom{-} S_2 C_1  & \phantom{-} C_2 C_1 &          -  S_1  \\
 \phantom{-} S_2 S_1  & \phantom{-} C_2 S_1 & \phantom{-} C_1
 \end{array}
-\right\rvert
-= r S_3^2 J_3,
-\end{dmath}
+\right\rvert \\
+&= r S_3^2 J_3,
+\end{aligned}
+\end{equation}
 and for the 3D volume
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:240}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:240}
+\begin{aligned}
 J_3
-= r^2 S_2^1 S_1^0
+&= r^2 S_2^1 S_1^0
 \left\lvert
 \begin{array}{lll}
 \phantom{-} C_2      &          -  S_2     & \phantom{-} 0    \\
 \phantom{-} S_2 C_1  & \phantom{-} C_2 C_1 &          -  S_1  \\
 \phantom{-} S_2 S_1  & \phantom{-} C_2 S_1 & \phantom{-} C_1
 \end{array}
-\right\rvert
-= r^2 S_2^1 S_1^0 (C_2^2 + S_2^2)
+\right\rvert \\
+&= r^2 S_2^1 S_1^0 (C_2^2 + S_2^2)
 \left\lvert
 \begin{array}{ll}
 C_1 &          -  S_1  \\
 S_1 & \phantom{-} C_1
 \end{array}
-\right\rvert
-= r S_2^1 J_2,
-\end{dmath}
+\right\rvert \\
+&= r S_2^1 J_2,
+\end{aligned}
+\end{equation}
 and finally for the 2D volume
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:260}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:260}
+\begin{aligned}
 J_2
-= r S_1^0
+&= r S_1^0
 \left\lvert
 \begin{array}{ll}
 C_1 &          -  S_1  \\
 S_1 & \phantom{-} C_1
 \end{array}
-\right\rvert
-= r S_1^0.
-\end{dmath}
+\right\rvert \\
+&= r S_1^0.
+\end{aligned}
+\end{equation}
 %
 Putting all the bits together, the ``volume'' element in the n-D space is
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:280}
 dV_n = dr d\theta_{n-1} \cdots d\theta_{1} r^{n-1} \prod_{k=0}^{n-2} (\sin\theta_{k+1})^{k},
 \end{equation}
 and the total volume is
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:300}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:300}
+\begin{aligned}
 V_n(R)
-= 2^n
+&= 2^n
 \int_0^R r^{n-1} dr
-\prod_{k=0}^{n-2} \int_0^{\pi/2} d\theta \sin^k \theta
-= 2^n \frac{R^{n}}{n}
-\prod_{k=0}^{n-2} \int_0^{\pi/2} d\theta \sin^k \theta
-=
+\prod_{k=0}^{n-2} \int_0^{\pi/2} d\theta \sin^k \theta \\
+&= 2^n \frac{R^{n}}{n}
+\prod_{k=0}^{n-2} \int_0^{\pi/2} d\theta \sin^k \theta \\
+&=
 \frac{4 R^2}{n} (n-2) 2^{n-2} \frac{R^{n-2}}{n-2}
 \prod_{k=n-3}^{n-2} \int_0^{\pi/2} d\theta \sin^k \theta
-\prod_{k=0}^{n-4} \int_0^{\pi/2} d\theta \sin^k \theta
-=
+\prod_{k=0}^{n-4} \int_0^{\pi/2} d\theta \sin^k \theta \\
+&=
 4 R^2 \frac{n-2}{n}
 V_{n-2}(R)
 \int_0^{\pi/2} d\theta \sin^{n-2} \theta
-\int_0^{\pi/2} d\theta \sin^{n-3} \theta
-=
+\int_0^{\pi/2} d\theta \sin^{n-3} \theta \\
+&=
 4 R^2 \frac{n-2}{n}
 V_{n-2}(R)
 \frac{\pi}{2 (n-2)}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Note that a single of these sine power integrals has a messy result (see: \nbref{statMechProblemSet3.nb})
 \begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:320}
@@ -323,12 +336,14 @@ V_{2(4)}
 &= \frac{2^3 (\pi R^2)^3}{2^3 (4)(3)(2)} V_{2}
 \end{array}
 \end{equation}
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:380}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:380}
+\begin{aligned}
 V_{2(n)}
-= \frac{2^n (\pi R^2)^{n-1}}{(2n)!!} V_{2}
-= \frac{(\pi R^2)^{n-1}}{(n)!} V_{2}
-= \frac{(\pi R^2)^{n-1}}{(n)!} \pi R^2.
-\end{dmath}
+&= \frac{2^n (\pi R^2)^{n-1}}{(2n)!!} V_{2} \\
+&= \frac{(\pi R^2)^{n-1}}{(n)!} V_{2} \\
+&= \frac{(\pi R^2)^{n-1}}{(n)!} \pi R^2.
+\end{aligned}
+\end{equation}
 %
 This gives us a closed form expression for the even powers for \(n \ge 2\)
 \boxedEquation{eqn:basicStatMechProblemSet3Problem1:400}{
@@ -349,11 +364,13 @@ V_{2(4)+1}
 &= 3 \frac{2^3 (\pi R^2)^3}{9!!} V_{2}
 \end{array}
 \end{equation}
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:440}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:440}
+\begin{aligned}
 V_{2(n)+1}
-= 3 \frac{2^{n-1} (\pi R^2)^{n-1}}{(2n +1)!!} V_{2}
-= 3 \frac{2^{n-1} (\pi R^2)^{n-1}}{(2n +1)!!} \frac{4}{3} \pi R^3.
-\end{dmath}
+&= 3 \frac{2^{n-1} (\pi R^2)^{n-1}}{(2n +1)!!} V_{2} \\
+&= 3 \frac{2^{n-1} (\pi R^2)^{n-1}}{(2n +1)!!} \frac{4}{3} \pi R^3.
+\end{aligned}
+\end{equation}
 %
 So, for \(n \ge 2\) we have
 \boxedEquation{eqn:basicStatMechProblemSet3Problem1:460}{
@@ -377,11 +394,13 @@ For the even powers, with the help of \citep{abramowitz1964handbook} we find
 \end{equation}
 %
 This gives us
-\begin{dmath}\label{eqn:basicStatMechProblemSet3Problem1:520}
+\begin{equation}\label{eqn:basicStatMechProblemSet3Problem1:520}
+\begin{aligned}
 V_{2(n)+1}
-= \frac{\pi^{n + 1/2} R^{2 n + 1}}{\Gamma\left(n + \frac{3}{2}\right)}
-= \frac{\pi^{n + 1/2} R^{2 n + 1}}{\Gamma\left(\frac{(2 n + 1) + 2}{2}\right)}.
-\end{dmath}
+&= \frac{\pi^{n + 1/2} R^{2 n + 1}}{\Gamma\left(n + \frac{3}{2}\right)} \\
+&= \frac{\pi^{n + 1/2} R^{2 n + 1}}{\Gamma\left(\frac{(2 n + 1) + 2}{2}\right)}.
+\end{aligned}
+\end{equation}
 %
 Writing \(m = 2 n + 1\), or \(n = (m - 1)/2\) we have for odd values of \(m \ge 3\) a match with the even powered expression of \eqnref{eqn:basicStatMechProblemSet3Problem1:480}
 \boxedEquation{eqn:basicStatMechProblemSet3Problem1:540}{

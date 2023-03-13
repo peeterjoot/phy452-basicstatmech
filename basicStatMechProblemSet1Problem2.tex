@@ -20,9 +20,9 @@ The base case has just two possibilities
 \end{itemize}
 %
 If \(k = 0,1\) for \(X = -1, 1\) respectively, we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet1Problem2:20}
+\begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:20}
 P_1(r, X) = r^{1 - k} (1 - r)^{k}
-\end{dmath}
+\end{equation}
 %
 As a check, when \(r = 1/2\) we have \(P_1(X) = 1/2\)
 %
@@ -40,9 +40,9 @@ Our sample space is now a bit bigger
 Here \(P\) is the probability of the ordered sequence, but we are interested only in the probability of each specific value of \(X\).  For \(X = 0\) there are \(\binom{2}{1} = 2\) ways of picking a heads, tails combination.
 %
 Enumerating the probabilities, as before, with \(k = 0, 1, 2\) for \(X = -1, 0, 1\) respectively, we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet1Problem2:40}
+\begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:40}
 P_2(r, X) = r^{2 - k} (1 - r)^{k} \binom{2}{k}
-\end{dmath}
+\end{equation}
 %
 \paragraph{3 tosses}
 %
@@ -64,9 +64,9 @@ Here \(P\) is the probability of the ordered sequence, but we are still interest
 \(\binom{3}{1} = \binom{3}{2} = 3\) ways of picking some ordering of either \((h,h,t)\) or \((t,t,h)\)
 %
 Now enumerating the possibilities with \(k = 0, 1, 2, 3\) for \(X = -3, -1, 1, 3\) respectively, we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet1Problem2:50}
+\begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:50}
 P_3(r, X) = r^{3 - k} (1 - r)^{k} \binom{3}{k}
-\end{dmath}
+\end{equation}
 %
 \paragraph{n tosses}
 %
@@ -114,20 +114,21 @@ P_N(r, X) = r^{\frac{N-X}{2}} (1 - r)^{\frac{N+X}{2}} \frac{N!}{
 }
 %
 Checking against the fair result, we see that we have the \(1/2^N\) factor when \(r = 1/2\) as expected.  Let's check for \(X = -1\) (two heads, one tail) to see if the exponents are right.  That is
-\begin{dmath}\label{eqn:basicStatMechProblemSet1Problem2:90}
+\begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:90}
+\begin{aligned}
 P_3(r, -1)
-= r^{\frac{3 + 1}{2}} (1 - r)^{\frac{3 - 1}{2}} \frac{3!}{
+&= r^{\frac{3 + 1}{2}} (1 - r)^{\frac{3 - 1}{2}} \frac{3!}{
 \left(
 \frac{3 - 1}{2}
 \right)!
 \left(
 \frac{3 + 1}{2}
 \right)!
-}
-=
-r^2 (1-r) \frac{3!}{1! 2!}
-= r^2 (1 - r).
-\end{dmath}
+} \\
+&= r^2 (1-r) \frac{3!}{1! 2!} \\
+&= r^2 (1 - r).
+\end{aligned}
+\end{equation}
 %
 Good, we've got a \(r^2\) (two heads) term as desired.
 %
@@ -135,22 +136,22 @@ Good, we've got a \(r^2\) (two heads) term as desired.
 %
 %We can express \(P_N(r, X)\) in terms of \(P_N(X) = P_N(1/2, X)\).  This is
 %
-%\begin{dmath}\label{eqn:basicStatMechProblemSet1Problem2:110}
+%\begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:110}
 %P_N(r, X) = 2^N r^{\frac{N-X}{2}} (1 - r)^{\frac{N+X}{2}} P_N(X).
-%\end{dmath}
+%\end{equation}
 %
 %Using the previous fair coin Gaussian approximation we have
 %
-%\begin{dmath}\label{eqn:basicStatMechProblemSet1Problem2:130}
+%\begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:130}
 %P_N(r, X)
 %\approx
 %2^N r^{\frac{N-X}{2}} (1 - r)^{\frac{N+X}{2}}
 %\frac{2}{\sqrt{2 \pi N}} e^{ -\frac{X^2}{2 N} }
-%\end{dmath}
+%\end{equation}
 %
 %For \(N \gg X\) we have
 %
-%\begin{dmath}\label{eqn:basicStatMechProblemSet1Problem2:150}
+%\begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:150}
 %P_N(r, X)
 %\approx
 %2^{N} \sqrt{
@@ -158,7 +159,7 @@ Good, we've got a \(r^2\) (two heads) term as desired.
 %2 r^{N} (1 - r)^{N}
 %}{\pi N}}
 %e^{ -\frac{X^2}{2 N} }
-%\end{dmath}
+%\end{equation}
 To determine the limiting behavior, we can utilize the Central limit theorem.  We first have to calculate the mean and the variance for the \(N=1\) case.  The first two moments are
 \begin{subequations}
 \begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:170}
@@ -169,13 +170,15 @@ To determine the limiting behavior, we can utilize the Central limit theorem.  W
 \end{equation}
 \end{subequations}
 and the variance is
-\begin{dmath}\label{eqn:basicStatMechProblemSet1Problem2:210}
+\begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:210}
+\begin{aligned}
 \expectation{X^2} -\expectation{X}^2
-= 1 - (1 - 2r)^2
-= 1 - ( 1 - 4 r + 4 r^2 )
-= 4 r - 4 r^2
-= 4 r ( 1 - r ).
-\end{dmath}
+&= 1 - (1 - 2r)^2 \\
+&= 1 - ( 1 - 4 r + 4 r^2 ) \\
+&= 4 r - 4 r^2 \\
+&= 4 r ( 1 - r ).
+\end{aligned}
+\end{equation}
 %
 The Central Limit Theorem gives us
 \begin{equation}\label{eqn:basicStatMechProblemSet1Problem2:230}

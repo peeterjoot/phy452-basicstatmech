@@ -80,14 +80,14 @@ F = U - T S = U + \kB T \frac{X^2}{2N} + S_0 T.
 \makeSubAnswer{Change in free energy.}{pr:basicStatMechProblemSet5Problem1:b}
 %
 At constant temperature, stretching the polymer from its end being at \(X\) to a larger distance \(X + \Delta X\), results in a free energy change of
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem1:260}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem1:260}
+\begin{aligned}
 \Delta F
-= F( X + \Delta X ) - F(X)
-=
- \frac{\kB T}{2N} \lr{(X + \Delta X)^2 - X^2}
-=
- \frac{\kB T}{2N} \lr{ 2 X \Delta X + (\Delta X)^2 }.
-\end{dmath}
+&= F( X + \Delta X ) - F(X) \\
+&= \frac{\kB T}{2N} \lr{(X + \Delta X)^2 - X^2} \\
+&= \frac{\kB T}{2N} \lr{ 2 X \Delta X + (\Delta X)^2 }.
+\end{aligned}
+\end{equation}
 %
 If \(\Delta X\) is assumed small, our constant temperature change in free energy \(\Delta F \approx (\partial F/\partial X)_T \Delta X\) is
 \boxedEquation{eqn:basicStatMechProblemSet5Problem1:280}{
@@ -110,31 +110,33 @@ dU = T dS - P dV.
 \end{subequations}
 %
 The differential of the free energy is
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem1:180}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem1:180}
+\begin{aligned}
 dF
-= dU - T dS - S dT
-= -P dV - S dT
-=
-\lr{\PD{T}{F}}_V dT
-+
-\lr{\PD{V}{F}}_T dV.
-\end{dmath}
+&= dU - T dS - S dT \\
+&= -P dV - S dT \\
+&= \lr{\PD{T}{F}}_V dT + \lr{\PD{V}{F}}_T dV.
+\end{aligned}
+\end{equation}
 %
 Forming the \textAndIndex{wedge product} with \(dT\), we arrive at the two form
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem1:200}
-0 =
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem1:200}
+\begin{aligned}
+0 
+&=
 \lr{
 \lr{ P +
 \lr{\PD{V}{F}}_T
 } dV
 + \lr{ S +
 \lr{\PD{T}{F}}_V
-} dT } \wedge dT
-=
+} dT } \wedge dT \\
+&=
 \lr{ P +
 \lr{\PD{V}{F}}_T
 } dV \wedge dT,
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 This provides the relation between free energy and the ``pressure'' for the system
 \begin{equation}\label{eqn:basicStatMechProblemSet5Problem1:220}

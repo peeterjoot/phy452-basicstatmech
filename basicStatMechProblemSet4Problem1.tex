@@ -20,12 +20,12 @@ N \kB
 \end{equation}
 Find the temperature of this gas via \((\partial S/ \partial E)_{V,N} = 1/T\). Find the energy per particle at which the entropy becomes negative. Is there any meaning to this temperature?
 } % makeoproblem
-%
 \makeanswer{basicStatMech:problemSet4:1}{
-%
 Taking derivatives we find
-\begin{dmath}\label{eqn:basicStatMechProblemSet4Problem1:40}
-\inv{T} =
+\begin{equation}\label{eqn:basicStatMechProblemSet4Problem1:40}
+\begin{aligned}
+\inv{T} 
+&=
 \PD{E}{}
 \lr{
 \cancel{
@@ -41,11 +41,11 @@ N \kB
 \cancel{N \kB
 \frac{5}{2}
 }
-}
-=
+} \\
+&=
 \frac{3}{2} N \kB \inv{E}
-\end{dmath}
-%
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:basicStatMechProblemSet4Problem1:60}{
 %\inv{T} = \frac{3}{2 E} N \kB
@@ -59,7 +59,6 @@ The energies for which the entropy is negative are given by
 }^{3/2}
 \le \frac{N}{V} e^{-5/2},
 \end{equation}
-%
 or
 \begin{equation}\label{eqn:basicStatMechProblemSet4Problem1:100}
 E \le

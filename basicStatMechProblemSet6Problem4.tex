@@ -5,9 +5,9 @@
 \makeoproblem{Neutron star}{basicStatMech:problemSet6:4}{\citep{huang2001introduction}, prob 9.5}{
 %(3 points)
 Model a neutron star as an ideal Fermi gas of neutrons at \(T = 0\) moving in the gravitational field of a heavy point mass \(M\) at the center. Show that the pressure \(P\) obeys the equation
-\begin{dmath}\label{eqn:basicStatMechProblemSet6Problem4:20}
+\begin{equation}\label{eqn:basicStatMechProblemSet6Problem4:20}
 \frac{dP}{dr} = - \gamma M \frac{\rho(r)}{r^2},
-\end{dmath}
+\end{equation}
 %
 where \(\gamma\) is the gravitational constant, \(r\) is the distance from the center, and \(\rho(r)\) is the density which only depends on distance from the center.
 } % makeoproblem
@@ -15,38 +15,33 @@ where \(\gamma\) is the gravitational constant, \(r\) is the distance from the c
 \makeanswer{basicStatMech:problemSet6:4}{
 %
 In the grand canonical scheme the pressure for a Fermion system is given by
-\begin{dmath}\label{eqn:basicStatMechProblemSet6Problem4:40}
+\begin{equation}\label{eqn:basicStatMechProblemSet6Problem4:40}
+\begin{aligned}
 \beta P V
-= \ln \ZG
-= \ln \prod_\epsilon \sum_{n = 0}^1 \lr{ z e^{-\beta \epsilon} }^n
-= \sum_\epsilon \ln \lr{ 1 + z e^{-\beta \epsilon} }.
-\end{dmath}
+&= \ln \ZG \\
+&= \ln \prod_\epsilon \sum_{n = 0}^1 \lr{ z e^{-\beta \epsilon} }^n \\
+&= \sum_\epsilon \ln \lr{ 1 + z e^{-\beta \epsilon} }.
+\end{aligned}
+\end{equation}
 %
 The kinetic energy of the particle is adjusted by the gravitational potential
-\begin{dmath}\label{eqn:basicStatMechProblemSet6Problem4:60}
-\epsilon = \epsilon_\Bk
-- \frac{\gamma m M}{r}
-= \frac{\Hbar^2 \Bk^2}{2m}
-- \frac{\gamma m M}{r}.
-\end{dmath}
+\begin{equation}\label{eqn:basicStatMechProblemSet6Problem4:60}
+\begin{aligned}
+\epsilon 
+&= \epsilon_\Bk - \frac{\gamma m M}{r} \\
+&= \frac{\Hbar^2 \Bk^2}{2m} - \frac{\gamma m M}{r}.
+\end{aligned}
+\end{equation}
 %
 Differentiating \eqnref{eqn:basicStatMechProblemSet6Problem4:40} with respect to the radius, we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet6Problem4:80}
+\begin{equation}\label{eqn:basicStatMechProblemSet6Problem4:80}
+\begin{aligned}
 \beta V \PD{r}{P}
-= -\beta \PD{r}{\epsilon}
-\sum_\epsilon \frac{z e^{-\beta \epsilon}}{ 1 + z e^{-\beta \epsilon} }
-= -\beta
-\lr{
-\frac{\gamma m M}{r^2}
-}
-\sum_\epsilon \frac{1}{ z^{-1} e^{\beta \epsilon} + 1}
-=
--\beta
-\lr{
-\frac{\gamma m M}{r^2}
-}
-\expectation{N}.
-\end{dmath}
+&= -\beta \PD{r}{\epsilon} \sum_\epsilon \frac{z e^{-\beta \epsilon}}{ 1 + z e^{-\beta \epsilon} } \\
+&= -\beta \lr{ \frac{\gamma m M}{r^2} } \sum_\epsilon \frac{1}{ z^{-1} e^{\beta \epsilon} + 1} \\
+&= -\beta \lr{ \frac{\gamma m M}{r^2} } \expectation{N}.
+\end{aligned}
+\end{equation}
 %
 Noting that \(\expectation{N} m/V\) is the average density of the particles, presumed radial, we have
 \boxedEquation{eqn:basicStatMechProblemSet6Problem4:100}{

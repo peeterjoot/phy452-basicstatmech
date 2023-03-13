@@ -53,7 +53,7 @@ H =
 H',
 \end{equation}
 so that the number of states in the phase space volume in the phase space region associated with the energy is
-\begin{dmath}\label{eqn:basicStatMechLecture11:80}
+\begin{equation}\label{eqn:basicStatMechLecture11:80}
 \begin{aligned}
 \Omega&(N, E) \\
 &=
@@ -79,7 +79,7 @@ d\Bp_N
 &=
 \frac{ V }{ h^3 N} \int d\Bp_1 \Omega( N-1, E - H_1 ).
 \end{aligned}
-\end{dmath}
+\end{equation}
 With entropy defined by
 \begin{equation}\label{eqn:basicStatMechLecture11:220}
 S = \kB \ln \Omega,
@@ -175,7 +175,7 @@ Breaking the system into a subsystem \(1\) and the reservoir \(2\) so that with
 H = H_1 + H_2,
 \end{equation}
 we have
-\begin{dmath}\label{eqn:basicStatMechLecture11:260}
+\begin{equation}\label{eqn:basicStatMechLecture11:260}
 \begin{aligned}
 \Omega(N, V, E) 
 &=
@@ -191,7 +191,7 @@ d\{x_1\}
 d\{p_1\}
 e^{\inv{\kB} S(E - H_1, N - N_1)}.
 \end{aligned}
-\end{dmath}
+\end{equation}
 \begin{equation}\label{eqn:basicStatMechLecture11:280}
 \Omega(N, V, E)
 \sim
@@ -305,9 +305,10 @@ allowing us to express the average energy compactly in terms of the partition fu
 }
 %
 Taking second derivatives we find the variance of the energy
-\begin{dmath}\label{eqn:basicStatMechLecture11:480}
+\begin{equation}\label{eqn:basicStatMechLecture11:480}
+\begin{aligned}
 \PDSq{\beta}{\ln Z}
-=
+&=
 \PD{\beta}{}
 \frac{
 \int
@@ -321,8 +322,8 @@ e^{- \beta H }
 d\{x_1\}
 d\{p_1\}
 e^{- \beta H }
-}
-=
+} \\
+&=
 \frac{
 \int
 d\{x_1\}
@@ -354,7 +355,8 @@ d\{p_1\}
 e^{- \beta H }
 }^2
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 We have a second thermodynamic result directly obtained from the partition function
 \boxedEquation{eqn:basicStatMechLecture11:481}{
@@ -365,19 +367,16 @@ We have a second thermodynamic result directly obtained from the partition funct
 }
 %
 We also have
-\begin{dmath}\label{eqn:basicStatMechLecture11:460}
-\sigma_{\txtE}^2 =
--\PD{\beta}{\expectation{E}} =
-\PD{T}{\expectation{E}}
-\PD{\beta}{T}
-=
--\PD{T}{\expectation{E}}
-\PD{\beta}{} \inv{\kB \beta}
-=
-\PD{T}{\expectation{E}}
-\inv{\kB \beta^2}
-= \kB T^2 \PD{T}{\expectation{E}}.
-\end{dmath}
+\begin{equation}\label{eqn:basicStatMechLecture11:460}
+\begin{aligned}
+\sigma_{\txtE}^2 
+&= -\PD{\beta}{\expectation{E}}  \\
+&= \PD{T}{\expectation{E}} \PD{\beta}{T} \\
+&= -\PD{T}{\expectation{E}} \PD{\beta}{} \inv{\kB \beta} \\
+&= \PD{T}{\expectation{E}} \inv{\kB \beta^2} \\
+&= \kB T^2 \PD{T}{\expectation{E}}.
+\end{aligned}
+\end{equation}
 %
 Recalling that the heat capacity was defined by
 \begin{equation}\label{eqn:basicStatMechLecture11:560}

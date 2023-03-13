@@ -87,18 +87,22 @@ We want something directed opposite to the velocity and the concentration
 \end{subequations}
 %
 This gives
-\begin{dmath}\label{eqn:basicStatMechLecture4:160}
+\begin{equation}\label{eqn:basicStatMechLecture4:160}
+\begin{aligned}
 \PD{t}{c}(v, t)
-= -\PD{v}{j_v}
-= -\PD{v}{}
-\left(
+&= -\PD{v}{j_v} \\
+&= -\PD{v}{}
+\lr{
 -D \PD{v}{c}(v, t) - \eta v c(v)
-\right)
-= D \PDSq{v}{c}(v, t) + \eta \PD{v}{}
-\left(
+} 
+\\
+&= D \PDSq{v}{c}(v, t) + \eta \PD{v}{}
+\lr{
 v c(v, t)
-\right).
-\end{dmath}
+}
+.
+\end{aligned}
+\end{equation}
 %
 Can we find a steady state solution to this equation when \(t \rightarrow \infty\)?  For such a steady state we have
 \begin{equation}\label{eqn:basicStatMechLecture4:220}
@@ -127,29 +131,31 @@ This is the \underlineAndIndex{Maxwell-Boltzmann} distribution, illustrated in \
 The concentration \(c(v)\) has a probability distribution.
 %
 Calculating \(\expectation{v^2}\) from this distribution we can identify the \(D/\eta\) factor.
-\begin{dmath}\label{eqn:basicStatMechLecture4:520}
+\begin{equation}\label{eqn:basicStatMechLecture4:520}
+\begin{aligned}
 \expectation{v^2}
-= \frac{\int v^2 e^{- \eta v^2/2D} dv}{
+&= \frac{\int v^2 e^{- \eta v^2/2D} dv}{
 \int e^{- \eta v^2/2D} dv
-}
-=
+} \\
+&=
 \frac{
 \frac{D}{\eta}
 \int v \frac{d}{dv} \left(
 -e^{- \eta v^2/2D} \right) dv
 }{
 \int e^{- \eta v^2/2D} dv
-}
-= -
+} \\
+&= -
 \frac{D}{\eta}
 \frac{
 \int -e^{- \eta v^2/2D} dv
 }{
 \int e^{- \eta v^2/2D} dv
-}
-=
+} \\
+&=
 \frac{D}{\eta}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 This also happens to be the energy in terms of temperature (we can view this as a definition of the temperature for now), writing
 \begin{equation}\label{eqn:basicStatMechLecture4:280}
@@ -188,13 +194,17 @@ Fick's law and the continuity equation in 3D are respectively
 \end{subequations}
 %
 As above we have for the steady state
-\begin{dmath}\label{eqn:basicStatMechLecture4:540}
-0 = \PD{t}{} c(\Bv, t) = \spacegrad_\Bv \cdot
+\begin{equation}\label{eqn:basicStatMechLecture4:540}
+\begin{aligned}
+0 
+&= \PD{t}{} c(\Bv, t) = \spacegrad_\Bv \cdot
 \left(
  -D \spacegrad_\Bv c(\Bv, t) - \eta \Bv c(\Bv, t)
 \right)
-= -D \spacegrad^2_\Bv c - \eta \spacegrad_\Bv \cdot (\Bv c).
-\end{dmath}
+\\
+&= -D \spacegrad^2_\Bv c - \eta \spacegrad_\Bv \cdot (\Bv c).
+\end{aligned}
+\end{equation}
 %
 Integrating once over all space
 \begin{equation}\label{eqn:basicStatMechLecture4:560}
@@ -222,9 +232,10 @@ v_z^2
 \end{equation}
 %
 Computing the average 3D squared velocity for this distribution, we have
-\begin{dmath}\label{eqn:basicStatMechLecture4:420}
+\begin{equation}\label{eqn:basicStatMechLecture4:420}
+\begin{aligned}
 \inv{2} m \expectation{\Bv \cdot \Bv}
-=
+&=
 \frac
 {
    \int dv_x dv_y dv_z
@@ -258,8 +269,8 @@ Computing the average 3D squared velocity for this distribution, we have
    v_z^2
    }{ 2 (D/\eta) }
    \right)
-}
-=
+} \\
+&=
 \frac
 {
    \int dv_x
@@ -321,16 +332,17 @@ Computing the average 3D squared velocity for this distribution, we have
    v_z^2
    }{ 2 (D/\eta) }
    \right)
-}
-=
+} \\
+&=
 3
 \left(
    \frac{1}{2}
    \kB T
-\right)
-= \frac{3}{2}
+\right) 
+\\
+&= \frac{3}{2}
 \kB T.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 For each component \(v_\alpha\) the normalization kills off all the contributions for the other components, leaving us with the usual \(3 \kB T/2\) ideal gas law kinetic energy.
-%

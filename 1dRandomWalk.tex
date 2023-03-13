@@ -97,13 +97,15 @@ p^{(N + D)/2}
 \paragraph{First moment}
 %
 For the expectations let's work with \(k\) instead of \(D\), so that the expectation is
-\begin{dmath}\label{eqn:1dRandomWalk:320}
+\begin{equation}\label{eqn:1dRandomWalk:320}
+\begin{aligned}
 \expectation{X}
-= \sum_{k = 0}^N (2 k - N) \binom{N}{k} p^k (1 - p)^{N - k}
-= 2 \sum_{k = 0}^N k \frac{N!}{(N-k)!k!} p^k (1 - p)^{N - k} - N
-= 2 N p \sum_{k = 1}^N \frac{(N-1)!}{(N - 1 - (k - 1))!(k-1)!} p^{k-1} (1 - p)^{N - 1 - (k - 1)} - N
-= 2 N p \sum_{s = 0}^{N-1} \binom{N-1}{s} p^{s} (1 - p)^{N -1 - s} - N.
-\end{dmath}
+&= \sum_{k = 0}^N (2 k - N) \binom{N}{k} p^k (1 - p)^{N - k} \\
+&= 2 \sum_{k = 0}^N k \frac{N!}{(N-k)!k!} p^k (1 - p)^{N - k} - N \\
+&= 2 N p \sum_{k = 1}^N \frac{(N-1)!}{(N - 1 - (k - 1))!(k-1)!} p^{k-1} (1 - p)^{N - 1 - (k - 1)} - N \\
+&= 2 N p \sum_{s = 0}^{N-1} \binom{N-1}{s} p^{s} (1 - p)^{N -1 - s} - N.
+\end{aligned}
+\end{equation}
 %
 This gives us
 \boxedEquation{eqn:1dRandomWalk:340}{
@@ -112,17 +114,19 @@ This gives us
 }
 %
 \paragraph{Second moment}
-\begin{dmath}\label{eqn:1dRandomWalk:360}
+\begin{equation}\label{eqn:1dRandomWalk:360}
+\begin{aligned}
 \expectation{X^2}
-= \sum_{k = 0}^N (2 k - N)^2 \binom{N}{k} p^k (1 - p)^{N - k}
-= 4 \sum_{k = 0}^N k^2 \binom{N}{k} p^k (1 - p)^{N - k}
+&= \sum_{k = 0}^N (2 k - N)^2 \binom{N}{k} p^k (1 - p)^{N - k} \\
+&= 4 \sum_{k = 0}^N k^2 \binom{N}{k} p^k (1 - p)^{N - k}
 - 4 N^2 p
-+ N^2
-= 4 N p \sum_{k = 1}^N k \frac{(N-1)!}{(N - 1 - (k - 1))! (k-1)!} p^{k-1} (1 - p)^{N - k} + N^2(1 - 4 p)
-= 4 N p \sum_{s = 0}^N (s + 1) \frac{(N-1)!}{(N - 1 - s)! s!} p^s (1 - p)^{N - 1 - s} + N^2(1 - 4 p)
-= 4 N p ((N-1) p + 1) + N^2(1 - 4 p)
-= N^2 ( 1 - 4 p + 4 p^2 ) + 4 N p ( 1 - p ).
-\end{dmath}
++ N^2 \\
+&= 4 N p \sum_{k = 1}^N k \frac{(N-1)!}{(N - 1 - (k - 1))! (k-1)!} p^{k-1} (1 - p)^{N - k} + N^2(1 - 4 p) \\
+&= 4 N p \sum_{s = 0}^N (s + 1) \frac{(N-1)!}{(N - 1 - s)! s!} p^s (1 - p)^{N - 1 - s} + N^2(1 - 4 p) \\
+&= 4 N p ((N-1) p + 1) + N^2(1 - 4 p) \\
+&= N^2 ( 1 - 4 p + 4 p^2 ) + 4 N p ( 1 - p ).
+\end{aligned}
+\end{equation}
 %
 So the second moment is
 \boxedEquation{eqn:1dRandomWalk:380}{

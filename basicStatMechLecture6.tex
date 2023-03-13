@@ -85,7 +85,7 @@ How does this relate to Louville's theorem?  We start by demonstrating that phas
 \item constrained to volume \(V\)
 \item Energy fixed at \(E\).
 \end{enumerate}
-\begin{dmath}\label{eqn:basicStatMechLecture6:180}
+\begin{equation}\label{eqn:basicStatMechLecture6:180}
 \begin{aligned}
 \Omega&(N, V, E) = \int_V
 d\Bx_1
@@ -126,7 +126,7 @@ E
 - \frac{\Bp_N^2}{2m}
 \right).
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 With \(\gamma\) defined implicitly by
 \begin{equation}\label{eqn:basicStatMechLecture6:200}
@@ -211,12 +211,13 @@ the radius is
 \end{equation}
 %
 This gives
-\begin{dmath}\label{eqn:basicStatMechLecture6:300}
+\begin{equation}\label{eqn:basicStatMechLecture6:300}
+\begin{aligned}
 \gamma(N, V, E)
-= V^N \frac{ \pi^{3 N/2} ( 2 m E)^{3 N/2}}{\Gamma( 3N/2 + 1) }
-= V^N \frac{2}{3N} \frac{ \pi^{3 N/2} ( 2 m E)^{3 N/2}}{\Gamma( 3N/2 ) },
-\end{dmath}
-%
+&= V^N \frac{ \pi^{3 N/2} ( 2 m E)^{3 N/2}}{\Gamma( 3N/2 + 1) } \\
+&= V^N \frac{2}{3N} \frac{ \pi^{3 N/2} ( 2 m E)^{3 N/2}}{\Gamma( 3N/2 ) },
+\end{aligned}
+\end{equation}
 and
 \begin{equation}\label{eqn:basicStatMechLecture6:360}
 \Omega(N, V, E) = V^N \pi^{3 N/2} ( 2 m E)^{3 N/2 - 1} \frac{2 m}{\Gamma( 3N/2 ) }
@@ -230,7 +231,6 @@ This result is almost correct, and we have to correct in 2 ways.  We have to fix
 \end{enumerate}
 %
 In the real world we have to consider this as a quantum mechanical system.  Imagine a two dimensional phase space.  The allowed points are illustrated in \cref{fig:basicStatMechLecture6:basicStatMechLecture6Fig3}.
-%
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture6Fig3}{Uncertainty principle phase space volume adjustment.}{fig:basicStatMechLecture6:basicStatMechLecture6Fig3}{0.2}
 %
 Since \(\Delta x \Delta p \sim \Hbar\), the question of how many boxes there are, we calculate the total volume, and then divide by the volume of each box.  This sort of handwaving wouldn't be required if we did a proper quantum mechanical treatment.  The corrected result is

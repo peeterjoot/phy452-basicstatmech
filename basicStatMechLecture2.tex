@@ -209,7 +209,7 @@ For the approximation itself, we'll use the Stirling formula \eqnref{eqn:basicSt
 %N! \approx \sqrt{ 2 \pi N} N^N e^{-N},
 %\end{equation}
 %
-\begin{dmath}\label{eqn:basicStatMechLecture2:500}
+\begin{equation}\label{eqn:basicStatMechLecture2:500}
 P_N(X)
 =
 \left(\inv{2}\right)^N
@@ -242,7 +242,7 @@ P_N(X)
 %\left( N^2 - X^2 \right)^{N/2 + 1/2}
 %\left( \frac{N+X}{N-X}\right)^{X/2}
 %}
-\end{dmath}
+\end{equation}
 %
 This can be simplified to
 \begin{equation}\label{eqn:basicStatMechLecture2:520}
@@ -266,16 +266,18 @@ Observe that we have
 I(0) = \int_0^\infty dy e^{-y} = 1,
 \end{equation}
 and
-\begin{dmath}\label{eqn:basicStatMechLecture2:570}
+\begin{equation}\label{eqn:basicStatMechLecture2:570}
+\begin{aligned}
 I(\alpha + 1)
-= \int_0^\infty dy e^{-y} y^{\alpha + 1}
-= \int_0^\infty d \left( \frac{e^{-y}}{-1} \right) y^{\alpha + 1}
-=
+&= \int_0^\infty dy e^{-y} y^{\alpha + 1} \\
+&= \int_0^\infty d \left( \frac{e^{-y}}{-1} \right) y^{\alpha + 1} \\
+&=
 \cancel{\evalrange{\left( \frac{e^{-y}}{-1} y^{\alpha + 1} \right)}{0}{\infty}}
 -
-\int_0^\infty dy \left( \frac{e^{-y}}{-1} \right) (\alpha + 1) y^{\alpha}
-= (\alpha + 1)I(\alpha).
-\end{dmath}
+\int_0^\infty dy \left( \frac{e^{-y}}{-1} \right) (\alpha + 1) y^{\alpha} \\
+&= (\alpha + 1)I(\alpha).
+\end{aligned}
+\end{equation}
 %
 This induction result means that
 \begin{equation}\label{eqn:basicStatMechLecture2:600}
@@ -295,11 +297,13 @@ and look for where \(f(y)\) is the largest.  We've set
 f(y) = -y + \alpha \ln y,
 \end{equation}
 and want to look at where
-\begin{dmath}\label{eqn:basicStatMechLecture2:660}
+\begin{equation}\label{eqn:basicStatMechLecture2:660}
+\begin{aligned}
 0
-= \evalbar{f'(y)}{y^\conj}
-= -1 + \frac{\alpha}{y^\conj},
-\end{dmath}
+&= \evalbar{f'(y)}{y^\conj} \\
+&= -1 + \frac{\alpha}{y^\conj},
+\end{aligned}
+\end{equation}
 so that the peak value
 \begin{equation}\label{eqn:basicStatMechLecture2:680}
 y^\conj = \alpha.
@@ -330,27 +334,32 @@ f(y^\conj) +
 %
 We'll drop all but the quadratic term, and first need the second derivative
 \begin{equation}\label{eqn:basicStatMechLecture2:780}
+\begin{aligned}
 f''(y)
-= \frac{d}{dy} \left(-1 + \alpha \inv{y}\right)
-= -\alpha \inv{y^2},
+&= \frac{d}{dy} \left(-1 + \alpha \inv{y}\right) \\
+&= -\alpha \inv{y^2},
+\end{aligned}
 \end{equation}
 at \(y = y^\conj = \alpha\) we have \(f''(y^\conj) = -\inv{\alpha}\), so
-\begin{dmath}\label{eqn:basicStatMechLecture2:720}
-I(\alpha \gg 1) \approx
+\begin{equation}\label{eqn:basicStatMechLecture2:720}
+\begin{aligned}
+I(\alpha \gg 1) 
+&\approx
 e^{f(y^\conj)}
 \int_0^\infty
 \exp\left(
 \inv{2}
 \evalbar{\PDSq{y}{f}}{y^\conj}
 (y - y^\conj)^2
-\right)
-=
+\right) \\
+&=
 e^{f(\alpha)}
 \int_0^\infty dy
 e^{
 -\frac{(y - \alpha)^2}{2 \alpha }
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 With a substitution \(x = (y - \alpha)/\sqrt{2 \alpha}\), this integral can be split into a constant term and an error function component, where the error function is
 \begin{equation}\label{eqn:basicStatMechLecture2:820b}
@@ -358,28 +367,30 @@ With a substitution \(x = (y - \alpha)/\sqrt{2 \alpha}\), this integral can be s
 \end{equation}
 %
 That is
-\begin{dmath}\label{eqn:basicStatMechLecture2:820c}
+\begin{equation}\label{eqn:basicStatMechLecture2:820c}
+\begin{aligned}
 \int_0^\infty dy
 e^{
 -\frac{(y - \alpha)^2}{2 \alpha }
 }
-=
+&=
 \sqrt{ 2\alpha}
-\int_{-\alpha/\sqrt{2\alpha}}^\infty dx e^{-x^2}
-=
+\int_{-\alpha/\sqrt{2\alpha}}^\infty dx e^{-x^2} \\
+&=
 \sqrt{ 2\alpha}
 \int_{-\sqrt{\alpha/2}}^0 dx e^{-x^2}
 +
 \sqrt{ 2\alpha}
-\int_0^\infty dx e^{-x^2}
-=
+\int_0^\infty dx e^{-x^2} \\
+&=
 \sqrt{ 2\alpha}
 \lr{
 \frac{\sqrt{\pi}}{2} \erf\lr{ \sqrt{\frac{\alpha}{2}} }
 +
 \frac{\sqrt{\pi}}{2}
 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 or (as also verified in \nbref{lecture2Figures.nb})
 \begin{equation}\label{eqn:basicStatMechLecture2:820}
 \int_0^\infty dy
@@ -428,10 +439,7 @@ N! \approx \sqrt{ 2 \pi N} N^N e^{-N}.
 }
 %
 A plot of the relative difference between the Stirling approximation and the factorial \((N! - \sqrt{ 2 \pi N} N^N e^{-N})/N!\) is given in \cref{fig:stirlingError:stirlingErrorFig3}
-%
 \imageFigure{../figures/phy452-basicstatmech/stirlingErrorFig3}{Relative error of the Stirling approximation.}{fig:stirlingError:stirlingErrorFig3}{0.2}
-%
 %0.077863, 0.0404978, 0.0272984, 0.020576, 0.0165069, 0.0137803, 0.0118262, 0.0103573, 0.00921276, 0.00829596, 0.00754507, 0.00691879
-%
 %\EndArticle
 %\EndNoBibArticle

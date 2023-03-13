@@ -36,19 +36,17 @@ X = \sum_{i = 1}^N \delta x_i
 \begin{equation}\label{eqn:basicStatMechLecture3:60}
 \expectation{X} = \sum_{i = 1}^N \expectation{\delta x_i} = 0
 \end{equation}
-\begin{dmath}\label{eqn:basicStatMechLecture3:80}
+\begin{equation}\label{eqn:basicStatMechLecture3:80}
+\begin{aligned}
 \expectation{X^2}
-=
-\expectation{
-\sum_{i = 1}^N \delta x_i
-\sum_{j = 1}^N \delta x_j
-}
-= \sum_{i,j = 1}^N \expectation{\delta x_i \delta x_j}
-= \sum_{i = 1}^N \expectation{(\delta x_i)^2 }
-= \sum_{i = 1}^N \expectation{(\pm \delta x)^2 }
-= (\delta x)^2 \sum_{i = 1}^N 1
-= N (\delta x)^2.
-\end{dmath}
+&= \expectation{ \sum_{i = 1}^N \delta x_i \sum_{j = 1}^N \delta x_j } \\
+&= \sum_{i,j = 1}^N \expectation{\delta x_i \delta x_j} \\
+&= \sum_{i = 1}^N \expectation{(\delta x_i)^2 } \\
+&= \sum_{i = 1}^N \expectation{(\pm \delta x)^2 } \\
+&= (\delta x)^2 \sum_{i = 1}^N 1 \\
+&= N (\delta x)^2.
+\end{aligned}
+\end{equation}
 %
 In the above, I assume that the cross terms were killed with an assumption of uncorrelation.
 %
@@ -62,13 +60,14 @@ The two dimensional case can be used for either spatial generalization of the ab
 %\cref{fig:basicStatMechLecture3:basicStatMechLecture3Fig3}.
 %\imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture3Fig3}{A couple Gaussians}{fig:basicStatMechLecture3:basicStatMechLecture3Fig3}{0.2}
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechLecture3Fig3a}{Spatial and temporal evolution.}{fig:basicStatMechLecture3:basicStatMechLecture3Fig3a}{0.15}
-\begin{dmath}\label{eqn:basicStatMechLecture3:100}
+\begin{equation}\label{eqn:basicStatMechLecture3:100}
+\begin{aligned}
 \calP( x, t )
-=
+&=
 \inv{2} \calP(x + \delta x, t - \delta t)
 +
-\inv{2} \calP(x - \delta x, t - \delta t)
-\approx
+\inv{2} \calP(x - \delta x, t - \delta t) \\
+&\approx
 \inv{2}
 \left(
 \calP(x, t - \delta t) +
@@ -84,12 +83,13 @@ The two dimensional case can be used for either spatial generalization of the ab
 \cancel{\PD{x}{\calP}(x, t - \delta t) \delta x}
 +
 \inv{2} \PDSq{x}{\calP}(x, t - \delta t) (\delta x)^2
-\right)
-=
+\right) \\
+&=
 \calP(x, t - \delta t)
 +
 \inv{2} \PDSq{x}{\calP}(x, t - \delta t) (\delta x)^2.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Since we have a small correction \((\delta x)^2 \approx 0\), this is approximately
 \begin{equation}\label{eqn:basicStatMechLecture3:120}
@@ -99,10 +99,10 @@ Since we have a small correction \((\delta x)^2 \approx 0\), this is approximate
 +
 \inv{2} \PDSq{x}{\calP}(x, t) (\delta x)^2.
 \end{equation}
-\begin{dmath}\label{eqn:basicStatMechLecture3:140}
+\begin{equation}\label{eqn:basicStatMechLecture3:140}
 \delta t \PD{t}{\calP}(x, t) \approx
 \inv{2} \PDSq{x}{\calP}(x, t) (\delta x)^2
-\end{dmath}
+\end{equation}
 \begin{equation}\label{eqn:basicStatMechLecture3:160}
 \PD{t}{\calP}(x, t) =
 \mathLabelBox

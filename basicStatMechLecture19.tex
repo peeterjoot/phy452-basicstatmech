@@ -23,15 +23,15 @@ We've considered a momentum sphere as in \cref{fig:lecture19:lecture19Fig1}, and
 \imageFigure{../figures/phy452-basicstatmech/lecture19Fig1}{Summation over momentum sphere.}{fig:lecture19:lecture19Fig1}{0.2}
 \imageFigure{../figures/phy452-basicstatmech/lecture19Fig2}{Fermion occupation.}{fig:lecture19:lecture19Fig2}{0.2}
 \begin{subequations}
-\begin{dmath}\label{eqn:basicStatMechLecture19:20}
+\begin{equation}\label{eqn:basicStatMechLecture19:20}
 \epsilon \sim T^2
-\end{dmath}
-\begin{dmath}\label{eqn:basicStatMechLecture19:40}
+\end{equation}
+\begin{equation}\label{eqn:basicStatMechLecture19:40}
 C \sim T
-\end{dmath}
-\begin{dmath}\label{eqn:basicStatMechLecture19:60}
+\end{equation}
+\begin{equation}\label{eqn:basicStatMechLecture19:60}
 P \sim \text{constant}.
-\end{dmath}
+\end{equation}
 \end{subequations}
 %
 The physics of Fermi gases has an extremely wide range of applicability.  Illustrating some of this range, here are some examples of Fermi temperatures (from \(E_{\txtF} = \kB T_{\txtF}\))
@@ -44,46 +44,48 @@ The physics of Fermi gases has an extremely wide range of applicability.  Illust
 \paragraph{Moving on to Bosons}
 %
 We'd like to work with a fixed number of particles, but the calculations are hard, so we move to the grand canonical ensemble
-\begin{dmath}\label{eqn:basicStatMechLecture19:200}
+\begin{equation}\label{eqn:basicStatMechLecture19:200}
 n_{\txtB}(\Bk) = \inv{ e^{\beta(\epsilon_\Bk - \mu)} - 1 }.
-\end{dmath}
+\end{equation}
 %
 Again, we'll consider free particles with energy as in \cref{fig:lecture19:lecture19Fig3}, or
-\begin{dmath}\label{eqn:basicStatMechLecture19:100}
+\begin{equation}\label{eqn:basicStatMechLecture19:100}
 \epsilon_\Bk = \frac{\Hbar^2 k^2}{2 m}.
-\end{dmath}
+\end{equation}
 %
 \imageFigure{../figures/phy452-basicstatmech/lecture19Fig3}{Free particle energy momentum distribution.}{fig:lecture19:lecture19Fig3}{0.2}
 %
 Again introducing fugacity \(z = e^{\beta \mu}\), we have
-\begin{dmath}\label{eqn:basicStatMechLecture19:220}
+\begin{equation}\label{eqn:basicStatMechLecture19:220}
 n_{\txtB}(\Bk) = \inv{ z^{-1} e^{\beta \epsilon_\Bk} - 1 }.
-\end{dmath}
+\end{equation}
 %
 We'll consider systems for which
-\begin{dmath}\label{eqn:basicStatMechLecture19:120}
+\begin{equation}\label{eqn:basicStatMechLecture19:120}
 N = \sum_\Bk n_{\txtB}(\Bk) = \text{fixed}.
-\end{dmath}
+\end{equation}
 %
 Observe that at large energies we have
-\begin{dmath}\label{eqn:basicStatMechLecture19:240}
+\begin{equation}\label{eqn:basicStatMechLecture19:240}
 n_{\txtB}(\text{large} \, \Bk) \sim z e^{-\beta \epsilon_\Bk}.
-\end{dmath}
+\end{equation}
 For small energies
-\begin{dmath}\label{eqn:basicStatMechLecture19:260}
+\begin{equation}\label{eqn:basicStatMechLecture19:260}
 n_{\txtB}(\Bk \rightarrow 0) \sim \inv{z^{-1} - 1} = \frac{z}{1 - z}.
-\end{dmath}
+\end{equation}
 %
 Observe that we require \(z < 1\) (or \(\mu < 0\)) so that the number distribution is strictly positive for all energies.  This tells us that the fugacity is a function of temperature, but there will be a point at which it must saturate.  This is illustrated in \cref{fig:lecture19:lecture19Fig4}.
 \imageFigure{../figures/phy452-basicstatmech/lecture19Fig4}{Density times cubed thermal de Broglie wavelength.}{fig:lecture19:lecture19Fig4}{0.2}
 %
 Let's calculate this density (assumed fixed for all temperatures)
-\begin{dmath}\label{eqn:basicStatMechLecture19:140}
-\rho = \frac{N}{V}
-= \int \frac{d^3 \Bk}{(2 \pi)^3} \inv{z^{-1} e^{\beta \epsilon_\Bk} -1 }
-= \frac{2}{(2 \pi)^2}
-\int_0^\infty k^2 dk \inv{z^{-1} e^{\beta \Hbar^2 k^2/2m} -1 }
-= \frac{2}{(2 \pi)^2}
+\begin{equation}\label{eqn:basicStatMechLecture19:140}
+\begin{aligned}
+\rho 
+&= \frac{N}{V} \\
+&= \int \frac{d^3 \Bk}{(2 \pi)^3} \inv{z^{-1} e^{\beta \epsilon_\Bk} -1 } \\
+&= \frac{2}{(2 \pi)^2}
+\int_0^\infty k^2 dk \inv{z^{-1} e^{\beta \Hbar^2 k^2/2m} -1 } \\
+&= \frac{2}{(2 \pi)^2}
 \lr{
 \frac
 {2 m}
@@ -98,16 +100,18 @@ Let's calculate this density (assumed fixed for all temperatures)
 }
 ^{3/2}
 k^2 dk \inv{z^{-1} e^{\beta \Hbar^2 k^2/2m} -1 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 With the substitution
-\begin{dmath}\label{eqn:basicStatMechLecture19:160}
+\begin{equation}\label{eqn:basicStatMechLecture19:160}
 x^2 = \beta \frac{\Hbar^2 k^2}{2m},
-\end{dmath}
+\end{equation}
 we find
-\begin{dmath}\label{eqn:basicStatMechLecture19:180}
+\begin{equation}\label{eqn:basicStatMechLecture19:180}
+\begin{aligned}
 \rho \lambda^3
-= \frac{2}{(2 \pi)^2}
+&= \frac{2}{(2 \pi)^2}
 \lr{
 \frac
 {2 \cancel{m}}
@@ -116,45 +120,45 @@ we find
 ^{3/2}
 \lr{ \frac{ 2 \pi \cancel{\Hbar^2 \beta}}{\cancel{m}} }^{3/2}
 \int_0^\infty
-x^2 dx \inv{z^{-1} e^{x^2} -1 }
-= \frac{4}{\sqrt{\pi}} \int_0^\infty dx \frac{x^2}{z^{-1} e^{x^2} - 1 }
-\equiv g_{3/2}(z).
-\end{dmath}
+x^2 dx \inv{z^{-1} e^{x^2} -1 } \\
+&= \frac{4}{\sqrt{\pi}} \int_0^\infty dx \frac{x^2}{z^{-1} e^{x^2} - 1 } \\
+&\equiv g_{3/2}(z).
+\end{aligned}
+\end{equation}
 %
 An exact plot of this is shown in \cref{fig:lecture19f32:lecture19f32Fig1}.
-%
 \imageFigure{../figures/phy452-basicstatmech/lecture19f32Fig1}{\(g_{3/2}(z)\).}{fig:lecture19f32:lecture19f32Fig1}{0.2}
 %
 This implicitly defines a relationship for the fugacity as a function of temperature \(z = z(T)\).
 It can be shown that
-\begin{dmath}\label{eqn:basicStatMechLecture19:280}
+\begin{equation}\label{eqn:basicStatMechLecture19:280}
 g_{3/2}(z)
 = z
 + \frac{z^2}{2^{3/2}}
 + \frac{z^3}{3^{3/2}}
 + \cdots
-\end{dmath}
+\end{equation}
 %
 As \(z \rightarrow 1\) we end up with a zeta function, for which we can look up the value
-\begin{dmath}\label{eqn:basicStatMechLecture19:300}
+\begin{equation}\label{eqn:basicStatMechLecture19:300}
 g_{3/2}(z \rightarrow 1)
 =
 \sum_{n = 1}^\infty \inv{n^{3/2}}
 = \zeta(3/2)
 \approx 2.612,
-\end{dmath}
+\end{equation}
 where the \underlineAndIndex{Riemann zeta function} is defined as
-\begin{dmath}\label{eqn:basicStatMechLecture19:320}
+\begin{equation}\label{eqn:basicStatMechLecture19:320}
 \zeta(s) = \sum_{ n = 1 } \inv{n^s}.
-\end{dmath}
-\begin{dmath}\label{eqn:basicStatMechLecture19:340}
+\end{equation}
+\begin{equation}\label{eqn:basicStatMechLecture19:340}
 g_{3/2}(z) = \rho \lambda^3.
-\end{dmath}
+\end{equation}
 %
 At high temperatures we have
-\begin{dmath}\label{eqn:basicStatMechLecture19:360}
+\begin{equation}\label{eqn:basicStatMechLecture19:360}
 \rho \lambda^3 \rightarrow 0,
-\end{dmath}
+\end{equation}
 (as \(T\) does down, \(\rho \lambda^3\) goes up)
 Looking at \(g_{3/2}(z = 1) = \rho \lambda^3(T_{\txtc})\) leads to
 \boxedEquation{eqn:basicStatMechLecture19:380}{
@@ -173,37 +177,38 @@ We have a problem here since as \(T \rightarrow 0\) the \(1/\lambda^3 \sim T^{3/
 \end{itemize}
 %
 To deal with this issue, we (somewhat arbitrarily, because we need to) introduce a non-zero density for \(\Bk = 0\).  This is an adjustment of the approximation so that we have
-\begin{dmath}\label{eqn:basicStatMechLecture19:400}
+\begin{equation}\label{eqn:basicStatMechLecture19:400}
 \sum_{\Bk} \rightarrow \int \frac{d^3 \Bk}{(2 \pi)^3} \qquad \mbox{Except around \(\Bk = 0\)},
-\end{dmath}
+\end{equation}
 as in \cref{fig:lecture19:lecture19Fig6}, so that
 \imageFigure{../figures/phy452-basicstatmech/lecture19Fig6}{Momentum sphere with origin omitted.}{fig:lecture19:lecture19Fig6}{0.2}
-\begin{dmath}\label{eqn:basicStatMechLecture19:420}
+\begin{equation}\label{eqn:basicStatMechLecture19:420}
 \sum_\Bk
 = \lr{ \mbox{Contribution at \(\Bk = 0\)} } + V \int \frac{d^3 \Bk}{(2 \pi)^3}.
-\end{dmath}
+\end{equation}
 %
 Given this, we have
-\begin{dmath}\label{eqn:basicStatMechLecture19:420b}
+\begin{equation}\label{eqn:basicStatMechLecture19:420b}
 N
 = N_{\Bk = 0}
 + V \int \frac{d^3 \Bk}{(2 \pi)^3} n_{\txtB}(\Bk).
-\end{dmath}
+\end{equation}
 %
 We can illustrate this as in \cref{fig:lecture19:lecture19Fig7}.
 \imageFigure{../figures/phy452-basicstatmech/lecture19Fig7}{Boson occupation vs momentum.}{fig:lecture19:lecture19Fig7}{0.2}
-\begin{dmath}\label{eqn:basicStatMechLecture19:420c}
+\begin{equation}\label{eqn:basicStatMechLecture19:420c}
+\begin{aligned}
 \rho
-= \rho_{\Bk = 0}
+&= \rho_{\Bk = 0}
 + \inv{\lambda^3}
-g_{3/2}(z)
-= \rho_{\Bk = 0}
+g_{3/2}(z) \\
+&= \rho_{\Bk = 0} 
 +
 \frac{ \lambda(T_{\txtc}) }{ \lambda(T)}
 \inv{ \lambda^3(T_{\txtc})}
 g_{3/2}(z).
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 At \(T > T_{\txtc}\) we have \(\rho_{\Bk = 0}\), whereas at \(T < T_{\txtc}\) we must introduce a non-zero density if we want to be able to keep a constant density constraint.
-%
 %\EndNoBibArticle

@@ -11,18 +11,14 @@
 %\beginArtNoToc
 %\generatetitle{PHY452H1S Basic Statistical Mechanics.  Lecture 13: Interacting spin.  Taught by Prof.\ Arun Paramekanti}
 \label{chap:basicStatMechLecture13}
-%
 %\section{Interacting spin}
-%
 For this section
 \boxedEquationStarred{
 \Hbar = \kB = 1.
 }
-%
 This lecture requires concepts from phy456 \citep{phy456:qmTwoL16TwoSpin}.
 %
 We'll look at pairs of spins as a toy model of interacting spins as depicted in \cref{fig:lecture13:lecture13Fig1}.
-%
 \imageFigure{../figures/phy452-basicstatmech/lecture13Fig1}{Pairs of interacting spins.}{fig:lecture13:lecture13Fig1}{0.2}
 %
 \paragraph{Example: }
@@ -128,30 +124,35 @@ e^{ -\beta J/4}
 \end{equation}
 %
 Our free energy is
-\begin{dmath}\label{eqn:basicStatMechLecture13:280}
+\begin{equation}\label{eqn:basicStatMechLecture13:280}
+\begin{aligned}
 F
-= - T \ln Z
-= - T N \ln Z_1
-= - T N \ln
+&= - T \ln Z \\
+&= - T N \ln Z_1 \\
+&= - T N \ln
 \lr{ e^{ +\beta 3 J/4} + e^{ -\beta (J/4 - B)} + e^{ -\beta J/4} + e^{ -\beta (J/4 + B)} }
 .
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 We can use this to find the average energy
-\begin{dmath}\label{eqn:basicStatMechLecture13:300}
+\begin{equation}\label{eqn:basicStatMechLecture13:300}
+\begin{aligned}
 \expectation{H}
-= -\PD{\beta}{(\beta F)}
-= -N \PD{\beta}{} \ln Z_1
-= -\frac{N}{Z_1} \PD{\beta}{Z_1}.
-\end{dmath}
+&= -\PD{\beta}{(\beta F)} \\
+&= -N \PD{\beta}{} \ln Z_1 \\
+&= -\frac{N}{Z_1} \PD{\beta}{Z_1}.
+\end{aligned}
+\end{equation}
 %
 The partition function derivative is
-\begin{dmath}\label{eqn:basicStatMechLecture13:440}
+\begin{equation}\label{eqn:basicStatMechLecture13:440}
+\begin{aligned}
 \PD{\beta}{Z_1}
-=
+&=
 \PD{\beta}{}
-\lr{ e^{ +\beta 3 J/4} + e^{ -\beta (J/4 - B)} + e^{ -\beta J/4} + e^{ -\beta (J/4 + B)} }
-=
+\lr{ e^{ +\beta 3 J/4} + e^{ -\beta (J/4 - B)} + e^{ -\beta J/4} + e^{ -\beta (J/4 + B)} } \\
+&=
 \lr{
    3 \frac{J}{4}
    e^{ +\beta 3 J/4}
@@ -168,8 +169,8 @@ The partition function derivative is
    \frac{J}{4} + B
    }
     e^{ -\beta (J/4 + B)}
-}
-=
+} \\
+&=
 e^{ - \beta J/4}
 \lr{
    3 \frac{J}{4}
@@ -186,8 +187,8 @@ e^{ - \beta J/4}
    \frac{J}{4} + B
    }
     e^{ -\beta B}
-}
-=
+} \\
+&=
 \frac{N}{Z_1}
 e^{ - \beta J/4}
 \lr{
@@ -205,8 +206,8 @@ e^{ - \beta J/4}
       -
       e^{ -\beta B}
    }
-}
-=
+} \\
+&=
 e^{ - \beta J/4}
 \lr{
    \frac{J}{4} \lr{
@@ -215,9 +216,10 @@ e^{ - \beta J/4}
    }
    + 2 B \sinh(\beta B)
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
-So that the average energy is
+The average energy is
 \begin{equation}\label{eqn:basicStatMechLecture13:460}
 \expectation{H}
 =
@@ -233,34 +235,16 @@ e^{ - \beta J/4}
 \end{equation}
 %
 We could use this to calculate the specific heat directly, but let's express the specific heat first in terms of \(\beta\) derivatives of \(Z_1\).
-\begin{dmath}\label{eqn:basicStatMechLecture13:480}
+\begin{equation}\label{eqn:basicStatMechLecture13:480}
+\begin{aligned}
 \CV
-=
-\PD{T}{\expectation{H}}
-=
--
-\inv{T^2}
-\PD{\beta}{\expectation{H}}
-=
--\beta^2
-\PD{\beta}{}
-\lr{
--\frac{N}{Z_1} \PD{\beta}{Z_1}
-}
-=
-\beta^2 N
-\lr{
--\inv{Z_1^2} \lr{\PD{\beta}{Z_1}}^2
-+ \inv{Z_1} \PDSq{\beta}{Z_1}
-}
-=
-\frac{N \beta^2}{Z_1^2}
-\lr{
-\PDSq{\beta}{Z_1}
--
-\lr{\PD{\beta}{Z_1}}^2
-}.
-\end{dmath}
+&= \PD{T}{\expectation{H}} \\
+&= - \inv{T^2} \PD{\beta}{\expectation{H}} \\
+&= -\beta^2 \PD{\beta}{} \lr{ -\frac{N}{Z_1} \PD{\beta}{Z_1} } \\
+&= \beta^2 N \lr{ -\inv{Z_1^2} \lr{\PD{\beta}{Z_1}}^2 + \inv{Z_1} \PDSq{\beta}{Z_1} } \\
+&= \frac{N \beta^2}{Z_1^2} \lr{ \PDSq{\beta}{Z_1} - \lr{\PD{\beta}{Z_1}}^2 }.
+\end{aligned}
+\end{equation}
 %
 After a bit of work, we find for the second partial of the partition function
 \begin{equation}\label{eqn:basicStatMechLecture13:500}
@@ -281,25 +265,15 @@ e^{-\beta J/4} \times \\
 That gives us the specific heat, but it's a messy expression, and not particularly illuminating.
 %
 Our magnetization \(\mu\) is
-\begin{dmath}\label{eqn:basicStatMechLecture13:320}
-\mu =
-\PD{B}{F}
-=
-\frac{T N}{Z_1}
-\lr{
-\beta e^{-\beta(J/4 - B)}
--\beta e^{-\beta(J/4 + B)}
-}
-=
-\frac{\cancel{T \beta} N}{Z_1}
-e^{-\beta J/4 }
-\lr{
-e^{\beta B}
--e^{-\beta B}
-}
-=
-\frac{2 N}{Z_1} e^{-\beta J/4 } \sinh( \beta B ).
-\end{dmath}
+\begin{equation}\label{eqn:basicStatMechLecture13:320}
+\begin{aligned}
+\mu
+&= \PD{B}{F} \\
+&= \frac{T N}{Z_1} \lr{ \beta e^{-\beta(J/4 - B)} -\beta e^{-\beta(J/4 + B)} } \\
+&= \frac{\cancel{T \beta} N}{Z_1} e^{-\beta J/4 } \lr{ e^{\beta B} -e^{-\beta B} } \\
+&= \frac{2 N}{Z_1} e^{-\beta J/4 } \sinh( \beta B ).
+\end{aligned}
+\end{equation}
 %
 The moment per particle, is
 \begin{equation}\label{eqn:basicStatMechLecture13:340}

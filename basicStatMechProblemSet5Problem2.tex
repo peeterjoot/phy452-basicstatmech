@@ -41,21 +41,23 @@ b = \sqrt{\frac{\beta m}{2}} \omega q,
 \end{equation}
 \end{subequations}
 we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem2:80}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem2:80}
+\begin{aligned}
 Z_1
-=
+&=
 \inv{h \omega}
 \sqrt{\frac{2 m}{\beta}}
 \sqrt{\frac{2}{\beta m}}
-\int da db e^{-a^2 - b^2}
-=
+\int da db e^{-a^2 - b^2} \\
+&=
 \frac{2}{\beta h \omega}
-2 \pi \int_0^\infty r e^{-r^2}
-=
-\frac{2 \pi}{\beta h \omega}
-=
+2 \pi \int_0^\infty r e^{-r^2} \\
+&=
+\frac{2 \pi}{\beta h \omega} \\
+&=
 \frac{1}{\beta \Hbar \omega}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 So for \(N\) distinguishable classical one dimensional harmonic oscillators we have
 \boxedEquation{eqn:basicStatMechProblemSet5Problem2:100}{
@@ -70,13 +72,14 @@ From the free energy
 F = -\kB T \ln Z_N = N \kB T \ln (\beta \Hbar \omega),
 \end{equation}
 we can compute the mean energy
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem2:140}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem2:140}
+\begin{aligned}
 U
-= \inv{\kB} \PD{\beta}{}
-\lr{ \frac{F}{T} }
-= N \PD{\beta}{} \ln (\beta \Hbar \omega)
-= \frac{N }{\beta},
-\end{dmath}
+&= \inv{\kB} \PD{\beta}{} \lr{ \frac{F}{T} } \\
+&= N \PD{\beta}{} \ln (\beta \Hbar \omega) \\
+&= \frac{N }{\beta},
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:basicStatMechProblemSet5Problem2:160}{
 U = N \kB T.
@@ -86,27 +89,27 @@ The specific heat follows immediately
 \boxedEquation{eqn:basicStatMechProblemSet5Problem2:180}{
 \CV = \PD{T}{U} = N \kB.
 }
-%
 \makeSubAnswer{Quantum partition function, mean energy and heat capacity}{pr:basicStatMechProblemSet5Problem2:c}
-%
 For a single one dimensional quantum oscillator, our partition function is
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem2:200}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem2:200}
+\begin{aligned}
 Z_1
-=
+&=
 \sum_{n = 0}^\infty e^{-\beta \Hbar \omega
 \lr{n + \inv{2} }
-}
-=
+} \\
+&=
 e^{-\beta \Hbar \omega/2}
-\sum_{n = 0}^\infty e^{-\beta \Hbar \omega n}
-=
+\sum_{n = 0}^\infty e^{-\beta \Hbar \omega n} \\
+&=
 \frac{
 e^{-\beta \Hbar \omega/2}
-}{1 - e^{-\beta \Hbar \omega}}
-=
-\frac{1}{e^{\beta \Hbar \omega/2} - e^{-\beta \Hbar \omega/2}}
-= \inv{\sinh(\beta \Hbar \omega/2)}.
-\end{dmath}
+}{1 - e^{-\beta \Hbar \omega}} \\
+&=
+\frac{1}{e^{\beta \Hbar \omega/2} - e^{-\beta \Hbar \omega/2}} \\
+&= \inv{\sinh(\beta \Hbar \omega/2)}.
+\end{aligned}
+\end{equation}
 %
 Assuming distinguishable quantum oscillators, our \(N\) particle partition function is
 \boxedEquation{eqn:basicStatMechProblemSet5Problem2:220}{
@@ -123,15 +126,14 @@ F = N \kB T
 ,
 \end{equation}
 our mean energy is
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem2:260}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem2:260}
+\begin{aligned}
 U
-= \inv{\kB} \PD{\beta}{} \frac{F}{T}
-= N \PD{\beta}{}
-\ln \sinh(\beta \Hbar \omega/2)
-= N \frac{\cosh( \beta \Hbar \omega/2 )}{
-\sinh(\beta \Hbar \omega/2)
-} \frac{\Hbar \omega}{2},
-\end{dmath}
+&= \inv{\kB} \PD{\beta}{} \frac{F}{T} \\
+&= N \PD{\beta}{} \ln \sinh(\beta \Hbar \omega/2) \\
+&= N \frac{\cosh( \beta \Hbar \omega/2 )}{ \sinh(\beta \Hbar \omega/2) } \frac{\Hbar \omega}{2},
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:basicStatMechProblemSet5Problem2:280}{
 U(T)
@@ -144,14 +146,16 @@ This is plotted in \cref{fig:basicStatMechProblemSet5Problem2:basicStatMechProbl
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechProblemSet5Problem2Fig2A}{Mean energy for \(N\) one dimensional quantum harmonic oscillators.}{fig:basicStatMechProblemSet5Problem2:basicStatMechProblemSet5Problem2Fig2}{0.2}
 %
 With \(\coth'(x) = -1/\sinh^2(x)\), our specific heat is
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem2:300}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem2:300}
+\begin{aligned}
 \CV
-= \PD{T}{U}
-= \frac{N \Hbar \omega}{2} \frac{-1}{\sinh^2
+&= \PD{T}{U} \\
+&= \frac{N \Hbar \omega}{2} \frac{-1}{\sinh^2
 \lr{ \frac{\Hbar \omega}{2 \kB T}}
 } \frac{\Hbar \omega}{2 \kB}
 \lr{\frac{-1}{T^2}},
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 or
 \boxedEquation{eqn:basicStatMechProblemSet5Problem2:320}{
@@ -208,20 +212,17 @@ This differs from the classical partition function only by this factor of \(2\).
 \makeSubAnswer{Low temperature limits}{pr:basicStatMechProblemSet5Problem2:e}
 %
 For the classical case the heat capacity was constant (\(\CV = N \kB\)), all the way down to zero.  For the quantum case the heat capacity drops to zero for low temperatures.  We can see that via L'hopitals rule.  With \(x = \Hbar \omega \beta/2\) the low temperature limit is
-\begin{dmath}\label{eqn:basicStatMechProblemSet5Problem2:460}
+\begin{equation}\label{eqn:basicStatMechProblemSet5Problem2:460}
+\begin{aligned}
 \lim_{T \rightarrow 0} \CV
-= N \kB \lim_{x \rightarrow \infty}
-\frac{x^2}{\sinh^2 x}
-= N \kB \lim_{x \rightarrow \infty}
-\frac{2x }{2 \sinh x \cosh x}
-= N \kB \lim_{x \rightarrow \infty}
-\frac{1 }{\cosh^2 x + \sinh^2 x}
-= N \kB \lim_{x \rightarrow \infty}
-\frac{1 }{\cosh (2 x) }
-= 0.
-\end{dmath}
+&= N \kB \lim_{x \rightarrow \infty} \frac{x^2}{\sinh^2 x} \\
+&= N \kB \lim_{x \rightarrow \infty} \frac{2x }{2 \sinh x \cosh x} \\
+&= N \kB \lim_{x \rightarrow \infty} \frac{1 }{\cosh^2 x + \sinh^2 x} \\
+&= N \kB \lim_{x \rightarrow \infty} \frac{1 }{\cosh (2 x) } \\
+&= 0.
+\end{aligned}
+\end{equation}
 %
 We also see this in the plot of \cref{fig:basicStatMechProblemSet5Problem2:basicStatMechProblemSet5Problem2Fig1}.
-%
 \imageFigure{../figures/phy452-basicstatmech/basicStatMechProblemSet5Problem2Fig1A}{Specific heat for \(N\) quantum oscillators.}{fig:basicStatMechProblemSet5Problem2:basicStatMechProblemSet5Problem2Fig1}{0.2}
 }

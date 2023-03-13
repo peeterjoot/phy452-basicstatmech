@@ -4,10 +4,10 @@
 %
 \makeoproblem{Relativistic Fermi gas}{basicStatMech:problemSet6:5}{\citep{huang2001introduction}, pr. 9.3}{
 Consider a relativistic gas of \(N\) particles of spin \(1/2\) obeying Fermi statistics, enclosed in volume \(V\), at absolute zero.  The energy-momentum relation is
-\begin{dmath}\label{eqn:huang93:100}
+\begin{equation}\label{eqn:huang93:100}
 \epsilon = \sqrt{(p c)^2 + \epsilon_0^2
 },
-\end{dmath}
+\end{equation}
 %
 where \(\epsilon_0 = m c^2\), and \(m\) is the rest mass.
 %
@@ -39,27 +39,29 @@ We've found \statmechchapcite{relativisticDensityOfStates} that the \textAndInde
 \end{equation}
 %
 For a given density \(n\), we can find the Fermi energy in the same way as we did for the non-relativistic energies, with the exception that we have to integrate from a lowest energy of \(\epsilon_0\) instead of \(0\) (the energy at \(\Bp = 0\)).  That is
-\begin{dmath}\label{eqn:huang93:40}
+\begin{equation}\label{eqn:huang93:40}
+\begin{aligned}
 n
-= \frac{N}{V}
-=
+&= \frac{N}{V} \\
+&=
 \lr{2 \inv{2} + 1}
 \frac{4 \pi}{(c h)^3} \int_{\epsilon_0}^{\epsilon_{\txtF}}
 d\epsilon \epsilon \sqrt{ \epsilon^2 -
 \epsilon_0^2
-}
-= \frac{8 \pi}{(c h)^3}
+} \\
+&= \frac{8 \pi}{(c h)^3}
 \inv{3} \evalrange{
 \lr{x^2 - \epsilon_0^2 }
 ^{3/2}
-}{\epsilon_0}{\epsilon_{\txtF}}
-= \frac{8 \pi}{3 (c h)^3}
+}{\epsilon_0}{\epsilon_{\txtF}} \\
+&= \frac{8 \pi}{3 (c h)^3}
 \lr{\epsilon_{\txtF}^2 - \epsilon_0^2 }
 ^{3/2}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Solving for \(\epsilon_{\txtF}/\epsilon_0\) we have
-\begin{dmath}\label{eqn:huang93:60}
+\begin{equation}\label{eqn:huang93:60}
 \frac{\epsilon_{\txtF}}{\epsilon_0}
 =
 \sqrt{
@@ -67,15 +69,15 @@ Solving for \(\epsilon_{\txtF}/\epsilon_0\) we have
 ^{2/3}
 + 1
 }.
-\end{dmath}
+\end{equation}
 %
 We'll see the constant factor above a number of times below and designate it
-\begin{dmath}\label{eqn:huang93:620}
+\begin{equation}\label{eqn:huang93:620}
 n_0 = \frac{8 \pi}{3}
 \lr{ \frac{\epsilon_0}{c h} }^3,
-\end{dmath}
+\end{equation}
 so that the Fermi energy is
-\begin{dmath}\label{eqn:huang93:700}
+\begin{equation}\label{eqn:huang93:700}
 \frac{\epsilon_{\txtF}}{\epsilon_0}
 =
 \sqrt{
@@ -83,7 +85,7 @@ so that the Fermi energy is
 ^{2/3}
 + 1
 }.
-\end{dmath}
+\end{equation}
 %
 \makeSubAnswer{}{basicStatMech:problemSet6:5b}
 %
@@ -92,12 +94,12 @@ For the pressure calculation, let's suppose that we have a configuration with a 
 \imageFigure{../figures/phy452-basicstatmech/huang93Fig1}{Pressure against \(x,y\) oriented plane.}{fig:huang93:huang93Fig1}{0.2}
 %
 It's argued in \citep{pathriastatistical} \S 6.4 that the pressure for such a configuration is
-\begin{dmath}\label{eqn:huang93:120}
+\begin{equation}\label{eqn:huang93:120}
 P = n \int p_z u_z f(\Bu) d^3 \Bu,
-\end{dmath}
+\end{equation}
 %
 where \(n\) is the number density and \(f(\Bu)\) is a normalized distribution function for the velocities.  The velocity and momentum components are related by the Hamiltonian equations.  From the Hamiltonian \eqnref{eqn:huang93:100} we find \footnote{ Observe that by squaring and summing one can show that this is equivalent to the standard relativistic momentum \(p_x = \frac{m v_x}{\sqrt{ 1 - \Bu^2/c^2}}\).} (for the x-component which is representative)
-\begin{dmath}\label{eqn:huang93:140}
+\begin{equation}\label{eqn:huang93:140}
 u_x
 %=
 %\xdot
@@ -112,44 +114,46 @@ u_x
 \epsilon_0
 ^2}
 }.
-\end{dmath}
+\end{equation}
 %
 For \(\alpha \in \{1, 2, 3\}\) we can summarize these velocity-momentum relationships as
-\begin{dmath}\label{eqn:huang93:220}
+\begin{equation}\label{eqn:huang93:220}
 \frac{u_\alpha}{c} = \frac{ c p_\alpha }{ \epsilon }.
-\end{dmath}
+\end{equation}
 %
 Should we attempt to calculate the pressure with this parameterization of the velocity space we end up with convergence problems, and can't express the results in terms of \(f^+_\nu(z)\).  Let's try instead with a distribution over momentum space
-\begin{dmath}\label{eqn:huang93:340}
+\begin{equation}\label{eqn:huang93:340}
 P
 =
 n \int \frac{(c p_z)^2}{\epsilon} f(c \Bp) d^3 (c \Bp).
-\end{dmath}
+\end{equation}
 %
 Here the momenta have been scaled to have units of energy since we want to express this integral in terms of energy in the end.  Our normalized distribution function is
-\begin{dmath}\label{eqn:huang93:360}
+\begin{equation}\label{eqn:huang93:360}
 f(c \Bp)
 \propto \frac{
 \inv{ z^{-1} e^{\beta \epsilon} + 1 }}
 {\int \inv{ z^{-1} e^{\beta \epsilon} + 1 } d^3 (c \Bp)},
-\end{dmath}
+\end{equation}
 %
 but before evaluating anything, we first want to change our integration variable from momentum to energy.  In spherical coordinates our volume element takes the form
-\begin{dmath}\label{eqn:huang93:380}
+\begin{equation}\label{eqn:huang93:380}
+\begin{aligned}
 d^3 (c \Bp)
-= 2 \pi (c p)^2 d (c p) \sin\theta d\theta
-= 2 \pi (c p)^2 \frac{d (c p)}{d \epsilon} d \epsilon \sin\theta d\theta.
-\end{dmath}
+&= 2 \pi (c p)^2 d (c p) \sin\theta d\theta \\
+&= 2 \pi (c p)^2 \frac{d (c p)}{d \epsilon} d \epsilon \sin\theta d\theta.
+\end{aligned}
+\end{equation}
 %
 Implicit derivatives of
-\begin{dmath}\label{eqn:huang93:240}
+\begin{equation}\label{eqn:huang93:240}
 c^2 p^2 = \epsilon^2 - \epsilon_0^2
 ,
-\end{dmath}
+\end{equation}
 gives us
-%\begin{dmath}\label{eqn:huang93:260}
+%\begin{equation}\label{eqn:huang93:260}
 %2 c p \frac{d (c p)}{d\epsilon} = 2 \epsilon,
-%\end{dmath}
+%\end{equation}
 %
 %or
 \begin{equation}\label{eqn:huang93:280}
@@ -163,22 +167,24 @@ gives us
 \end{equation}
 %
 Our momentum volume element becomes
-\begin{dmath}\label{eqn:huang93:400}
+\begin{equation}\label{eqn:huang93:400}
+\begin{aligned}
 d^3 (c \Bp)
-=
+&=
 2 \pi (c p)^2 \frac{\epsilon}{\sqrt{\epsilon^2 - \epsilon_0^2 }}
-d \epsilon \sin\theta d\theta
-=
+d \epsilon \sin\theta d\theta \\
+&=
 2 \pi
 \lr{ \epsilon^2 - \epsilon_0^2}
 \frac{\epsilon}{\sqrt{\epsilon^2 - \epsilon_0^2 }}
-d \epsilon \sin\theta d\theta
-=
+d \epsilon \sin\theta d\theta \\
+&=
 2 \pi \epsilon \sqrt{ \epsilon^2 - \epsilon_0^2} d \epsilon \sin\theta d\theta.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 For our distribution function, we can now write
-\begin{dmath}\label{eqn:huang93:420}
+\begin{equation}\label{eqn:huang93:420}
 f(c \Bp) d^3 (c \Bp)
 = C
 \frac
@@ -187,14 +193,14 @@ f(c \Bp) d^3 (c \Bp)
 }
 { z^{-1} e^{\beta \epsilon} + 1 }
 \frac{ 2 \pi \sin\theta d\theta }{ 4 \pi \epsilon_0^3 },
-\end{dmath}
+\end{equation}
 where \(C\) is determined by the requirement \(\int f(c \Bp) d^3 (c \Bp) = 1\)
-\begin{dmath}\label{eqn:huang93:600}
+\begin{equation}\label{eqn:huang93:600}
 C^{-1} =
 \int_{0}^\infty
 \frac{(y + 1)\sqrt{ (y + 1)^2 - 1} dy }
 { z^{-1} e^{\beta \epsilon_0 (y + 1)} + 1 }.
-\end{dmath}
+\end{equation}
 %
 The z component of our momentum can be written in spherical coordinates as
 \begin{equation}\label{eqn:huang93:440}
@@ -212,24 +218,26 @@ Noting that
 = \frac{2}{3},
 \end{equation}
 all the bits come together as
-\begin{dmath}\label{eqn:huang93:480}
+\begin{equation}\label{eqn:huang93:480}
+\begin{aligned}
 P
-= \frac{C n}{3 \epsilon_0^3 }
+&= \frac{C n}{3 \epsilon_0^3 }
    \int_{\epsilon_0}^\infty
 \lr{ \epsilon^2 - \epsilon_0^2}
 ^{3/2}
    \inv{ z^{-1} e^{\beta \epsilon} + 1 }
-   d \epsilon
-= \frac{n \epsilon_0}{3}
+   d \epsilon \\
+&= \frac{n \epsilon_0}{3}
    \int_{1}^\infty
 \lr{ x^2 - 1}
 ^{3/2}
    \inv{ z^{-1} e^{\beta \epsilon_0 x} + 1 }
    dx.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Letting \(y = x - 1\), this is
-\begin{dmath}\label{eqn:huang93:500}
+\begin{equation}\label{eqn:huang93:500}
 P
 = \frac{C n \epsilon_0}{3}
    \int_{0}^\infty
@@ -238,14 +246,15 @@ P
 ^{3/2} }
    { z^{-1} e^{\beta \epsilon_0 (y + 1)} + 1 }
    dy.
-\end{dmath}
+\end{equation}
 %
 We could conceivable expand the numerators of each of these integrals in power series, which could then be evaluated as a sum of \(f^+_\nu(z e^{-\beta \epsilon_0})\) terms.
 %
 Note that above the Fermi energy \(n\) also has an integral representation
-\begin{dmath}\label{eqn:huang93:560}
+\begin{equation}\label{eqn:huang93:560}
+\begin{aligned}
 n
-=
+&=
 \left(2
 \lr{\inv{2}}
  + 1\right)
@@ -253,8 +262,8 @@ n
 \inv
 {
    z^{-1} e^{\beta \epsilon} + 1
-}
-=
+} \\
+&=
 \frac{8 \pi}{(c h)^3}
 \int_{\epsilon_0}^\infty d\epsilon
 \frac{
@@ -262,8 +271,8 @@ n
 }
 {
    z^{-1} e^{\beta \epsilon} + 1
-}
-=
+} \\
+&=
 \frac{8 \pi \epsilon_0^3}{(c h)^3}
 \int_{0}^\infty dy
 \frac{
@@ -272,7 +281,8 @@ n
 {
    z^{-1} e^{\beta \epsilon_0 (y + 1)} + 1
 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:huang93:580}{
 n
@@ -294,12 +304,12 @@ Observe that we can use this result to remove the dependence of pressure on this
 \makeSubAnswer{}{basicStatMech:problemSet6:5be}
 %
 Now for the average energy difference from the rest energy \(\epsilon_0\)
-\begin{dmath}\label{eqn:huang93:520}
+\begin{equation}\label{eqn:huang93:520}
+\begin{aligned}
 U
-= \expectation{\epsilon - \epsilon_0}
-=
-\int_{\epsilon_0}^\infty d\epsilon \calD(\epsilon) f(\epsilon) (\epsilon - \epsilon_0)
-=
+&= \expectation{\epsilon - \epsilon_0} \\
+&= \int_{\epsilon_0}^\infty d\epsilon \calD(\epsilon) f(\epsilon) (\epsilon - \epsilon_0) \\
+&=
 \frac{8 \pi V}{(c h)^3}
 \int_{\epsilon_0}^\infty d\epsilon
 \frac
@@ -308,8 +318,8 @@ U
 }
 {
    z^{-1} e^{\beta \epsilon} + 1
-}
-=
+} \\
+&=
 \frac{8 \pi V \epsilon_0^4}{(c h)^3}
 \int_{0}^\infty dy
 \frac
@@ -319,7 +329,8 @@ U
 {
    z^{-1} e^{\beta \epsilon} + 1
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 So the average energy density difference from the rest energy, relative to the rest energy, is
 \boxedEquation{eqn:huang93:540}{
@@ -340,9 +351,10 @@ So the average energy density difference from the rest energy, relative to the r
 \makeSubAnswer{}{basicStatMech:problemSet6:5c}
 %
 From \eqnref{eqn:huang93:640} and \eqnref{eqn:huang93:540} we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet6Problem5:660}
+\begin{equation}\label{eqn:basicStatMechProblemSet6Problem5:660}
+\begin{aligned}
 \inv{n_0}
-=
+&=
 3 \frac
 {V \epsilon_0}
 {\expectation{\epsilon - \epsilon_0}}
@@ -353,8 +365,8 @@ From \eqnref{eqn:huang93:640} and \eqnref{eqn:huang93:540} we have
    }
    {
       z^{-1} e^{\beta \epsilon_0 (y + 1)} + 1
-   }
-=
+   } \\
+&=
 \frac
 {\epsilon_0}
 {P}
@@ -364,9 +376,10 @@ From \eqnref{eqn:huang93:640} and \eqnref{eqn:huang93:540} we have
 ^{3/2} }
    { z^{-1} e^{\beta \epsilon_0 (y + 1)} + 1 }
    dy,
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:basicStatMechProblemSet6Problem5:680}
+\begin{equation}\label{eqn:basicStatMechProblemSet6Problem5:680}
 P V
 =
 \frac{U}{3}
@@ -389,7 +402,7 @@ P V
       z^{-1} e^{\beta \epsilon_0 (y + 1)} + 1
    }
 }.
-\end{dmath}
+\end{equation}
 %
 This ratio of integrals is supposed to resolve to 1 and 2 in the low and high density limits.  To consider this let's perform one final non-dimensionalization, writing
 \begin{equation}\label{eqn:huang93:720}
@@ -444,16 +457,18 @@ The density, pressure, and energy take the form
 \end{subequations}
 %
 We can rewrite the square roots in the number density and energy density expressions by expanding out the completion of the square
-\begin{dmath}\label{eqn:huang93:800}
+\begin{equation}\label{eqn:huang93:800}
+\begin{aligned}
 (1 + \theta x) \sqrt{ (1 + \theta x)^2 - 1}
-=
+&=
 (1 + \theta x)
 \sqrt{ 1 + \theta x + 1 }
-\sqrt{ 1 + \theta x - 1 }
-= \sqrt{2 \theta} x^{1/2}
+\sqrt{ 1 + \theta x - 1 } \\
+&= \sqrt{2 \theta} x^{1/2} 
 (1 + \theta x) \sqrt{ 1 + \frac{\theta x}{2}}
 ,
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Expanding the distribution about \(\bar{z} e^{-x} = 0\), we have
 \begin{equation}\label{eqn:huang93:820}
@@ -521,7 +536,7 @@ e^{-x(1 + s)}
 An exact integration of the various integrals above is possible in terms of special functions.  However, that attempt (included below) introduced an erroneous extra factor of \(\theta\).  Given that this end result was obtained by tossing all but the lowest order terms in \(\theta\) and \(\barz\), let's try that right from the get go.
 %
 For the pressure we have an integrand containing a factor
-\begin{dmath}\label{eqn:huang93:1220}
+\begin{equation}\label{eqn:huang93:1220}
 \begin{aligned}
 \lr{ (\theta x + 1)^2 -1 }
 ^{3/2}
@@ -542,27 +557,31 @@ For the pressure we have an integrand containing a factor
 &\approx
 2 \sqrt{2} \theta^{3/2} x^{3/2}
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 Our pressure, to lowest order in \(\theta\) and \(\barz\) is then
-\begin{dmath}\label{eqn:huang93:1240}
+\begin{equation}\label{eqn:huang93:1240}
+\begin{aligned}
 \frac{P}{\epsilon_0 n_0}
-= 2 \sqrt{2} \theta^{5/2} \barz \int_0^\infty x^{3/2} e^{-x} dx
-= 2 \sqrt{2} \theta^{5/2} \barz \Gamma(5/2).
-\end{dmath}
+&= 2 \sqrt{2} \theta^{5/2} \barz \int_0^\infty x^{3/2} e^{-x} dx \\
+&= 2 \sqrt{2} \theta^{5/2} \barz \Gamma(5/2).
+\end{aligned}
+\end{equation}
 %
 Our energy density to lowest order in \(\theta\) and \(\barz\) from \eqnref{eqn:huang93:1000} is
-\begin{dmath}\label{eqn:huang93:1260}
+\begin{equation}\label{eqn:huang93:1260}
+\begin{aligned}
 \frac{U}{V \epsilon_0 n_0}
-=
+&=
 3 \sqrt{2} \theta^{5/2}
 \barz
    \int_{0}^\infty dx
-      x^{3/2} e^{-x}
-=
+      x^{3/2} e^{-x} \\
+&=
 3 \sqrt{2} \theta^{5/2}
 \barz \Gamma(5/2).
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Comparing these, we have
 \begin{equation}\label{eqn:huang93:1280}
@@ -669,7 +688,7 @@ P V = \inv{3} U.
 }
 %
 \makeSubAnswer{}{basicStatMech:problemSet6:5d}
-\begin{dmath}\label{eqn:huang93:80}
+\begin{equation}\label{eqn:huang93:80}
 \begin{aligned}
 \evalbar{\epsilon_{\txtF}}{n = 1/(0.01)^3}
 %ef[3 10^8, 6.62606957 10^(-34), rho, 0]
@@ -677,7 +696,7 @@ P V = \inv{3} U.
 &= 6.12402 \times 10^{-35} \text{J} \times 6.24150934 \times 10^{18} \frac{\text{eV}}{\text{J}} \\
 &= 3.82231 \times 10^{-16} \text{eV}.
 \end{aligned}
-\end{dmath}
+\end{equation}
 Wow.  That's pretty low!
 %
 \makeSubAnswer{}{basicStatMech:problemSet6:5f}
@@ -775,9 +794,10 @@ This allows a \(\kB T \ll m c^2\) and \(\barz \ll 1\) approximation of the press
 \paragraph{Number density integral}
 %
 For the number density, it appears that we can evaluate the integral using integration from parts applied to \eqnref{eqn:huang93:730}
-\begin{dmath}\label{eqn:huang93:880}
+\begin{equation}\label{eqn:huang93:880}
+\begin{aligned}
 \frac{n}{n_0}
-=
+&=
 \theta
 \int_{0}^\infty dx
 \frac{
@@ -785,8 +805,8 @@ For the number density, it appears that we can evaluate the integral using integ
 }
 {
    \barz^{-1} e^{x} + 1
-}
-=
+} \\
+&=
 \theta
 \int_{0}^\infty dx
 \lr{
@@ -797,8 +817,8 @@ For the number density, it appears that we can evaluate the integral using integ
 \frac{1}
 {
    \barz^{-1} e^{x} + 1
-}
-=
+} \\
+&=
 \evalrange{
 \theta
 \lr{ (\theta x + 1)^2 - 1}
@@ -816,8 +836,8 @@ For the number density, it appears that we can evaluate the integral using integ
 \frac{ -\barz^{-1} e^{x} }
 {
    \lr{\barz^{-1} e^{x} + 1}^2
-}
-=
+} \\
+&=
 \theta
 \int_{0}^\infty dx
 \lr{ (\theta x + 1)^2 - 1}
@@ -826,20 +846,22 @@ For the number density, it appears that we can evaluate the integral using integ
 {
    \lr{1 + \barz e^{-x}}^2
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Expanding in series, gives us
-\begin{dmath}\label{eqn:huang93:920}
+\begin{equation}\label{eqn:huang93:920}
+\begin{aligned}
 \frac{n}{n_0}
-=
+&=
 \theta
 \sum_{s = 0}^\infty
 \binom{-2}{s}
 \barz^{s + 1}
 \int_{0}^\infty dx
 \lr{ (\theta x + 1)^2 - 1}
-^{3/2} e^{-x(s + 1)}
-=
+^{3/2} e^{-x(s + 1)} \\
+&=
 3 \theta^2
 \sum_{s = 0}^\infty
 \binom{-2}{s}
@@ -848,7 +870,8 @@ Expanding in series, gives us
 ^{s + 1}}{(s + 1)^2}
 K_2
 \lr{ \frac{s+1}{\theta } }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Here the binomial coefficient has the meaning given in the definitions of \statmechchapcite{nonIntegralBinomialSeries}, where for negative integral values of \(b\) we have
 \begin{equation}\label{eqn:huang93:940b}
@@ -881,7 +904,7 @@ It's kind of odd seeming that this is quadratic in temperature.  Is there an err
 \paragraph{Energy integral}
 %
 Starting from \eqnref{eqn:huang93:780} and integrating by parts we have
-\begin{dmath}\label{eqn:huang93:1080}
+\begin{equation}\label{eqn:huang93:1080}
 \begin{aligned}
 &\frac{\expectation{\epsilon - \epsilon_0}}{V \epsilon_0 n_0} \\
 &=
@@ -957,24 +980,24 @@ Starting from \eqnref{eqn:huang93:780} and integrating by parts we have
 ^{3/2}
    \lr{ (x - 1) e^{-x(s + 1)} - \barz e^{-x(s + 2)} }.
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 The integral with the factor of \(x\) doesn't have a nice closed form as before (if you consider the \(K_2\) a nice closed form), but instead evaluates to a confluent hypergeometric function \citep{wolframHyperGeometricU}.  That integral is
-\begin{dmath}\label{eqn:huang93:1100}
+\begin{equation}\label{eqn:huang93:1100}
 \int_0^{\infty } x \left((\theta  x+1)^2-1\right)^{3/2} e^{-x (1+s)} dx = \frac{15 \sqrt{\pi } \theta^3
 U\left(-\frac{3}{2},-4,\frac{2 (s+1)}{\theta }\right)
 }{8 (s+1)^5},
-\end{dmath}
+\end{equation}
 and looks like \cref{fig:huang93:huang93Fig6}.  Series expansion shows that this hypergeometricU function has a \(\theta^{3/2}\) singularity at the origin
 \imageFigure{../figures/phy452-basicstatmech/huang93Fig6}{Plot of HypergeometricU, and with \(\theta^5\) scaling.}{fig:huang93:huang93Fig6}{0.2}
-\begin{dmath}\label{eqn:huang93:1120}
+\begin{equation}\label{eqn:huang93:1120}
 U\left(-\frac{3}{2},-4,\frac{2 (s+1)}{\theta }\right)
 =
 \frac{2 \sqrt{2} \sqrt{s+1} s+2 \sqrt{2} \sqrt{s+1}}{\theta^{3/2}}+\frac{21 \sqrt{s+1}}{2 \sqrt{2} \sqrt{\theta }}
 + \cdots,
-\end{dmath}
+\end{equation}
 so our multiplication by \(\theta^5\) brings us to zero as seen in the plot.  Evaluating the complete integral yields the unholy mess
-\begin{dmath}\label{eqn:huang93:1140}
+\begin{equation}\label{eqn:huang93:1140}
 \begin{aligned}
 &\frac{\expectation{\epsilon - \epsilon_0}}{V \epsilon_0 n_0}
 =
@@ -989,19 +1012,18 @@ so our multiplication by \(\theta^5\) brings us to zero as seen in the plot.  Ev
 &\qquad -\frac{2 \barz e^{\frac{s+2}{\theta }} K_1\left(\frac{s+2}{\theta }\right)}{s+2}
 },
 \end{aligned}
-\end{dmath}
+\end{equation}
 to first order in \(\barz\) and \(\theta\) this is
-\begin{dmath}\label{eqn:huang93:1160}
+\begin{equation}\label{eqn:huang93:1160}
 \frac{\expectation{\epsilon - \epsilon_0}}{V \epsilon_0 n_0}
 =
 \frac{9}{4} \sqrt{2 \pi} \barz \theta^{7/2}.
-\end{dmath}
+\end{equation}
 %
 Comparing pressure and energy we have for low densities (where \(\barz \approx 0\))
 \begin{equation}\label{eqn:huang93:1180}
 \inv{\epsilon_0 n_0 \sqrt{2 \pi} \barz \theta^{5/2}} = \frac{3}{2} \inv{P} = \frac{9}{4} \theta \frac{V}{U},
 \end{equation}
-%
 or
 \begin{equation}\label{eqn:huang93:1200}
 \theta P V = \frac{2}{3} U.

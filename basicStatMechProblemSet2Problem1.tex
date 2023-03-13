@@ -41,14 +41,14 @@ to assume \(A < 1/L\) to ensure that the probability density is positive.  Obtai
 %
 \makeanswer{basicStatMech:problemSet2:1}{
 Inserting the transform definitions we have
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:120}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:120}
+\begin{aligned}
 0
-=
-\left( \PD{t}{} - D \PDSq{x}{} \right) P
-=
+&= \left( \PD{t}{} - D \PDSq{x}{} \right) P \\
+&=
 \left( \PD{t}{} - D \PDSq{x}{} \right)
-\int_{-\infty}^\infty \frac{dk}{2 \pi} \tilde{P}(k, t) \exp\left( i k x \right)
-=
+\int_{-\infty}^\infty \frac{dk}{2 \pi} \tilde{P}(k, t) \exp\left( i k x \right) \\
+&=
 \int_{-\infty}^\infty \frac{dk}{2 \pi}
 \left(
 \PD{t}{}
@@ -58,7 +58,8 @@ k^2 D
 \tilde{P}(k, t)
 \right)
 \exp\left( i k x \right),
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 We conclude that
 \begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:140}
@@ -83,25 +84,27 @@ The time evolution of the distributions transform just requires multiplication b
 \paragraph{Propagator for the diffusion equation}
 %
 We can also use this to express the explicit time evolution of the distribution
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:200}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:200}
+\begin{aligned}
 P(x, t)
-=
+&=
 \int_{-\infty}^\infty \frac{dk}{2 \pi}
 \tilde{P}(k, 0)
 e^{-k^2 D t}
-\exp\left( i k x \right)
-=
+\exp\left( i k x \right) \\
+&=
 \int_{-\infty}^\infty \frac{dk}{2 \pi}
 \int_{-\infty}^\infty dx' P(x', 0) \exp\left( -i k x' \right)
 e^{-k^2 D t}
-\exp\left( i k x \right)
-=
+\exp\left( i k x \right) \\
+&=
 \int_{-\infty}^\infty
 dx' P(x', 0)
 \int_{-\infty}^\infty
 \frac{dk}{2 \pi}
 \exp\left( -k^2 D t + i k (x - x') \right).
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Our distribution time evolution is given by convolve with a propagator function
 \begin{subequations}
@@ -118,7 +121,7 @@ G(x', x)
 \end{subequations}
 %
 For \(t \ge 0\) we can complete the square, finding that this propagator is
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:260}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:260}
 \begin{aligned}
 G(x', x)
 &=
@@ -131,7 +134,7 @@ G(x', x)
 \frac{dk}{2 \pi}
 \exp\left( - \left(k \sqrt{D t} + \frac{i (x - x')}{2 \sqrt{D t}} \right)^2 \right),
 \end{aligned}
-\end{dmath}
+\end{equation}
 or
 \boxedEquation{eqn:basicStatMechProblemSet2Problem1:360}{
 G(x', x)
@@ -148,7 +151,7 @@ A schematic plot of this function as a function of \(t\) for fixed \(x - x'\) is
 \makeSubAnswer{Gaussian}{basicStatMech:problemSet2:1a}
 %
 For the Gaussian of \eqnref{eqn:basicStatMechProblemSet2Problem1:80} we compute the initial time Fourier transform
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:280}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:280}
 \begin{aligned}
 \tilde{P}(k)
 &=
@@ -176,18 +179,18 @@ For the Gaussian of \eqnref{eqn:basicStatMechProblemSet2Problem1:80} we compute 
 -\frac{\sigma^2 k^2}{2}
 \right).
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 The time evolution of the generating function is
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:300}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:300}
 \tilde{P}(k, t)
 =
 \exp\left(
 -\frac{\sigma^2 k^2}{2} - D k^2 t
 \right),
-\end{dmath}
+\end{equation}
 and we can find our time evolved probability density by inverse transforming
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:320}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:320}
 \begin{aligned}
 P(x, t)
 &=
@@ -209,7 +212,7 @@ k \sqrt{\frac{\sigma^2}{2} + D t}
 \right)^2
 \right).
 \end{aligned}
-\end{dmath}
+\end{equation}
 %
 For \(t \ge 0\) this is
 \boxedEquation{eqn:basicStatMechProblemSet2Problem1:340}{
@@ -239,7 +242,7 @@ The normalization of the distribution depends on the interval boundaries.  With 
 With an even range for box \(x \in [-L/2, L/2]\) this is unity.
 %
 To find the distribution at a later point in time we can utilize the propagator
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:400}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:400}
 P(x, t)
 =
 \int_{-L/2}^{L/2} dx' \inv{2 \sqrt{\pi D t} }
@@ -247,14 +250,14 @@ P(x, t)
 \left(
 - \frac{(x' - x)^2}{2 \sqrt{D t} }
 \right).
-\end{dmath}
+\end{equation}
 %
 Let's write this as
 \begin{subequations}
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:520}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:520}
 P(x, t) = P_{\mathrm{rect}}(x, t) + P_{\mathrm{sin}}(x, t)
-\end{dmath}
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:540}
+\end{equation}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:540}
 P_{\mathrm{rect}}(x, t)
 =
 \inv{2 L \sqrt{\pi D t} }
@@ -263,8 +266,8 @@ P_{\mathrm{rect}}(x, t)
 \left(
 - \frac{(x' - x)^2}{2 \sqrt{D t} }
 \right)
-\end{dmath}
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:560}
+\end{equation}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:560}
 \begin{aligned}
 P_{\mathrm{sin}}(x, t)
 &=
@@ -276,38 +279,40 @@ P_{\mathrm{sin}}(x, t)
 - \frac{(x' - x)^2}{2 \sqrt{D t} }
 \right).
 \end{aligned}
-\end{dmath}
+\end{equation}
 \end{subequations}
 %
 Applying a \(u = (x' - x)/\sqrt{4 D t}\) change of variables for the first term, we can reduce it to a difference of error functions
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:420}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:420}
+\begin{aligned}
 P_{\mathrm{rect}}(x, t)
-=
+&=
 \inv{L}
 \int_{-L/2}^{L/2} dx' \inv{2 \sqrt{\pi D t} }
 \exp
 \left(
 - \frac{(x' - x)^2}{2 \sqrt{D t} }
-\right)
-=
+\right) \\
+&=
 \inv{L \sqrt{\pi}}
 \int_{-\frac{L/2 +x}{2 \sqrt{D t}}}^{\frac{L/2 - x}{2 \sqrt{Dt}}}
 du
-e^{-u^2}
-=
+e^{-u^2} \\
+&=
 \inv{2 L} \left(
 \erf\left( \frac{L/2 -x}{2 \sqrt{D t}} \right)
 -\erf\left( -\frac{L/2 +x}{2 \sqrt{D t}} \right)
 \right).
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Following Mathematica, lets introduce a two argument error function for the difference between two points
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:480}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:480}
 \erf(z_0, z_1) \equiv \erf(z_1) - \erf(z_0).
-\end{dmath}
+\end{equation}
 %
 Using that our rectangular function's time evolution can be written
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:500}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:500}
 P_{\mathrm{rect}}(x, t)
 =
 \inv{2 L} \erf
@@ -316,7 +321,7 @@ P_{\mathrm{rect}}(x, t)
 ,
 \frac{L/2 -x}{2 \sqrt{D t}}
 \right).
-\end{dmath}
+\end{equation}
 %
 For \(L = D = 1\), and \(t = 10^{-8}\), this is plotted in \cref{fig:problemSet2Problem1iiRectPropagator:problemSet2Problem1iiRectPropagatorFig3}.  Somewhat surprisingly, this difference of error functions does appear to result in a rectangular function for small \(t\).
 %
@@ -327,7 +332,7 @@ The time evolution of this non-oscillation part of the probability distribution 
 \imageFigure{../figures/phy452-basicstatmech/problemSet2Problem1iiRectPropagatorFig4}{Time evolution of the rectangular part of the probability distribution.}{fig:problemSet2Problem1iiRectPropagator:problemSet2Problem1iiRectPropagatorFig4}{0.2}
 %
 For the sine piece we can also find a solution in terms of (complex) error functions
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:440}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:440}
 \begin{aligned}
 &P_{\mathrm{sin}}(x, t) \\
 &=
@@ -395,9 +400,9 @@ e^{-u^2} \\
 %%\right)
 ,
 \end{aligned}
-\end{dmath}
+\end{equation}
 which reduces to
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:n}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:n}
 \begin{aligned}
 P_{\mathrm{sin}}&(x, t)
 = \\
@@ -417,7 +422,7 @@ e^{ -i k_0 x }
    \frac{L/2 - x}{2 \sqrt{Dt}} + i k_0 \sqrt{D t}
 \right).
 \end{aligned}
-\end{dmath}
+\end{equation}
 This is plotted for \(A = D = L = 1\), \(k_0 = 8 \pi\), and \(t = 10^{-8}\) in \cref{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSinePropagatorFig5}.
 %
 \imageFigure{../figures/phy452-basicstatmech/problemSet2Problem1iiSinePropagatorFig5}{Verification at \(t \rightarrow 0\), sine like diffusion.}{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSinePropagatorFig5}{0.2}
@@ -455,9 +460,9 @@ e^{ -k_0^2 D t -i k_0 x }
 }
 %
 It is certainly ugly looking!  We see that the oscillation die off is dependent on the \(\exp( -k_0^2 D t)\) term.  In time
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:580}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:580}
 t = \inv{k_0^2 D},
-\end{dmath}
+\end{equation}
 that oscillation dies away to \(1/e\) of its initial amplitude.  This dispersion is plotted at times \(t = 10^{-5}\) and \(t = 1/(k_0^2 D)\) for \(L = D = 1\), \(k_0 = 8 \pi\) and \(A = 1/2\) in \cref{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSinePropagatorFig7}.
 %
 \imageFigure{../figures/phy452-basicstatmech/problemSet2Problem1iiSinePropagatorFig7}{Initial time distribution and dispersion of the oscillatory portion to \(1/e\) of initial amplitude.}{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSinePropagatorFig7}{0.2}
@@ -469,38 +474,41 @@ Similar to the individual plots of \(P_{\mathrm{rect}}(x, t)\) and \(P_{\mathrm{
 \paragraph{An easier solution for the sinusoidal part}
 %
 After working this problem, talking with classmates about how they solved it (because I was sure I'd done this windowed oscillating distribution the hard way), I now understand what was meant by ``ignore boundary effects''.  That is, ignore the boundary effects in the sinusoid portion of the distribution.  I didn't see how we could ignore the boundary effects because doing so would make the sine Fourier transform non-convergent.  Ignoring pesky ideas like convergence we can ``approximate'' the Fourier transform of the windowed sine as
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:600}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:600}
+\begin{aligned}
 \tilde{P}_{\mathrm{sin}}(k)
-\approx
-A \int_{-\infty}^\infty \sin (k_0 x) e^{-i k x} dx
-=
+&\approx
+A \int_{-\infty}^\infty \sin (k_0 x) e^{-i k x} dx \\
+&=
 \frac{A }{2 i}
 \int_{-\infty}^\infty
 \left(
 e^{i (k_0 - k) x}
 -e^{-i (k_0 + k) x} \right)
-dx
-=
+dx \\
+&=
 \frac{A \pi}{i} \left(
 \delta(k - k_0) - \delta(k + k_0)
 \right).
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Now we can inverse Fourier transform the diffusion result with ease since we've got delta functions.  That is
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:620}
-P_{\mathrm{sin}}(x, t) \approx
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:620}
+\begin{aligned}
+P_{\mathrm{sin}}(x, t) 
+&\approx
 \inv{2 \pi}
 \frac{A \pi}{i}
 \int
 \left(
 \delta(k - k_0) - \delta(k + k_0)
 \right)
-e^{-D k^2 t} e^{i k x} dk
-=
-A e^{-D k_0^2 t} \frac{ e^{i k_0 x} - e^{-i k_0 x}}{2 i}
-=
-A e^{-D k_0^2 t} \sin( k_0 x ).
-\end{dmath}
+e^{-D k^2 t} e^{i k x} dk \\
+&= A e^{-D k_0^2 t} \frac{ e^{i k_0 x} - e^{-i k_0 x}}{2 i} \\
+&= A e^{-D k_0^2 t} \sin( k_0 x ).
+\end{aligned}
+\end{equation}
 %
 Plotted in \cref{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSinePropagatorFig9} we see things die off uniformly, since we didn't start with a windowed sine.  Together, the rectangular function and the sine, after diffusion is plotted in \cref{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSinePropagatorFig10}.  Because the sine wasn't confined to the window, we see initial time oscillations, but they die off, looking fairly similar to what we saw when the initial conditions were completely zero outside of the window.
 %
@@ -508,9 +516,10 @@ Plotted in \cref{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSi
 \imageFigure{../figures/phy452-basicstatmech/problemSet2Problem1iiSinePropagatorFig10}{Diffusion of rectangular function and (non-windowed) sine composition.}{fig:problemSet2Problem1iiSinePropagator:problemSet2Problem1iiSinePropagatorFig10}{0.2}
 %
 My expectation is that we'd get exactly the same result with application of the propagator.  Let's try that.
-\begin{dmath}\label{eqn:basicStatMechProblemSet2Problem1:640}
+\begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:640}
+\begin{aligned}
 P_{\mathrm{sin}}(x, t)
-=
+&=
 \frac{A}{\sqrt{4 \pi D t}}
 \int \sin(k_0 x')
 \exp
@@ -525,15 +534,15 @@ P_{\mathrm{sin}}(x, t)
 \right)
 }
 {\(u = (x' - x)/\sqrt{4 D t}\)}
-dx'
-=
+dx' \\
+&=
 \frac{A}{\sqrt{\pi}}
 \int \sin\lr{
 k_0 \lr{\sqrt{ 4 D t} u + x}
 }
 e^{-u^2}
-du
-=
+du \\
+&=
 \frac{A}{2 i \sqrt{\pi}}
 \int
 \lr{
@@ -546,8 +555,8 @@ e^{
 }
 }
 e^{-u^2}
-du
-=
+du \\
+&=
 \frac{A}{2 i \sqrt{\pi}}
 \int
 du
@@ -567,7 +576,8 @@ du
       \lr{i k_0 \sqrt{D t}}^2
    }
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 This is just
 \begin{equation}\label{eqn:basicStatMechProblemSet2Problem1:660}

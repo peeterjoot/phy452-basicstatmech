@@ -24,12 +24,12 @@ In \citep{pathriastatistical} I saw the Euler-summation \index{Euler-MacLauren s
 Before tackling Euler summation, we first need to understand some properties of Bernoulli polynomials \citep{ wiki:bernoulliPolynomial} \index{Bernoulli polynomial}, and Bernoulli numbers \index{Bernoulli number} \citep{wiki:bernoulliNumber}.  The properties of interest required for the derivation of the Euler summation formula appear to follow fairly easily with the following choice for the definition of the Bernoulli polynomials \(B_k(x)\) and Bernoulli numbers \(B_k\)
 \begin{subequations}
 \label{eqn:bernoulliAndEulerMacLarenSummation:20a}
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:20}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:20}
 B_m(z) = \sum_{k = 0}^m \binom{m}{k} B_k z^{m - k}
-\end{dmath}
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:60}
+\end{equation}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:60}
 0 = \sum_{k = 0}^{m-1} \binom{m}{k} B_k \inv{m!}, \qquad \mbox{m > 1}.
-\end{dmath}
+\end{equation}
 \end{subequations}
 %
 It is conventional to fix \(B_0 = 1\).  \Eqnref{eqn:bernoulliAndEulerMacLarenSummation:60} provides an iterative method to calculate all the higher Bernoulli numbers.  Without calculating the Bernoulli numbers explicitly, we can relate these to the values of the polynomials at the origin
@@ -38,23 +38,24 @@ B_m(0) = B_m.
 }
 %
 Now, let's calculate the first few of these, to verify that we've got the conventions right.  Starting with \(m = 2\) we have
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:80}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:80}
+\begin{aligned}
 0
-= \sum_{k = 0}^{1} \binom{2}{k} B_k \inv{2!}
-=
+&= \sum_{k = 0}^{1} \binom{2}{k} B_k \inv{2!} \\
+&=
 \inv{2!}
 \lr{ B_0 + 2 B_1 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 or \(B_1 = -1/2\).  Next with \(m = 3\)
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:100}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:100}
+\begin{aligned}
 0
-= \sum_{k = 0}^{2} \binom{3}{k} B_k \inv{3!}
-=
-\frac{B_0}{6} + \frac{B_1}{2} + \frac{B_2}{2}
-=
-\inv{2}
-\lr{ \inv{3} -\inv{2} + B_2 },
-\end{dmath}
+&= \sum_{k = 0}^{2} \binom{3}{k} B_k \inv{3!} \\
+&= \frac{B_0}{6} + \frac{B_1}{2} + \frac{B_2}{2} \\
+&= \inv{2} \lr{ \inv{3} -\inv{2} + B_2 },
+\end{aligned}
+\end{equation}
 or \(B_2 = 1/6\).  Thus the first few Bernoulli polynomials are
 \begin{subequations}
 \begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:140}
@@ -67,16 +68,14 @@ B_2(z) &= z^2 - z + \inv{6}.
 \end{subequations}
 %
 The Bernoulli polynomials have a simple relation to their derivative.  Proceeding directly, taking derivatives we have
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:200}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:200}
+\begin{aligned}
 B_m'(z)
-=
-\sum_{k = 0}^{m-1} (m - k)\binom{m}{k} B_k z^{m - k -1}
-=
-\sum_{k = 0}^{m-1} \frac{m!}{(m - k - 1)! k!} B_k z^{m - k -1}
-=
-m
-\sum_{k = 0}^{m-1} \frac{(m - 1)!}{(m - 1 - k)! k!} B_k z^{m - 1 - k},
-\end{dmath}
+&= \sum_{k = 0}^{m-1} (m - k)\binom{m}{k} B_k z^{m - k -1} \\
+&= \sum_{k = 0}^{m-1} \frac{m!}{(m - k - 1)! k!} B_k z^{m - k -1} \\
+&= m \sum_{k = 0}^{m-1} \frac{(m - 1)!}{(m - 1 - k)! k!} B_k z^{m - 1 - k},
+\end{aligned}
+\end{equation}
 %
 or
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:220}{
@@ -91,17 +90,18 @@ B_m(z + 1) - B_m(z) = m z^{m -1}.
 }
 %
 To prepare for demonstrating this difference in general, let's perform this calculation for the specific cases of \(m = 1\) and \(m = 3\) to remove some of the index abstraction from the mix.  For \(m = 1\) we have
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:160a}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:160a}
+\begin{aligned}
 B_1(z + 1) - B_1(z)
-=
+&=
 \sum_{k = 0}^1
 \binom{1}{k} B_k
 \left(
 \lr{z + 1}
 ^{1 - k}
 - z^{1 - k}
-\right)
-=
+\right) \\
+&=
 B_0
 \left(
 \lr{z + 1}^1
@@ -112,92 +112,48 @@ B_1
 \left(
 \lr{z + 1}^0
 - z^0
-\right)
-=
-B_0
-= 1.
-\end{dmath}
+\right) \\
+&=
+B_0 \\
+&= 1.
+\end{aligned}
+\end{equation}
 %
 For \(m = 3\) (a value of \(m > 1\) that is representative) we have
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:160}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:160}
+\begin{aligned}
 B_3(z + 1) - B_3(z)
-=
-\sum_{k = 0}^3
-\binom{3}{k} B_k
-\left(
-\lr{z + 1}
-^{3 - k}
-- z^{3 - k}
-\right)
-=
-B_0
-\left(
-\lr{z + 1}^3
-- z^3
-\right)
-+ 3
-B_1
-\left(
-\lr{z + 1}^2
-- z^2
-\right)
-+ 3
-B_2
-\left(
-\lr{z + 1}^1
-- z^1
-\right)
-+
-B_3
-\cancel{
-\left(
-\lr{z + 1}^0
-- z^0
-\right)
-}
-=
-B_0
-\left(
-3 z^2 + 3 z + 1
-\right)
-+ 3
-B_1
-(
-2 z + 1
-)
-+ 3
-B_2
-=
-3 z^2
-+ z^1
-\lr{ 3 - 3 }
-+ z^0
-\lr{ 1 - \frac{3}{2} + \frac{3}{6} }
-= 3 z^2.
-\end{dmath}
+&= \sum_{k = 0}^3 \binom{3}{k} B_k \left( \lr{z + 1} ^{3 - k} - z^{3 - k} \right) \\
+&= B_0 \left( \lr{z + 1}^3 - z^3 \right) + 3 B_1 \left( \lr{z + 1}^2 - z^2 \right) + 3 B_2 \left( \lr{z + 1}^1 - z^1 \right) + B_3 \cancel{ \left( \lr{z + 1}^0 - z^0 \right) } \\
+&= B_0 \left( 3 z^2 + 3 z + 1 \right) + 3 B_1 ( 2 z + 1) + 3 B_2 \\
+&= 3 z^2 + z^1 \lr{ 3 - 3 } + z^0 \lr{ 1 - \frac{3}{2} + \frac{3}{6} } \\
+&= 3 z^2.
+\end{aligned}
+\end{equation}
 %
 Evaluating this in general, we see that the term with the highest order Bernoulli number is immediately killed, and we'll have just one highest order monomial out of the mix.  We expect all the remaining monomial terms to be killed term by term.  That general difference is, for \(m \ge 2\) is
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:180}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:180}
+\begin{aligned}
 B_m(z + 1) - B_m(z)
-=
+&=
 \sum_{k = 0}^{m - 1}
 \binom{m}{k} B_k
 \left(
 \lr{z + 1}^{m - k}
 - z^{m - k}
-\right)
-=
+\right) \\
+&=
 \sum_{k = 0}^{m - 1}
 \binom{m}{k} B_k
-\sum_{s = 0}^{m - k - 1} \binom{m - k}{s} z^s
-=
+\sum_{s = 0}^{m - k - 1} \binom{m - k}{s} z^s \\
+&=
 m! \sum_{s = 0}^{m - 1}
 \frac{z^s}{s!}
 \sum_{k = 0}^{m - s - 1}
 \frac{1}{\cancel{(m -k)!} k!}
 \frac{\cancel{(m - k)!}}{(m - k - s)!}
-B_k
-=
+B_k \\
+&=
 \frac{m! }{(m -1)!} z^{m - 1}
 \sum_{k = 0}^{m - m + 1 - 1}
 \frac{1}{ k! (m - k - m + 1)!} B_k
@@ -205,31 +161,31 @@ B_k
 m! \sum_{s = 0}^{m - 2}
 \frac{z^s}{s!}
 \sum_{k = 0}^{m - s - 1}
-\frac{1}{ k! (m - k - s)!} B_k
-=
+\frac{1}{ k! (m - k - s)!} B_k \\
+&=
 m z^{m - 1}
 +
 m! \sum_{s = 0}^{m - 2}
 \frac{z^s}{s!}
 \lr{ \sum_{k = 0}^{(m-s) - 1} \binom{m - s}{s} B_k \inv{(m - s)!} }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 This last sum up to \(m -s -1\) has the form of \eqnref{eqn:bernoulliAndEulerMacLarenSummation:60}, so is killed off.  This proves \eqnref{eqn:bernoulliAndEulerMacLarenSummation:40} as desired.
 %
 From this difference result we find for \(m > 1\)
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:260}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:260}
+\begin{aligned}
 B_m(1)
-= \sum_{k = 0}^m \binom{m}{k} B_k
-=
-m! \sum_{k = 0}^{m-1} \binom{m}{k} B_k \inv{m!}
-+
-B_m
-= B_m,
-\end{dmath}
+&= \sum_{k = 0}^m \binom{m}{k} B_k \\
+&= m! \sum_{k = 0}^{m-1} \binom{m}{k} B_k \inv{m!} + B_m \\
+&= B_m,
+\end{aligned}
+\end{equation}
 and for \(m = 1\)
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:240b}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:240b}
 B_1(1) = 1 + B_1(0) = 1 - 1/2 = -B_1.
-\end{dmath}
+\end{equation}
 We find that either of the end points in the \([0, 1]\) interval provide us (up to a sign) with the Bernoulli numbers
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:280}{
 B_m(1) =
@@ -258,19 +214,13 @@ Evaluating this at \(z = 0\) shows that our polynomials are odd functions around
 }
 %
 We also obtain Bernoulli's sum of powers result
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:360}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:360}
+\begin{aligned}
 \int_0^n B_m(z) dz
-=
-\int_0^1 B_m(z) dz
-+
-\int_1^2 B_m(z) dz
-+
-\cdots
-+
-\int_n^{n-1} B_m(z) dz
-=
-0 + 1^m + 2^m + \cdots (n-1)^m,
-\end{dmath}
+&= \int_0^1 B_m(z) dz + \int_1^2 B_m(z) dz + \cdots + \int_n^{n-1} B_m(z) dz \\
+&= 0 + 1^m + 2^m + \cdots (n-1)^m,
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:380}{
 \sum_{k = 1}^{n-1} k^m = \int_1^n B_m(z) dz.
@@ -302,41 +252,44 @@ B_m(0) = B_m & \quad \mbox{if \(m > 1\)} \\
 \end{equation}
 %
 Utilizing \eqnref{eqn:bernoulliAndEulerMacLarenSummation:220} we can integrate by parts in a specific unit interval
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:440}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:440}
+\begin{aligned}
 \int_k^{k+1} f(x) dx
-=
-\int_k^{k+1} f(x) P_0(x) dx
-=
+&=
+\int_k^{k+1} f(x) P_0(x) dx \\
+&=
 \int_k^{k+1} f(x) d
-\lr{ \frac{P_1(x)}{1} }
-=
+\lr{ \frac{P_1(x)}{1} } \\
+&=
 \evalrange{
 \lr{ f(x) P_1(x) }
 }{k}{k+1}
 -
-\int_k^{k+1} f'(x) P_1(x) dx
-=
+\int_k^{k+1} f'(x) P_1(x) dx \\
+&=
 - B_1 f(k+1) - B_1 f(k)
 -
-\int_k^{k+1} f'(x) P_1(x)
-=
+\int_k^{k+1} f'(x) P_1(x) \\
+&=
 \inv{2}
 \lr{ f(k+1) + f(k) }
 -
 \int_k^{k+1} f'(x) P_1(x).
-\end{dmath}
+\end{aligned}
+\end{equation}
 Summing gives us
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:460}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:460}
+\begin{aligned}
 \int_0^{n} f(x) dx
-= \sum_{k = 0}^{n-1}
-\int_k^{k+1} f(x) dx
-=
+&= \sum_{k = 0}^{n-1} \int_k^{k+1} f(x) dx \\
+&=
 \inv{2} f(0) + \sum_{k = 1}^{n-1} f(k) + f(n)
 -
 \int_0^{n} f'(x) P_1(x) dx,
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:480}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:480}
 \sum_{k = 0}^{n} f(k)
 =
 \int_0^{n} f(x) dx
@@ -345,48 +298,20 @@ or
 \lr{ f(0) + f(n) }
 -
 \int_0^{n} f'(x) P_1(x) dx.
-\end{dmath}
+\end{equation}
 %
 Continuing the integration by parts we have
-\begin{dmath}\label{eqn:bernoulliAndEulerMacLarenSummation:500}
+\begin{equation}\label{eqn:bernoulliAndEulerMacLarenSummation:500}
+\begin{aligned}
 \int_0^{n} f'(x) P_1(x) dx
-=
-\sum_{k = 0}^{n-1}
-\int_k^{k+1} f'(x) P_1(x) dx
-=
-\sum_{k = 0}^{n-1}
-\int_k^{k+1} f'(x) d
-\lr{ \frac{P_2(x)}{2} }
-=
-\sum_{k = 0}^{n-1}
-\frac{B_2}{2}
-\lr{ f'(k+1) - f'(k) }
--
-\sum_{k = 0}^{n-1}
-\int_k^{k+1} f''(x) \frac{P_2(x)}{2} dx
-=
-\frac{B_2}{2}
-\lr{ f'(n) - f'(0) }
--
-\int_0^{n} f''(x) \frac{P_2(x)}{2} dx
-=
-\frac{B_2}{2}
-\lr{ f'(n) - f'(0) }
--
-\frac{B_3}{3!}
-\lr{ f''(n) - f''(0) }
-+
-\int_0^{n} f'''(x) \frac{P_3(x)}{3!} dx
-=
-\sum_{s = 1}^{m}
-(-1)^{s-1}
-\frac{B_{s+1}}{(s+1)!}
-\lr{ f^s(n) - f^s(0) }
-+
-(-1)^{m-1}
-\int_0^{n} f^m(x) \frac{P_m(x)}{m!} dx,
-\end{dmath}
-%
+&= \sum_{k = 0}^{n-1} \int_k^{k+1} f'(x) P_1(x) dx \\
+&= \sum_{k = 0}^{n-1} \int_k^{k+1} f'(x) d \lr{ \frac{P_2(x)}{2} } \\
+&= \sum_{k = 0}^{n-1} \frac{B_2}{2} \lr{ f'(k+1) - f'(k) } - \sum_{k = 0}^{n-1} \int_k^{k+1} f''(x) \frac{P_2(x)}{2} dx \\
+&= \frac{B_2}{2} \lr{ f'(n) - f'(0) } - \int_0^{n} f''(x) \frac{P_2(x)}{2} dx \\
+&= \frac{B_2}{2} \lr{ f'(n) - f'(0) } - \frac{B_3}{3!} \lr{ f''(n) - f''(0) } + \int_0^{n} f'''(x) \frac{P_3(x)}{3!} dx \\
+&= \sum_{s = 1}^{m} (-1)^{s-1} \frac{B_{s+1}}{(s+1)!} \lr{ f^s(n) - f^s(0) } + (-1)^{m-1} \int_0^{n} f^m(x) \frac{P_m(x)}{m!} dx,
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:bernoulliAndEulerMacLarenSummation:481}{
 \begin{aligned}
@@ -406,5 +331,4 @@ or
 \int_0^{n} f^m(x) \frac{P_m(x)}{m!} dx.
 \end{aligned}
 }
-%
 %\EndArticle
