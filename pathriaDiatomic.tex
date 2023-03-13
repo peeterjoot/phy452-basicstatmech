@@ -46,8 +46,9 @@ e^{-\beta K
 \int d^3 \Br_1 d^3 \Br_2
 e^{-\beta K
 \frac{ \Abs{\Br_1 - \Br_2}^2 }{2}.
+}
 \end{aligned}
-}\end{equation}
+\end{equation}
 %
 Now we can make a change of variables to simplify the exponential.  Let's write
 \begin{subequations}
@@ -247,62 +248,11 @@ The momentum portions of the average will just cancel out, leaving just
 \begin{equation}\label{eqn:pathriaDiatomic:447}
 \begin{aligned}
 \expectation{r_{12}^2}
-&=
-\frac{
-\int
-d^3 \Br_1
-d^3 \Br_2
-\lr{\Br_1 - \Br_2}^2 e^{-\beta K \lr{\Br_1 - \Br_2}^2 /2 }
-}{
-\int
-d^3 \Br_1
-d^3 \Br_2
-e^{-\beta K \lr{\Br_1 - \Br_2}^2 /2 }
-} \\
-&=
-\frac{
-\int
-d^3 \Bu
-\Bu^2
-e^{-\beta K \Bu^2 /2 }
-}{
-\int
-d^3 \Bu
-e^{-\beta K \Bu^2 /2 }
-} \\
-&=
-\frac{
-\int
-da db dc
-\lr{ a^2 + b^2 + c^2}
-e^{-\beta K \lr{a^2 + b^2 + c^2} /2 }
-}{
-\int
-e^{-\beta K \lr{a^2 + b^2 + c^2} /2 }
-} \\
-&=
-3 \frac{
-\int
-da
-a^2
-e^{-\beta K a^2/2}
-\int
-db dc
-e^{-\beta K \lr{b^2 + c^2} /2 }
-}{
-\int
-e^{-\beta K \lr{a^2 + b^2 + c^2} /2 }
-} \\
-&=
-3 \frac{
-\int
-da
-a^2
-e^{-\beta K a^2/2}
-}{
-\int
-e^{-\beta K a^2/2}
-}.
+&= \frac{ \int d^3 \Br_1 d^3 \Br_2 \lr{\Br_1 - \Br_2}^2 e^{-\beta K \lr{\Br_1 - \Br_2}^2 /2 } }{ \int d^3 \Br_1 d^3 \Br_2 e^{-\beta K \lr{\Br_1 - \Br_2}^2 /2 } } \\
+&= \frac{ \int d^3 \Bu \Bu^2 e^{-\beta K \Bu^2 /2 } }{ \int d^3 \Bu e^{-\beta K \Bu^2 /2 } } \\
+&= \frac{ \int da db dc \lr{ a^2 + b^2 + c^2} e^{-\beta K \lr{a^2 + b^2 + c^2} /2 } }{ \int e^{-\beta K \lr{a^2 + b^2 + c^2} /2 } } \\
+&= 3 \frac{ \int da a^2 e^{-\beta K a^2/2} \int db dc e^{-\beta K \lr{b^2 + c^2} /2 } }{ \int e^{-\beta K \lr{a^2 + b^2 + c^2} /2 } } \\
+&= 3 \frac{ \int da a^2 e^{-\beta K a^2/2} }{ \int e^{-\beta K a^2/2} }.
 \end{aligned}
 \end{equation}
 %
