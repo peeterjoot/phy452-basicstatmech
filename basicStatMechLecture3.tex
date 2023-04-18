@@ -69,21 +69,23 @@ The two dimensional case can be used for either spatial generalization of the ab
 \inv{2} \calP(x - \delta x, t - \delta t) \\
 &\approx
 \inv{2}
-\left(
+\lr{
 \calP(x, t - \delta t) +
 \cancel{\PD{x}{\calP}(x, t - \delta t) \delta x}
 +
 \inv{2} \PDSq{x}{\calP}(x, t - \delta t) (\delta x)^2
-\right)
+} \\
+&\quad
 +
 \inv{2}
-\left(
+\lr{
 \calP(x, t - \delta t)
 -
 \cancel{\PD{x}{\calP}(x, t - \delta t) \delta x}
 +
 \inv{2} \PDSq{x}{\calP}(x, t - \delta t) (\delta x)^2
-\right) \\
+}
+\\
 &=
 \calP(x, t - \delta t)
 +

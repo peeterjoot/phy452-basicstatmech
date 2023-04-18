@@ -124,7 +124,7 @@ F_\nu(e^y)
 As \(a\) gets large in the first integral the integrand is approximately \(e^{-a} (y-a)^{\nu -1}\).  The exponential dominates this integrand.  Since we are considering large \(y\), we can approximate the upper bound of the integral by extending it to \(\infty\).  Also expanding in series we have
 \begin{equation}\label{eqn:basicStatMechProblemSet6Problem2:360}
 \begin{aligned}
-F_\nu(e^y)
+&F_\nu(e^y) \\
 &\approx
 \frac{y^\nu}{\nu}
 +
@@ -134,19 +134,21 @@ F_\nu(e^y)
 -
 (y - a)^{\nu - 1}
  } { 1 + e^{a} } \\
- &=
+&=
 \frac{y^\nu}{\nu}
 +
-\int_0^\infty da \inv{e^a + 1}
-\lr{
+\int_0^\infty da \inv{e^a + 1} \times \\
+&\,
+\Biglr{
    \lr{
    \inv{0!} y^{\nu-1} a^0
    +
-   \inv{1!} (\nu-1) y^{\nu-2} a^1
+   \inv{1!} (\nu-1) y^{\nu-2} a^1 
    +
    \inv{2!} (\nu-1) (\nu-2) y^{\nu-3} a^2
    + \cdots
-   }
+   } \\
+&\,
 -
    \lr{
    \inv{0!} y^{\nu-1} (-a)^0
@@ -160,13 +162,13 @@ F_\nu(e^y)
 &=
 \frac{y^\nu}{\nu}
 + 2
-\int_0^\infty da \inv{e^a + 1}
-   \lr{
+\int_0^\infty da \inv{e^a + 1} \times \\
+&\quad \lr{
    \inv{1!} (\nu-1) y^{\nu-2} a^1
    +
    \inv{3!} (\nu-1) (\nu-2) (\nu - 3)y^{\nu-4} a^3
    + \cdots
-   } \\
+} \\
 &=
 \frac{y^\nu}{\nu}
 + 2
