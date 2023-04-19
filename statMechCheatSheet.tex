@@ -266,18 +266,20 @@ E_n =
 \end{equation}
 \paragraph{Liouville's theorem}
 \begin{equation}\label{eqn:statMechCheatSheet:900}
+\begin{aligned}
 \ddt{\rho}
 %= \PD{t}{\rho} + \PD{t}{x} \PD{x}{\rho} + \PD{t}{p} \PD{p}{\rho}
-= \PD{t}{\rho} + \xdot \PD{x}{\rho} + \pdot \PD{p}{\rho}
-= \cdots
-= \PD{t}{\rho} + \PD{x}{
+&= \PD{t}{\rho} + \xdot \PD{x}{\rho} + \pdot \PD{p}{\rho} \\
+&= \cdots \\
+&= \PD{t}{\rho} + \PD{x}{
 \lr{\xdot \rho}
 } + \PD{p}{
 \lr{\xdot \rho}
-}
-= \PD{t}{\rho} + \spacegrad_{x,p} \cdot (\rho \xdot, \rho \pdot)
-= \PD{t}{\rho} + \spacegrad \cdot \BJ
-= 0,
+} \\
+&= \PD{t}{\rho} + \spacegrad_{x,p} \cdot (\rho \xdot, \rho \pdot) \\
+&= \PD{t}{\rho} + \spacegrad \cdot \BJ \\
+&= 0,
+\end{aligned}
 \end{equation}
 Regardless of whether we have a steady state system, if we sit on a region of phase space volume, the probability density in that neighborhood will be constant.
 \paragraph{Ergodic}
@@ -356,7 +358,9 @@ Example (work on gas): \(\dbar W = -P dV\).  Adiabatic: \(\dbar Q = 0\).  Cyclic
 S = \kB \ln \Omega
 \end{equation}
 \begin{equation}\label{eqn:statMechCheatSheet:1220}
-\Omega(N, V, E) =
+\begin{aligned}
+\Omega(N, V, E) 
+&=
 \inv{h^{3N} N!}
 \int_V
 d\Bx_1
@@ -366,24 +370,28 @@ d\Bx_N
 d\Bp_1
 \cdots
 d\Bp_N
-\delta \left(
+\delta
+\lr{
 E
 - \frac{\Bp_1^2}{2 m}
 \cdots
 - \frac{\Bp_N^2}{2 m}
-\right)
-=
+}
+\\
+&=
 \frac{V^N}{h^{3N} N!}
 \int
 d\Bp_1
 \cdots
 d\Bp_N
-\delta \left(
+\delta 
+\lr{
 E
 - \frac{\Bp_1^2}{2m}
 \cdots
 - \frac{\Bp_N^2}{2m}
-\right)
+}
+\end{aligned}
 \end{equation}
 \begin{equation}\label{eqn:statMechCheatSheet:1240}
 \Omega = \frac{d\gamma}{dE}
