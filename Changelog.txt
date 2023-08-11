@@ -1,11 +1,11 @@
 Changelog
 
-phy452.V0.1.14.pdf (not published.)
+phy452.V0.1.14-8.pdf
 
 - spellcheck rules, and spell check.
 - prune blank lines surrounding \paragraph
-- undo s/center/centre/
-...
+- purge dmath
+- updated some figures (Mathematica Thick,Black attributes.)  Some hand drawn figures replaced.
 
 phy452.V0.1.13.pdf, Sept 10, 2020 (commit 309bc76da70f3dd7aa38ee343f5f40750f516da0)
 
