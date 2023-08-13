@@ -1,5 +1,6 @@
-- 
+- Figure: 4.73 Pressure to ten terms: fonts not embedded.  Relabel with MaTeX
 
+- 
 /Applications/Inkscape.app/Contents/MacOS/Inkscape -D --file=batteryAndWireFig1.svg --export-pdf=batteryAndWireFig1.pdf --export-latex
 
 - probably remove: midterm1review.tex (now in the appendix)
