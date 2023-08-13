@@ -13,7 +13,7 @@ include ../latex/make.bookvars
 FIGURES := ../figures/phy452-basicstatmech
 
 # comment this out for online pdf version (uncomment for KDP)
-#PRINT_VERSION := 1
+PRINT_VERSION := 1
 
 ifndef PRINT_VERSION
 PARAMS += --no-print
@@ -110,6 +110,9 @@ basicStatMechProblemSet7.pdf :: $(PDF_DEPS)
 # https://tex.stackexchange.com/questions/570899/use-of-amsmath-binom-causes-missing-number-if-breqn-is-used
 #mathstyle.sty : 
 #	wget -o $@ http://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/latex/breqn/mathstyle.sty?revision=54801&view=co
+
+clean ::
+	git checkout FrontBackmatter/Bibliography.tex FrontBackmatter/Version.tex
 
 scrpage2.sty : ../latex/scrpage2.sty
 	cp $^ $@
