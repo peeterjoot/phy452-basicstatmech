@@ -13,8 +13,7 @@ include ../latex/make.bookvars
 FIGURES := ../figures/phy452-basicstatmech
 
 # comment this out for online pdf version (uncomment for KDP)
-PRINT_VERSION := 1
-
+#PRINT_VERSION := 1
 ifndef PRINT_VERSION
 PARAMS += --no-print
 endif
